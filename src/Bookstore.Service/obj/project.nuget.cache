@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "pAxPswd3Y/2StCRtj8zRC0Mak3bZbYqYy3E2XjWOiCLw3izCYsn5t4g6x0R7X8AaaJNNPNFQK6POUT0nnsbqRg==",
+  "dgSpecHash": "wrduk1H5H/1d7hv7ywSrBphT9wXXyqxCebzZ8Jmxgos9uDMCwya5dfyB8X/FXcJ6JU/pTZNfsyt4kBjjGsrR/g==",
   "success": true,
-  "projectFilePath": "C:\\Users\\jpreksavec\\source\\repos\\Bookstore\\src\\Bookstore.Service\\Bookstore.Service.csproj",
+  "projectFilePath": "C:\\Users\\jpreksavec\\Source\\Repos\\Bookstore\\src\\Bookstore.Service\\Bookstore.Service.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\jpreksavec\\.nuget\\packages\\autofac\\6.3.0\\autofac.6.3.0.nupkg.sha512",
     "C:\\Users\\jpreksavec\\.nuget\\packages\\entityframework\\6.4.4\\entityframework.6.4.4.nupkg.sha512",
@@ -52,6 +52,7 @@
     "C:\\Users\\jpreksavec\\.nuget\\packages\\rhetos.host.aspnet\\5.3.0\\rhetos.host.aspnet.5.3.0.nupkg.sha512",
     "C:\\Users\\jpreksavec\\.nuget\\packages\\rhetos.host.net\\5.3.0\\rhetos.host.net.5.3.0.nupkg.sha512",
     "C:\\Users\\jpreksavec\\.nuget\\packages\\rhetos.msbuild\\5.3.0\\rhetos.msbuild.5.3.0.nupkg.sha512",
+    "C:\\Users\\jpreksavec\\.nuget\\packages\\rhetos.restgenerator\\5.0.0\\rhetos.restgenerator.5.0.0.nupkg.sha512",
     "C:\\Users\\jpreksavec\\.nuget\\packages\\runtime.native.system.data.sqlclient.sni\\4.7.0\\runtime.native.system.data.sqlclient.sni.4.7.0.nupkg.sha512",
     "C:\\Users\\jpreksavec\\.nuget\\packages\\runtime.win-arm64.runtime.native.system.data.sqlclient.sni\\4.4.0\\runtime.win-arm64.runtime.native.system.data.sqlclient.sni.4.4.0.nupkg.sha512",
     "C:\\Users\\jpreksavec\\.nuget\\packages\\runtime.win-x64.runtime.native.system.data.sqlclient.sni\\4.4.0\\runtime.win-x64.runtime.native.system.data.sqlclient.sni.4.4.0.nupkg.sha512",

@@ -1,10 +1,10 @@
 ﻿{
   "RhetosBuildEnvironment": {
-    "ProjectFolder": "C:\\Users\\jpreksavec\\source\\repos\\Bookstore\\src\\Bookstore.Service",
+    "ProjectFolder": "C:\\Users\\jpreksavec\\Source\\Repos\\Bookstore\\src\\Bookstore.Service",
     "OutputAssemblyName": "Bookstore.Service",
-    "CacheFolder": "C:\\Users\\jpreksavec\\source\\repos\\Bookstore\\src\\Bookstore.Service\\obj\\Rhetos",
-    "GeneratedAssetsFolder": "C:\\Users\\jpreksavec\\source\\repos\\Bookstore\\src\\Bookstore.Service\\obj\\Rhetos\\Assets",
-    "GeneratedSourceFolder": "C:\\Users\\jpreksavec\\source\\repos\\Bookstore\\src\\Bookstore.Service\\obj\\Rhetos\\Source"
+    "CacheFolder": "C:\\Users\\jpreksavec\\Source\\Repos\\Bookstore\\src\\Bookstore.Service\\obj\\Rhetos",
+    "GeneratedAssetsFolder": "C:\\Users\\jpreksavec\\Source\\Repos\\Bookstore\\src\\Bookstore.Service\\obj\\Rhetos\\Assets",
+    "GeneratedSourceFolder": "C:\\Users\\jpreksavec\\Source\\Repos\\Bookstore\\src\\Bookstore.Service\\obj\\Rhetos\\Source"
   },
   "RhetosProjectAssets": {
     "InstalledPackages": {
@@ -10208,6 +10208,59 @@
           ]
         },
         {
+          "Id": "Rhetos.RestGenerator",
+          "Version": "5.0.0.0",
+          "Dependencies": [
+            {
+              "Id": "Rhetos.CommonConcepts",
+              "VersionsRange": "5.0.0"
+            },
+            {
+              "Id": "Rhetos.Host.AspNet",
+              "VersionsRange": "5.0.0"
+            }
+          ],
+          "Folder": "C:\\Users\\jpreksavec\\.nuget\\packages\\rhetos.restgenerator\\5.0.0",
+          "ContentFiles": [
+            {
+              "PhysicalPath": "C:\\Users\\jpreksavec\\.nuget\\packages\\rhetos.restgenerator\\5.0.0\\.nupkg.metadata",
+              "InPackagePath": ".nupkg.metadata"
+            },
+            {
+              "PhysicalPath": "C:\\Users\\jpreksavec\\.nuget\\packages\\rhetos.restgenerator\\5.0.0\\.signature.p7s",
+              "InPackagePath": ".signature.p7s"
+            },
+            {
+              "PhysicalPath": "C:\\Users\\jpreksavec\\.nuget\\packages\\rhetos.restgenerator\\5.0.0\\ChangeLog.md",
+              "InPackagePath": "ChangeLog.md"
+            },
+            {
+              "PhysicalPath": "C:\\Users\\jpreksavec\\.nuget\\packages\\rhetos.restgenerator\\5.0.0\\Readme.md",
+              "InPackagePath": "Readme.md"
+            },
+            {
+              "PhysicalPath": "C:\\Users\\jpreksavec\\.nuget\\packages\\rhetos.restgenerator\\5.0.0\\lib\\net5.0\\Rhetos.Host.AspNet.RestApi.dll",
+              "InPackagePath": "lib\\net5.0\\Rhetos.Host.AspNet.RestApi.dll"
+            },
+            {
+              "PhysicalPath": "C:\\Users\\jpreksavec\\.nuget\\packages\\rhetos.restgenerator\\5.0.0\\lib\\net5.0\\Rhetos.Host.AspNet.RestApi.pdb",
+              "InPackagePath": "lib\\net5.0\\Rhetos.Host.AspNet.RestApi.pdb"
+            },
+            {
+              "PhysicalPath": "C:\\Users\\jpreksavec\\.nuget\\packages\\rhetos.restgenerator\\5.0.0\\lib\\net5.0\\Rhetos.Host.AspNet.RestApi.xml",
+              "InPackagePath": "lib\\net5.0\\Rhetos.Host.AspNet.RestApi.xml"
+            },
+            {
+              "PhysicalPath": "C:\\Users\\jpreksavec\\.nuget\\packages\\rhetos.restgenerator\\5.0.0\\rhetos.restgenerator.5.0.0.nupkg.sha512",
+              "InPackagePath": "rhetos.restgenerator.5.0.0.nupkg.sha512"
+            },
+            {
+              "PhysicalPath": "C:\\Users\\jpreksavec\\.nuget\\packages\\rhetos.restgenerator\\5.0.0\\rhetos.restgenerator.nuspec",
+              "InPackagePath": "rhetos.restgenerator.nuspec"
+            }
+          ]
+        },
+        {
           "Id": "Bookstore.Service",
           "Version": "",
           "Dependencies": [
@@ -10236,18 +10289,22 @@
               "VersionsRange": "[5.3.0, )"
             },
             {
+              "Id": "Rhetos.RestGenerator",
+              "VersionsRange": "[5.0.0, )"
+            },
+            {
               "Id": "Swashbuckle.AspNetCore",
               "VersionsRange": "[6.4.0, )"
             }
           ],
-          "Folder": "C:\\Users\\jpreksavec\\source\\repos\\Bookstore\\src\\Bookstore.Service\\.",
+          "Folder": "C:\\Users\\jpreksavec\\Source\\Repos\\Bookstore\\src\\Bookstore.Service\\.",
           "ContentFiles": [
             {
-              "PhysicalPath": "C:\\Users\\jpreksavec\\source\\repos\\Bookstore\\src\\Bookstore.Service\\DslScripts\\Books.rhe",
+              "PhysicalPath": "C:\\Users\\jpreksavec\\Source\\Repos\\Bookstore\\src\\Bookstore.Service\\DslScripts\\Books.rhe",
               "InPackagePath": "DslScripts\\Books.rhe"
             },
             {
-              "PhysicalPath": "C:\\Users\\jpreksavec\\source\\repos\\Bookstore\\src\\Bookstore.Service\\DslScripts\\Employees.rhe",
+              "PhysicalPath": "C:\\Users\\jpreksavec\\Source\\Repos\\Bookstore\\src\\Bookstore.Service\\DslScripts\\Employees.rhe",
               "InPackagePath": "DslScripts\\Employees.rhe"
             }
           ]
@@ -10325,6 +10382,7 @@
       "C:\\Users\\jpreksavec\\.nuget\\packages\\rhetos.dslparser\\5.3.0\\lib\\netstandard2.1\\Rhetos.Utilities.Interfaces.dll",
       "C:\\Users\\jpreksavec\\.nuget\\packages\\rhetos.host.aspnet\\5.3.0\\lib\\net5.0\\Rhetos.Host.AspNet.dll",
       "C:\\Users\\jpreksavec\\.nuget\\packages\\rhetos.host.net\\5.3.0\\lib\\net5.0\\Rhetos.Host.Net.dll",
+      "C:\\Users\\jpreksavec\\.nuget\\packages\\rhetos.restgenerator\\5.0.0\\lib\\net5.0\\Rhetos.Host.AspNet.RestApi.dll",
       "C:\\Users\\jpreksavec\\.nuget\\packages\\swashbuckle.aspnetcore.swagger\\6.4.0\\lib\\net6.0\\Swashbuckle.AspNetCore.Swagger.dll",
       "C:\\Users\\jpreksavec\\.nuget\\packages\\swashbuckle.aspnetcore.swaggergen\\6.4.0\\lib\\net6.0\\Swashbuckle.AspNetCore.SwaggerGen.dll",
       "C:\\Users\\jpreksavec\\.nuget\\packages\\swashbuckle.aspnetcore.swaggerui\\6.4.0\\lib\\net6.0\\Swashbuckle.AspNetCore.SwaggerUI.dll",

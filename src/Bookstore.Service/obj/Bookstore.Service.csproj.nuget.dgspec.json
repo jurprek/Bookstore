@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\jpreksavec\\source\\repos\\Bookstore\\src\\Bookstore.Service\\Bookstore.Service.csproj": {}
+    "C:\\Users\\jpreksavec\\Source\\Repos\\Bookstore\\src\\Bookstore.Service\\Bookstore.Service.csproj": {}
   },
   "projects": {
-    "C:\\Users\\jpreksavec\\source\\repos\\Bookstore\\src\\Bookstore.Service\\Bookstore.Service.csproj": {
+    "C:\\Users\\jpreksavec\\Source\\Repos\\Bookstore\\src\\Bookstore.Service\\Bookstore.Service.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\jpreksavec\\source\\repos\\Bookstore\\src\\Bookstore.Service\\Bookstore.Service.csproj",
+        "projectUniqueName": "C:\\Users\\jpreksavec\\Source\\Repos\\Bookstore\\src\\Bookstore.Service\\Bookstore.Service.csproj",
         "projectName": "Bookstore.Service",
-        "projectPath": "C:\\Users\\jpreksavec\\source\\repos\\Bookstore\\src\\Bookstore.Service\\Bookstore.Service.csproj",
+        "projectPath": "C:\\Users\\jpreksavec\\Source\\Repos\\Bookstore\\src\\Bookstore.Service\\Bookstore.Service.csproj",
         "packagesPath": "C:\\Users\\jpreksavec\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\jpreksavec\\source\\repos\\Bookstore\\src\\Bookstore.Service\\obj\\",
+        "outputPath": "C:\\Users\\jpreksavec\\Source\\Repos\\Bookstore\\src\\Bookstore.Service\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\jpreksavec\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -63,6 +63,10 @@
             "Rhetos.MSBuild": {
               "target": "Package",
               "version": "[5.3.0, )"
+            },
+            "Rhetos.RestGenerator": {
+              "target": "Package",
+              "version": "[5.0.0, )"
             },
             "Swashbuckle.AspNetCore": {
               "target": "Package",

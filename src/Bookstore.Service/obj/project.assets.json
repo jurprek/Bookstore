@@ -1152,6 +1152,26 @@
           "build/Rhetos.MSBuild.targets": {}
         }
       },
+      "Rhetos.RestGenerator/5.0.0": {
+        "type": "package",
+        "dependencies": {
+          "Rhetos.CommonConcepts": "5.0.0",
+          "Rhetos.Host.AspNet": "5.0.0"
+        },
+        "compile": {
+          "lib/net5.0/Rhetos.Host.AspNet.RestApi.dll": {
+            "related": ".pdb;.xml"
+          }
+        },
+        "runtime": {
+          "lib/net5.0/Rhetos.Host.AspNet.RestApi.dll": {
+            "related": ".pdb;.xml"
+          }
+        },
+        "frameworkReferences": [
+          "Microsoft.AspNetCore.App"
+        ]
+      },
       "runtime.native.System.Data.SqlClient.sni/4.7.0": {
         "type": "package",
         "dependencies": {
@@ -3516,6 +3536,22 @@
         "tools/runtimes/win/lib/netcoreapp2.1/System.Data.SqlClient.dll"
       ]
     },
+    "Rhetos.RestGenerator/5.0.0": {
+      "sha512": "+YHVCuCDhGaCae6DQ+vXq6PRsPIpbwDRma03Qc77NYANagSxQWTucMJrbWhn0kaswNHoW8sHz19NtCMWmEGWNA==",
+      "type": "package",
+      "path": "rhetos.restgenerator/5.0.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "ChangeLog.md",
+        "Readme.md",
+        "lib/net5.0/Rhetos.Host.AspNet.RestApi.dll",
+        "lib/net5.0/Rhetos.Host.AspNet.RestApi.pdb",
+        "lib/net5.0/Rhetos.Host.AspNet.RestApi.xml",
+        "rhetos.restgenerator.5.0.0.nupkg.sha512",
+        "rhetos.restgenerator.nuspec"
+      ]
+    },
     "runtime.native.System.Data.SqlClient.sni/4.7.0": {
       "sha512": "9kyFSIdN3T0qjDQ2R0HRXYIhS3l5psBzQi6qqhdLz+SzFyEy4sVxNOke+yyYv8Cu8rPER12c3RDjLT8wF3WBYQ==",
       "type": "package",
@@ -4628,6 +4664,7 @@
       "Rhetos.Host >= 5.3.0",
       "Rhetos.Host.AspNet >= 5.3.0",
       "Rhetos.MSBuild >= 5.3.0",
+      "Rhetos.RestGenerator >= 5.0.0",
       "Swashbuckle.AspNetCore >= 6.4.0"
     ]
   },
@@ -4637,11 +4674,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\jpreksavec\\source\\repos\\Bookstore\\src\\Bookstore.Service\\Bookstore.Service.csproj",
+      "projectUniqueName": "C:\\Users\\jpreksavec\\Source\\Repos\\Bookstore\\src\\Bookstore.Service\\Bookstore.Service.csproj",
       "projectName": "Bookstore.Service",
-      "projectPath": "C:\\Users\\jpreksavec\\source\\repos\\Bookstore\\src\\Bookstore.Service\\Bookstore.Service.csproj",
+      "projectPath": "C:\\Users\\jpreksavec\\Source\\Repos\\Bookstore\\src\\Bookstore.Service\\Bookstore.Service.csproj",
       "packagesPath": "C:\\Users\\jpreksavec\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\jpreksavec\\source\\repos\\Bookstore\\src\\Bookstore.Service\\obj\\",
+      "outputPath": "C:\\Users\\jpreksavec\\Source\\Repos\\Bookstore\\src\\Bookstore.Service\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\jpreksavec\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -4693,6 +4730,10 @@
           "Rhetos.MSBuild": {
             "target": "Package",
             "version": "[5.3.0, )"
+          },
+          "Rhetos.RestGenerator": {
+            "target": "Package",
+            "version": "[5.0.0, )"
           },
           "Swashbuckle.AspNetCore": {
             "target": "Package",
