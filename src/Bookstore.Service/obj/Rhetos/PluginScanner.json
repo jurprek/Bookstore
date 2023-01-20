@@ -632,6 +632,14 @@
     "C:\\Users\\jpreksavec\\.nuget\\packages\\rhetos.restgenerator\\5.0.0\\lib\\net5.0\\Rhetos.Host.AspNet.RestApi.dll": {
       "ModifiedTime": "2022-03-25T16:51:30.0000000Z",
       "TypesWithExports": []
+    },
+    "C:\\Users\\jpreksavec\\.nuget\\packages\\nlog.extensions.logging\\1.7.0\\lib\\net5.0\\NLog.Extensions.Logging.dll": {
+      "ModifiedTime": "2020-12-29T01:45:34.0000000Z",
+      "TypesWithExports": []
+    },
+    "C:\\Users\\jpreksavec\\.nuget\\packages\\nlog.web.aspnetcore\\4.10.0\\lib\\netcoreapp3.0\\NLog.Web.AspNetCore.dll": {
+      "ModifiedTime": "2020-12-30T20:06:04.0000000Z",
+      "TypesWithExports": []
     }
   }
 }

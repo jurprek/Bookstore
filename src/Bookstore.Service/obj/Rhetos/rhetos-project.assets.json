@@ -5683,6 +5683,176 @@
           ]
         },
         {
+          "Id": "NLog.Extensions.Logging",
+          "Version": "1.7.0.0",
+          "Dependencies": [
+            {
+              "Id": "Microsoft.Extensions.Configuration.Abstractions",
+              "VersionsRange": "5.0.0"
+            },
+            {
+              "Id": "Microsoft.Extensions.Logging",
+              "VersionsRange": "5.0.0"
+            },
+            {
+              "Id": "NLog",
+              "VersionsRange": "4.7.6"
+            }
+          ],
+          "Folder": "C:\\Users\\jpreksavec\\.nuget\\packages\\nlog.extensions.logging\\1.7.0",
+          "ContentFiles": [
+            {
+              "PhysicalPath": "C:\\Users\\jpreksavec\\.nuget\\packages\\nlog.extensions.logging\\1.7.0\\.nupkg.metadata",
+              "InPackagePath": ".nupkg.metadata"
+            },
+            {
+              "PhysicalPath": "C:\\Users\\jpreksavec\\.nuget\\packages\\nlog.extensions.logging\\1.7.0\\.signature.p7s",
+              "InPackagePath": ".signature.p7s"
+            },
+            {
+              "PhysicalPath": "C:\\Users\\jpreksavec\\.nuget\\packages\\nlog.extensions.logging\\1.7.0\\N.png",
+              "InPackagePath": "N.png"
+            },
+            {
+              "PhysicalPath": "C:\\Users\\jpreksavec\\.nuget\\packages\\nlog.extensions.logging\\1.7.0\\lib\\net451\\NLog.Extensions.Logging.dll",
+              "InPackagePath": "lib\\net451\\NLog.Extensions.Logging.dll"
+            },
+            {
+              "PhysicalPath": "C:\\Users\\jpreksavec\\.nuget\\packages\\nlog.extensions.logging\\1.7.0\\lib\\net451\\NLog.Extensions.Logging.xml",
+              "InPackagePath": "lib\\net451\\NLog.Extensions.Logging.xml"
+            },
+            {
+              "PhysicalPath": "C:\\Users\\jpreksavec\\.nuget\\packages\\nlog.extensions.logging\\1.7.0\\lib\\net461\\NLog.Extensions.Logging.dll",
+              "InPackagePath": "lib\\net461\\NLog.Extensions.Logging.dll"
+            },
+            {
+              "PhysicalPath": "C:\\Users\\jpreksavec\\.nuget\\packages\\nlog.extensions.logging\\1.7.0\\lib\\net461\\NLog.Extensions.Logging.xml",
+              "InPackagePath": "lib\\net461\\NLog.Extensions.Logging.xml"
+            },
+            {
+              "PhysicalPath": "C:\\Users\\jpreksavec\\.nuget\\packages\\nlog.extensions.logging\\1.7.0\\lib\\net5.0\\NLog.Extensions.Logging.dll",
+              "InPackagePath": "lib\\net5.0\\NLog.Extensions.Logging.dll"
+            },
+            {
+              "PhysicalPath": "C:\\Users\\jpreksavec\\.nuget\\packages\\nlog.extensions.logging\\1.7.0\\lib\\net5.0\\NLog.Extensions.Logging.xml",
+              "InPackagePath": "lib\\net5.0\\NLog.Extensions.Logging.xml"
+            },
+            {
+              "PhysicalPath": "C:\\Users\\jpreksavec\\.nuget\\packages\\nlog.extensions.logging\\1.7.0\\lib\\netcoreapp3.0\\NLog.Extensions.Logging.dll",
+              "InPackagePath": "lib\\netcoreapp3.0\\NLog.Extensions.Logging.dll"
+            },
+            {
+              "PhysicalPath": "C:\\Users\\jpreksavec\\.nuget\\packages\\nlog.extensions.logging\\1.7.0\\lib\\netcoreapp3.0\\NLog.Extensions.Logging.xml",
+              "InPackagePath": "lib\\netcoreapp3.0\\NLog.Extensions.Logging.xml"
+            },
+            {
+              "PhysicalPath": "C:\\Users\\jpreksavec\\.nuget\\packages\\nlog.extensions.logging\\1.7.0\\lib\\netstandard1.3\\NLog.Extensions.Logging.dll",
+              "InPackagePath": "lib\\netstandard1.3\\NLog.Extensions.Logging.dll"
+            },
+            {
+              "PhysicalPath": "C:\\Users\\jpreksavec\\.nuget\\packages\\nlog.extensions.logging\\1.7.0\\lib\\netstandard1.3\\NLog.Extensions.Logging.xml",
+              "InPackagePath": "lib\\netstandard1.3\\NLog.Extensions.Logging.xml"
+            },
+            {
+              "PhysicalPath": "C:\\Users\\jpreksavec\\.nuget\\packages\\nlog.extensions.logging\\1.7.0\\lib\\netstandard1.5\\NLog.Extensions.Logging.dll",
+              "InPackagePath": "lib\\netstandard1.5\\NLog.Extensions.Logging.dll"
+            },
+            {
+              "PhysicalPath": "C:\\Users\\jpreksavec\\.nuget\\packages\\nlog.extensions.logging\\1.7.0\\lib\\netstandard1.5\\NLog.Extensions.Logging.xml",
+              "InPackagePath": "lib\\netstandard1.5\\NLog.Extensions.Logging.xml"
+            },
+            {
+              "PhysicalPath": "C:\\Users\\jpreksavec\\.nuget\\packages\\nlog.extensions.logging\\1.7.0\\lib\\netstandard2.0\\NLog.Extensions.Logging.dll",
+              "InPackagePath": "lib\\netstandard2.0\\NLog.Extensions.Logging.dll"
+            },
+            {
+              "PhysicalPath": "C:\\Users\\jpreksavec\\.nuget\\packages\\nlog.extensions.logging\\1.7.0\\lib\\netstandard2.0\\NLog.Extensions.Logging.xml",
+              "InPackagePath": "lib\\netstandard2.0\\NLog.Extensions.Logging.xml"
+            },
+            {
+              "PhysicalPath": "C:\\Users\\jpreksavec\\.nuget\\packages\\nlog.extensions.logging\\1.7.0\\nlog.extensions.logging.1.7.0.nupkg.sha512",
+              "InPackagePath": "nlog.extensions.logging.1.7.0.nupkg.sha512"
+            },
+            {
+              "PhysicalPath": "C:\\Users\\jpreksavec\\.nuget\\packages\\nlog.extensions.logging\\1.7.0\\nlog.extensions.logging.nuspec",
+              "InPackagePath": "nlog.extensions.logging.nuspec"
+            }
+          ]
+        },
+        {
+          "Id": "NLog.Web.AspNetCore",
+          "Version": "4.10.0.0",
+          "Dependencies": [
+            {
+              "Id": "NLog.Extensions.Logging",
+              "VersionsRange": "1.7.0"
+            }
+          ],
+          "Folder": "C:\\Users\\jpreksavec\\.nuget\\packages\\nlog.web.aspnetcore\\4.10.0",
+          "ContentFiles": [
+            {
+              "PhysicalPath": "C:\\Users\\jpreksavec\\.nuget\\packages\\nlog.web.aspnetcore\\4.10.0\\.nupkg.metadata",
+              "InPackagePath": ".nupkg.metadata"
+            },
+            {
+              "PhysicalPath": "C:\\Users\\jpreksavec\\.nuget\\packages\\nlog.web.aspnetcore\\4.10.0\\.signature.p7s",
+              "InPackagePath": ".signature.p7s"
+            },
+            {
+              "PhysicalPath": "C:\\Users\\jpreksavec\\.nuget\\packages\\nlog.web.aspnetcore\\4.10.0\\N.png",
+              "InPackagePath": "N.png"
+            },
+            {
+              "PhysicalPath": "C:\\Users\\jpreksavec\\.nuget\\packages\\nlog.web.aspnetcore\\4.10.0\\lib\\net451\\NLog.Web.AspNetCore.dll",
+              "InPackagePath": "lib\\net451\\NLog.Web.AspNetCore.dll"
+            },
+            {
+              "PhysicalPath": "C:\\Users\\jpreksavec\\.nuget\\packages\\nlog.web.aspnetcore\\4.10.0\\lib\\net451\\NLog.Web.AspNetCore.xml",
+              "InPackagePath": "lib\\net451\\NLog.Web.AspNetCore.xml"
+            },
+            {
+              "PhysicalPath": "C:\\Users\\jpreksavec\\.nuget\\packages\\nlog.web.aspnetcore\\4.10.0\\lib\\net461\\NLog.Web.AspNetCore.dll",
+              "InPackagePath": "lib\\net461\\NLog.Web.AspNetCore.dll"
+            },
+            {
+              "PhysicalPath": "C:\\Users\\jpreksavec\\.nuget\\packages\\nlog.web.aspnetcore\\4.10.0\\lib\\net461\\NLog.Web.AspNetCore.xml",
+              "InPackagePath": "lib\\net461\\NLog.Web.AspNetCore.xml"
+            },
+            {
+              "PhysicalPath": "C:\\Users\\jpreksavec\\.nuget\\packages\\nlog.web.aspnetcore\\4.10.0\\lib\\netcoreapp3.0\\NLog.Web.AspNetCore.dll",
+              "InPackagePath": "lib\\netcoreapp3.0\\NLog.Web.AspNetCore.dll"
+            },
+            {
+              "PhysicalPath": "C:\\Users\\jpreksavec\\.nuget\\packages\\nlog.web.aspnetcore\\4.10.0\\lib\\netcoreapp3.0\\NLog.Web.AspNetCore.xml",
+              "InPackagePath": "lib\\netcoreapp3.0\\NLog.Web.AspNetCore.xml"
+            },
+            {
+              "PhysicalPath": "C:\\Users\\jpreksavec\\.nuget\\packages\\nlog.web.aspnetcore\\4.10.0\\lib\\netstandard1.5\\NLog.Web.AspNetCore.dll",
+              "InPackagePath": "lib\\netstandard1.5\\NLog.Web.AspNetCore.dll"
+            },
+            {
+              "PhysicalPath": "C:\\Users\\jpreksavec\\.nuget\\packages\\nlog.web.aspnetcore\\4.10.0\\lib\\netstandard1.5\\NLog.Web.AspNetCore.xml",
+              "InPackagePath": "lib\\netstandard1.5\\NLog.Web.AspNetCore.xml"
+            },
+            {
+              "PhysicalPath": "C:\\Users\\jpreksavec\\.nuget\\packages\\nlog.web.aspnetcore\\4.10.0\\lib\\netstandard2.0\\NLog.Web.AspNetCore.dll",
+              "InPackagePath": "lib\\netstandard2.0\\NLog.Web.AspNetCore.dll"
+            },
+            {
+              "PhysicalPath": "C:\\Users\\jpreksavec\\.nuget\\packages\\nlog.web.aspnetcore\\4.10.0\\lib\\netstandard2.0\\NLog.Web.AspNetCore.xml",
+              "InPackagePath": "lib\\netstandard2.0\\NLog.Web.AspNetCore.xml"
+            },
+            {
+              "PhysicalPath": "C:\\Users\\jpreksavec\\.nuget\\packages\\nlog.web.aspnetcore\\4.10.0\\nlog.web.aspnetcore.4.10.0.nupkg.sha512",
+              "InPackagePath": "nlog.web.aspnetcore.4.10.0.nupkg.sha512"
+            },
+            {
+              "PhysicalPath": "C:\\Users\\jpreksavec\\.nuget\\packages\\nlog.web.aspnetcore\\4.10.0\\nlog.web.aspnetcore.nuspec",
+              "InPackagePath": "nlog.web.aspnetcore.nuspec"
+            }
+          ]
+        },
+        {
           "Id": "Microsoft.Extensions.Hosting.Abstractions",
           "Version": "6.0.0.0",
           "Dependencies": [
@@ -10273,6 +10443,10 @@
               "VersionsRange": "[7.0.0, )"
             },
             {
+              "Id": "NLog.Web.AspNetCore",
+              "VersionsRange": "[4.10.0, )"
+            },
+            {
               "Id": "Rhetos.CommonConcepts",
               "VersionsRange": "[5.3.0, )"
             },
@@ -10349,6 +10523,8 @@
       "C:\\Users\\jpreksavec\\.nuget\\packages\\microsoft.win32.systemevents\\6.0.0\\lib\\net6.0\\Microsoft.Win32.SystemEvents.dll",
       "C:\\Users\\jpreksavec\\.nuget\\packages\\newtonsoft.json\\13.0.1\\lib\\netstandard2.0\\Newtonsoft.Json.dll",
       "C:\\Users\\jpreksavec\\.nuget\\packages\\nlog\\4.7.11\\lib\\netstandard2.0\\NLog.dll",
+      "C:\\Users\\jpreksavec\\.nuget\\packages\\nlog.extensions.logging\\1.7.0\\lib\\net5.0\\NLog.Extensions.Logging.dll",
+      "C:\\Users\\jpreksavec\\.nuget\\packages\\nlog.web.aspnetcore\\4.10.0\\lib\\netcoreapp3.0\\NLog.Web.AspNetCore.dll",
       "C:\\Users\\jpreksavec\\.nuget\\packages\\oracle.manageddataaccess.core\\3.21.50\\lib\\netstandard2.1\\Oracle.ManagedDataAccess.dll",
       "C:\\Users\\jpreksavec\\.nuget\\packages\\rhetos\\5.3.0\\lib\\net5.0\\Rhetos.Compiler.Interfaces.dll",
       "C:\\Users\\jpreksavec\\.nuget\\packages\\rhetos\\5.3.0\\lib\\net5.0\\Rhetos.Compiler.dll",

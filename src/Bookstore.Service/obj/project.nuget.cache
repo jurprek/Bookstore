@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "wrduk1H5H/1d7hv7ywSrBphT9wXXyqxCebzZ8Jmxgos9uDMCwya5dfyB8X/FXcJ6JU/pTZNfsyt4kBjjGsrR/g==",
+  "dgSpecHash": "C42B0iqRk5l0ylIBf3W+yvhaZpUXerYA7FCNLSx43QXmKuaCcxv4rI6HcsErlcia/IC5NqAYA0jgROnsNSw47g==",
   "success": true,
   "projectFilePath": "C:\\Users\\jpreksavec\\Source\\Repos\\Bookstore\\src\\Bookstore.Service\\Bookstore.Service.csproj",
   "expectedPackageFiles": [
@@ -44,6 +44,8 @@
     "C:\\Users\\jpreksavec\\.nuget\\packages\\microsoft.win32.systemevents\\6.0.0\\microsoft.win32.systemevents.6.0.0.nupkg.sha512",
     "C:\\Users\\jpreksavec\\.nuget\\packages\\newtonsoft.json\\13.0.1\\newtonsoft.json.13.0.1.nupkg.sha512",
     "C:\\Users\\jpreksavec\\.nuget\\packages\\nlog\\4.7.11\\nlog.4.7.11.nupkg.sha512",
+    "C:\\Users\\jpreksavec\\.nuget\\packages\\nlog.extensions.logging\\1.7.0\\nlog.extensions.logging.1.7.0.nupkg.sha512",
+    "C:\\Users\\jpreksavec\\.nuget\\packages\\nlog.web.aspnetcore\\4.10.0\\nlog.web.aspnetcore.4.10.0.nupkg.sha512",
     "C:\\Users\\jpreksavec\\.nuget\\packages\\oracle.manageddataaccess.core\\3.21.50\\oracle.manageddataaccess.core.3.21.50.nupkg.sha512",
     "C:\\Users\\jpreksavec\\.nuget\\packages\\rhetos\\5.3.0\\rhetos.5.3.0.nupkg.sha512",
     "C:\\Users\\jpreksavec\\.nuget\\packages\\rhetos.commonconcepts\\5.3.0\\rhetos.commonconcepts.5.3.0.nupkg.sha512",

@@ -1,4 +1,5 @@
 using Rhetos;
+using NLog.Web;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -12,7 +13,8 @@ builder.Services.AddRhetosHost((serviceProvider, rhetosHostBuilder) => rhetosHos
               {
                   o.BaseRoute = "rest";
                   o.GroupNameMapper = (conceptInfo, controller, oldName) => "v1";
-              });
+              })
+              .AddHostLogging();
 
 // Add services to the container.
 
@@ -20,6 +22,7 @@ builder.Services.AddControllers();
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen(o => o.CustomSchemaIds(type => type.ToString())); // CustomSchemaIds allows multiple entities with the same name in different modules.
+builder.Host.UseNLog();
 
 var app = builder.Build();
 

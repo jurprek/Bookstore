@@ -163,3 +163,5 @@ C:\Users\jpreksavec\source\repos\Bookstore\src\Bookstore.Service\obj\Debug\net7.
 C:\Users\jpreksavec\source\repos\Bookstore\src\Bookstore.Service\obj\Debug\net7.0\Bookstore.Service.genruntimeconfig.cache
 C:\Users\jpreksavec\source\repos\Bookstore\src\Bookstore.Service\obj\Debug\net7.0\ref\Bookstore.Service.dll
 C:\Users\jpreksavec\Source\Repos\Bookstore\src\Bookstore.Service\bin\Debug\net7.0\Rhetos.Host.AspNet.RestApi.dll
+C:\Users\jpreksavec\Source\Repos\Bookstore\src\Bookstore.Service\bin\Debug\net7.0\NLog.Extensions.Logging.dll
+C:\Users\jpreksavec\Source\Repos\Bookstore\src\Bookstore.Service\bin\Debug\net7.0\NLog.Web.AspNetCore.dll

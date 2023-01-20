@@ -1,4 +1,4 @@
-﻿<Project Sdk="Microsoft.NET.Sdk.Web">
+<Project Sdk="Microsoft.NET.Sdk.Web">
 
   <PropertyGroup>
     <RhetosDeploy>True</RhetosDeploy>
@@ -10,6 +10,7 @@
   <ItemGroup>
     <PackageReference Include="Microsoft.AspNetCore.OpenApi" Version="7.0.2" />
     <PackageReference Include="Microsoft.Extensions.Configuration" Version="7.0.0" />
+    <PackageReference Include="NLog.Web.AspNetCore" Version="4.10.0" />
     <PackageReference Include="Rhetos.CommonConcepts" Version="5.3.0" />
     <PackageReference Include="Rhetos.Host" Version="5.3.0" />
     <PackageReference Include="Rhetos.Host.AspNet" Version="5.3.0" />
