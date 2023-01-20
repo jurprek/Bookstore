@@ -1,0 +1,80 @@
+Module Bookstore  //https://github.com/Rhetos/Rhetos/wiki/Data-model-and-relationships#entities-and-properties
+{
+    AutodetectSqlDependencies;
+
+   Entity Book  //One-to-many relationship (master-detail). "1 : N" relationship is declared by the Reference from the dependent entity to the other one.
+   {
+      ShortString Code { AutoCode; }
+      ShortString Title { Required; }
+   
+	  Integer NumberOfPages;
+      ItemFilter CommonMisspelling 'book => book.Title.Contains("curiousity")';
+      InvalidData CommonMisspelling 'It is not allowed to enter misspelled word "curiousity".';
+      
+	  ItemFilter NameTooLong 'item => item.Title.Length > 100';
+      InvalidData NameTooLong '[Test] Longer than 100.'; // { AllowSave; }
+
+      Logging;
+   }
+
+   Entity Person
+   {
+      ShortString Name;
+   }
+
+   Entity Comment
+   {
+      Reference Book { Detail; }
+      LongString Text;
+   }
+
+   Entity ChildrensBook  //One-to-one relationship (extensions). One-to-one relationship is declared by the Extends concept.
+   {
+      Extends Bookstore.Book;
+
+      Integer AgeFrom;
+      Integer AgeTo;
+      IntegerRange AgeFrom AgeTo; // A simple validation.
+   }
+
+   Entity ForeignBook
+   {
+      Extends Bookstore.Book;
+
+      ShortString OriginalLanguage;
+      Reference Translator Bookstore.Person;
+   }
+
+   Entity Topic  //Many-to-many relationship (join table). "N : N" relationship is usually implemented as an associative table. 
+   {
+      ShortString Name { Unique; Required; }
+   }
+
+   Entity BookTopic
+   {
+      Reference Book { Detail; }
+      Reference Topic { Required; }
+
+      UniqueMultiple 'Book Topic';
+   }
+}
+
+// Relationships summary
+// The following DSL keywords are available for relationships between entities (and other data structures).
+//  ------------------------------------------------------------------
+//  |            Simple relationship	|    "Part-of" relationship  |
+//  ==================================================================
+//  |  1 : N	         Reference	    |      Reference { Detail; } |
+//  ------------------------------------------------------------------
+//  |  0..1 : 1     UniqueReference     |     	Extension            |
+//  ------------------------------------------------------------------
+
+// ---  Nakon ovih izmjena treba updateati (u SQL-u kreiranu) bazu "Bookstore" (koraci 10. & 11. iz Rhetos-Bookstore.txt):
+
+// 10. In Bookstore.Service Run (CMD):
+
+//            dotnet build    
+            
+// 11. In folder (Bookstore.Service\bin\Debug\net6.0) execute dbupdate (CMD) command:
+
+//           ./rhetos.exe dbupdate Bookstore.Service.dll                   
