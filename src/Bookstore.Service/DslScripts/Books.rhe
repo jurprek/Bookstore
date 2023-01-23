@@ -4,28 +4,58 @@ Module Bookstore  //https://github.com/Rhetos/Rhetos/wiki/Data-model-and-relatio
 
    Entity Book  //One-to-many relationship (master-detail). "1 : N" relationship is declared by the Reference from the dependent entity to the other one.
    {
-      ShortString Code { AutoCode; }
+      ShortString Code { AutoCode; DenyUserEdit; }
+      //ShortString Code { RegExMatch "\d{7,10}" "Code must have 7 to 10 digits."; }
       ShortString Title { Required; }
    
-	  Integer NumberOfPages;
+	  Integer NumberOfPages {MaxValue 999;}
       ItemFilter CommonMisspelling 'book => book.Title.Contains("curiousity")';
       InvalidData CommonMisspelling 'It is not allowed to enter misspelled word "curiousity".';
       
 	  ItemFilter NameTooLong 'item => item.Title.Length > 100';
+      //Lock NameTooLong 'item => item.Title.Length > 100';
       InvalidData NameTooLong '[Test] Longer than 100.'; // { AllowSave; }
 
-      Logging;
+      Logging
+      {
+            Log Bookstore.Book.Title;
+            Log Bookstore.Book.Code;
+            // 'Description' property is long and not interesting, so we don't want to log its values.
+      }
    }
 
-   Entity Person
+   Entity Author
    {
       ShortString Name;
+   }
+
+   Entity Translator
+   {
+      ShortString Name;
+   }
+
+    Entity BookAuthor
+   {
+      Reference Book { Detail; }
+      Reference Author { Required; }
+
+      UniqueMultiple 'Book Author';
+   }
+
+    Entity BookTranslator
+   {
+      Reference Book { Detail; }
+      Reference Translator { Required; }
+
+      UniqueMultiple 'Book Translator';
    }
 
    Entity Comment
    {
       Reference Book { Detail; }
       LongString Text;
+
+      Logging { AllProperties; }
    }
 
    Entity ChildrensBook  //One-to-one relationship (extensions). One-to-one relationship is declared by the Extends concept.
@@ -42,7 +72,9 @@ Module Bookstore  //https://github.com/Rhetos/Rhetos/wiki/Data-model-and-relatio
       Extends Bookstore.Book;
 
       ShortString OriginalLanguage;
-      Reference Translator Bookstore.Person;
+      Reference Translator Bookstore.Translator;
+      Reference Author Bookstore.Author;
+
    }
 
    Entity Topic  //Many-to-many relationship (join table). "N : N" relationship is usually implemented as an associative table. 
@@ -57,6 +89,98 @@ Module Bookstore  //https://github.com/Rhetos/Rhetos/wiki/Data-model-and-relatio
 
       UniqueMultiple 'Book Topic';
    }
+
+   Browse BookGrid Bookstore.Book
+   {
+        Take Code;
+        Take Title;
+        Take AuthorName 'Extension_ForeignBook.Author.Name';
+        Take TranslatorName 'Extension_ForeignBook.Translator.Name';
+        Take NumberOfComments 'Extension_BookInfo.NumberOfComments';
+   }
+
+    //SqlQueryable BookInfo
+    //"
+    //    SELECT
+    //        b.ID,
+    //        NumberOfComments = COUNT(c.ID)
+    //    FROM
+    //        Bookstore.Book b
+    //        LEFT JOIN Bookstore.Comment c ON c.BookID = b.ID
+    //    GROUP BY
+    //        b.ID
+    //"
+    //{
+    //    Extends Bookstore.Book;
+    //    Integer NumberOfComments;
+    //
+    //    AutodetectSqlDependencies;
+    //}
+
+   SqlQueryable BookInfo <SQL\BookInfo.sql>
+   {
+        Extends Bookstore.Book;
+        Integer NumberOfComments;
+
+        AutodetectSqlDependencies;
+   }
+
+   Computed ExpectedBookRating 'repository =>
+        {
+            var books = repository.Bookstore.Book.Query()
+                .Select(b =>
+                    new
+                    {
+                        b.ID,
+                        b.Title,
+                        IsForeign = b.Extension_ForeignBook.ID != null
+                    })
+                .ToList();
+
+            var ratings = new List<ExpectedBookRating>();
+            foreach (var book in books)
+            {
+                decimal rating = 0;
+
+                if (book.Title?.IndexOf("super", StringComparison.InvariantCultureIgnoreCase) >= 0)
+                    rating += 100;
+
+                if (book.Title?.IndexOf("great", StringComparison.InvariantCultureIgnoreCase) >= 0)
+                    rating += 50;
+
+                if (book.IsForeign)
+                    rating *= 1.2m;
+
+                ratings.Add(new ExpectedBookRating { ID = book.ID, Rating = rating });
+            }
+
+            return ratings.ToArray();
+        }'
+    {
+        Extends Bookstore.Book;
+        Decimal Rating;
+    }
+
+    Hardcoded Genre
+    {
+        ShortString Label; // Short text displayed to user.
+        LongString Description;
+        Bool IsFiction;
+
+        Entry ScienceFiction
+        {
+            Value Label 'Science fiction';
+            Value Description 'A speculative fiction with imagined elements that are inspired by natural sciences or social sciences.';
+            Value IsFiction 1;
+        }
+
+        Entry Biography
+        {
+            Value Label 'Biography';
+            Value Description 'A written narrative of a person''s life.';
+            Value IsFiction 0;
+        }
+    }
 }
 
 // Relationships summary
@@ -68,13 +192,4 @@ Module Bookstore  //https://github.com/Rhetos/Rhetos/wiki/Data-model-and-relatio
 //  ------------------------------------------------------------------
 //  |  0..1 : 1     UniqueReference     |     	Extension            |
 //  ------------------------------------------------------------------
-
-// ---  Nakon ovih izmjena treba updateati (u SQL-u kreiranu) bazu "Bookstore" (koraci 10. & 11. iz Rhetos-Bookstore.txt):
-
-// 10. In Bookstore.Service Run (CMD):
-
-//            dotnet build    
-            
-// 11. In folder (Bookstore.Service\bin\Debug\net6.0) execute dbupdate (CMD) command:
-
-//           ./rhetos.exe dbupdate Bookstore.Service.dll                   
+                

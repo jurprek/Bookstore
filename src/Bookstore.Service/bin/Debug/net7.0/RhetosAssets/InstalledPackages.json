@@ -10462,14 +10462,14 @@
           "VersionsRange": "[6.4.0, )"
         }
       ],
-      "Folder": "C:\\Users\\jpreksavec\\Source\\Repos\\Bookstore\\src\\Bookstore.Service\\.",
+      "Folder": "C:\\Users\\jpreksavec\\source\\repos\\Bookstore\\src\\Bookstore.Service\\.",
       "ContentFiles": [
         {
-          "PhysicalPath": "C:\\Users\\jpreksavec\\Source\\Repos\\Bookstore\\src\\Bookstore.Service\\DslScripts\\Books.rhe",
+          "PhysicalPath": "C:\\Users\\jpreksavec\\source\\repos\\Bookstore\\src\\Bookstore.Service\\DslScripts\\Books.rhe",
           "InPackagePath": "DslScripts\\Books.rhe"
         },
         {
-          "PhysicalPath": "C:\\Users\\jpreksavec\\Source\\Repos\\Bookstore\\src\\Bookstore.Service\\DslScripts\\Employees.rhe",
+          "PhysicalPath": "C:\\Users\\jpreksavec\\source\\repos\\Bookstore\\src\\Bookstore.Service\\DslScripts\\Employees.rhe",
           "InPackagePath": "DslScripts\\Employees.rhe"
         }
       ]

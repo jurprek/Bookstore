@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "C42B0iqRk5l0ylIBf3W+yvhaZpUXerYA7FCNLSx43QXmKuaCcxv4rI6HcsErlcia/IC5NqAYA0jgROnsNSw47g==",
+  "dgSpecHash": "KKTPy8sFvkuTYFKpFGsEbhf/zENI72lluw5ukt4DM1z+c1uZaHnUad8ZevrLQrZknh5sU+a8dC5+R3lL7NGy+w==",
   "success": true,
-  "projectFilePath": "C:\\Users\\jpreksavec\\Source\\Repos\\Bookstore\\src\\Bookstore.Service\\Bookstore.Service.csproj",
+  "projectFilePath": "C:\\Users\\jpreksavec\\source\\repos\\Bookstore\\src\\Bookstore.Service\\Bookstore.Service.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\jpreksavec\\.nuget\\packages\\autofac\\6.3.0\\autofac.6.3.0.nupkg.sha512",
     "C:\\Users\\jpreksavec\\.nuget\\packages\\entityframework\\6.4.4\\entityframework.6.4.4.nupkg.sha512",

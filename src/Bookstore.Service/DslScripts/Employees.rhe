@@ -4,13 +4,12 @@ Module Bookstore    //https://github.com/Rhetos/Rhetos-wiki/blob/master/Data-mod
    {
       ShortString Name { Unique; Required; }
       ShortString VAT { AutoCode; }
-      //Reference Department { Required; }         - prebaceno u N:N vezu, tako sto je dodana tablica "EmployeesDepartment"
+      //Reference Department { Required; }      -  prebaceno u N:N vezu, tako sto je dodana tablica "EmployeesDepartment"
    }
 
    Entity Managers
    {
       Extends Bookstore.Employees;
-
       LongString Bonus;
    }
 
@@ -19,10 +18,8 @@ Module Bookstore    //https://github.com/Rhetos/Rhetos-wiki/blob/master/Data-mod
       //Extends Bookstore.Employees;            -  Bojan:   Entity Education bi trebao imati N:1 relaciju sa employee umjesto 1:1
                                                       //    (Each employee can have multiple education records).
                                                       //    Dakle umjesto Extends, treba imati referencu na Employee.
-
       DateTime EduDate;
       LongString Description;
-
       Reference Employees;                            //    Dodano.
    }
   
@@ -36,7 +33,6 @@ Module Bookstore    //https://github.com/Rhetos/Rhetos-wiki/blob/master/Data-mod
    {
       Reference Employees { Detail; }
       Reference Department { Required; }
-
       UniqueMultiple 'Employees Department';
    }
 }

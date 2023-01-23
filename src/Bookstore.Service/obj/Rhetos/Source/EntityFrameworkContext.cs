@@ -40,8 +40,12 @@ namespace Common
             this.Database.CommandTimeout = Rhetos.Utilities.SqlUtility.SqlCommandTimeout;
         }
 
+        public System.Data.Entity.DbSet<Common.Queryable.Bookstore_Author> Bookstore_Author { get; set; }
         public System.Data.Entity.DbSet<Common.Queryable.Bookstore_Book> Bookstore_Book { get; set; }
+        public System.Data.Entity.DbSet<Common.Queryable.Bookstore_BookAuthor> Bookstore_BookAuthor { get; set; }
+        public System.Data.Entity.DbSet<Common.Queryable.Bookstore_BookInfo> Bookstore_BookInfo { get; set; }
         public System.Data.Entity.DbSet<Common.Queryable.Bookstore_BookTopic> Bookstore_BookTopic { get; set; }
+        public System.Data.Entity.DbSet<Common.Queryable.Bookstore_BookTranslator> Bookstore_BookTranslator { get; set; }
         public System.Data.Entity.DbSet<Common.Queryable.Bookstore_ChildrensBook> Bookstore_ChildrensBook { get; set; }
         public System.Data.Entity.DbSet<Common.Queryable.Bookstore_Comment> Bookstore_Comment { get; set; }
         public System.Data.Entity.DbSet<Common.Queryable.Bookstore_Department> Bookstore_Department { get; set; }
@@ -49,9 +53,10 @@ namespace Common
         public System.Data.Entity.DbSet<Common.Queryable.Bookstore_Employees> Bookstore_Employees { get; set; }
         public System.Data.Entity.DbSet<Common.Queryable.Bookstore_EmployeesDepartment> Bookstore_EmployeesDepartment { get; set; }
         public System.Data.Entity.DbSet<Common.Queryable.Bookstore_ForeignBook> Bookstore_ForeignBook { get; set; }
+        public System.Data.Entity.DbSet<Common.Queryable.Bookstore_Genre> Bookstore_Genre { get; set; }
         public System.Data.Entity.DbSet<Common.Queryable.Bookstore_Managers> Bookstore_Managers { get; set; }
-        public System.Data.Entity.DbSet<Common.Queryable.Bookstore_Person> Bookstore_Person { get; set; }
         public System.Data.Entity.DbSet<Common.Queryable.Bookstore_Topic> Bookstore_Topic { get; set; }
+        public System.Data.Entity.DbSet<Common.Queryable.Bookstore_Translator> Bookstore_Translator { get; set; }
         public System.Data.Entity.DbSet<Common.Queryable.Common_AutoCodeCache> Common_AutoCodeCache { get; set; }
         public System.Data.Entity.DbSet<Common.Queryable.Common_Claim> Common_Claim { get; set; }
         public System.Data.Entity.DbSet<Common.Queryable.Common_ExclusiveLock> Common_ExclusiveLock { get; set; }

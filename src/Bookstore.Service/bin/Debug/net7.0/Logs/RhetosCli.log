@@ -266,3 +266,1073 @@
 2023-01-20 14:20:39.6942|INFO|ApplicationInitialization|Initialization ClaimGenerator.
 2023-01-20 14:20:40.0747|INFO|ApplicationInitialization|Initialization KeepSynchronizedRecomputeOnDeploy.
 2023-01-20 14:20:40.0898|INFO|Rhetos DbUpdate|Done.
+2023-01-20 14:25:43.3776|INFO|Rhetos DbUpdate base|Started 'dotnet' process 18104.
+2023-01-20 14:25:43.6426|INFO|Rhetos DbUpdate|Started in C:\Users\jpreksavec\Source\Repos\Bookstore\src\Bookstore.Service\bin\Debug\net7.0\
+2023-01-20 14:25:43.6677|INFO|DatabaseUpdate|Loading plugins.
+2023-01-20 14:25:44.0459|INFO|DatabaseDeployment|SQL connection: DataSource=JPREKSAVEC-LAP, InitialCatalog=Bookstore
+2023-01-20 14:25:44.1640|INFO|DatabaseDeployment|Preparing Rhetos database.
+2023-01-20 14:25:44.4054|INFO|DatabaseDeployment|Cleaning old migration data.
+2023-01-20 14:25:44.4254|INFO|DatabaseCleaner|Deleted 0 columns in data migration schemas, 8 remaining.
+2023-01-20 14:25:44.4254|INFO|DatabaseDeployment|Executing data migration scripts.
+2023-01-20 14:25:44.4254|INFO|ConceptDataMigration|Executing 0 before-data-migration scripts.
+2023-01-20 14:25:44.4454|INFO|DataMigration|Executed 0 of 12 scripts.
+2023-01-20 14:25:44.4454|INFO|ConceptDataMigration|Executing 0 after-data-migration scripts.
+2023-01-20 14:25:44.4454|INFO|DatabaseDeployment|Upgrading database.
+2023-01-20 14:25:44.4838|INFO|DatabaseGenerator|Removing 0 database objects.
+2023-01-20 14:25:44.4983|INFO|DatabaseGenerator|Creating 0 database objects.
+2023-01-20 14:25:44.4983|INFO|DatabaseDeployment|Deleting redundant migration data.
+2023-01-20 14:25:44.5138|INFO|DatabaseCleaner|Deleted 0 columns in data migration schemas, 8 remaining.
+2023-01-20 14:25:44.5138|INFO|ApplicationInitialization|Loading generated plugins.
+2023-01-20 14:25:44.5571|INFO|ApplicationInitialization|Initializing EfMappingViews.
+2023-01-20 14:25:45.0438|INFO|ApplicationInitialization|Initialization ClaimGenerator.
+2023-01-20 14:25:45.4408|INFO|ApplicationInitialization|Initialization KeepSynchronizedRecomputeOnDeploy.
+2023-01-20 14:25:45.4574|INFO|Rhetos DbUpdate|Done.
+2023-01-23 08:40:35.8182|INFO|Rhetos DbUpdate base|Started 'dotnet' process 4224.
+2023-01-23 08:40:36.1256|INFO|Rhetos DbUpdate|Started in C:\Users\jpreksavec\Source\Repos\Bookstore\src\Bookstore.Service\bin\Debug\net7.0\
+2023-01-23 08:40:36.1506|INFO|DatabaseUpdate|Loading plugins.
+2023-01-23 08:40:36.6100|INFO|DatabaseDeployment|SQL connection: DataSource=JPREKSAVEC-LAP, InitialCatalog=Bookstore
+2023-01-23 08:40:36.7207|INFO|DatabaseDeployment|Preparing Rhetos database.
+2023-01-23 08:40:36.8983|INFO|DatabaseDeployment|Cleaning old migration data.
+2023-01-23 08:40:36.9211|INFO|DatabaseCleaner|Deleted 0 columns in data migration schemas, 8 remaining.
+2023-01-23 08:40:36.9211|INFO|DatabaseDeployment|Executing data migration scripts.
+2023-01-23 08:40:36.9211|INFO|ConceptDataMigration|Executing 0 before-data-migration scripts.
+2023-01-23 08:40:36.9429|INFO|DataMigration|Executed 0 of 12 scripts.
+2023-01-23 08:40:36.9429|INFO|ConceptDataMigration|Executing 0 after-data-migration scripts.
+2023-01-23 08:40:36.9429|INFO|DatabaseDeployment|Upgrading database.
+2023-01-23 08:40:37.0129|INFO|DatabaseGenerator|Removing 0 database objects.
+2023-01-23 08:40:37.0129|INFO|DatabaseGenerator|Creating 0 database objects.
+2023-01-23 08:40:37.0291|INFO|DatabaseDeployment|Deleting redundant migration data.
+2023-01-23 08:40:37.0291|INFO|DatabaseCleaner|Deleted 0 columns in data migration schemas, 8 remaining.
+2023-01-23 08:40:37.0291|INFO|ApplicationInitialization|Loading generated plugins.
+2023-01-23 08:40:37.0814|INFO|ApplicationInitialization|Initializing EfMappingViews.
+2023-01-23 08:40:37.5789|INFO|ApplicationInitialization|Initialization ClaimGenerator.
+2023-01-23 08:40:37.9687|INFO|ApplicationInitialization|Initialization KeepSynchronizedRecomputeOnDeploy.
+2023-01-23 08:40:37.9793|INFO|Rhetos DbUpdate|Done.
+2023-01-23 08:42:06.1018|INFO|Rhetos DbUpdate base|Started 'dotnet' process 21208.
+2023-01-23 08:42:06.3547|INFO|Rhetos DbUpdate|Started in C:\Users\jpreksavec\Source\Repos\Bookstore\src\Bookstore.Service\bin\Debug\net7.0\
+2023-01-23 08:42:06.3805|INFO|DatabaseUpdate|Loading plugins.
+2023-01-23 08:42:06.7660|INFO|DatabaseDeployment|SQL connection: DataSource=JPREKSAVEC-LAP, InitialCatalog=Bookstore
+2023-01-23 08:42:06.8876|INFO|DatabaseDeployment|Preparing Rhetos database.
+2023-01-23 08:42:06.9903|INFO|DatabaseDeployment|Cleaning old migration data.
+2023-01-23 08:42:07.0276|INFO|DatabaseCleaner|Deleted 0 columns in data migration schemas, 8 remaining.
+2023-01-23 08:42:07.0276|INFO|DatabaseDeployment|Executing data migration scripts.
+2023-01-23 08:42:07.0276|INFO|ConceptDataMigration|Executing 0 before-data-migration scripts.
+2023-01-23 08:42:07.0465|INFO|DataMigration|Executed 0 of 12 scripts.
+2023-01-23 08:42:07.0465|INFO|ConceptDataMigration|Executing 0 after-data-migration scripts.
+2023-01-23 08:42:07.0465|INFO|DatabaseDeployment|Upgrading database.
+2023-01-23 08:42:07.0906|INFO|DatabaseGenerator|Removing 0 database objects.
+2023-01-23 08:42:07.0906|INFO|DatabaseGenerator|Creating 0 database objects.
+2023-01-23 08:42:07.1061|INFO|DatabaseDeployment|Deleting redundant migration data.
+2023-01-23 08:42:07.1061|INFO|DatabaseCleaner|Deleted 0 columns in data migration schemas, 8 remaining.
+2023-01-23 08:42:07.1061|INFO|ApplicationInitialization|Loading generated plugins.
+2023-01-23 08:42:07.1566|INFO|ApplicationInitialization|Initializing EfMappingViews.
+2023-01-23 08:42:07.6692|INFO|ApplicationInitialization|Initialization ClaimGenerator.
+2023-01-23 08:42:08.0487|INFO|ApplicationInitialization|Initialization KeepSynchronizedRecomputeOnDeploy.
+2023-01-23 08:42:08.0634|INFO|Rhetos DbUpdate|Done.
+2023-01-23 09:03:56.6308|INFO|Rhetos DbUpdate base|Started 'dotnet' process 16224.
+2023-01-23 09:03:56.8897|INFO|Rhetos DbUpdate|Started in C:\Users\jpreksavec\Source\Repos\Bookstore\src\Bookstore.Service\bin\Debug\net7.0\
+2023-01-23 09:03:56.9159|INFO|DatabaseUpdate|Loading plugins.
+2023-01-23 09:03:57.3139|INFO|DatabaseDeployment|SQL connection: DataSource=JPREKSAVEC-LAP, InitialCatalog=Bookstore
+2023-01-23 09:03:57.4166|INFO|DatabaseDeployment|Preparing Rhetos database.
+2023-01-23 09:03:57.5465|INFO|DatabaseDeployment|Cleaning old migration data.
+2023-01-23 09:03:57.5807|INFO|DatabaseCleaner|Deleted 0 columns in data migration schemas, 8 remaining.
+2023-01-23 09:03:57.5807|INFO|DatabaseDeployment|Executing data migration scripts.
+2023-01-23 09:03:57.5807|INFO|ConceptDataMigration|Executing 0 before-data-migration scripts.
+2023-01-23 09:03:57.5987|INFO|DataMigration|Executed 0 of 12 scripts.
+2023-01-23 09:03:57.5987|INFO|ConceptDataMigration|Executing 0 after-data-migration scripts.
+2023-01-23 09:03:57.5987|INFO|DatabaseDeployment|Upgrading database.
+2023-01-23 09:03:57.6459|TRACE|DatabaseGeneratorChanges|Removing SqlIndexMultipleInfo Bookstore.Book.Code/Rhetos.DatabaseGenerator.DefaultConcepts.SqlIndexMultipleDatabaseDefinition, ID=4B5ECB2F-FD14-4930-94C5-90795D8ADBDD.
+2023-01-23 09:03:57.6459|INFO|DatabaseGenerator|Removing 1 database objects.
+2023-01-23 09:03:57.6575|INFO|DatabaseGenerator|Creating 0 database objects.
+2023-01-23 09:03:57.6744|INFO|DatabaseDeployment|Deleting redundant migration data.
+2023-01-23 09:03:57.6744|INFO|DatabaseCleaner|Deleted 0 columns in data migration schemas, 8 remaining.
+2023-01-23 09:03:57.6869|INFO|ApplicationInitialization|Loading generated plugins.
+2023-01-23 09:03:57.7275|INFO|ApplicationInitialization|Initializing EfMappingViews.
+2023-01-23 09:03:58.2278|INFO|ApplicationInitialization|Initialization ClaimGenerator.
+2023-01-23 09:03:58.6080|INFO|ApplicationInitialization|Initialization KeepSynchronizedRecomputeOnDeploy.
+2023-01-23 09:03:58.6080|INFO|Rhetos DbUpdate|Done.
+2023-01-23 09:10:02.1187|INFO|Rhetos DbUpdate base|Started 'dotnet' process 7416.
+2023-01-23 09:10:02.3758|INFO|Rhetos DbUpdate|Started in C:\Users\jpreksavec\Source\Repos\Bookstore\src\Bookstore.Service\bin\Debug\net7.0\
+2023-01-23 09:10:02.4017|INFO|DatabaseUpdate|Loading plugins.
+2023-01-23 09:10:02.8040|INFO|DatabaseDeployment|SQL connection: DataSource=JPREKSAVEC-LAP, InitialCatalog=Bookstore
+2023-01-23 09:10:02.9153|INFO|DatabaseDeployment|Preparing Rhetos database.
+2023-01-23 09:10:03.0948|INFO|DatabaseDeployment|Cleaning old migration data.
+2023-01-23 09:10:03.1140|INFO|DatabaseCleaner|Deleted 0 columns in data migration schemas, 8 remaining.
+2023-01-23 09:10:03.1140|INFO|DatabaseDeployment|Executing data migration scripts.
+2023-01-23 09:10:03.1140|INFO|ConceptDataMigration|Executing 0 before-data-migration scripts.
+2023-01-23 09:10:03.1368|INFO|DataMigration|Executed 0 of 12 scripts.
+2023-01-23 09:10:03.1368|INFO|ConceptDataMigration|Executing 0 after-data-migration scripts.
+2023-01-23 09:10:03.1368|INFO|DatabaseDeployment|Upgrading database.
+2023-01-23 09:10:03.1746|INFO|DatabaseGenerator|Removing 0 database objects.
+2023-01-23 09:10:03.1902|TRACE|DatabaseGeneratorChanges|Creating SqlIndexMultipleInfo Bookstore.Book.Code/Rhetos.DatabaseGenerator.DefaultConcepts.SqlIndexMultipleDatabaseDefinition, ID=B4E84558-0DEA-4A4B-8083-C9C85769CA81.
+2023-01-23 09:10:03.1902|INFO|DatabaseGenerator|Creating 1 database objects.
+2023-01-23 09:10:03.2023|INFO|DatabaseDeployment|Deleting redundant migration data.
+2023-01-23 09:10:03.2023|INFO|DatabaseCleaner|Deleted 0 columns in data migration schemas, 8 remaining.
+2023-01-23 09:10:03.2195|INFO|ApplicationInitialization|Loading generated plugins.
+2023-01-23 09:10:03.2601|INFO|ApplicationInitialization|Initializing EfMappingViews.
+2023-01-23 09:10:03.7709|INFO|ApplicationInitialization|Initialization ClaimGenerator.
+2023-01-23 09:10:04.1583|INFO|ApplicationInitialization|Initialization KeepSynchronizedRecomputeOnDeploy.
+2023-01-23 09:10:04.1738|INFO|Rhetos DbUpdate|Done.
+2023-01-23 09:14:23.0681|INFO|Rhetos DbUpdate base|Started 'dotnet' process 9048.
+2023-01-23 09:14:23.3290|INFO|Rhetos DbUpdate|Started in C:\Users\jpreksavec\Source\Repos\Bookstore\src\Bookstore.Service\bin\Debug\net7.0\
+2023-01-23 09:14:23.3544|INFO|DatabaseUpdate|Loading plugins.
+2023-01-23 09:14:23.7387|INFO|DatabaseDeployment|SQL connection: DataSource=JPREKSAVEC-LAP, InitialCatalog=Bookstore
+2023-01-23 09:14:23.8521|INFO|DatabaseDeployment|Preparing Rhetos database.
+2023-01-23 09:14:23.9206|INFO|DatabaseDeployment|Cleaning old migration data.
+2023-01-23 09:14:23.9320|INFO|DatabaseCleaner|Deleted 0 columns in data migration schemas, 8 remaining.
+2023-01-23 09:14:23.9320|INFO|DatabaseDeployment|Executing data migration scripts.
+2023-01-23 09:14:23.9379|INFO|ConceptDataMigration|Executing 0 before-data-migration scripts.
+2023-01-23 09:14:23.9379|INFO|DataMigration|Executed 0 of 12 scripts.
+2023-01-23 09:14:23.9379|INFO|ConceptDataMigration|Executing 0 after-data-migration scripts.
+2023-01-23 09:14:23.9379|INFO|DatabaseDeployment|Upgrading database.
+2023-01-23 09:14:24.0013|INFO|DatabaseGenerator|Removing 0 database objects.
+2023-01-23 09:14:24.0013|INFO|DatabaseGenerator|Creating 0 database objects.
+2023-01-23 09:14:24.0013|INFO|DatabaseDeployment|Deleting redundant migration data.
+2023-01-23 09:14:24.0224|INFO|DatabaseCleaner|Deleted 0 columns in data migration schemas, 8 remaining.
+2023-01-23 09:14:24.0224|INFO|ApplicationInitialization|Loading generated plugins.
+2023-01-23 09:14:24.0668|INFO|ApplicationInitialization|Initializing EfMappingViews.
+2023-01-23 09:14:24.5878|INFO|ApplicationInitialization|Initialization ClaimGenerator.
+2023-01-23 09:14:24.9733|INFO|ApplicationInitialization|Initialization KeepSynchronizedRecomputeOnDeploy.
+2023-01-23 09:14:24.9885|INFO|Rhetos DbUpdate|Done.
+2023-01-23 09:20:13.9552|INFO|Rhetos DbUpdate base|Started 'dotnet' process 23128.
+2023-01-23 09:20:14.2181|INFO|Rhetos DbUpdate|Started in C:\Users\jpreksavec\Source\Repos\Bookstore\src\Bookstore.Service\bin\Debug\net7.0\
+2023-01-23 09:20:14.2444|INFO|DatabaseUpdate|Loading plugins.
+2023-01-23 09:20:14.6272|INFO|DatabaseDeployment|SQL connection: DataSource=JPREKSAVEC-LAP, InitialCatalog=Bookstore
+2023-01-23 09:20:14.7399|INFO|DatabaseDeployment|Preparing Rhetos database.
+2023-01-23 09:20:14.8068|INFO|DatabaseDeployment|Cleaning old migration data.
+2023-01-23 09:20:14.8179|INFO|DatabaseCleaner|Deleted 0 columns in data migration schemas, 8 remaining.
+2023-01-23 09:20:14.8179|INFO|DatabaseDeployment|Executing data migration scripts.
+2023-01-23 09:20:14.8179|INFO|ConceptDataMigration|Executing 0 before-data-migration scripts.
+2023-01-23 09:20:14.8373|INFO|DataMigration|Executed 0 of 12 scripts.
+2023-01-23 09:20:14.8373|INFO|ConceptDataMigration|Executing 0 after-data-migration scripts.
+2023-01-23 09:20:14.8373|INFO|DatabaseDeployment|Upgrading database.
+2023-01-23 09:20:14.8766|INFO|DatabaseGenerator|Removing 0 database objects.
+2023-01-23 09:20:14.8915|INFO|DatabaseGenerator|Creating 0 database objects.
+2023-01-23 09:20:14.8915|INFO|DatabaseDeployment|Deleting redundant migration data.
+2023-01-23 09:20:14.9100|INFO|DatabaseCleaner|Deleted 0 columns in data migration schemas, 8 remaining.
+2023-01-23 09:20:14.9100|INFO|ApplicationInitialization|Loading generated plugins.
+2023-01-23 09:20:14.9533|INFO|ApplicationInitialization|Initializing EfMappingViews.
+2023-01-23 09:20:15.4700|INFO|ApplicationInitialization|Initialization ClaimGenerator.
+2023-01-23 09:20:15.8496|INFO|ApplicationInitialization|Initialization KeepSynchronizedRecomputeOnDeploy.
+2023-01-23 09:20:15.8654|INFO|Rhetos DbUpdate|Done.
+2023-01-23 09:31:20.9072|INFO|Rhetos DbUpdate base|Started 'dotnet' process 26816.
+2023-01-23 09:31:21.1583|INFO|Rhetos DbUpdate|Started in C:\Users\jpreksavec\Source\Repos\Bookstore\src\Bookstore.Service\bin\Debug\net7.0\
+2023-01-23 09:31:21.1847|INFO|DatabaseUpdate|Loading plugins.
+2023-01-23 09:31:21.5834|INFO|DatabaseDeployment|SQL connection: DataSource=JPREKSAVEC-LAP, InitialCatalog=Bookstore
+2023-01-23 09:31:21.6861|INFO|DatabaseDeployment|Preparing Rhetos database.
+2023-01-23 09:31:21.8722|INFO|DatabaseDeployment|Cleaning old migration data.
+2023-01-23 09:31:21.8943|INFO|DatabaseCleaner|Deleted 0 columns in data migration schemas, 8 remaining.
+2023-01-23 09:31:21.8943|INFO|DatabaseDeployment|Executing data migration scripts.
+2023-01-23 09:31:21.8943|INFO|ConceptDataMigration|Executing 0 before-data-migration scripts.
+2023-01-23 09:31:21.9154|INFO|DataMigration|Executed 0 of 12 scripts.
+2023-01-23 09:31:21.9154|INFO|ConceptDataMigration|Executing 0 after-data-migration scripts.
+2023-01-23 09:31:21.9154|INFO|DatabaseDeployment|Upgrading database.
+2023-01-23 09:31:21.9558|INFO|DatabaseGenerator|Removing 0 database objects.
+2023-01-23 09:31:21.9713|INFO|DatabaseGenerator|Creating 0 database objects.
+2023-01-23 09:31:21.9713|INFO|DatabaseDeployment|Deleting redundant migration data.
+2023-01-23 09:31:21.9713|INFO|DatabaseCleaner|Deleted 0 columns in data migration schemas, 8 remaining.
+2023-01-23 09:31:21.9896|INFO|ApplicationInitialization|Loading generated plugins.
+2023-01-23 09:31:22.0306|INFO|ApplicationInitialization|Initializing EfMappingViews.
+2023-01-23 09:31:22.5376|INFO|ApplicationInitialization|Initialization ClaimGenerator.
+2023-01-23 09:31:22.9236|INFO|ApplicationInitialization|Initialization KeepSynchronizedRecomputeOnDeploy.
+2023-01-23 09:31:22.9236|INFO|Rhetos DbUpdate|Done.
+2023-01-23 09:33:08.6441|INFO|Rhetos DbUpdate base|Started 'dotnet' process 26284.
+2023-01-23 09:33:08.8987|INFO|Rhetos DbUpdate|Started in C:\Users\jpreksavec\Source\Repos\Bookstore\src\Bookstore.Service\bin\Debug\net7.0\
+2023-01-23 09:33:08.9246|INFO|DatabaseUpdate|Loading plugins.
+2023-01-23 09:33:09.3184|INFO|DatabaseDeployment|SQL connection: DataSource=JPREKSAVEC-LAP, InitialCatalog=Bookstore
+2023-01-23 09:33:09.4255|INFO|DatabaseDeployment|Preparing Rhetos database.
+2023-01-23 09:33:09.6082|INFO|DatabaseDeployment|Cleaning old migration data.
+2023-01-23 09:33:09.6276|INFO|DatabaseCleaner|Deleted 0 columns in data migration schemas, 8 remaining.
+2023-01-23 09:33:09.6276|INFO|DatabaseDeployment|Executing data migration scripts.
+2023-01-23 09:33:09.6276|INFO|ConceptDataMigration|Executing 0 before-data-migration scripts.
+2023-01-23 09:33:09.6485|INFO|DataMigration|Executed 0 of 12 scripts.
+2023-01-23 09:33:09.6485|INFO|ConceptDataMigration|Executing 0 after-data-migration scripts.
+2023-01-23 09:33:09.6485|INFO|DatabaseDeployment|Upgrading database.
+2023-01-23 09:33:09.6953|INFO|DatabaseGenerator|Removing 0 database objects.
+2023-01-23 09:33:09.6953|INFO|DatabaseGenerator|Creating 0 database objects.
+2023-01-23 09:33:09.7093|INFO|DatabaseDeployment|Deleting redundant migration data.
+2023-01-23 09:33:09.7093|INFO|DatabaseCleaner|Deleted 0 columns in data migration schemas, 8 remaining.
+2023-01-23 09:33:09.7093|INFO|ApplicationInitialization|Loading generated plugins.
+2023-01-23 09:33:09.7616|INFO|ApplicationInitialization|Initializing EfMappingViews.
+2023-01-23 09:33:10.2640|INFO|ApplicationInitialization|Initialization ClaimGenerator.
+2023-01-23 09:33:10.6429|INFO|ApplicationInitialization|Initialization KeepSynchronizedRecomputeOnDeploy.
+2023-01-23 09:33:10.6601|INFO|Rhetos DbUpdate|Done.
+2023-01-23 09:39:37.0811|INFO|Rhetos DbUpdate base|Started 'dotnet' process 13824.
+2023-01-23 09:39:37.3380|INFO|Rhetos DbUpdate|Started in C:\Users\jpreksavec\Source\Repos\Bookstore\src\Bookstore.Service\bin\Debug\net7.0\
+2023-01-23 09:39:37.3633|INFO|DatabaseUpdate|Loading plugins.
+2023-01-23 09:39:37.7716|INFO|DatabaseDeployment|SQL connection: DataSource=JPREKSAVEC-LAP, InitialCatalog=Bookstore
+2023-01-23 09:39:37.8727|INFO|DatabaseDeployment|Preparing Rhetos database.
+2023-01-23 09:39:38.0482|INFO|DatabaseDeployment|Cleaning old migration data.
+2023-01-23 09:39:38.0670|INFO|DatabaseCleaner|Deleted 0 columns in data migration schemas, 8 remaining.
+2023-01-23 09:39:38.0670|INFO|DatabaseDeployment|Executing data migration scripts.
+2023-01-23 09:39:38.0670|INFO|ConceptDataMigration|Executing 0 before-data-migration scripts.
+2023-01-23 09:39:38.0869|INFO|DataMigration|Executed 0 of 12 scripts.
+2023-01-23 09:39:38.0869|INFO|ConceptDataMigration|Executing 0 after-data-migration scripts.
+2023-01-23 09:39:38.0869|INFO|DatabaseDeployment|Upgrading database.
+2023-01-23 09:39:38.1278|INFO|DatabaseGenerator|Removing 0 database objects.
+2023-01-23 09:39:38.1441|INFO|DatabaseGenerator|Creating 0 database objects.
+2023-01-23 09:39:38.1441|INFO|DatabaseDeployment|Deleting redundant migration data.
+2023-01-23 09:39:38.1609|INFO|DatabaseCleaner|Deleted 0 columns in data migration schemas, 8 remaining.
+2023-01-23 09:39:38.1609|INFO|ApplicationInitialization|Loading generated plugins.
+2023-01-23 09:39:38.2086|INFO|ApplicationInitialization|Initializing EfMappingViews.
+2023-01-23 09:39:38.7455|INFO|ApplicationInitialization|Initialization ClaimGenerator.
+2023-01-23 09:39:39.1360|INFO|ApplicationInitialization|Initialization KeepSynchronizedRecomputeOnDeploy.
+2023-01-23 09:39:39.1519|INFO|Rhetos DbUpdate|Done.
+2023-01-23 09:56:34.7733|INFO|Rhetos DbUpdate base|Started 'dotnet' process 27192.
+2023-01-23 09:56:35.0350|INFO|Rhetos DbUpdate|Started in C:\Users\jpreksavec\Source\Repos\Bookstore\src\Bookstore.Service\bin\Debug\net7.0\
+2023-01-23 09:56:35.0609|INFO|DatabaseUpdate|Loading plugins.
+2023-01-23 09:56:35.4640|INFO|DatabaseDeployment|SQL connection: DataSource=JPREKSAVEC-LAP, InitialCatalog=Bookstore
+2023-01-23 09:56:35.5730|INFO|DatabaseDeployment|Preparing Rhetos database.
+2023-01-23 09:56:35.7487|INFO|DatabaseDeployment|Cleaning old migration data.
+2023-01-23 09:56:35.7681|INFO|DatabaseCleaner|Deleted 0 columns in data migration schemas, 8 remaining.
+2023-01-23 09:56:35.7722|INFO|DatabaseDeployment|Executing data migration scripts.
+2023-01-23 09:56:35.7722|INFO|ConceptDataMigration|Executing 0 before-data-migration scripts.
+2023-01-23 09:56:35.7888|INFO|DataMigration|Executed 0 of 12 scripts.
+2023-01-23 09:56:35.7888|INFO|ConceptDataMigration|Executing 0 after-data-migration scripts.
+2023-01-23 09:56:35.7888|INFO|DatabaseDeployment|Upgrading database.
+2023-01-23 09:56:35.8347|TRACE|DatabaseGeneratorChanges|Changed concept application: EntityLoggingInfo Bookstore.Book/Rhetos.DatabaseGenerator.DefaultConcepts.EntityLoggingDefinition
+Old: ...\n    Description = CASE WHEN inserted.ID IS NOT NULL AND deleted.ID IS NULL\r\n        THEN ''\t--When inserting, Description is not available (there is no previous state)\r\n        ELSE N'<PREVIOUS'\r\n\t\t\t/*EntityLoggingInfo LogProperty Bookstore.Book*/\r\n            + ' />'\r\n    END/*EntityLoggingInfo TempColumnSelect Bookstore.Book*/\r\nFROM\r\n    inserted\r\n    FULL OUTER JOIN deleted ON inserted.ID = de...
+New: ...\n    Description = CASE WHEN inserted.ID IS NOT NULL AND deleted.ID IS NULL\r\n        THEN ''\t--When inserting, Description is not available (there is no previous state)\r\n        ELSE N'<PREVIOUS'\r\n\t\t\t+ CASE WHEN inserted.Code <> deleted.Code\r\n                    OR inserted.Code IS NULL AND deleted.Code IS NOT NULL\r\n                    OR inserted.Code IS NOT NULL AND deleted.Code IS NULL\r\n       ...
+2023-01-23 09:56:35.8347|TRACE|DatabaseGeneratorChanges|Removing EntityLoggingInfo Bookstore.Book/Rhetos.DatabaseGenerator.DefaultConcepts.EntityLoggingDefinition, ID=65FBADF6-32EE-40D4-835D-2EE353FAF62C.
+2023-01-23 09:56:35.8347|INFO|DatabaseGenerator|Removing 1 database objects.
+2023-01-23 09:56:35.8347|TRACE|DatabaseGeneratorChanges|Creating EntityLoggingInfo Bookstore.Person/Rhetos.DatabaseGenerator.DefaultConcepts.EntityLoggingDefinition, ID=37537458-188C-4E97-B12C-3D4CFCC38B43.
+2023-01-23 09:56:35.8347|TRACE|DatabaseGeneratorChanges|Creating EntityLoggingInfo Bookstore.Book/Rhetos.DatabaseGenerator.DefaultConcepts.EntityLoggingDefinition, ID=65FBADF6-32EE-40D4-835D-2EE353FAF62C.
+2023-01-23 09:56:35.8490|INFO|DatabaseGenerator|Creating 2 database objects.
+2023-01-23 09:56:35.8645|INFO|DatabaseDeployment|Deleting redundant migration data.
+2023-01-23 09:56:35.8645|INFO|DatabaseCleaner|Deleted 0 columns in data migration schemas, 8 remaining.
+2023-01-23 09:56:35.8815|INFO|ApplicationInitialization|Loading generated plugins.
+2023-01-23 09:56:35.9262|INFO|ApplicationInitialization|Initializing EfMappingViews.
+2023-01-23 09:56:36.4282|INFO|ApplicationInitialization|Initialization ClaimGenerator.
+2023-01-23 09:56:36.8082|INFO|ApplicationInitialization|Initialization KeepSynchronizedRecomputeOnDeploy.
+2023-01-23 09:56:36.8278|INFO|Rhetos DbUpdate|Done.
+2023-01-23 10:06:33.4519|INFO|Rhetos DbUpdate base|Started 'dotnet' process 12732.
+2023-01-23 10:06:33.7148|INFO|Rhetos DbUpdate|Started in C:\Users\jpreksavec\Source\Repos\Bookstore\src\Bookstore.Service\bin\Debug\net7.0\
+2023-01-23 10:06:33.7409|INFO|DatabaseUpdate|Loading plugins.
+2023-01-23 10:06:34.1521|INFO|DatabaseDeployment|SQL connection: DataSource=JPREKSAVEC-LAP, InitialCatalog=Bookstore
+2023-01-23 10:06:34.2561|INFO|DatabaseDeployment|Preparing Rhetos database.
+2023-01-23 10:06:34.3399|INFO|DatabaseDeployment|Cleaning old migration data.
+2023-01-23 10:06:34.3555|INFO|DatabaseCleaner|Deleted 0 columns in data migration schemas, 8 remaining.
+2023-01-23 10:06:34.3555|INFO|DatabaseDeployment|Executing data migration scripts.
+2023-01-23 10:06:34.3555|INFO|ConceptDataMigration|Executing 0 before-data-migration scripts.
+2023-01-23 10:06:34.3770|INFO|DataMigration|Executed 0 of 12 scripts.
+2023-01-23 10:06:34.3770|INFO|ConceptDataMigration|Executing 0 after-data-migration scripts.
+2023-01-23 10:06:34.3770|INFO|DatabaseDeployment|Upgrading database.
+2023-01-23 10:06:34.4287|INFO|DatabaseGenerator|Removing 0 database objects.
+2023-01-23 10:06:34.4287|INFO|DatabaseGenerator|Creating 0 database objects.
+2023-01-23 10:06:34.4451|INFO|DatabaseDeployment|Deleting redundant migration data.
+2023-01-23 10:06:34.4451|INFO|DatabaseCleaner|Deleted 0 columns in data migration schemas, 8 remaining.
+2023-01-23 10:06:34.4451|INFO|ApplicationInitialization|Loading generated plugins.
+2023-01-23 10:06:34.5001|INFO|ApplicationInitialization|Initializing EfMappingViews.
+2023-01-23 10:06:35.0377|INFO|ApplicationInitialization|Initialization ClaimGenerator.
+2023-01-23 10:06:35.4464|INFO|ApplicationInitialization|Initialization KeepSynchronizedRecomputeOnDeploy.
+2023-01-23 10:06:35.4607|INFO|Rhetos DbUpdate|Done.
+2023-01-23 10:22:44.3444|INFO|Rhetos DbUpdate base|Started 'dotnet' process 26768.
+2023-01-23 10:22:44.6035|INFO|Rhetos DbUpdate|Started in C:\Users\jpreksavec\Source\Repos\Bookstore\src\Bookstore.Service\bin\Debug\net7.0\
+2023-01-23 10:22:44.6296|INFO|DatabaseUpdate|Loading plugins.
+2023-01-23 10:22:45.0235|INFO|DatabaseDeployment|SQL connection: DataSource=JPREKSAVEC-LAP, InitialCatalog=Bookstore
+2023-01-23 10:22:45.1315|INFO|DatabaseDeployment|Preparing Rhetos database.
+2023-01-23 10:22:45.3091|INFO|DatabaseDeployment|Cleaning old migration data.
+2023-01-23 10:22:45.3284|INFO|DatabaseCleaner|Deleted 0 columns in data migration schemas, 8 remaining.
+2023-01-23 10:22:45.3284|INFO|DatabaseDeployment|Executing data migration scripts.
+2023-01-23 10:22:45.3358|INFO|ConceptDataMigration|Executing 0 before-data-migration scripts.
+2023-01-23 10:22:45.3358|INFO|DataMigration|Executed 0 of 12 scripts.
+2023-01-23 10:22:45.3515|INFO|ConceptDataMigration|Executing 0 after-data-migration scripts.
+2023-01-23 10:22:45.3515|INFO|DatabaseDeployment|Upgrading database.
+2023-01-23 10:22:45.3984|INFO|DatabaseGenerator|Removing 0 database objects.
+2023-01-23 10:22:45.3984|INFO|DatabaseGenerator|Creating 0 database objects.
+2023-01-23 10:22:45.3984|INFO|DatabaseDeployment|Deleting redundant migration data.
+2023-01-23 10:22:45.4198|INFO|DatabaseCleaner|Deleted 0 columns in data migration schemas, 8 remaining.
+2023-01-23 10:22:45.4198|INFO|ApplicationInitialization|Loading generated plugins.
+2023-01-23 10:22:45.4637|INFO|ApplicationInitialization|Initializing EfMappingViews.
+2023-01-23 10:22:45.9727|INFO|ApplicationInitialization|Initialization ClaimGenerator.
+2023-01-23 10:22:46.3567|INFO|ApplicationInitialization|Initialization KeepSynchronizedRecomputeOnDeploy.
+2023-01-23 10:22:46.3684|INFO|Rhetos DbUpdate|Done.
+2023-01-23 10:38:25.6947|INFO|Rhetos DbUpdate base|Started 'dotnet' process 19444.
+2023-01-23 10:38:25.9598|INFO|Rhetos DbUpdate|Started in C:\Users\jpreksavec\Source\Repos\Bookstore\src\Bookstore.Service\bin\Debug\net7.0\
+2023-01-23 10:38:25.9853|INFO|DatabaseUpdate|Loading plugins.
+2023-01-23 10:38:26.3760|INFO|DatabaseDeployment|SQL connection: DataSource=JPREKSAVEC-LAP, InitialCatalog=Bookstore
+2023-01-23 10:38:26.4840|INFO|DatabaseDeployment|Preparing Rhetos database.
+2023-01-23 10:38:26.5507|INFO|DatabaseDeployment|Cleaning old migration data.
+2023-01-23 10:38:26.5624|INFO|DatabaseCleaner|Deleted 0 columns in data migration schemas, 8 remaining.
+2023-01-23 10:38:26.5624|INFO|DatabaseDeployment|Executing data migration scripts.
+2023-01-23 10:38:26.5624|INFO|ConceptDataMigration|Executing 0 before-data-migration scripts.
+2023-01-23 10:38:26.5842|INFO|DataMigration|Executed 0 of 12 scripts.
+2023-01-23 10:38:26.5842|INFO|ConceptDataMigration|Executing 0 after-data-migration scripts.
+2023-01-23 10:38:26.5842|INFO|DatabaseDeployment|Upgrading database.
+2023-01-23 10:38:26.6227|INFO|DatabaseGenerator|Removing 0 database objects.
+2023-01-23 10:38:26.6403|INFO|DatabaseGenerator|Creating 0 database objects.
+2023-01-23 10:38:26.6403|INFO|DatabaseDeployment|Deleting redundant migration data.
+2023-01-23 10:38:26.6559|INFO|DatabaseCleaner|Deleted 0 columns in data migration schemas, 8 remaining.
+2023-01-23 10:38:26.6559|INFO|ApplicationInitialization|Loading generated plugins.
+2023-01-23 10:38:26.7019|INFO|ApplicationInitialization|Initializing EfMappingViews.
+2023-01-23 10:38:27.2192|INFO|ApplicationInitialization|Initialization ClaimGenerator.
+2023-01-23 10:38:27.6052|INFO|ApplicationInitialization|Initialization KeepSynchronizedRecomputeOnDeploy.
+2023-01-23 10:38:27.6207|INFO|Rhetos DbUpdate|Done.
+2023-01-23 10:54:33.6097|INFO|Rhetos DbUpdate base|Started 'dotnet' process 22512.
+2023-01-23 10:54:33.9079|INFO|Rhetos DbUpdate|Started in C:\Users\jpreksavec\Source\Repos\Bookstore\src\Bookstore.Service\bin\Debug\net7.0\
+2023-01-23 10:54:33.9356|INFO|DatabaseUpdate|Loading plugins.
+2023-01-23 10:54:34.4053|INFO|DatabaseDeployment|SQL connection: DataSource=JPREKSAVEC-LAP, InitialCatalog=Bookstore
+2023-01-23 10:54:34.5175|INFO|DatabaseDeployment|Preparing Rhetos database.
+2023-01-23 10:54:34.5878|INFO|DatabaseDeployment|Cleaning old migration data.
+2023-01-23 10:54:34.6010|INFO|DatabaseCleaner|Deleted 0 columns in data migration schemas, 8 remaining.
+2023-01-23 10:54:34.6064|INFO|DatabaseDeployment|Executing data migration scripts.
+2023-01-23 10:54:34.6064|INFO|ConceptDataMigration|Executing 0 before-data-migration scripts.
+2023-01-23 10:54:34.6244|INFO|DataMigration|Executed 0 of 12 scripts.
+2023-01-23 10:54:34.6244|INFO|ConceptDataMigration|Executing 0 after-data-migration scripts.
+2023-01-23 10:54:34.6244|INFO|DatabaseDeployment|Upgrading database.
+2023-01-23 10:54:34.6702|INFO|DatabaseGenerator|Removing 0 database objects.
+2023-01-23 10:54:34.6828|INFO|DatabaseGenerator|Creating 0 database objects.
+2023-01-23 10:54:34.6828|INFO|DatabaseDeployment|Deleting redundant migration data.
+2023-01-23 10:54:34.7033|INFO|DatabaseCleaner|Deleted 0 columns in data migration schemas, 8 remaining.
+2023-01-23 10:54:34.7033|INFO|ApplicationInitialization|Loading generated plugins.
+2023-01-23 10:54:34.7569|INFO|ApplicationInitialization|Initializing EfMappingViews.
+2023-01-23 10:54:35.3293|INFO|ApplicationInitialization|Initialization ClaimGenerator.
+2023-01-23 10:54:35.7490|INFO|ApplicationInitialization|Initialization KeepSynchronizedRecomputeOnDeploy.
+2023-01-23 10:54:35.7647|INFO|Rhetos DbUpdate|Done.
+2023-01-23 10:55:31.9974|INFO|Rhetos DbUpdate base|Started 'dotnet' process 12320.
+2023-01-23 10:55:32.2523|INFO|Rhetos DbUpdate|Started in C:\Users\jpreksavec\Source\Repos\Bookstore\src\Bookstore.Service\bin\Debug\net7.0\
+2023-01-23 10:55:32.2783|INFO|DatabaseUpdate|Loading plugins.
+2023-01-23 10:55:32.6849|INFO|DatabaseDeployment|SQL connection: DataSource=JPREKSAVEC-LAP, InitialCatalog=Bookstore
+2023-01-23 10:55:32.7884|INFO|DatabaseDeployment|Preparing Rhetos database.
+2023-01-23 10:55:32.9717|INFO|DatabaseDeployment|Cleaning old migration data.
+2023-01-23 10:55:32.9902|INFO|DatabaseCleaner|Deleted 0 columns in data migration schemas, 8 remaining.
+2023-01-23 10:55:32.9902|INFO|DatabaseDeployment|Executing data migration scripts.
+2023-01-23 10:55:32.9970|INFO|ConceptDataMigration|Executing 0 before-data-migration scripts.
+2023-01-23 10:55:32.9970|INFO|DataMigration|Executed 0 of 12 scripts.
+2023-01-23 10:55:33.0115|INFO|ConceptDataMigration|Executing 0 after-data-migration scripts.
+2023-01-23 10:55:33.0115|INFO|DatabaseDeployment|Upgrading database.
+2023-01-23 10:55:33.0577|INFO|DatabaseGenerator|Removing 0 database objects.
+2023-01-23 10:55:33.0577|INFO|DatabaseGenerator|Creating 0 database objects.
+2023-01-23 10:55:33.0577|INFO|DatabaseDeployment|Deleting redundant migration data.
+2023-01-23 10:55:33.0800|INFO|DatabaseCleaner|Deleted 0 columns in data migration schemas, 8 remaining.
+2023-01-23 10:55:33.0800|INFO|ApplicationInitialization|Loading generated plugins.
+2023-01-23 10:55:33.1257|INFO|ApplicationInitialization|Initializing EfMappingViews.
+2023-01-23 10:55:33.6649|INFO|ApplicationInitialization|Initialization ClaimGenerator.
+2023-01-23 10:55:34.0446|INFO|ApplicationInitialization|Initialization KeepSynchronizedRecomputeOnDeploy.
+2023-01-23 10:55:34.0588|INFO|Rhetos DbUpdate|Done.
+2023-01-23 10:58:51.1558|INFO|Rhetos DbUpdate base|Started 'dotnet' process 2728.
+2023-01-23 10:58:51.4121|INFO|Rhetos DbUpdate|Started in C:\Users\jpreksavec\Source\Repos\Bookstore\src\Bookstore.Service\bin\Debug\net7.0\
+2023-01-23 10:58:51.4404|INFO|DatabaseUpdate|Loading plugins.
+2023-01-23 10:58:51.8575|INFO|DatabaseDeployment|SQL connection: DataSource=JPREKSAVEC-LAP, InitialCatalog=Bookstore
+2023-01-23 10:58:51.9643|INFO|DatabaseDeployment|Preparing Rhetos database.
+2023-01-23 10:58:52.1438|INFO|DatabaseDeployment|Cleaning old migration data.
+2023-01-23 10:58:52.1633|INFO|DatabaseCleaner|Deleted 0 columns in data migration schemas, 8 remaining.
+2023-01-23 10:58:52.1633|INFO|DatabaseDeployment|Executing data migration scripts.
+2023-01-23 10:58:52.1703|INFO|ConceptDataMigration|Executing 0 before-data-migration scripts.
+2023-01-23 10:58:52.1864|INFO|DataMigration|Executed 0 of 12 scripts.
+2023-01-23 10:58:52.1864|INFO|ConceptDataMigration|Executing 0 after-data-migration scripts.
+2023-01-23 10:58:52.1864|INFO|DatabaseDeployment|Upgrading database.
+2023-01-23 10:58:52.2355|INFO|DatabaseGenerator|Removing 0 database objects.
+2023-01-23 10:58:52.2468|INFO|DatabaseGenerator|Creating 0 database objects.
+2023-01-23 10:58:52.2468|INFO|DatabaseDeployment|Deleting redundant migration data.
+2023-01-23 10:58:52.2645|INFO|DatabaseCleaner|Deleted 0 columns in data migration schemas, 8 remaining.
+2023-01-23 10:58:52.2645|INFO|ApplicationInitialization|Loading generated plugins.
+2023-01-23 10:58:52.3095|INFO|ApplicationInitialization|Initializing EfMappingViews.
+2023-01-23 10:58:52.8354|INFO|ApplicationInitialization|Initialization ClaimGenerator.
+2023-01-23 10:58:53.2044|INFO|ApplicationInitialization|Initialization KeepSynchronizedRecomputeOnDeploy.
+2023-01-23 10:58:53.2206|INFO|Rhetos DbUpdate|Done.
+2023-01-23 11:18:23.7459|INFO|Rhetos DbUpdate base|Started 'dotnet' process 27420.
+2023-01-23 11:18:24.0019|INFO|Rhetos DbUpdate|Started in C:\Users\jpreksavec\Source\Repos\Bookstore\src\Bookstore.Service\bin\Debug\net7.0\
+2023-01-23 11:18:24.0287|INFO|DatabaseUpdate|Loading plugins.
+2023-01-23 11:18:24.4242|INFO|DatabaseDeployment|SQL connection: DataSource=JPREKSAVEC-LAP, InitialCatalog=Bookstore
+2023-01-23 11:18:24.5340|INFO|DatabaseDeployment|Preparing Rhetos database.
+2023-01-23 11:18:24.7107|INFO|DatabaseDeployment|Cleaning old migration data.
+2023-01-23 11:18:24.7297|INFO|DatabaseCleaner|Deleted 0 columns in data migration schemas, 8 remaining.
+2023-01-23 11:18:24.7339|INFO|DatabaseDeployment|Executing data migration scripts.
+2023-01-23 11:18:24.7339|INFO|ConceptDataMigration|Executing 0 before-data-migration scripts.
+2023-01-23 11:18:24.7509|INFO|DataMigration|Executed 0 of 12 scripts.
+2023-01-23 11:18:24.7509|INFO|ConceptDataMigration|Executing 0 after-data-migration scripts.
+2023-01-23 11:18:24.7509|INFO|DatabaseDeployment|Upgrading database.
+2023-01-23 11:18:24.7986|INFO|DatabaseGenerator|Removing 0 database objects.
+2023-01-23 11:18:24.7986|TRACE|DatabaseGeneratorChanges|Creating DataStructureInfo Bookstore.BookInfo/Rhetos.DatabaseGenerator.DefaultConcepts.SqlQueryableDatabaseDefinition, ID=F9045668-305A-4F9D-BF47-B8E2F356C32C.
+2023-01-23 11:18:24.8107|INFO|DatabaseGenerator|Creating 1 database objects.
+2023-01-23 11:18:24.8107|INFO|DatabaseDeployment|Deleting redundant migration data.
+2023-01-23 11:18:24.8326|INFO|DatabaseCleaner|Deleted 0 columns in data migration schemas, 8 remaining.
+2023-01-23 11:18:24.8326|INFO|ApplicationInitialization|Loading generated plugins.
+2023-01-23 11:18:24.8788|INFO|ApplicationInitialization|Initializing EfMappingViews.
+2023-01-23 11:18:25.5425|INFO|ApplicationInitialization|Initialization ClaimGenerator.
+2023-01-23 11:18:25.9841|INFO|ApplicationInitialization|Initialization KeepSynchronizedRecomputeOnDeploy.
+2023-01-23 11:18:25.9841|INFO|Rhetos DbUpdate|Done.
+2023-01-23 12:02:31.7688|INFO|Rhetos DbUpdate base|Started 'dotnet' process 12732.
+2023-01-23 12:02:32.0398|INFO|Rhetos DbUpdate|Started in C:\Users\jpreksavec\Source\Repos\Bookstore\src\Bookstore.Service\bin\Debug\net7.0\
+2023-01-23 12:02:32.0668|INFO|DatabaseUpdate|Loading plugins.
+2023-01-23 12:02:32.5068|INFO|DatabaseDeployment|SQL connection: DataSource=JPREKSAVEC-LAP, InitialCatalog=Bookstore
+2023-01-23 12:02:32.6136|INFO|DatabaseDeployment|Preparing Rhetos database.
+2023-01-23 12:02:32.7922|INFO|DatabaseDeployment|Cleaning old migration data.
+2023-01-23 12:02:32.8144|INFO|DatabaseCleaner|Deleted 0 columns in data migration schemas, 8 remaining.
+2023-01-23 12:02:32.8144|INFO|DatabaseDeployment|Executing data migration scripts.
+2023-01-23 12:02:32.8222|INFO|ConceptDataMigration|Executing 0 before-data-migration scripts.
+2023-01-23 12:02:32.8362|INFO|DataMigration|Executed 0 of 12 scripts.
+2023-01-23 12:02:32.8362|INFO|ConceptDataMigration|Executing 0 after-data-migration scripts.
+2023-01-23 12:02:32.8362|INFO|DatabaseDeployment|Upgrading database.
+2023-01-23 12:02:32.8876|TRACE|DatabaseGeneratorChanges|Changed concept application: ReferencePropertyDbConstraintInfo Bookstore.ForeignBook.Translator/Rhetos.DatabaseGenerator.DefaultConcepts.ReferencePropertyConstraintDatabaseDefinition
+Old: ALTER TABLE Bookstore.ForeignBook ADD CONSTRAINT FK_ForeignBook_Person_TranslatorID FOREIGN KEY (TranslatorID) REFERENCES Bookstore.Person (ID) /*ReferencePropertyDbConstraintInfo FK options Bookstore.ForeignBook.Translator*/
+New: ALTER TABLE Bookstore.ForeignBook ADD CONSTRAINT FK_ForeignBook_Translator_TranslatorID FOREIGN KEY (TranslatorID) REFERENCES Bookstore.Translator (ID) /*ReferencePropertyDbConstraintInfo FK options Bookstore.ForeignBook.Translator*/
+2023-01-23 12:02:32.8876|TRACE|DatabaseGeneratorChanges|Changed concept application: DataStructureInfo Bookstore.BookInfo/Rhetos.DatabaseGenerator.DefaultConcepts.SqlQueryableDatabaseDefinition
+Old: CREATE VIEW Bookstore.BookInfo AS \r\n\r\n\t\t        SELECT\r\n\t\t\t        b.ID,\r\n\t\t\t        NumberOfComments = COUNT(c.ID)\r\n\r\n\t\t        FROM\r\n\t\t\t        Bookstore.Book b\r\n\r\n\t\t\t        LEFT JOIN Bookstore.Comment c ON c.BookID = b.ID\r\n\r\n\t\t        GROUP BY\r\n\r\n\t\t\t        b.ID
+New: CREATE VIEW Bookstore.BookInfo AS \r\n\tSELECT\r\n\tb.ID,\r\n\tNumberOfComments = COUNT(c.ID)\r\n\tFROM Bookstore.Book b\r\n\tLEFT JOIN Bookstore.Comment c ON c.BookID = b.ID\r\n\tGROUP BY b.ID
+2023-01-23 12:02:32.8981|TRACE|DatabaseGeneratorChanges|Refresh PropertyInfo Bookstore.ForeignBook.Translator/Rhetos.DatabaseGenerator.DefaultConcepts.ReferencePropertyDatabaseDefinition, ID=5D266F39-D2E8-48F4-A6A4-C509F85C926A. It depends on new concepts: DataStructureInfo Bookstore.Translator/Rhetos.DatabaseGenerator.DefaultConcepts.EntityDatabaseDefinition. It depends on removed concepts: DataStructureInfo Bookstore.Person/Rhetos.DatabaseGenerator.DefaultConcepts.EntityDatabaseDefinition.
+2023-01-23 12:02:32.8981|TRACE|DatabaseGeneratorChanges|Removing DataStructureInfo Bookstore.BookInfo/Rhetos.DatabaseGenerator.DefaultConcepts.SqlQueryableDatabaseDefinition, ID=F9045668-305A-4F9D-BF47-B8E2F356C32C.
+2023-01-23 12:02:32.8981|TRACE|DatabaseGeneratorChanges|Removing EntityLoggingInfo Bookstore.Person/Rhetos.DatabaseGenerator.DefaultConcepts.EntityLoggingDefinition, ID=37537458-188C-4E97-B12C-3D4CFCC38B43.
+2023-01-23 12:02:32.8981|TRACE|DatabaseGeneratorChanges|Removing ReferencePropertyDbConstraintInfo Bookstore.ForeignBook.Translator/Rhetos.DatabaseGenerator.DefaultConcepts.ReferencePropertyConstraintDatabaseDefinition, ID=551FF0CF-3F86-4F81-9895-4B20A50190C7.
+2023-01-23 12:02:32.8981|TRACE|DatabaseGeneratorChanges|Removing PropertyInfo Bookstore.Person.Name/Rhetos.DatabaseGenerator.DefaultConcepts.ShortStringPropertyDatabaseDefinition, ID=77588C8B-D595-4AA1-AD33-38D9358157B9.
+2023-01-23 12:02:32.8981|TRACE|DatabaseGeneratorChanges|Removing PropertyInfo Bookstore.ForeignBook.Translator/Rhetos.DatabaseGenerator.DefaultConcepts.ReferencePropertyDatabaseDefinition, ID=5D266F39-D2E8-48F4-A6A4-C509F85C926A.
+2023-01-23 12:02:32.8981|TRACE|DatabaseGeneratorChanges|Removing DataStructureInfo Bookstore.Person/Rhetos.DatabaseGenerator.DefaultConcepts.EntityDatabaseDefinition, ID=A170E782-BEB2-4809-AE51-B8842F653429.
+2023-01-23 12:02:32.8981|INFO|DatabaseGenerator|Removing 6 database objects.
+2023-01-23 12:02:32.8981|TRACE|DatabaseGeneratorChanges|Creating DataStructureInfo Bookstore.Author/Rhetos.DatabaseGenerator.DefaultConcepts.EntityDatabaseDefinition, ID=CB913682-F525-49E3-9464-B455FC228F4D.
+2023-01-23 12:02:32.8981|TRACE|DatabaseGeneratorChanges|Creating DataStructureInfo Bookstore.BookAuthor/Rhetos.DatabaseGenerator.DefaultConcepts.EntityDatabaseDefinition, ID=0FA9505F-5F72-40ED-90C7-F045F5B4D5C2.
+2023-01-23 12:02:32.8981|TRACE|DatabaseGeneratorChanges|Creating DataStructureInfo Bookstore.BookTranslator/Rhetos.DatabaseGenerator.DefaultConcepts.EntityDatabaseDefinition, ID=8ADC74C8-AA97-4EDC-B188-CFA0086C1D2A.
+2023-01-23 12:02:32.8981|TRACE|DatabaseGeneratorChanges|Creating DataStructureInfo Bookstore.Translator/Rhetos.DatabaseGenerator.DefaultConcepts.EntityDatabaseDefinition, ID=0E94F588-446F-420F-975B-34771F831735.
+2023-01-23 12:02:32.8981|TRACE|DatabaseGeneratorChanges|Creating PropertyInfo Bookstore.Author.Name/Rhetos.DatabaseGenerator.DefaultConcepts.ShortStringPropertyDatabaseDefinition, ID=6D4F1F36-994E-41CC-8A90-BF6575D43062.
+2023-01-23 12:02:32.8981|TRACE|DatabaseGeneratorChanges|Creating EntityLoggingInfo Bookstore.Author/Rhetos.DatabaseGenerator.DefaultConcepts.EntityLoggingDefinition, ID=057144CB-3463-4A42-AD58-D7AF9F00F3CD.
+2023-01-23 12:02:32.8981|TRACE|DatabaseGeneratorChanges|Creating PropertyInfo Bookstore.BookAuthor.Author/Rhetos.DatabaseGenerator.DefaultConcepts.ReferencePropertyDatabaseDefinition, ID=C2241CFC-6907-41A3-9AB4-4D1911C6A13E.
+2023-01-23 12:02:32.8981|TRACE|DatabaseGeneratorChanges|Creating PropertyInfo Bookstore.BookAuthor.Book/Rhetos.DatabaseGenerator.DefaultConcepts.ReferencePropertyDatabaseDefinition, ID=6C70FE0E-FCE4-4C95-9850-5AB8A76DBD7A.
+2023-01-23 12:02:32.8981|TRACE|DatabaseGeneratorChanges|Creating SqlIndexMultipleInfo Bookstore.BookAuthor.'Book Author'/Rhetos.DatabaseGenerator.DefaultConcepts.SqlIndexMultipleDatabaseDefinition, ID=74EF5E0F-1D7F-4368-B3A7-608DDF7B58C8.
+2023-01-23 12:02:32.8981|TRACE|DatabaseGeneratorChanges|Creating PropertyInfo Bookstore.BookTranslator.Book/Rhetos.DatabaseGenerator.DefaultConcepts.ReferencePropertyDatabaseDefinition, ID=B8D3F954-E21A-4D09-B073-D84971E42752.
+2023-01-23 12:02:32.8981|TRACE|DatabaseGeneratorChanges|Creating PropertyInfo Bookstore.BookTranslator.Translator/Rhetos.DatabaseGenerator.DefaultConcepts.ReferencePropertyDatabaseDefinition, ID=CC06CBBB-5E36-4E32-9372-4EDD676D9E61.
+2023-01-23 12:02:32.8981|TRACE|DatabaseGeneratorChanges|Creating SqlIndexMultipleInfo Bookstore.BookTranslator.'Book Translator'/Rhetos.DatabaseGenerator.DefaultConcepts.SqlIndexMultipleDatabaseDefinition, ID=4FCD0530-91C1-4ABA-905C-3F50A0232866.
+2023-01-23 12:02:32.9135|TRACE|DatabaseGeneratorChanges|Creating PropertyInfo Bookstore.Translator.Name/Rhetos.DatabaseGenerator.DefaultConcepts.ShortStringPropertyDatabaseDefinition, ID=530ABA5F-ADA4-4788-BE9E-86D9A7CB8AA5.
+2023-01-23 12:02:32.9135|TRACE|DatabaseGeneratorChanges|Creating ReferencePropertyDbConstraintInfo Bookstore.BookAuthor.Author/Rhetos.DatabaseGenerator.DefaultConcepts.ReferencePropertyConstraintDatabaseDefinition, ID=EBE855CF-7D53-4CF7-9D9D-0A069396F341.
+2023-01-23 12:02:32.9135|TRACE|DatabaseGeneratorChanges|Creating ReferencePropertyDbConstraintInfo Bookstore.BookAuthor.Book/Rhetos.DatabaseGenerator.DefaultConcepts.ReferencePropertyConstraintDatabaseDefinition, ID=179FBCFC-F884-4973-B5BB-BF1832646530.
+2023-01-23 12:02:32.9135|TRACE|DatabaseGeneratorChanges|Creating ReferencePropertyDbConstraintInfo Bookstore.BookTranslator.Book/Rhetos.DatabaseGenerator.DefaultConcepts.ReferencePropertyConstraintDatabaseDefinition, ID=4E208634-B7FA-4581-BFDF-941CED81EBB1.
+2023-01-23 12:02:32.9135|TRACE|DatabaseGeneratorChanges|Creating ReferencePropertyDbConstraintInfo Bookstore.BookTranslator.Translator/Rhetos.DatabaseGenerator.DefaultConcepts.ReferencePropertyConstraintDatabaseDefinition, ID=F45A9F96-954E-443D-A1F6-7672ED34C3E5.
+2023-01-23 12:02:32.9135|TRACE|DatabaseGeneratorChanges|Creating PropertyInfo Bookstore.ForeignBook.Translator/Rhetos.DatabaseGenerator.DefaultConcepts.ReferencePropertyDatabaseDefinition, ID=5D266F39-D2E8-48F4-A6A4-C509F85C926A.
+2023-01-23 12:02:32.9135|TRACE|DatabaseGeneratorChanges|Creating ReferencePropertyDbConstraintInfo Bookstore.ForeignBook.Translator/Rhetos.DatabaseGenerator.DefaultConcepts.ReferencePropertyConstraintDatabaseDefinition, ID=551FF0CF-3F86-4F81-9895-4B20A50190C7.
+2023-01-23 12:02:32.9135|TRACE|DatabaseGeneratorChanges|Creating DataStructureInfo Bookstore.BookInfo/Rhetos.DatabaseGenerator.DefaultConcepts.SqlQueryableDatabaseDefinition, ID=F9045668-305A-4F9D-BF47-B8E2F356C32C.
+2023-01-23 12:02:32.9135|INFO|DatabaseGenerator|Creating 20 database objects.
+2023-01-23 12:02:33.1333|INFO|DatabaseDeployment|Deleting redundant migration data.
+2023-01-23 12:02:33.1656|INFO|DatabaseCleaner|Deleted 1 columns in data migration schemas, 10 remaining.
+2023-01-23 12:02:33.1656|INFO|ApplicationInitialization|Loading generated plugins.
+2023-01-23 12:02:33.2107|INFO|ApplicationInitialization|Initializing EfMappingViews.
+2023-01-23 12:02:33.8831|INFO|ApplicationInitialization|Initialization ClaimGenerator.
+2023-01-23 12:02:34.4035|INFO|ApplicationInitialization|Initialization KeepSynchronizedRecomputeOnDeploy.
+2023-01-23 12:02:34.4198|INFO|Rhetos DbUpdate|Done.
+2023-01-23 12:21:52.1250|INFO|Rhetos DbUpdate base|Started 'dotnet' process 21372.
+2023-01-23 12:21:52.3800|INFO|Rhetos DbUpdate|Started in C:\Users\jpreksavec\Source\Repos\Bookstore\src\Bookstore.Service\bin\Debug\net7.0\
+2023-01-23 12:21:52.4057|INFO|DatabaseUpdate|Loading plugins.
+2023-01-23 12:21:52.8057|INFO|DatabaseDeployment|SQL connection: DataSource=JPREKSAVEC-LAP, InitialCatalog=Bookstore
+2023-01-23 12:21:52.9143|INFO|DatabaseDeployment|Preparing Rhetos database.
+2023-01-23 12:21:53.0957|INFO|DatabaseDeployment|Cleaning old migration data.
+2023-01-23 12:21:53.1147|INFO|DatabaseCleaner|Deleted 0 columns in data migration schemas, 10 remaining.
+2023-01-23 12:21:53.1185|INFO|DatabaseDeployment|Executing data migration scripts.
+2023-01-23 12:21:53.1185|INFO|ConceptDataMigration|Executing 0 before-data-migration scripts.
+2023-01-23 12:21:53.1358|INFO|DataMigration|Executed 0 of 12 scripts.
+2023-01-23 12:21:53.1358|INFO|ConceptDataMigration|Executing 0 after-data-migration scripts.
+2023-01-23 12:21:53.1358|INFO|DatabaseDeployment|Upgrading database.
+2023-01-23 12:21:53.1865|TRACE|DatabaseGeneratorChanges|Changed concept application: EntityLoggingInfo Bookstore.Book/Rhetos.DatabaseGenerator.DefaultConcepts.EntityLoggingDefinition
+Old: ...SE WHEN inserted.ID IS NOT NULL AND deleted.ID IS NULL\r\n        THEN ''\t--When inserting, Description is not available (there is no previous state)\r\n        ELSE N'<PREVIOUS'\r\n\t\t\t+ CASE WHEN inserted.Code <> deleted.Code\r\n                    OR inserted.Code IS NULL AND deleted.Code IS NOT NULL\r\n                    OR inserted.Code IS NOT NULL AND deleted.Code IS NULL\r\n                THEN ' Code=...
+New: ...SE WHEN inserted.ID IS NOT NULL AND deleted.ID IS NULL\r\n        THEN ''\t--When inserting, Description is not available (there is no previous state)\r\n        ELSE N'<PREVIOUS'\r\n\t\t\t+ CASE WHEN inserted.Author <> deleted.Author\r\n                    OR inserted.Author IS NULL AND deleted.Author IS NOT NULL\r\n                    OR inserted.Author IS NOT NULL AND deleted.Author IS NULL\r\n                ...
+2023-01-23 12:21:53.1977|TRACE|DatabaseGeneratorChanges|Refresh DataStructureInfo Bookstore.BookInfo/Rhetos.DatabaseGenerator.DefaultConcepts.SqlQueryableDatabaseDefinition, ID=F9045668-305A-4F9D-BF47-B8E2F356C32C. It depends on new concepts: PropertyInfo Bookstore.Book.Author/Rhetos.DatabaseGenerator.DefaultConcepts.ShortStringPropertyDatabaseDefinition.
+2023-01-23 12:21:53.1977|TRACE|DatabaseGeneratorChanges|Removing DataStructureInfo Bookstore.BookInfo/Rhetos.DatabaseGenerator.DefaultConcepts.SqlQueryableDatabaseDefinition, ID=F9045668-305A-4F9D-BF47-B8E2F356C32C.
+2023-01-23 12:21:53.1977|TRACE|DatabaseGeneratorChanges|Removing ReferencePropertyDbConstraintInfo Bookstore.BookAuthor.Book/Rhetos.DatabaseGenerator.DefaultConcepts.ReferencePropertyConstraintDatabaseDefinition, ID=179FBCFC-F884-4973-B5BB-BF1832646530.
+2023-01-23 12:21:53.1977|TRACE|DatabaseGeneratorChanges|Removing ReferencePropertyDbConstraintInfo Bookstore.BookAuthor.Author/Rhetos.DatabaseGenerator.DefaultConcepts.ReferencePropertyConstraintDatabaseDefinition, ID=EBE855CF-7D53-4CF7-9D9D-0A069396F341.
+2023-01-23 12:21:53.1977|TRACE|DatabaseGeneratorChanges|Removing SqlIndexMultipleInfo Bookstore.BookAuthor.'Book Author'/Rhetos.DatabaseGenerator.DefaultConcepts.SqlIndexMultipleDatabaseDefinition, ID=74EF5E0F-1D7F-4368-B3A7-608DDF7B58C8.
+2023-01-23 12:21:53.1977|TRACE|DatabaseGeneratorChanges|Removing PropertyInfo Bookstore.BookAuthor.Book/Rhetos.DatabaseGenerator.DefaultConcepts.ReferencePropertyDatabaseDefinition, ID=6C70FE0E-FCE4-4C95-9850-5AB8A76DBD7A.
+2023-01-23 12:21:53.1977|TRACE|DatabaseGeneratorChanges|Removing PropertyInfo Bookstore.BookAuthor.Author/Rhetos.DatabaseGenerator.DefaultConcepts.ReferencePropertyDatabaseDefinition, ID=C2241CFC-6907-41A3-9AB4-4D1911C6A13E.
+2023-01-23 12:21:53.1977|TRACE|DatabaseGeneratorChanges|Removing EntityLoggingInfo Bookstore.Author/Rhetos.DatabaseGenerator.DefaultConcepts.EntityLoggingDefinition, ID=057144CB-3463-4A42-AD58-D7AF9F00F3CD.
+2023-01-23 12:21:53.1977|TRACE|DatabaseGeneratorChanges|Removing PropertyInfo Bookstore.Author.Name/Rhetos.DatabaseGenerator.DefaultConcepts.ShortStringPropertyDatabaseDefinition, ID=6D4F1F36-994E-41CC-8A90-BF6575D43062.
+2023-01-23 12:21:53.1977|TRACE|DatabaseGeneratorChanges|Removing DataStructureInfo Bookstore.BookAuthor/Rhetos.DatabaseGenerator.DefaultConcepts.EntityDatabaseDefinition, ID=0FA9505F-5F72-40ED-90C7-F045F5B4D5C2.
+2023-01-23 12:21:53.1977|TRACE|DatabaseGeneratorChanges|Removing DataStructureInfo Bookstore.Author/Rhetos.DatabaseGenerator.DefaultConcepts.EntityDatabaseDefinition, ID=CB913682-F525-49E3-9464-B455FC228F4D.
+2023-01-23 12:21:53.1977|TRACE|DatabaseGeneratorChanges|Removing EntityLoggingInfo Bookstore.Book/Rhetos.DatabaseGenerator.DefaultConcepts.EntityLoggingDefinition, ID=65FBADF6-32EE-40D4-835D-2EE353FAF62C.
+2023-01-23 12:21:53.1977|INFO|DatabaseGenerator|Removing 11 database objects.
+2023-01-23 12:21:53.2119|TRACE|DatabaseGeneratorChanges|Creating PropertyInfo Bookstore.Book.Author/Rhetos.DatabaseGenerator.DefaultConcepts.ShortStringPropertyDatabaseDefinition, ID=82D2CD19-225D-4609-8250-A1B3D9ACEE46.
+2023-01-23 12:21:53.2119|TRACE|DatabaseGeneratorChanges|Creating EntityLoggingInfo Bookstore.Translator/Rhetos.DatabaseGenerator.DefaultConcepts.EntityLoggingDefinition, ID=DB8D8A09-0FEA-448E-BE57-6A563BD818AA.
+2023-01-23 12:21:53.2119|TRACE|DatabaseGeneratorChanges|Creating EntityLoggingInfo Bookstore.Book/Rhetos.DatabaseGenerator.DefaultConcepts.EntityLoggingDefinition, ID=65FBADF6-32EE-40D4-835D-2EE353FAF62C.
+2023-01-23 12:21:53.2119|TRACE|DatabaseGeneratorChanges|Creating DataStructureInfo Bookstore.BookInfo/Rhetos.DatabaseGenerator.DefaultConcepts.SqlQueryableDatabaseDefinition, ID=F9045668-305A-4F9D-BF47-B8E2F356C32C.
+2023-01-23 12:21:53.2119|INFO|DatabaseGenerator|Creating 4 database objects.
+2023-01-23 12:21:53.3869|INFO|DatabaseDeployment|Deleting redundant migration data.
+2023-01-23 12:21:53.3999|INFO|DatabaseCleaner|Deleted 0 columns in data migration schemas, 15 remaining.
+2023-01-23 12:21:53.3999|INFO|ApplicationInitialization|Loading generated plugins.
+2023-01-23 12:21:53.4479|INFO|ApplicationInitialization|Initializing EfMappingViews.
+2023-01-23 12:21:54.1083|INFO|ApplicationInitialization|Initialization ClaimGenerator.
+2023-01-23 12:21:54.6051|INFO|ApplicationInitialization|Initialization KeepSynchronizedRecomputeOnDeploy.
+2023-01-23 12:21:54.6183|INFO|Rhetos DbUpdate|Done.
+2023-01-23 12:22:33.4283|INFO|Rhetos DbUpdate base|Started 'dotnet' process 11732.
+2023-01-23 12:22:33.6781|INFO|Rhetos DbUpdate|Started in C:\Users\jpreksavec\Source\Repos\Bookstore\src\Bookstore.Service\bin\Debug\net7.0\
+2023-01-23 12:22:33.7052|INFO|DatabaseUpdate|Loading plugins.
+2023-01-23 12:22:34.1028|INFO|DatabaseDeployment|SQL connection: DataSource=JPREKSAVEC-LAP, InitialCatalog=Bookstore
+2023-01-23 12:22:34.2147|INFO|DatabaseDeployment|Preparing Rhetos database.
+2023-01-23 12:22:34.3924|INFO|DatabaseDeployment|Cleaning old migration data.
+2023-01-23 12:22:34.4122|INFO|DatabaseCleaner|Deleted 0 columns in data migration schemas, 15 remaining.
+2023-01-23 12:22:34.4158|INFO|DatabaseDeployment|Executing data migration scripts.
+2023-01-23 12:22:34.4158|INFO|ConceptDataMigration|Executing 0 before-data-migration scripts.
+2023-01-23 12:22:34.4323|INFO|DataMigration|Executed 0 of 12 scripts.
+2023-01-23 12:22:34.4323|INFO|ConceptDataMigration|Executing 0 after-data-migration scripts.
+2023-01-23 12:22:34.4323|INFO|DatabaseDeployment|Upgrading database.
+2023-01-23 12:22:34.4805|INFO|DatabaseGenerator|Removing 0 database objects.
+2023-01-23 12:22:34.4805|INFO|DatabaseGenerator|Creating 0 database objects.
+2023-01-23 12:22:34.4976|INFO|DatabaseDeployment|Deleting redundant migration data.
+2023-01-23 12:22:34.4976|INFO|DatabaseCleaner|Deleted 0 columns in data migration schemas, 15 remaining.
+2023-01-23 12:22:34.5113|INFO|ApplicationInitialization|Loading generated plugins.
+2023-01-23 12:22:34.5524|INFO|ApplicationInitialization|Initializing EfMappingViews.
+2023-01-23 12:22:35.0772|INFO|ApplicationInitialization|Initialization ClaimGenerator.
+2023-01-23 12:22:35.4645|INFO|ApplicationInitialization|Initialization KeepSynchronizedRecomputeOnDeploy.
+2023-01-23 12:22:35.4849|INFO|Rhetos DbUpdate|Done.
+2023-01-23 12:28:26.1496|INFO|Rhetos DbUpdate base|Started 'dotnet' process 6248.
+2023-01-23 12:28:26.4066|INFO|Rhetos DbUpdate|Started in C:\Users\jpreksavec\Source\Repos\Bookstore\src\Bookstore.Service\bin\Debug\net7.0\
+2023-01-23 12:28:26.4326|INFO|DatabaseUpdate|Loading plugins.
+2023-01-23 12:28:26.8308|INFO|DatabaseDeployment|SQL connection: DataSource=JPREKSAVEC-LAP, InitialCatalog=Bookstore
+2023-01-23 12:28:26.9317|INFO|DatabaseDeployment|Preparing Rhetos database.
+2023-01-23 12:28:27.1062|INFO|DatabaseDeployment|Cleaning old migration data.
+2023-01-23 12:28:27.1253|INFO|DatabaseCleaner|Deleted 0 columns in data migration schemas, 15 remaining.
+2023-01-23 12:28:27.1253|INFO|DatabaseDeployment|Executing data migration scripts.
+2023-01-23 12:28:27.1253|INFO|ConceptDataMigration|Executing 0 before-data-migration scripts.
+2023-01-23 12:28:27.1460|INFO|DataMigration|Executed 0 of 12 scripts.
+2023-01-23 12:28:27.1460|INFO|ConceptDataMigration|Executing 0 after-data-migration scripts.
+2023-01-23 12:28:27.1460|INFO|DatabaseDeployment|Upgrading database.
+2023-01-23 12:28:27.1875|TRACE|DatabaseGeneratorChanges|Changed concept application: EntityLoggingInfo Bookstore.Book/Rhetos.DatabaseGenerator.DefaultConcepts.EntityLoggingDefinition
+Old: ...SE WHEN inserted.ID IS NOT NULL AND deleted.ID IS NULL\r\n        THEN ''\t--When inserting, Description is not available (there is no previous state)\r\n        ELSE N'<PREVIOUS'\r\n\t\t\t+ CASE WHEN inserted.Author <> deleted.Author\r\n                    OR inserted.Author IS NULL AND deleted.Author IS NOT NULL\r\n                    OR inserted.Author IS NOT NULL AND deleted.Author IS NULL\r\n                ...
+New: ...SE WHEN inserted.ID IS NOT NULL AND deleted.ID IS NULL\r\n        THEN ''\t--When inserting, Description is not available (there is no previous state)\r\n        ELSE N'<PREVIOUS'\r\n\t\t\t+ CASE WHEN inserted.Code <> deleted.Code\r\n                    OR inserted.Code IS NULL AND deleted.Code IS NOT NULL\r\n                    OR inserted.Code IS NOT NULL AND deleted.Code IS NULL\r\n                THEN ' Code=...
+2023-01-23 12:28:27.1875|TRACE|DatabaseGeneratorChanges|Changed concept application: DataStructureInfo Bookstore.BookInfo/Rhetos.DatabaseGenerator.DefaultConcepts.SqlQueryableDatabaseDefinition
+Old: CREATE VIEW Bookstore.BookInfo AS \r\n\tSELECT\r\n\tb.ID,\r\n\tNumberOfComments = COUNT(c.ID)\r\n\tFROM Bookstore.Book b\r\n\tLEFT JOIN Bookstore.Comment c ON c.BookID = b.ID\r\n\tGROUP BY b.ID
+New: CREATE VIEW Bookstore.BookInfo AS \r\n   SELECT\r\n   b.ID,\r\n   NumberOfComments = COUNT(c.ID)\r\n   FROM Bookstore.Book b\r\n   LEFT JOIN Bookstore.Comment c ON c.BookID = b.ID\r\n   GROUP BY b.ID
+2023-01-23 12:28:27.1875|TRACE|DatabaseGeneratorChanges|Removing DataStructureInfo Bookstore.BookInfo/Rhetos.DatabaseGenerator.DefaultConcepts.SqlQueryableDatabaseDefinition, ID=F9045668-305A-4F9D-BF47-B8E2F356C32C.
+2023-01-23 12:28:27.2028|TRACE|DatabaseGeneratorChanges|Removing EntityLoggingInfo Bookstore.Book/Rhetos.DatabaseGenerator.DefaultConcepts.EntityLoggingDefinition, ID=65FBADF6-32EE-40D4-835D-2EE353FAF62C.
+2023-01-23 12:28:27.2028|TRACE|DatabaseGeneratorChanges|Removing EntityLoggingInfo Bookstore.Translator/Rhetos.DatabaseGenerator.DefaultConcepts.EntityLoggingDefinition, ID=DB8D8A09-0FEA-448E-BE57-6A563BD818AA.
+2023-01-23 12:28:27.2028|TRACE|DatabaseGeneratorChanges|Removing PropertyInfo Bookstore.Book.Author/Rhetos.DatabaseGenerator.DefaultConcepts.ShortStringPropertyDatabaseDefinition, ID=82D2CD19-225D-4609-8250-A1B3D9ACEE46.
+2023-01-23 12:28:27.2028|INFO|DatabaseGenerator|Removing 4 database objects.
+2023-01-23 12:28:27.2028|TRACE|DatabaseGeneratorChanges|Creating DataStructureInfo Bookstore.Author/Rhetos.DatabaseGenerator.DefaultConcepts.EntityDatabaseDefinition, ID=E7CA05A2-6ACB-4935-A1B7-1C9D365FDC4B.
+2023-01-23 12:28:27.2028|TRACE|DatabaseGeneratorChanges|Creating DataStructureInfo Bookstore.BookAuthor/Rhetos.DatabaseGenerator.DefaultConcepts.EntityDatabaseDefinition, ID=274A8E49-76FD-4A80-8FBC-24DD43AC456B.
+2023-01-23 12:28:27.2028|TRACE|DatabaseGeneratorChanges|Creating PropertyInfo Bookstore.Author.Name/Rhetos.DatabaseGenerator.DefaultConcepts.ShortStringPropertyDatabaseDefinition, ID=71B6FC72-8576-498B-B611-0E779753CE57.
+2023-01-23 12:28:27.2028|TRACE|DatabaseGeneratorChanges|Creating EntityLoggingInfo Bookstore.Author/Rhetos.DatabaseGenerator.DefaultConcepts.EntityLoggingDefinition, ID=6B933570-98F5-42A1-B58A-06B760C2AC47.
+2023-01-23 12:28:27.2028|TRACE|DatabaseGeneratorChanges|Creating PropertyInfo Bookstore.BookAuthor.Author/Rhetos.DatabaseGenerator.DefaultConcepts.ReferencePropertyDatabaseDefinition, ID=9CBED827-E8DD-474A-A135-438C01F43D3F.
+2023-01-23 12:28:27.2028|TRACE|DatabaseGeneratorChanges|Creating PropertyInfo Bookstore.BookAuthor.Book/Rhetos.DatabaseGenerator.DefaultConcepts.ReferencePropertyDatabaseDefinition, ID=C2E8A363-86A2-4C93-A9CE-517C787BF15A.
+2023-01-23 12:28:27.2028|TRACE|DatabaseGeneratorChanges|Creating SqlIndexMultipleInfo Bookstore.BookAuthor.'Book Author'/Rhetos.DatabaseGenerator.DefaultConcepts.SqlIndexMultipleDatabaseDefinition, ID=8E1C2EDA-D4A7-41FD-9410-A7F39CCDC8A6.
+2023-01-23 12:28:27.2028|TRACE|DatabaseGeneratorChanges|Creating ReferencePropertyDbConstraintInfo Bookstore.BookAuthor.Author/Rhetos.DatabaseGenerator.DefaultConcepts.ReferencePropertyConstraintDatabaseDefinition, ID=7F1E3201-EE50-4E1B-BE1D-896C01E36378.
+2023-01-23 12:28:27.2028|TRACE|DatabaseGeneratorChanges|Creating ReferencePropertyDbConstraintInfo Bookstore.BookAuthor.Book/Rhetos.DatabaseGenerator.DefaultConcepts.ReferencePropertyConstraintDatabaseDefinition, ID=98747CBA-F1D0-47B7-8AB8-D90A54D083B0.
+2023-01-23 12:28:27.2028|TRACE|DatabaseGeneratorChanges|Creating EntityLoggingInfo Bookstore.Book/Rhetos.DatabaseGenerator.DefaultConcepts.EntityLoggingDefinition, ID=65FBADF6-32EE-40D4-835D-2EE353FAF62C.
+2023-01-23 12:28:27.2028|TRACE|DatabaseGeneratorChanges|Creating DataStructureInfo Bookstore.BookInfo/Rhetos.DatabaseGenerator.DefaultConcepts.SqlQueryableDatabaseDefinition, ID=F9045668-305A-4F9D-BF47-B8E2F356C32C.
+2023-01-23 12:28:27.2028|INFO|DatabaseGenerator|Creating 11 database objects.
+2023-01-23 12:28:27.3776|INFO|DatabaseDeployment|Deleting redundant migration data.
+2023-01-23 12:28:27.3952|INFO|DatabaseCleaner|Deleted 3 columns in data migration schemas, 11 remaining.
+2023-01-23 12:28:27.3952|INFO|ApplicationInitialization|Loading generated plugins.
+2023-01-23 12:28:27.4392|INFO|ApplicationInitialization|Initializing EfMappingViews.
+2023-01-23 12:28:28.1178|INFO|ApplicationInitialization|Initialization ClaimGenerator.
+2023-01-23 12:28:28.5874|INFO|ApplicationInitialization|Initialization KeepSynchronizedRecomputeOnDeploy.
+2023-01-23 12:28:28.6001|INFO|Rhetos DbUpdate|Done.
+2023-01-23 12:47:55.5677|INFO|Rhetos DbUpdate base|Started 'dotnet' process 18412.
+2023-01-23 12:47:55.8228|INFO|Rhetos DbUpdate|Started in C:\Users\jpreksavec\Source\Repos\Bookstore\src\Bookstore.Service\bin\Debug\net7.0\
+2023-01-23 12:47:55.8487|INFO|DatabaseUpdate|Loading plugins.
+2023-01-23 12:47:56.2390|INFO|DatabaseDeployment|SQL connection: DataSource=JPREKSAVEC-LAP, InitialCatalog=Bookstore
+2023-01-23 12:47:56.3499|INFO|DatabaseDeployment|Preparing Rhetos database.
+2023-01-23 12:47:56.5205|INFO|DatabaseDeployment|Cleaning old migration data.
+2023-01-23 12:47:56.5390|INFO|DatabaseCleaner|Deleted 0 columns in data migration schemas, 11 remaining.
+2023-01-23 12:47:56.5390|INFO|DatabaseDeployment|Executing data migration scripts.
+2023-01-23 12:47:56.5467|INFO|ConceptDataMigration|Executing 0 before-data-migration scripts.
+2023-01-23 12:47:56.5615|INFO|DataMigration|Executed 0 of 12 scripts.
+2023-01-23 12:47:56.5615|INFO|ConceptDataMigration|Executing 0 after-data-migration scripts.
+2023-01-23 12:47:56.5615|INFO|DatabaseDeployment|Upgrading database.
+2023-01-23 12:47:56.6073|TRACE|DatabaseGeneratorChanges|Changed concept application: DataStructureInfo Bookstore.BookInfo/Rhetos.DatabaseGenerator.DefaultConcepts.SqlQueryableDatabaseDefinition
+Old: CREATE VIEW Bookstore.BookInfo AS \r\n   SELECT\r\n   b.ID,\r\n   NumberOfComments = COUNT(c.ID)\r\n   FROM Bookstore.Book b\r\n   LEFT JOIN Bookstore.Comment c ON c.BookID = b.ID\r\n   GROUP BY b.ID
+New: CREATE VIEW Bookstore.BookInfo AS \r\n       SELECT\r\n       b.ID,\r\n       NumberOfComments = COUNT(c.ID)\r\n       FROM Bookstore.Book b\r\n       LEFT JOIN Bookstore.Comment c ON c.BookID = b.ID\r\n       GROUP BY b.ID
+2023-01-23 12:47:56.6073|TRACE|DatabaseGeneratorChanges|Removing DataStructureInfo Bookstore.BookInfo/Rhetos.DatabaseGenerator.DefaultConcepts.SqlQueryableDatabaseDefinition, ID=F9045668-305A-4F9D-BF47-B8E2F356C32C.
+2023-01-23 12:47:56.6073|INFO|DatabaseGenerator|Removing 1 database objects.
+2023-01-23 12:47:56.6073|TRACE|DatabaseGeneratorChanges|Creating PropertyInfo Bookstore.ForeignBook.Author/Rhetos.DatabaseGenerator.DefaultConcepts.ReferencePropertyDatabaseDefinition, ID=D536F58C-9BC7-4BA3-BEFB-8DF793175564.
+2023-01-23 12:47:56.6224|TRACE|DatabaseGeneratorChanges|Creating ReferencePropertyDbConstraintInfo Bookstore.ForeignBook.Author/Rhetos.DatabaseGenerator.DefaultConcepts.ReferencePropertyConstraintDatabaseDefinition, ID=2ECA9450-E2C3-49BF-AF15-1C9BBAB6ADC9.
+2023-01-23 12:47:56.6224|TRACE|DatabaseGeneratorChanges|Creating DataStructureInfo Bookstore.BookInfo/Rhetos.DatabaseGenerator.DefaultConcepts.SqlQueryableDatabaseDefinition, ID=F9045668-305A-4F9D-BF47-B8E2F356C32C.
+2023-01-23 12:47:56.6224|INFO|DatabaseGenerator|Creating 3 database objects.
+2023-01-23 12:47:56.6700|INFO|DatabaseDeployment|Deleting redundant migration data.
+2023-01-23 12:47:56.7045|INFO|DatabaseCleaner|Deleted 0 columns in data migration schemas, 11 remaining.
+2023-01-23 12:47:56.7045|INFO|ApplicationInitialization|Loading generated plugins.
+2023-01-23 12:47:56.7519|INFO|ApplicationInitialization|Initializing EfMappingViews.
+2023-01-23 12:47:57.4317|INFO|ApplicationInitialization|Initialization ClaimGenerator.
+2023-01-23 12:47:57.8139|INFO|ApplicationInitialization|Initialization KeepSynchronizedRecomputeOnDeploy.
+2023-01-23 12:47:57.8309|INFO|Rhetos DbUpdate|Done.
+2023-01-23 12:57:26.5453|INFO|Rhetos DbUpdate base|Started 'dotnet' process 24916.
+2023-01-23 12:57:26.8052|INFO|Rhetos DbUpdate|Started in C:\Users\jpreksavec\Source\Repos\Bookstore\src\Bookstore.Service\bin\Debug\net7.0\
+2023-01-23 12:57:26.8309|INFO|DatabaseUpdate|Loading plugins.
+2023-01-23 12:57:27.2270|INFO|DatabaseDeployment|SQL connection: DataSource=JPREKSAVEC-LAP, InitialCatalog=Bookstore
+2023-01-23 12:57:27.3303|INFO|DatabaseDeployment|Preparing Rhetos database.
+2023-01-23 12:57:27.4656|INFO|DatabaseDeployment|Cleaning old migration data.
+2023-01-23 12:57:27.5003|INFO|DatabaseCleaner|Deleted 0 columns in data migration schemas, 11 remaining.
+2023-01-23 12:57:27.5035|INFO|DatabaseDeployment|Executing data migration scripts.
+2023-01-23 12:57:27.5035|INFO|ConceptDataMigration|Executing 0 before-data-migration scripts.
+2023-01-23 12:57:27.5035|INFO|DataMigration|Executed 0 of 12 scripts.
+2023-01-23 12:57:27.5035|INFO|ConceptDataMigration|Executing 0 after-data-migration scripts.
+2023-01-23 12:57:27.5198|INFO|DatabaseDeployment|Upgrading database.
+2023-01-23 12:57:27.5670|INFO|DatabaseGenerator|Removing 0 database objects.
+2023-01-23 12:57:27.5670|INFO|DatabaseGenerator|Creating 0 database objects.
+2023-01-23 12:57:27.5670|INFO|DatabaseDeployment|Deleting redundant migration data.
+2023-01-23 12:57:27.5879|INFO|DatabaseCleaner|Deleted 0 columns in data migration schemas, 11 remaining.
+2023-01-23 12:57:27.5879|INFO|ApplicationInitialization|Loading generated plugins.
+2023-01-23 12:57:27.6324|INFO|ApplicationInitialization|Initializing EfMappingViews.
+2023-01-23 12:57:28.1570|INFO|ApplicationInitialization|Initialization ClaimGenerator.
+2023-01-23 12:57:28.5352|INFO|ApplicationInitialization|Initialization KeepSynchronizedRecomputeOnDeploy.
+2023-01-23 12:57:28.5546|INFO|Rhetos DbUpdate|Done.
+2023-01-23 13:07:28.9137|INFO|Rhetos DbUpdate base|Started 'dotnet' process 26000.
+2023-01-23 13:07:29.1904|INFO|Rhetos DbUpdate|Started in C:\Users\jpreksavec\Source\Repos\Bookstore\src\Bookstore.Service\bin\Debug\net7.0\
+2023-01-23 13:07:29.2181|INFO|DatabaseUpdate|Loading plugins.
+2023-01-23 13:07:29.6199|INFO|DatabaseDeployment|SQL connection: DataSource=JPREKSAVEC-LAP, InitialCatalog=Bookstore
+2023-01-23 13:07:29.7412|INFO|DatabaseDeployment|Preparing Rhetos database.
+2023-01-23 13:07:29.8150|INFO|DatabaseDeployment|Cleaning old migration data.
+2023-01-23 13:07:29.8270|INFO|DatabaseCleaner|Deleted 0 columns in data migration schemas, 11 remaining.
+2023-01-23 13:07:29.8270|INFO|DatabaseDeployment|Executing data migration scripts.
+2023-01-23 13:07:29.8270|INFO|ConceptDataMigration|Executing 0 before-data-migration scripts.
+2023-01-23 13:07:29.8459|INFO|DataMigration|Executed 0 of 12 scripts.
+2023-01-23 13:07:29.8459|INFO|ConceptDataMigration|Executing 0 after-data-migration scripts.
+2023-01-23 13:07:29.8459|INFO|DatabaseDeployment|Upgrading database.
+2023-01-23 13:07:29.8867|INFO|DatabaseGenerator|Removing 0 database objects.
+2023-01-23 13:07:29.9038|INFO|DatabaseGenerator|Creating 0 database objects.
+2023-01-23 13:07:29.9038|INFO|DatabaseDeployment|Deleting redundant migration data.
+2023-01-23 13:07:29.9190|INFO|DatabaseCleaner|Deleted 0 columns in data migration schemas, 11 remaining.
+2023-01-23 13:07:29.9190|INFO|ApplicationInitialization|Loading generated plugins.
+2023-01-23 13:07:29.9645|INFO|ApplicationInitialization|Initializing EfMappingViews.
+2023-01-23 13:07:30.5061|INFO|ApplicationInitialization|Initialization ClaimGenerator.
+2023-01-23 13:07:30.9210|INFO|ApplicationInitialization|Initialization KeepSynchronizedRecomputeOnDeploy.
+2023-01-23 13:07:30.9342|INFO|Rhetos DbUpdate|Done.
+2023-01-23 13:47:01.8965|INFO|Rhetos DbUpdate base|Started 'dotnet' process 16756.
+2023-01-23 13:47:02.1479|INFO|Rhetos DbUpdate|Started in C:\Users\jpreksavec\Source\Repos\Bookstore\src\Bookstore.Service\bin\Debug\net7.0\
+2023-01-23 13:47:02.1744|INFO|DatabaseUpdate|Loading plugins.
+2023-01-23 13:47:02.5633|INFO|DatabaseDeployment|SQL connection: DataSource=JPREKSAVEC-LAP, InitialCatalog=Bookstore
+2023-01-23 13:47:02.6705|INFO|DatabaseDeployment|Preparing Rhetos database.
+2023-01-23 13:47:02.8363|INFO|DatabaseDeployment|Cleaning old migration data.
+2023-01-23 13:47:02.8562|INFO|DatabaseCleaner|Deleted 0 columns in data migration schemas, 11 remaining.
+2023-01-23 13:47:02.8608|INFO|DatabaseDeployment|Executing data migration scripts.
+2023-01-23 13:47:02.8608|INFO|ConceptDataMigration|Executing 0 before-data-migration scripts.
+2023-01-23 13:47:02.8778|INFO|DataMigration|Executed 0 of 12 scripts.
+2023-01-23 13:47:02.8778|INFO|ConceptDataMigration|Executing 0 after-data-migration scripts.
+2023-01-23 13:47:02.8778|INFO|DatabaseDeployment|Upgrading database.
+2023-01-23 13:47:02.9245|TRACE|DatabaseGeneratorChanges|Changed concept application: DataStructureInfo Bookstore.BookInfo/Rhetos.DatabaseGenerator.DefaultConcepts.SqlQueryableDatabaseDefinition
+Old: CREATE VIEW Bookstore.BookInfo AS \r\n       SELECT\r\n       b.ID,\r\n       NumberOfComments = COUNT(c.ID)\r\n       FROM Bookstore.Book b\r\n       LEFT JOIN Bookstore.Comment c ON c.BookID = b.ID\r\n       GROUP BY b.ID
+New: CREATE VIEW Bookstore.BookInfo AS SELECT\r\n    b.ID,\r\n    NumberOfComments = COUNT(c.ID)\r\nFROM\r\n    Bookstore.Book b\r\n    LEFT JOIN Bookstore.Comment c ON c.BookID = b.ID\r\nGROUP BY\r\n    b.ID
+2023-01-23 13:47:02.9245|TRACE|DatabaseGeneratorChanges|Removing DataStructureInfo Bookstore.BookInfo/Rhetos.DatabaseGenerator.DefaultConcepts.SqlQueryableDatabaseDefinition, ID=F9045668-305A-4F9D-BF47-B8E2F356C32C.
+2023-01-23 13:47:02.9245|INFO|DatabaseGenerator|Removing 1 database objects.
+2023-01-23 13:47:02.9245|TRACE|DatabaseGeneratorChanges|Creating DataStructureInfo Bookstore.BookInfo/Rhetos.DatabaseGenerator.DefaultConcepts.SqlQueryableDatabaseDefinition, ID=F9045668-305A-4F9D-BF47-B8E2F356C32C.
+2023-01-23 13:47:02.9245|INFO|DatabaseGenerator|Creating 1 database objects.
+2023-01-23 13:47:02.9550|INFO|DatabaseDeployment|Deleting redundant migration data.
+2023-01-23 13:47:02.9550|INFO|DatabaseCleaner|Deleted 0 columns in data migration schemas, 11 remaining.
+2023-01-23 13:47:02.9550|INFO|ApplicationInitialization|Loading generated plugins.
+2023-01-23 13:47:03.0086|INFO|ApplicationInitialization|Initializing EfMappingViews.
+2023-01-23 13:47:03.5257|INFO|ApplicationInitialization|Initialization ClaimGenerator.
+2023-01-23 13:47:03.9067|INFO|ApplicationInitialization|Initialization KeepSynchronizedRecomputeOnDeploy.
+2023-01-23 13:47:03.9067|INFO|Rhetos DbUpdate|Done.
+2023-01-23 13:58:36.3683|INFO|Rhetos DbUpdate base|Started 'dotnet' process 12680.
+2023-01-23 13:58:36.6230|INFO|Rhetos DbUpdate|Started in C:\Users\jpreksavec\source\repos\Bookstore\src\Bookstore.Service\bin\Debug\net7.0\
+2023-01-23 13:58:36.6485|INFO|DatabaseUpdate|Loading plugins.
+2023-01-23 13:58:37.0385|INFO|DatabaseDeployment|SQL connection: DataSource=JPREKSAVEC-LAP, InitialCatalog=Bookstore
+2023-01-23 13:58:37.1380|INFO|DatabaseDeployment|Preparing Rhetos database.
+2023-01-23 13:58:37.2049|INFO|DatabaseDeployment|Cleaning old migration data.
+2023-01-23 13:58:37.2163|INFO|DatabaseCleaner|Deleted 0 columns in data migration schemas, 11 remaining.
+2023-01-23 13:58:37.2163|INFO|DatabaseDeployment|Executing data migration scripts.
+2023-01-23 13:58:37.2163|INFO|ConceptDataMigration|Executing 0 before-data-migration scripts.
+2023-01-23 13:58:37.2352|INFO|DataMigration|Executed 0 of 12 scripts.
+2023-01-23 13:58:37.2352|INFO|ConceptDataMigration|Executing 0 after-data-migration scripts.
+2023-01-23 13:58:37.2352|INFO|DatabaseDeployment|Upgrading database.
+2023-01-23 13:58:37.2733|TRACE|DatabaseGeneratorChanges|Changed concept application: ReferencePropertyDbConstraintInfo Bookstore.ForeignBook.Translator/Rhetos.DatabaseGenerator.DefaultConcepts.ReferencePropertyConstraintDatabaseDefinition
+Old: ALTER TABLE Bookstore.ForeignBook ADD CONSTRAINT FK_ForeignBook_Translator_TranslatorID FOREIGN KEY (TranslatorID) REFERENCES Bookstore.Translator (ID) /*ReferencePropertyDbConstraintInfo FK options Bookstore.ForeignBook.Translator*/
+New: ALTER TABLE Bookstore.ForeignBook ADD CONSTRAINT FK_ForeignBook_Person_TranslatorID FOREIGN KEY (TranslatorID) REFERENCES Bookstore.Person (ID) /*ReferencePropertyDbConstraintInfo FK options Bookstore.ForeignBook.Translator*/
+2023-01-23 13:58:37.2733|TRACE|DatabaseGeneratorChanges|Changed concept application: EntityLoggingInfo Bookstore.Book/Rhetos.DatabaseGenerator.DefaultConcepts.EntityLoggingDefinition
+Old: ...\n    Description = CASE WHEN inserted.ID IS NOT NULL AND deleted.ID IS NULL\r\n        THEN ''\t--When inserting, Description is not available (there is no previous state)\r\n        ELSE N'<PREVIOUS'\r\n\t\t\t+ CASE WHEN inserted.Code <> deleted.Code\r\n                    OR inserted.Code IS NULL AND deleted.Code IS NOT NULL\r\n                    OR inserted.Code IS NOT NULL AND deleted.Code IS NULL\r\n       ...
+New: ...\n    Description = CASE WHEN inserted.ID IS NOT NULL AND deleted.ID IS NULL\r\n        THEN ''\t--When inserting, Description is not available (there is no previous state)\r\n        ELSE N'<PREVIOUS'\r\n\t\t\t/*EntityLoggingInfo LogProperty Bookstore.Book*/\r\n            + ' />'\r\n    END/*EntityLoggingInfo TempColumnSelect Bookstore.Book*/\r\nFROM\r\n    inserted\r\n    FULL OUTER JOIN deleted ON inserted.ID = de...
+2023-01-23 13:58:37.2937|TRACE|DatabaseGeneratorChanges|Refresh PropertyInfo Bookstore.ForeignBook.Translator/Rhetos.DatabaseGenerator.DefaultConcepts.ReferencePropertyDatabaseDefinition, ID=5D266F39-D2E8-48F4-A6A4-C509F85C926A. It depends on new concepts: DataStructureInfo Bookstore.Person/Rhetos.DatabaseGenerator.DefaultConcepts.EntityDatabaseDefinition. It depends on removed concepts: DataStructureInfo Bookstore.Translator/Rhetos.DatabaseGenerator.DefaultConcepts.EntityDatabaseDefinition.
+2023-01-23 13:58:37.2937|TRACE|DatabaseGeneratorChanges|Removing DataStructureInfo Bookstore.BookInfo/Rhetos.DatabaseGenerator.DefaultConcepts.SqlQueryableDatabaseDefinition, ID=F9045668-305A-4F9D-BF47-B8E2F356C32C.
+2023-01-23 13:58:37.2937|TRACE|DatabaseGeneratorChanges|Removing ReferencePropertyDbConstraintInfo Bookstore.ForeignBook.Author/Rhetos.DatabaseGenerator.DefaultConcepts.ReferencePropertyConstraintDatabaseDefinition, ID=2ECA9450-E2C3-49BF-AF15-1C9BBAB6ADC9.
+2023-01-23 13:58:37.2937|TRACE|DatabaseGeneratorChanges|Removing PropertyInfo Bookstore.ForeignBook.Author/Rhetos.DatabaseGenerator.DefaultConcepts.ReferencePropertyDatabaseDefinition, ID=D536F58C-9BC7-4BA3-BEFB-8DF793175564.
+2023-01-23 13:58:37.2937|TRACE|DatabaseGeneratorChanges|Removing EntityLoggingInfo Bookstore.Book/Rhetos.DatabaseGenerator.DefaultConcepts.EntityLoggingDefinition, ID=65FBADF6-32EE-40D4-835D-2EE353FAF62C.
+2023-01-23 13:58:37.2937|TRACE|DatabaseGeneratorChanges|Removing ReferencePropertyDbConstraintInfo Bookstore.BookAuthor.Book/Rhetos.DatabaseGenerator.DefaultConcepts.ReferencePropertyConstraintDatabaseDefinition, ID=98747CBA-F1D0-47B7-8AB8-D90A54D083B0.
+2023-01-23 13:58:37.2937|TRACE|DatabaseGeneratorChanges|Removing ReferencePropertyDbConstraintInfo Bookstore.BookAuthor.Author/Rhetos.DatabaseGenerator.DefaultConcepts.ReferencePropertyConstraintDatabaseDefinition, ID=7F1E3201-EE50-4E1B-BE1D-896C01E36378.
+2023-01-23 13:58:37.2937|TRACE|DatabaseGeneratorChanges|Removing SqlIndexMultipleInfo Bookstore.BookAuthor.'Book Author'/Rhetos.DatabaseGenerator.DefaultConcepts.SqlIndexMultipleDatabaseDefinition, ID=8E1C2EDA-D4A7-41FD-9410-A7F39CCDC8A6.
+2023-01-23 13:58:37.2937|TRACE|DatabaseGeneratorChanges|Removing PropertyInfo Bookstore.BookAuthor.Book/Rhetos.DatabaseGenerator.DefaultConcepts.ReferencePropertyDatabaseDefinition, ID=C2E8A363-86A2-4C93-A9CE-517C787BF15A.
+2023-01-23 13:58:37.2937|TRACE|DatabaseGeneratorChanges|Removing PropertyInfo Bookstore.BookAuthor.Author/Rhetos.DatabaseGenerator.DefaultConcepts.ReferencePropertyDatabaseDefinition, ID=9CBED827-E8DD-474A-A135-438C01F43D3F.
+2023-01-23 13:58:37.2937|TRACE|DatabaseGeneratorChanges|Removing EntityLoggingInfo Bookstore.Author/Rhetos.DatabaseGenerator.DefaultConcepts.EntityLoggingDefinition, ID=6B933570-98F5-42A1-B58A-06B760C2AC47.
+2023-01-23 13:58:37.2937|TRACE|DatabaseGeneratorChanges|Removing PropertyInfo Bookstore.Author.Name/Rhetos.DatabaseGenerator.DefaultConcepts.ShortStringPropertyDatabaseDefinition, ID=71B6FC72-8576-498B-B611-0E779753CE57.
+2023-01-23 13:58:37.2937|TRACE|DatabaseGeneratorChanges|Removing DataStructureInfo Bookstore.BookAuthor/Rhetos.DatabaseGenerator.DefaultConcepts.EntityDatabaseDefinition, ID=274A8E49-76FD-4A80-8FBC-24DD43AC456B.
+2023-01-23 13:58:37.2937|TRACE|DatabaseGeneratorChanges|Removing DataStructureInfo Bookstore.Author/Rhetos.DatabaseGenerator.DefaultConcepts.EntityDatabaseDefinition, ID=E7CA05A2-6ACB-4935-A1B7-1C9D365FDC4B.
+2023-01-23 13:58:37.2937|TRACE|DatabaseGeneratorChanges|Removing ReferencePropertyDbConstraintInfo Bookstore.ForeignBook.Translator/Rhetos.DatabaseGenerator.DefaultConcepts.ReferencePropertyConstraintDatabaseDefinition, ID=551FF0CF-3F86-4F81-9895-4B20A50190C7.
+2023-01-23 13:58:37.2937|TRACE|DatabaseGeneratorChanges|Removing PropertyInfo Bookstore.ForeignBook.Translator/Rhetos.DatabaseGenerator.DefaultConcepts.ReferencePropertyDatabaseDefinition, ID=5D266F39-D2E8-48F4-A6A4-C509F85C926A.
+2023-01-23 13:58:37.3027|TRACE|DatabaseGeneratorChanges|Removing ReferencePropertyDbConstraintInfo Bookstore.BookTranslator.Translator/Rhetos.DatabaseGenerator.DefaultConcepts.ReferencePropertyConstraintDatabaseDefinition, ID=F45A9F96-954E-443D-A1F6-7672ED34C3E5.
+2023-01-23 13:58:37.3027|TRACE|DatabaseGeneratorChanges|Removing ReferencePropertyDbConstraintInfo Bookstore.BookTranslator.Book/Rhetos.DatabaseGenerator.DefaultConcepts.ReferencePropertyConstraintDatabaseDefinition, ID=4E208634-B7FA-4581-BFDF-941CED81EBB1.
+2023-01-23 13:58:37.3027|TRACE|DatabaseGeneratorChanges|Removing PropertyInfo Bookstore.Translator.Name/Rhetos.DatabaseGenerator.DefaultConcepts.ShortStringPropertyDatabaseDefinition, ID=530ABA5F-ADA4-4788-BE9E-86D9A7CB8AA5.
+2023-01-23 13:58:37.3027|TRACE|DatabaseGeneratorChanges|Removing SqlIndexMultipleInfo Bookstore.BookTranslator.'Book Translator'/Rhetos.DatabaseGenerator.DefaultConcepts.SqlIndexMultipleDatabaseDefinition, ID=4FCD0530-91C1-4ABA-905C-3F50A0232866.
+2023-01-23 13:58:37.3027|TRACE|DatabaseGeneratorChanges|Removing PropertyInfo Bookstore.BookTranslator.Translator/Rhetos.DatabaseGenerator.DefaultConcepts.ReferencePropertyDatabaseDefinition, ID=CC06CBBB-5E36-4E32-9372-4EDD676D9E61.
+2023-01-23 13:58:37.3027|TRACE|DatabaseGeneratorChanges|Removing PropertyInfo Bookstore.BookTranslator.Book/Rhetos.DatabaseGenerator.DefaultConcepts.ReferencePropertyDatabaseDefinition, ID=B8D3F954-E21A-4D09-B073-D84971E42752.
+2023-01-23 13:58:37.3027|TRACE|DatabaseGeneratorChanges|Removing DataStructureInfo Bookstore.Translator/Rhetos.DatabaseGenerator.DefaultConcepts.EntityDatabaseDefinition, ID=0E94F588-446F-420F-975B-34771F831735.
+2023-01-23 13:58:37.3027|TRACE|DatabaseGeneratorChanges|Removing DataStructureInfo Bookstore.BookTranslator/Rhetos.DatabaseGenerator.DefaultConcepts.EntityDatabaseDefinition, ID=8ADC74C8-AA97-4EDC-B188-CFA0086C1D2A.
+2023-01-23 13:58:37.3027|INFO|DatabaseGenerator|Removing 23 database objects.
+2023-01-23 13:58:37.3027|TRACE|DatabaseGeneratorChanges|Creating DataStructureInfo Bookstore.Person/Rhetos.DatabaseGenerator.DefaultConcepts.EntityDatabaseDefinition, ID=E7F8152B-3DA2-41DB-B126-D12148F8FB3C.
+2023-01-23 13:58:37.3027|TRACE|DatabaseGeneratorChanges|Creating PropertyInfo Bookstore.Person.Name/Rhetos.DatabaseGenerator.DefaultConcepts.ShortStringPropertyDatabaseDefinition, ID=006C8B6E-CEC1-4479-9DAD-41D83B651184.
+2023-01-23 13:58:37.3027|TRACE|DatabaseGeneratorChanges|Creating PropertyInfo Bookstore.ForeignBook.Translator/Rhetos.DatabaseGenerator.DefaultConcepts.ReferencePropertyDatabaseDefinition, ID=5D266F39-D2E8-48F4-A6A4-C509F85C926A.
+2023-01-23 13:58:37.3027|TRACE|DatabaseGeneratorChanges|Creating ReferencePropertyDbConstraintInfo Bookstore.ForeignBook.Translator/Rhetos.DatabaseGenerator.DefaultConcepts.ReferencePropertyConstraintDatabaseDefinition, ID=551FF0CF-3F86-4F81-9895-4B20A50190C7.
+2023-01-23 13:58:37.3027|TRACE|DatabaseGeneratorChanges|Creating EntityLoggingInfo Bookstore.Book/Rhetos.DatabaseGenerator.DefaultConcepts.EntityLoggingDefinition, ID=65FBADF6-32EE-40D4-835D-2EE353FAF62C.
+2023-01-23 13:58:37.3027|INFO|DatabaseGenerator|Creating 5 database objects.
+2023-01-23 13:58:37.5721|INFO|DatabaseDeployment|Deleting redundant migration data.
+2023-01-23 13:58:37.5844|INFO|DatabaseCleaner|Deleted 2 columns in data migration schemas, 20 remaining.
+2023-01-23 13:58:37.5844|INFO|ApplicationInitialization|Loading generated plugins.
+2023-01-23 13:58:37.6277|INFO|ApplicationInitialization|Initializing EfMappingViews.
+2023-01-23 13:58:38.2679|INFO|ApplicationInitialization|Initialization ClaimGenerator.
+2023-01-23 13:58:38.8187|INFO|ApplicationInitialization|Initialization KeepSynchronizedRecomputeOnDeploy.
+2023-01-23 13:58:38.8187|INFO|Rhetos DbUpdate|Done.
+2023-01-23 14:03:09.0952|INFO|Rhetos DbUpdate base|Started 'dotnet' process 7028.
+2023-01-23 14:03:09.3520|INFO|Rhetos DbUpdate|Started in C:\Users\jpreksavec\source\repos\Bookstore\src\Bookstore.Service\bin\Debug\net7.0\
+2023-01-23 14:03:09.3775|INFO|DatabaseUpdate|Loading plugins.
+2023-01-23 14:03:09.7734|INFO|DatabaseDeployment|SQL connection: DataSource=JPREKSAVEC-LAP, InitialCatalog=Bookstore
+2023-01-23 14:03:09.8831|INFO|DatabaseDeployment|Preparing Rhetos database.
+2023-01-23 14:03:09.9546|INFO|DatabaseDeployment|Cleaning old migration data.
+2023-01-23 14:03:09.9715|INFO|DatabaseCleaner|Deleted 0 columns in data migration schemas, 20 remaining.
+2023-01-23 14:03:09.9715|INFO|DatabaseDeployment|Executing data migration scripts.
+2023-01-23 14:03:09.9785|INFO|ConceptDataMigration|Executing 0 before-data-migration scripts.
+2023-01-23 14:03:09.9785|INFO|DataMigration|Executed 0 of 12 scripts.
+2023-01-23 14:03:09.9931|INFO|ConceptDataMigration|Executing 0 after-data-migration scripts.
+2023-01-23 14:03:09.9931|INFO|DatabaseDeployment|Upgrading database.
+2023-01-23 14:03:10.0392|INFO|DatabaseGenerator|Removing 0 database objects.
+2023-01-23 14:03:10.0392|INFO|DatabaseGenerator|Creating 0 database objects.
+2023-01-23 14:03:10.0558|INFO|DatabaseDeployment|Deleting redundant migration data.
+2023-01-23 14:03:10.0558|INFO|DatabaseCleaner|Deleted 0 columns in data migration schemas, 20 remaining.
+2023-01-23 14:03:10.0558|INFO|ApplicationInitialization|Loading generated plugins.
+2023-01-23 14:03:10.1113|INFO|ApplicationInitialization|Initializing EfMappingViews.
+2023-01-23 14:03:10.6322|INFO|ApplicationInitialization|Initialization ClaimGenerator.
+2023-01-23 14:03:11.0272|INFO|ApplicationInitialization|Initialization KeepSynchronizedRecomputeOnDeploy.
+2023-01-23 14:03:11.0415|INFO|Rhetos DbUpdate|Done.
+2023-01-23 14:04:27.0402|INFO|Rhetos DbUpdate base|Started 'dotnet' process 29520.
+2023-01-23 14:04:27.2966|INFO|Rhetos DbUpdate|Started in C:\Users\jpreksavec\source\repos\Bookstore\src\Bookstore.Service\bin\Debug\net7.0\
+2023-01-23 14:04:27.3228|INFO|DatabaseUpdate|Loading plugins.
+2023-01-23 14:04:27.7205|INFO|DatabaseDeployment|SQL connection: DataSource=JPREKSAVEC-LAP, InitialCatalog=Bookstore
+2023-01-23 14:04:27.8293|INFO|DatabaseDeployment|Preparing Rhetos database.
+2023-01-23 14:04:27.8950|INFO|DatabaseDeployment|Cleaning old migration data.
+2023-01-23 14:04:27.9064|INFO|DatabaseCleaner|Deleted 0 columns in data migration schemas, 20 remaining.
+2023-01-23 14:04:27.9064|INFO|DatabaseDeployment|Executing data migration scripts.
+2023-01-23 14:04:27.9064|INFO|ConceptDataMigration|Executing 0 before-data-migration scripts.
+2023-01-23 14:04:27.9275|INFO|DataMigration|Executed 0 of 12 scripts.
+2023-01-23 14:04:27.9275|INFO|ConceptDataMigration|Executing 0 after-data-migration scripts.
+2023-01-23 14:04:27.9275|INFO|DatabaseDeployment|Upgrading database.
+2023-01-23 14:04:27.9781|TRACE|DatabaseGeneratorChanges|Removing SqlIndexMultipleInfo Bookstore.Book.Code/Rhetos.DatabaseGenerator.DefaultConcepts.SqlIndexMultipleDatabaseDefinition, ID=B4E84558-0DEA-4A4B-8083-C9C85769CA81.
+2023-01-23 14:04:27.9781|INFO|DatabaseGenerator|Removing 1 database objects.
+2023-01-23 14:04:27.9781|INFO|DatabaseGenerator|Creating 0 database objects.
+2023-01-23 14:04:27.9966|INFO|DatabaseDeployment|Deleting redundant migration data.
+2023-01-23 14:04:28.0091|INFO|DatabaseCleaner|Deleted 0 columns in data migration schemas, 20 remaining.
+2023-01-23 14:04:28.0091|INFO|ApplicationInitialization|Loading generated plugins.
+2023-01-23 14:04:28.0524|INFO|ApplicationInitialization|Initializing EfMappingViews.
+2023-01-23 14:04:28.5604|INFO|ApplicationInitialization|Initialization ClaimGenerator.
+2023-01-23 14:04:28.9499|INFO|ApplicationInitialization|Initialization KeepSynchronizedRecomputeOnDeploy.
+2023-01-23 14:04:28.9684|INFO|Rhetos DbUpdate|Done.
+2023-01-23 14:06:00.8155|INFO|Rhetos DbUpdate base|Started 'dotnet' process 5420.
+2023-01-23 14:06:01.0753|INFO|Rhetos DbUpdate|Started in C:\Users\jpreksavec\source\repos\Bookstore\src\Bookstore.Service\bin\Debug\net7.0\
+2023-01-23 14:06:01.1009|INFO|DatabaseUpdate|Loading plugins.
+2023-01-23 14:06:01.4954|INFO|DatabaseDeployment|SQL connection: DataSource=JPREKSAVEC-LAP, InitialCatalog=Bookstore
+2023-01-23 14:06:01.6011|INFO|DatabaseDeployment|Preparing Rhetos database.
+2023-01-23 14:06:01.6683|INFO|DatabaseDeployment|Cleaning old migration data.
+2023-01-23 14:06:01.7018|INFO|DatabaseCleaner|Deleted 0 columns in data migration schemas, 20 remaining.
+2023-01-23 14:06:01.7018|INFO|DatabaseDeployment|Executing data migration scripts.
+2023-01-23 14:06:01.7018|INFO|ConceptDataMigration|Executing 0 before-data-migration scripts.
+2023-01-23 14:06:01.7202|INFO|DataMigration|Executed 0 of 12 scripts.
+2023-01-23 14:06:01.7202|INFO|ConceptDataMigration|Executing 0 after-data-migration scripts.
+2023-01-23 14:06:01.7202|INFO|DatabaseDeployment|Upgrading database.
+2023-01-23 14:06:01.7662|INFO|DatabaseGenerator|Removing 0 database objects.
+2023-01-23 14:06:01.7751|TRACE|DatabaseGeneratorChanges|Creating SqlIndexMultipleInfo Bookstore.Book.Code/Rhetos.DatabaseGenerator.DefaultConcepts.SqlIndexMultipleDatabaseDefinition, ID=BEDAB474-CB20-428C-815B-44A45481791F.
+2023-01-23 14:06:01.7751|INFO|DatabaseGenerator|Creating 1 database objects.
+2023-01-23 14:06:01.7932|INFO|DatabaseDeployment|Deleting redundant migration data.
+2023-01-23 14:06:01.7932|INFO|DatabaseCleaner|Deleted 0 columns in data migration schemas, 20 remaining.
+2023-01-23 14:06:01.8064|INFO|ApplicationInitialization|Loading generated plugins.
+2023-01-23 14:06:01.8592|INFO|ApplicationInitialization|Initializing EfMappingViews.
+2023-01-23 14:06:02.3872|INFO|ApplicationInitialization|Initialization ClaimGenerator.
+2023-01-23 14:06:02.8287|INFO|ApplicationInitialization|Initialization KeepSynchronizedRecomputeOnDeploy.
+2023-01-23 14:06:02.8397|INFO|Rhetos DbUpdate|Done.
+2023-01-23 14:07:04.6639|INFO|Rhetos DbUpdate base|Started 'dotnet' process 20016.
+2023-01-23 14:07:04.9215|INFO|Rhetos DbUpdate|Started in C:\Users\jpreksavec\source\repos\Bookstore\src\Bookstore.Service\bin\Debug\net7.0\
+2023-01-23 14:07:04.9472|INFO|DatabaseUpdate|Loading plugins.
+2023-01-23 14:07:05.3548|INFO|DatabaseDeployment|SQL connection: DataSource=JPREKSAVEC-LAP, InitialCatalog=Bookstore
+2023-01-23 14:07:05.4636|INFO|DatabaseDeployment|Preparing Rhetos database.
+2023-01-23 14:07:05.5431|INFO|DatabaseDeployment|Cleaning old migration data.
+2023-01-23 14:07:05.5431|INFO|DatabaseCleaner|Deleted 0 columns in data migration schemas, 20 remaining.
+2023-01-23 14:07:05.5582|INFO|DatabaseDeployment|Executing data migration scripts.
+2023-01-23 14:07:05.5582|INFO|ConceptDataMigration|Executing 0 before-data-migration scripts.
+2023-01-23 14:07:05.5742|INFO|DataMigration|Executed 0 of 12 scripts.
+2023-01-23 14:07:05.5742|INFO|ConceptDataMigration|Executing 0 after-data-migration scripts.
+2023-01-23 14:07:05.5742|INFO|DatabaseDeployment|Upgrading database.
+2023-01-23 14:07:05.6224|TRACE|DatabaseGeneratorChanges|Changed concept application: ReferencePropertyDbConstraintInfo Bookstore.ForeignBook.Translator/Rhetos.DatabaseGenerator.DefaultConcepts.ReferencePropertyConstraintDatabaseDefinition
+Old: ALTER TABLE Bookstore.ForeignBook ADD CONSTRAINT FK_ForeignBook_Person_TranslatorID FOREIGN KEY (TranslatorID) REFERENCES Bookstore.Person (ID) /*ReferencePropertyDbConstraintInfo FK options Bookstore.ForeignBook.Translator*/
+New: ALTER TABLE Bookstore.ForeignBook ADD CONSTRAINT FK_ForeignBook_Author_TranslatorID FOREIGN KEY (TranslatorID) REFERENCES Bookstore.Author (ID) /*ReferencePropertyDbConstraintInfo FK options Bookstore.ForeignBook.Translator*/
+2023-01-23 14:07:05.6224|TRACE|DatabaseGeneratorChanges|Refresh PropertyInfo Bookstore.ForeignBook.Translator/Rhetos.DatabaseGenerator.DefaultConcepts.ReferencePropertyDatabaseDefinition, ID=5D266F39-D2E8-48F4-A6A4-C509F85C926A. It depends on new concepts: DataStructureInfo Bookstore.Author/Rhetos.DatabaseGenerator.DefaultConcepts.EntityDatabaseDefinition. It depends on removed concepts: DataStructureInfo Bookstore.Person/Rhetos.DatabaseGenerator.DefaultConcepts.EntityDatabaseDefinition.
+2023-01-23 14:07:05.6354|TRACE|DatabaseGeneratorChanges|Removing ReferencePropertyDbConstraintInfo Bookstore.ForeignBook.Translator/Rhetos.DatabaseGenerator.DefaultConcepts.ReferencePropertyConstraintDatabaseDefinition, ID=551FF0CF-3F86-4F81-9895-4B20A50190C7.
+2023-01-23 14:07:05.6354|TRACE|DatabaseGeneratorChanges|Removing PropertyInfo Bookstore.ForeignBook.Translator/Rhetos.DatabaseGenerator.DefaultConcepts.ReferencePropertyDatabaseDefinition, ID=5D266F39-D2E8-48F4-A6A4-C509F85C926A.
+2023-01-23 14:07:05.6354|TRACE|DatabaseGeneratorChanges|Removing PropertyInfo Bookstore.Person.Name/Rhetos.DatabaseGenerator.DefaultConcepts.ShortStringPropertyDatabaseDefinition, ID=006C8B6E-CEC1-4479-9DAD-41D83B651184.
+2023-01-23 14:07:05.6354|TRACE|DatabaseGeneratorChanges|Removing DataStructureInfo Bookstore.Person/Rhetos.DatabaseGenerator.DefaultConcepts.EntityDatabaseDefinition, ID=E7F8152B-3DA2-41DB-B126-D12148F8FB3C.
+2023-01-23 14:07:05.6354|INFO|DatabaseGenerator|Removing 4 database objects.
+2023-01-23 14:07:05.6354|TRACE|DatabaseGeneratorChanges|Creating DataStructureInfo Bookstore.Author/Rhetos.DatabaseGenerator.DefaultConcepts.EntityDatabaseDefinition, ID=51D0D4F9-C457-4DDD-99D0-7662D80998BB.
+2023-01-23 14:07:05.6354|TRACE|DatabaseGeneratorChanges|Creating PropertyInfo Bookstore.Author.Name/Rhetos.DatabaseGenerator.DefaultConcepts.ShortStringPropertyDatabaseDefinition, ID=93E49734-2AFB-49D0-A152-073B6D011082.
+2023-01-23 14:07:05.6354|TRACE|DatabaseGeneratorChanges|Creating PropertyInfo Bookstore.ForeignBook.Translator/Rhetos.DatabaseGenerator.DefaultConcepts.ReferencePropertyDatabaseDefinition, ID=5D266F39-D2E8-48F4-A6A4-C509F85C926A.
+2023-01-23 14:07:05.6354|TRACE|DatabaseGeneratorChanges|Creating ReferencePropertyDbConstraintInfo Bookstore.ForeignBook.Translator/Rhetos.DatabaseGenerator.DefaultConcepts.ReferencePropertyConstraintDatabaseDefinition, ID=551FF0CF-3F86-4F81-9895-4B20A50190C7.
+2023-01-23 14:07:05.6354|INFO|DatabaseGenerator|Creating 4 database objects.
+2023-01-23 14:07:05.8005|INFO|DatabaseDeployment|Deleting redundant migration data.
+2023-01-23 14:07:05.8187|INFO|DatabaseCleaner|Deleted 2 columns in data migration schemas, 20 remaining.
+2023-01-23 14:07:05.8224|INFO|ApplicationInitialization|Loading generated plugins.
+2023-01-23 14:07:05.8631|INFO|ApplicationInitialization|Initializing EfMappingViews.
+2023-01-23 14:07:06.5491|INFO|ApplicationInitialization|Initialization ClaimGenerator.
+2023-01-23 14:07:07.0406|INFO|ApplicationInitialization|Initialization KeepSynchronizedRecomputeOnDeploy.
+2023-01-23 14:07:07.0570|INFO|Rhetos DbUpdate|Done.
+2023-01-23 14:08:56.7495|INFO|Rhetos DbUpdate base|Started 'dotnet' process 32568.
+2023-01-23 14:08:57.0052|INFO|Rhetos DbUpdate|Started in C:\Users\jpreksavec\source\repos\Bookstore\src\Bookstore.Service\bin\Debug\net7.0\
+2023-01-23 14:08:57.0310|INFO|DatabaseUpdate|Loading plugins.
+2023-01-23 14:08:57.4196|INFO|DatabaseDeployment|SQL connection: DataSource=JPREKSAVEC-LAP, InitialCatalog=Bookstore
+2023-01-23 14:08:57.5288|INFO|DatabaseDeployment|Preparing Rhetos database.
+2023-01-23 14:08:57.6016|INFO|DatabaseDeployment|Cleaning old migration data.
+2023-01-23 14:08:57.6127|INFO|DatabaseCleaner|Deleted 0 columns in data migration schemas, 20 remaining.
+2023-01-23 14:08:57.6127|INFO|DatabaseDeployment|Executing data migration scripts.
+2023-01-23 14:08:57.6127|INFO|ConceptDataMigration|Executing 0 before-data-migration scripts.
+2023-01-23 14:08:57.6335|INFO|DataMigration|Executed 0 of 12 scripts.
+2023-01-23 14:08:57.6335|INFO|ConceptDataMigration|Executing 0 after-data-migration scripts.
+2023-01-23 14:08:57.6335|INFO|DatabaseDeployment|Upgrading database.
+2023-01-23 14:08:57.6831|TRACE|DatabaseGeneratorChanges|Changed concept application: ReferencePropertyDbConstraintInfo Bookstore.ForeignBook.Translator/Rhetos.DatabaseGenerator.DefaultConcepts.ReferencePropertyConstraintDatabaseDefinition
+Old: ALTER TABLE Bookstore.ForeignBook ADD CONSTRAINT FK_ForeignBook_Author_TranslatorID FOREIGN KEY (TranslatorID) REFERENCES Bookstore.Author (ID) /*ReferencePropertyDbConstraintInfo FK options Bookstore.ForeignBook.Translator*/
+New: ALTER TABLE Bookstore.ForeignBook ADD CONSTRAINT FK_ForeignBook_Translator_TranslatorID FOREIGN KEY (TranslatorID) REFERENCES Bookstore.Translator (ID) /*ReferencePropertyDbConstraintInfo FK options Bookstore.ForeignBook.Translator*/
+2023-01-23 14:08:57.6831|TRACE|DatabaseGeneratorChanges|Refresh PropertyInfo Bookstore.ForeignBook.Translator/Rhetos.DatabaseGenerator.DefaultConcepts.ReferencePropertyDatabaseDefinition, ID=5D266F39-D2E8-48F4-A6A4-C509F85C926A. It depends on new concepts: DataStructureInfo Bookstore.Translator/Rhetos.DatabaseGenerator.DefaultConcepts.EntityDatabaseDefinition.
+2023-01-23 14:08:57.6974|TRACE|DatabaseGeneratorChanges|Removing ReferencePropertyDbConstraintInfo Bookstore.ForeignBook.Translator/Rhetos.DatabaseGenerator.DefaultConcepts.ReferencePropertyConstraintDatabaseDefinition, ID=551FF0CF-3F86-4F81-9895-4B20A50190C7.
+2023-01-23 14:08:57.6974|TRACE|DatabaseGeneratorChanges|Removing PropertyInfo Bookstore.ForeignBook.Translator/Rhetos.DatabaseGenerator.DefaultConcepts.ReferencePropertyDatabaseDefinition, ID=5D266F39-D2E8-48F4-A6A4-C509F85C926A.
+2023-01-23 14:08:57.6974|INFO|DatabaseGenerator|Removing 2 database objects.
+2023-01-23 14:08:57.6974|TRACE|DatabaseGeneratorChanges|Creating DataStructureInfo Bookstore.Translator/Rhetos.DatabaseGenerator.DefaultConcepts.EntityDatabaseDefinition, ID=A30D8D00-3DA5-4E2A-9B1D-3DB90D371477.
+2023-01-23 14:08:57.6974|TRACE|DatabaseGeneratorChanges|Creating PropertyInfo Bookstore.ForeignBook.Author/Rhetos.DatabaseGenerator.DefaultConcepts.ReferencePropertyDatabaseDefinition, ID=DFE0808F-D327-43D2-B18A-DDA6D82F63CF.
+2023-01-23 14:08:57.6974|TRACE|DatabaseGeneratorChanges|Creating PropertyInfo Bookstore.Translator.Name/Rhetos.DatabaseGenerator.DefaultConcepts.ShortStringPropertyDatabaseDefinition, ID=0F6198D5-FB0B-47DA-9189-7089785C810A.
+2023-01-23 14:08:57.6974|TRACE|DatabaseGeneratorChanges|Creating ReferencePropertyDbConstraintInfo Bookstore.ForeignBook.Author/Rhetos.DatabaseGenerator.DefaultConcepts.ReferencePropertyConstraintDatabaseDefinition, ID=D72B5894-EF7C-4A05-ACCF-9A6FA9766AB9.
+2023-01-23 14:08:57.6974|TRACE|DatabaseGeneratorChanges|Creating PropertyInfo Bookstore.ForeignBook.Translator/Rhetos.DatabaseGenerator.DefaultConcepts.ReferencePropertyDatabaseDefinition, ID=5D266F39-D2E8-48F4-A6A4-C509F85C926A.
+2023-01-23 14:08:57.6974|TRACE|DatabaseGeneratorChanges|Creating ReferencePropertyDbConstraintInfo Bookstore.ForeignBook.Translator/Rhetos.DatabaseGenerator.DefaultConcepts.ReferencePropertyConstraintDatabaseDefinition, ID=551FF0CF-3F86-4F81-9895-4B20A50190C7.
+2023-01-23 14:08:57.6974|INFO|DatabaseGenerator|Creating 6 database objects.
+2023-01-23 14:08:57.8587|INFO|DatabaseDeployment|Deleting redundant migration data.
+2023-01-23 14:08:57.8711|INFO|DatabaseCleaner|Deleted 3 columns in data migration schemas, 17 remaining.
+2023-01-23 14:08:57.8711|INFO|ApplicationInitialization|Loading generated plugins.
+2023-01-23 14:08:57.9153|INFO|ApplicationInitialization|Initializing EfMappingViews.
+2023-01-23 14:08:58.5728|INFO|ApplicationInitialization|Initialization ClaimGenerator.
+2023-01-23 14:08:59.0287|INFO|ApplicationInitialization|Initialization KeepSynchronizedRecomputeOnDeploy.
+2023-01-23 14:08:59.0287|INFO|Rhetos DbUpdate|Done.
+2023-01-23 14:10:20.1391|INFO|Rhetos DbUpdate base|Started 'dotnet' process 18120.
+2023-01-23 14:10:20.3895|INFO|Rhetos DbUpdate|Started in C:\Users\jpreksavec\source\repos\Bookstore\src\Bookstore.Service\bin\Debug\net7.0\
+2023-01-23 14:10:20.4169|INFO|DatabaseUpdate|Loading plugins.
+2023-01-23 14:10:20.8245|INFO|DatabaseDeployment|SQL connection: DataSource=JPREKSAVEC-LAP, InitialCatalog=Bookstore
+2023-01-23 14:10:20.9269|INFO|DatabaseDeployment|Preparing Rhetos database.
+2023-01-23 14:10:20.9951|INFO|DatabaseDeployment|Cleaning old migration data.
+2023-01-23 14:10:21.0060|INFO|DatabaseCleaner|Deleted 0 columns in data migration schemas, 17 remaining.
+2023-01-23 14:10:21.0060|INFO|DatabaseDeployment|Executing data migration scripts.
+2023-01-23 14:10:21.0122|INFO|ConceptDataMigration|Executing 0 before-data-migration scripts.
+2023-01-23 14:10:21.0269|INFO|DataMigration|Executed 0 of 12 scripts.
+2023-01-23 14:10:21.0269|INFO|ConceptDataMigration|Executing 0 after-data-migration scripts.
+2023-01-23 14:10:21.0269|INFO|DatabaseDeployment|Upgrading database.
+2023-01-23 14:10:21.0744|INFO|DatabaseGenerator|Removing 0 database objects.
+2023-01-23 14:10:21.0744|TRACE|DatabaseGeneratorChanges|Creating DataStructureInfo Bookstore.BookAuthor/Rhetos.DatabaseGenerator.DefaultConcepts.EntityDatabaseDefinition, ID=96CA646F-ABBE-4C9D-B22B-015FBFB9E64E.
+2023-01-23 14:10:21.0744|TRACE|DatabaseGeneratorChanges|Creating DataStructureInfo Bookstore.BookTranslator/Rhetos.DatabaseGenerator.DefaultConcepts.EntityDatabaseDefinition, ID=6EFBD203-D773-4261-BB27-F903C89ADF79.
+2023-01-23 14:10:21.0744|TRACE|DatabaseGeneratorChanges|Creating PropertyInfo Bookstore.BookAuthor.Author/Rhetos.DatabaseGenerator.DefaultConcepts.ReferencePropertyDatabaseDefinition, ID=1CB42F7F-F979-4487-B11B-060734810C8B.
+2023-01-23 14:10:21.0744|TRACE|DatabaseGeneratorChanges|Creating PropertyInfo Bookstore.BookAuthor.Book/Rhetos.DatabaseGenerator.DefaultConcepts.ReferencePropertyDatabaseDefinition, ID=0629CB5A-1D18-4A90-9D8C-C11E1E278122.
+2023-01-23 14:10:21.0744|TRACE|DatabaseGeneratorChanges|Creating SqlIndexMultipleInfo Bookstore.BookAuthor.'Book Author'/Rhetos.DatabaseGenerator.DefaultConcepts.SqlIndexMultipleDatabaseDefinition, ID=944FB195-CEAD-4A21-977F-2A7B95568DD0.
+2023-01-23 14:10:21.0744|TRACE|DatabaseGeneratorChanges|Creating SqlIndexMultipleInfo Bookstore.BookAuthor.Book/Rhetos.DatabaseGenerator.DefaultConcepts.SqlIndexMultipleDatabaseDefinition, ID=C9922E32-5CEE-4124-AC59-AA8CC8EE371D.
+2023-01-23 14:10:21.0744|TRACE|DatabaseGeneratorChanges|Creating PropertyInfo Bookstore.BookTranslator.Book/Rhetos.DatabaseGenerator.DefaultConcepts.ReferencePropertyDatabaseDefinition, ID=AABB472B-5269-4441-B33C-C89D71312404.
+2023-01-23 14:10:21.0744|TRACE|DatabaseGeneratorChanges|Creating PropertyInfo Bookstore.BookTranslator.Translator/Rhetos.DatabaseGenerator.DefaultConcepts.ReferencePropertyDatabaseDefinition, ID=30D0710D-FA92-4985-A170-FAD859D1978D.
+2023-01-23 14:10:21.0744|TRACE|DatabaseGeneratorChanges|Creating SqlIndexMultipleInfo Bookstore.BookTranslator.'Book Translator'/Rhetos.DatabaseGenerator.DefaultConcepts.SqlIndexMultipleDatabaseDefinition, ID=E889F8A5-F725-4E8E-90EC-7FA8CFF39A0B.
+2023-01-23 14:10:21.0744|TRACE|DatabaseGeneratorChanges|Creating SqlIndexMultipleInfo Bookstore.BookTranslator.Book/Rhetos.DatabaseGenerator.DefaultConcepts.SqlIndexMultipleDatabaseDefinition, ID=3BD11B75-DB42-428D-BC09-C4E71F6016DD.
+2023-01-23 14:10:21.0744|TRACE|DatabaseGeneratorChanges|Creating ReferencePropertyDbConstraintInfo Bookstore.BookAuthor.Author/Rhetos.DatabaseGenerator.DefaultConcepts.ReferencePropertyConstraintDatabaseDefinition, ID=D79FCF3E-913B-4246-9797-30EE3C3A3A2E.
+2023-01-23 14:10:21.0897|TRACE|DatabaseGeneratorChanges|Creating ReferencePropertyDbConstraintInfo Bookstore.BookAuthor.Book/Rhetos.DatabaseGenerator.DefaultConcepts.ReferencePropertyConstraintDatabaseDefinition, ID=498E7E69-5DB5-41B9-BF62-C02CF38D1573.
+2023-01-23 14:10:21.0897|TRACE|DatabaseGeneratorChanges|Creating ReferencePropertyDbConstraintInfo Bookstore.BookTranslator.Book/Rhetos.DatabaseGenerator.DefaultConcepts.ReferencePropertyConstraintDatabaseDefinition, ID=38F062AE-2FFE-45C2-A581-C4B860160959.
+2023-01-23 14:10:21.0897|TRACE|DatabaseGeneratorChanges|Creating ReferencePropertyDbConstraintInfo Bookstore.BookTranslator.Translator/Rhetos.DatabaseGenerator.DefaultConcepts.ReferencePropertyConstraintDatabaseDefinition, ID=353988BF-B1A9-4315-91F0-DE92DA16C82C.
+2023-01-23 14:10:21.0897|INFO|DatabaseGenerator|Creating 14 database objects.
+2023-01-23 14:10:21.1537|INFO|DatabaseDeployment|Deleting redundant migration data.
+2023-01-23 14:10:21.1537|INFO|DatabaseCleaner|Deleted 4 columns in data migration schemas, 11 remaining.
+2023-01-23 14:10:21.1688|INFO|ApplicationInitialization|Loading generated plugins.
+2023-01-23 14:10:21.2130|INFO|ApplicationInitialization|Initializing EfMappingViews.
+2023-01-23 14:10:21.8836|INFO|ApplicationInitialization|Initialization ClaimGenerator.
+2023-01-23 14:10:22.3439|INFO|ApplicationInitialization|Initialization KeepSynchronizedRecomputeOnDeploy.
+2023-01-23 14:10:22.3568|INFO|Rhetos DbUpdate|Done.
+2023-01-23 14:11:19.9060|INFO|Rhetos DbUpdate base|Started 'dotnet' process 24912.
+2023-01-23 14:11:20.1645|INFO|Rhetos DbUpdate|Started in C:\Users\jpreksavec\source\repos\Bookstore\src\Bookstore.Service\bin\Debug\net7.0\
+2023-01-23 14:11:20.1908|INFO|DatabaseUpdate|Loading plugins.
+2023-01-23 14:11:20.5974|INFO|DatabaseDeployment|SQL connection: DataSource=JPREKSAVEC-LAP, InitialCatalog=Bookstore
+2023-01-23 14:11:20.7064|INFO|DatabaseDeployment|Preparing Rhetos database.
+2023-01-23 14:11:20.7747|INFO|DatabaseDeployment|Cleaning old migration data.
+2023-01-23 14:11:20.7867|INFO|DatabaseCleaner|Deleted 0 columns in data migration schemas, 11 remaining.
+2023-01-23 14:11:20.7867|INFO|DatabaseDeployment|Executing data migration scripts.
+2023-01-23 14:11:20.7930|INFO|ConceptDataMigration|Executing 0 before-data-migration scripts.
+2023-01-23 14:11:20.7930|INFO|DataMigration|Executed 0 of 12 scripts.
+2023-01-23 14:11:20.8088|INFO|ConceptDataMigration|Executing 0 after-data-migration scripts.
+2023-01-23 14:11:20.8088|INFO|DatabaseDeployment|Upgrading database.
+2023-01-23 14:11:20.8574|INFO|DatabaseGenerator|Removing 0 database objects.
+2023-01-23 14:11:20.8574|TRACE|DatabaseGeneratorChanges|Creating DataStructureInfo Bookstore.BookInfo/Rhetos.DatabaseGenerator.DefaultConcepts.SqlQueryableDatabaseDefinition, ID=7945A8A7-2724-46A2-AC0A-E45338D237E1.
+2023-01-23 14:11:20.8711|INFO|DatabaseGenerator|Creating 1 database objects.
+2023-01-23 14:11:20.8711|INFO|DatabaseDeployment|Deleting redundant migration data.
+2023-01-23 14:11:20.8942|INFO|DatabaseCleaner|Deleted 0 columns in data migration schemas, 11 remaining.
+2023-01-23 14:11:20.8942|INFO|ApplicationInitialization|Loading generated plugins.
+2023-01-23 14:11:20.9401|INFO|ApplicationInitialization|Initializing EfMappingViews.
+2023-01-23 14:11:21.6703|INFO|ApplicationInitialization|Initialization ClaimGenerator.
+2023-01-23 14:11:22.1115|INFO|ApplicationInitialization|Initialization KeepSynchronizedRecomputeOnDeploy.
+2023-01-23 14:11:22.1246|INFO|Rhetos DbUpdate|Done.
+2023-01-23 14:12:06.7761|INFO|Rhetos DbUpdate base|Started 'dotnet' process 12040.
+2023-01-23 14:12:07.0326|INFO|Rhetos DbUpdate|Started in C:\Users\jpreksavec\source\repos\Bookstore\src\Bookstore.Service\bin\Debug\net7.0\
+2023-01-23 14:12:07.0576|INFO|DatabaseUpdate|Loading plugins.
+2023-01-23 14:12:07.4527|INFO|DatabaseDeployment|SQL connection: DataSource=JPREKSAVEC-LAP, InitialCatalog=Bookstore
+2023-01-23 14:12:07.5608|INFO|DatabaseDeployment|Preparing Rhetos database.
+2023-01-23 14:12:07.6369|INFO|DatabaseDeployment|Cleaning old migration data.
+2023-01-23 14:12:07.6481|INFO|DatabaseCleaner|Deleted 0 columns in data migration schemas, 11 remaining.
+2023-01-23 14:12:07.6481|INFO|DatabaseDeployment|Executing data migration scripts.
+2023-01-23 14:12:07.6541|INFO|ConceptDataMigration|Executing 0 before-data-migration scripts.
+2023-01-23 14:12:07.6541|INFO|DataMigration|Executed 0 of 12 scripts.
+2023-01-23 14:12:07.6680|INFO|ConceptDataMigration|Executing 0 after-data-migration scripts.
+2023-01-23 14:12:07.6680|INFO|DatabaseDeployment|Upgrading database.
+2023-01-23 14:12:07.7160|TRACE|DatabaseGeneratorChanges|Changed concept application: DataStructureInfo Bookstore.BookInfo/Rhetos.DatabaseGenerator.DefaultConcepts.SqlQueryableDatabaseDefinition
+Old: CREATE VIEW Bookstore.BookInfo AS \r\n        SELECT\r\n            b.ID,\r\n            NumberOfComments = COUNT(c.ID)\r\n        FROM\r\n            Bookstore.Book b\r\n            LEFT JOIN Bookstore.Comment c ON c.BookID = b.ID\r\n        GROUP BY\r\n            b.ID
+New: CREATE VIEW Bookstore.BookInfo AS SELECT\r\n    b.ID,\r\n    NumberOfComments = COUNT(c.ID)\r\nFROM\r\n    Bookstore.Book b\r\n    LEFT JOIN Bookstore.Comment c ON c.BookID = b.ID\r\nGROUP BY\r\n    b.ID
+2023-01-23 14:12:07.7160|TRACE|DatabaseGeneratorChanges|Removing DataStructureInfo Bookstore.BookInfo/Rhetos.DatabaseGenerator.DefaultConcepts.SqlQueryableDatabaseDefinition, ID=7945A8A7-2724-46A2-AC0A-E45338D237E1.
+2023-01-23 14:12:07.7160|INFO|DatabaseGenerator|Removing 1 database objects.
+2023-01-23 14:12:07.7160|TRACE|DatabaseGeneratorChanges|Creating DataStructureInfo Bookstore.BookInfo/Rhetos.DatabaseGenerator.DefaultConcepts.SqlQueryableDatabaseDefinition, ID=7945A8A7-2724-46A2-AC0A-E45338D237E1.
+2023-01-23 14:12:07.7160|INFO|DatabaseGenerator|Creating 1 database objects.
+2023-01-23 14:12:07.7494|INFO|DatabaseDeployment|Deleting redundant migration data.
+2023-01-23 14:12:07.7494|INFO|DatabaseCleaner|Deleted 0 columns in data migration schemas, 11 remaining.
+2023-01-23 14:12:07.7494|INFO|ApplicationInitialization|Loading generated plugins.
+2023-01-23 14:12:07.8099|INFO|ApplicationInitialization|Initializing EfMappingViews.
+2023-01-23 14:12:08.3262|INFO|ApplicationInitialization|Initialization ClaimGenerator.
+2023-01-23 14:12:08.7189|INFO|ApplicationInitialization|Initialization KeepSynchronizedRecomputeOnDeploy.
+2023-01-23 14:12:08.7383|INFO|Rhetos DbUpdate|Done.
+2023-01-23 14:16:26.3520|INFO|Rhetos DbUpdate base|Started 'dotnet' process 31828.
+2023-01-23 14:16:26.6048|INFO|Rhetos DbUpdate|Started in C:\Users\jpreksavec\source\repos\Bookstore\src\Bookstore.Service\bin\Debug\net7.0\
+2023-01-23 14:16:26.6321|INFO|DatabaseUpdate|Loading plugins.
+2023-01-23 14:16:27.0307|INFO|DatabaseDeployment|SQL connection: DataSource=JPREKSAVEC-LAP, InitialCatalog=Bookstore
+2023-01-23 14:16:27.1303|INFO|DatabaseDeployment|Preparing Rhetos database.
+2023-01-23 14:16:27.2297|INFO|DatabaseDeployment|Cleaning old migration data.
+2023-01-23 14:16:27.2406|INFO|DatabaseCleaner|Deleted 0 columns in data migration schemas, 11 remaining.
+2023-01-23 14:16:27.2406|INFO|DatabaseDeployment|Executing data migration scripts.
+2023-01-23 14:16:27.2406|INFO|ConceptDataMigration|Executing 0 before-data-migration scripts.
+2023-01-23 14:16:27.2593|INFO|DataMigration|Executed 0 of 12 scripts.
+2023-01-23 14:16:27.2593|INFO|ConceptDataMigration|Executing 0 after-data-migration scripts.
+2023-01-23 14:16:27.2593|INFO|DatabaseDeployment|Upgrading database.
+2023-01-23 14:16:27.2982|INFO|DatabaseGenerator|Removing 0 database objects.
+2023-01-23 14:16:27.3120|INFO|DatabaseGenerator|Creating 0 database objects.
+2023-01-23 14:16:27.3120|INFO|DatabaseDeployment|Deleting redundant migration data.
+2023-01-23 14:16:27.3277|INFO|DatabaseCleaner|Deleted 0 columns in data migration schemas, 11 remaining.
+2023-01-23 14:16:27.3277|INFO|ApplicationInitialization|Loading generated plugins.
+2023-01-23 14:16:27.3735|INFO|ApplicationInitialization|Initializing EfMappingViews.
+2023-01-23 14:16:27.9126|INFO|ApplicationInitialization|Initialization ClaimGenerator.
+2023-01-23 14:16:28.2956|INFO|ApplicationInitialization|Initialization KeepSynchronizedRecomputeOnDeploy.
+2023-01-23 14:16:28.3100|INFO|Rhetos DbUpdate|Done.
+2023-01-23 14:21:37.0433|INFO|Rhetos DbUpdate base|Started 'dotnet' process 21980.
+2023-01-23 14:21:37.3002|INFO|Rhetos DbUpdate|Started in C:\Users\jpreksavec\source\repos\Bookstore\src\Bookstore.Service\bin\Debug\net7.0\
+2023-01-23 14:21:37.3267|INFO|DatabaseUpdate|Loading plugins.
+2023-01-23 14:21:37.7220|INFO|DatabaseDeployment|SQL connection: DataSource=JPREKSAVEC-LAP, InitialCatalog=Bookstore
+2023-01-23 14:21:37.8260|INFO|DatabaseDeployment|Preparing Rhetos database.
+2023-01-23 14:21:37.9229|INFO|DatabaseDeployment|Cleaning old migration data.
+2023-01-23 14:21:37.9229|INFO|DatabaseCleaner|Deleted 0 columns in data migration schemas, 11 remaining.
+2023-01-23 14:21:37.9387|INFO|DatabaseDeployment|Executing data migration scripts.
+2023-01-23 14:21:37.9387|INFO|ConceptDataMigration|Executing 0 before-data-migration scripts.
+2023-01-23 14:21:37.9552|INFO|DataMigration|Executed 0 of 12 scripts.
+2023-01-23 14:21:37.9552|INFO|ConceptDataMigration|Executing 0 after-data-migration scripts.
+2023-01-23 14:21:37.9552|INFO|DatabaseDeployment|Upgrading database.
+2023-01-23 14:21:38.0008|INFO|DatabaseGenerator|Removing 0 database objects.
+2023-01-23 14:21:38.0008|INFO|DatabaseGenerator|Creating 0 database objects.
+2023-01-23 14:21:38.0169|INFO|DatabaseDeployment|Deleting redundant migration data.
+2023-01-23 14:21:38.0169|INFO|DatabaseCleaner|Deleted 0 columns in data migration schemas, 11 remaining.
+2023-01-23 14:21:38.0169|INFO|ApplicationInitialization|Loading generated plugins.
+2023-01-23 14:21:38.0747|INFO|ApplicationInitialization|Initializing EfMappingViews.
+2023-01-23 14:21:38.6037|INFO|ApplicationInitialization|Initialization ClaimGenerator.
+2023-01-23 14:21:39.0319|INFO|ApplicationInitialization|Initialization KeepSynchronizedRecomputeOnDeploy.
+2023-01-23 14:21:39.0319|INFO|Rhetos DbUpdate|Done.
+2023-01-23 14:30:31.3414|INFO|Rhetos DbUpdate base|Started 'dotnet' process 3396.
+2023-01-23 14:30:31.6003|INFO|Rhetos DbUpdate|Started in C:\Users\jpreksavec\source\repos\Bookstore\src\Bookstore.Service\bin\Debug\net7.0\
+2023-01-23 14:30:31.6255|INFO|DatabaseUpdate|Loading plugins.
+2023-01-23 14:30:32.0221|INFO|DatabaseDeployment|SQL connection: DataSource=JPREKSAVEC-LAP, InitialCatalog=Bookstore
+2023-01-23 14:30:32.1220|INFO|DatabaseDeployment|Preparing Rhetos database.
+2023-01-23 14:30:32.1907|INFO|DatabaseDeployment|Cleaning old migration data.
+2023-01-23 14:30:32.2029|INFO|DatabaseCleaner|Deleted 0 columns in data migration schemas, 11 remaining.
+2023-01-23 14:30:32.2066|INFO|DatabaseDeployment|Executing data migration scripts.
+2023-01-23 14:30:32.2066|INFO|ConceptDataMigration|Executing 0 before-data-migration scripts.
+2023-01-23 14:30:32.2222|INFO|DataMigration|Executed 0 of 12 scripts.
+2023-01-23 14:30:32.2222|INFO|ConceptDataMigration|Executing 0 after-data-migration scripts.
+2023-01-23 14:30:32.2222|INFO|DatabaseDeployment|Upgrading database.
+2023-01-23 14:30:32.2707|INFO|DatabaseGenerator|Removing 0 database objects.
+2023-01-23 14:30:32.2707|INFO|DatabaseGenerator|Creating 0 database objects.
+2023-01-23 14:30:32.2707|INFO|DatabaseDeployment|Deleting redundant migration data.
+2023-01-23 14:30:32.2917|INFO|DatabaseCleaner|Deleted 0 columns in data migration schemas, 11 remaining.
+2023-01-23 14:30:32.2917|INFO|ApplicationInitialization|Loading generated plugins.
+2023-01-23 14:30:32.3351|INFO|ApplicationInitialization|Initializing EfMappingViews.
+2023-01-23 14:30:32.8650|INFO|ApplicationInitialization|Initialization ClaimGenerator.
+2023-01-23 14:30:33.2412|INFO|ApplicationInitialization|Initialization KeepSynchronizedRecomputeOnDeploy.
+2023-01-23 14:30:33.2610|INFO|Rhetos DbUpdate|Done.
+2023-01-23 14:33:11.3340|INFO|Rhetos DbUpdate base|Started 'dotnet' process 22368.
+2023-01-23 14:33:11.5845|INFO|Rhetos DbUpdate|Started in C:\Users\jpreksavec\source\repos\Bookstore\src\Bookstore.Service\bin\Debug\net7.0\
+2023-01-23 14:33:11.6105|INFO|DatabaseUpdate|Loading plugins.
+2023-01-23 14:33:11.9967|INFO|DatabaseDeployment|SQL connection: DataSource=JPREKSAVEC-LAP, InitialCatalog=Bookstore
+2023-01-23 14:33:12.1046|INFO|DatabaseDeployment|Preparing Rhetos database.
+2023-01-23 14:33:12.2797|INFO|DatabaseDeployment|Cleaning old migration data.
+2023-01-23 14:33:12.2998|INFO|DatabaseCleaner|Deleted 0 columns in data migration schemas, 11 remaining.
+2023-01-23 14:33:12.3036|INFO|DatabaseDeployment|Executing data migration scripts.
+2023-01-23 14:33:12.3036|INFO|ConceptDataMigration|Executing 0 before-data-migration scripts.
+2023-01-23 14:33:12.3211|INFO|DataMigration|Executed 0 of 12 scripts.
+2023-01-23 14:33:12.3211|INFO|ConceptDataMigration|Executing 0 after-data-migration scripts.
+2023-01-23 14:33:12.3211|INFO|DatabaseDeployment|Upgrading database.
+2023-01-23 14:33:12.3651|INFO|DatabaseGenerator|Removing 0 database objects.
+2023-01-23 14:33:12.3806|INFO|DatabaseGenerator|Creating 0 database objects.
+2023-01-23 14:33:12.3806|INFO|DatabaseDeployment|Deleting redundant migration data.
+2023-01-23 14:33:12.3979|INFO|DatabaseCleaner|Deleted 0 columns in data migration schemas, 11 remaining.
+2023-01-23 14:33:12.3979|INFO|ApplicationInitialization|Loading generated plugins.
+2023-01-23 14:33:12.4429|INFO|ApplicationInitialization|Initializing EfMappingViews.
+2023-01-23 14:33:12.9751|INFO|ApplicationInitialization|Initialization ClaimGenerator.
+2023-01-23 14:33:13.3675|INFO|ApplicationInitialization|Initialization KeepSynchronizedRecomputeOnDeploy.
+2023-01-23 14:33:13.3892|INFO|Rhetos DbUpdate|Done.
+2023-01-23 14:35:24.6666|INFO|Rhetos DbUpdate base|Started 'dotnet' process 29668.
+2023-01-23 14:35:24.9208|INFO|Rhetos DbUpdate|Started in C:\Users\jpreksavec\source\repos\Bookstore\src\Bookstore.Service\bin\Debug\net7.0\
+2023-01-23 14:35:24.9470|INFO|DatabaseUpdate|Loading plugins.
+2023-01-23 14:35:25.3546|INFO|DatabaseDeployment|SQL connection: DataSource=JPREKSAVEC-LAP, InitialCatalog=Bookstore
+2023-01-23 14:35:25.4604|INFO|DatabaseDeployment|Preparing Rhetos database.
+2023-01-23 14:35:25.6430|INFO|DatabaseDeployment|Cleaning old migration data.
+2023-01-23 14:35:25.6649|INFO|DatabaseCleaner|Deleted 0 columns in data migration schemas, 11 remaining.
+2023-01-23 14:35:25.6649|INFO|DatabaseDeployment|Executing data migration scripts.
+2023-01-23 14:35:25.6649|INFO|ConceptDataMigration|Executing 0 before-data-migration scripts.
+2023-01-23 14:35:25.6859|INFO|DataMigration|Executed 0 of 12 scripts.
+2023-01-23 14:35:25.6859|INFO|ConceptDataMigration|Executing 0 after-data-migration scripts.
+2023-01-23 14:35:25.6859|INFO|DatabaseDeployment|Upgrading database.
+2023-01-23 14:35:25.7266|TRACE|DatabaseGeneratorChanges|Changed concept application: EntityLoggingInfo Bookstore.Book/Rhetos.DatabaseGenerator.DefaultConcepts.EntityLoggingDefinition
+Old: ...\n    Description = CASE WHEN inserted.ID IS NOT NULL AND deleted.ID IS NULL\r\n        THEN ''\t--When inserting, Description is not available (there is no previous state)\r\n        ELSE N'<PREVIOUS'\r\n\t\t\t/*EntityLoggingInfo LogProperty Bookstore.Book*/\r\n            + ' />'\r\n    END/*EntityLoggingInfo TempColumnSelect Bookstore.Book*/\r\nFROM\r\n    inserted\r\n    FULL OUTER JOIN deleted ON inserted.ID = de...
+New: ...\n    Description = CASE WHEN inserted.ID IS NOT NULL AND deleted.ID IS NULL\r\n        THEN ''\t--When inserting, Description is not available (there is no previous state)\r\n        ELSE N'<PREVIOUS'\r\n\t\t\t+ CASE WHEN inserted.Code <> deleted.Code\r\n                    OR inserted.Code IS NULL AND deleted.Code IS NOT NULL\r\n                    OR inserted.Code IS NOT NULL AND deleted.Code IS NULL\r\n       ...
+2023-01-23 14:35:25.7405|TRACE|DatabaseGeneratorChanges|Removing EntityLoggingInfo Bookstore.Book/Rhetos.DatabaseGenerator.DefaultConcepts.EntityLoggingDefinition, ID=65FBADF6-32EE-40D4-835D-2EE353FAF62C.
+2023-01-23 14:35:25.7405|INFO|DatabaseGenerator|Removing 1 database objects.
+2023-01-23 14:35:25.7405|TRACE|DatabaseGeneratorChanges|Creating EntityLoggingInfo Bookstore.Book/Rhetos.DatabaseGenerator.DefaultConcepts.EntityLoggingDefinition, ID=65FBADF6-32EE-40D4-835D-2EE353FAF62C.
+2023-01-23 14:35:25.7405|INFO|DatabaseGenerator|Creating 1 database objects.
+2023-01-23 14:35:25.7625|INFO|DatabaseDeployment|Deleting redundant migration data.
+2023-01-23 14:35:25.7792|INFO|DatabaseCleaner|Deleted 0 columns in data migration schemas, 11 remaining.
+2023-01-23 14:35:25.7792|INFO|ApplicationInitialization|Loading generated plugins.
+2023-01-23 14:35:25.8232|INFO|ApplicationInitialization|Initializing EfMappingViews.
+2023-01-23 14:35:26.3591|INFO|ApplicationInitialization|Initialization ClaimGenerator.
+2023-01-23 14:35:26.7409|INFO|ApplicationInitialization|Initialization KeepSynchronizedRecomputeOnDeploy.
+2023-01-23 14:35:26.7610|INFO|Rhetos DbUpdate|Done.
+2023-01-23 14:35:46.4418|INFO|Rhetos DbUpdate base|Started 'dotnet' process 23628.
+2023-01-23 14:35:46.6939|INFO|Rhetos DbUpdate|Started in C:\Users\jpreksavec\source\repos\Bookstore\src\Bookstore.Service\bin\Debug\net7.0\
+2023-01-23 14:35:46.7197|INFO|DatabaseUpdate|Loading plugins.
+2023-01-23 14:35:47.1203|INFO|DatabaseDeployment|SQL connection: DataSource=JPREKSAVEC-LAP, InitialCatalog=Bookstore
+2023-01-23 14:35:47.2276|INFO|DatabaseDeployment|Preparing Rhetos database.
+2023-01-23 14:35:47.2968|INFO|DatabaseDeployment|Cleaning old migration data.
+2023-01-23 14:35:47.3086|INFO|DatabaseCleaner|Deleted 0 columns in data migration schemas, 11 remaining.
+2023-01-23 14:35:47.3086|INFO|DatabaseDeployment|Executing data migration scripts.
+2023-01-23 14:35:47.3086|INFO|ConceptDataMigration|Executing 0 before-data-migration scripts.
+2023-01-23 14:35:47.3284|INFO|DataMigration|Executed 0 of 12 scripts.
+2023-01-23 14:35:47.3284|INFO|ConceptDataMigration|Executing 0 after-data-migration scripts.
+2023-01-23 14:35:47.3284|INFO|DatabaseDeployment|Upgrading database.
+2023-01-23 14:35:47.3693|INFO|DatabaseGenerator|Removing 0 database objects.
+2023-01-23 14:35:47.3801|TRACE|DatabaseGeneratorChanges|Creating EntityLoggingInfo Bookstore.Comment/Rhetos.DatabaseGenerator.DefaultConcepts.EntityLoggingDefinition, ID=B364B6D9-BA04-40B2-BFEC-DDAF9CCD69D8.
+2023-01-23 14:35:47.3801|INFO|DatabaseGenerator|Creating 1 database objects.
+2023-01-23 14:35:47.3968|INFO|DatabaseDeployment|Deleting redundant migration data.
+2023-01-23 14:35:47.4123|INFO|DatabaseCleaner|Deleted 0 columns in data migration schemas, 11 remaining.
+2023-01-23 14:35:47.4123|INFO|ApplicationInitialization|Loading generated plugins.
+2023-01-23 14:35:47.4608|INFO|ApplicationInitialization|Initializing EfMappingViews.
+2023-01-23 14:35:47.9994|INFO|ApplicationInitialization|Initialization ClaimGenerator.
+2023-01-23 14:35:48.3889|INFO|ApplicationInitialization|Initialization KeepSynchronizedRecomputeOnDeploy.
+2023-01-23 14:35:48.4078|INFO|Rhetos DbUpdate|Done.
+2023-01-23 14:57:49.3008|INFO|Rhetos DbUpdate base|Started 'dotnet' process 30248.
+2023-01-23 14:57:49.5539|INFO|Rhetos DbUpdate|Started in C:\Users\jpreksavec\source\repos\Bookstore\src\Bookstore.Service\bin\Debug\net7.0\
+2023-01-23 14:57:49.5787|INFO|DatabaseUpdate|Loading plugins.
+2023-01-23 14:57:50.0054|INFO|DatabaseDeployment|SQL connection: DataSource=JPREKSAVEC-LAP, InitialCatalog=Bookstore
+2023-01-23 14:57:50.1144|INFO|DatabaseDeployment|Preparing Rhetos database.
+2023-01-23 14:57:50.2939|INFO|DatabaseDeployment|Cleaning old migration data.
+2023-01-23 14:57:50.3162|INFO|DatabaseCleaner|Deleted 0 columns in data migration schemas, 11 remaining.
+2023-01-23 14:57:50.3162|INFO|DatabaseDeployment|Executing data migration scripts.
+2023-01-23 14:57:50.3270|INFO|ConceptDataMigration|Executing 1 before-data-migration scripts.
+2023-01-23 14:57:50.4781|INFO|DataMigration|Executed 0 of 12 scripts.
+2023-01-23 14:57:50.4781|INFO|ConceptDataMigration|Executing 1 after-data-migration scripts.
+2023-01-23 14:57:50.4883|INFO|DatabaseDeployment|Upgrading database.
+2023-01-23 14:57:50.5357|INFO|DatabaseGenerator|Removing 0 database objects.
+2023-01-23 14:57:50.5448|TRACE|DatabaseGeneratorChanges|Creating SqlFunctionInfo Bookstore.Genre_Biography/Rhetos.DatabaseGenerator.DefaultConcepts.SqlFunctionDatabaseDefinition, ID=1BCC61EC-B00B-4FD9-B149-6558BA08A186.
+2023-01-23 14:57:50.5448|TRACE|DatabaseGeneratorChanges|Creating SqlFunctionInfo Bookstore.Genre_ScienceFiction/Rhetos.DatabaseGenerator.DefaultConcepts.SqlFunctionDatabaseDefinition, ID=36252714-BC0F-4496-BFD8-4074CA214794.
+2023-01-23 14:57:50.5448|TRACE|DatabaseGeneratorChanges|Creating DataStructureInfo Bookstore.Genre/Rhetos.DatabaseGenerator.DefaultConcepts.EntityDatabaseDefinition, ID=C97F3141-5B6D-4372-9F9F-B704A6D153CA.
+2023-01-23 14:57:50.5448|TRACE|DatabaseGeneratorChanges|Creating PropertyInfo Bookstore.Genre.Description/Rhetos.DatabaseGenerator.DefaultConcepts.LongStringPropertyDatabaseDefinition, ID=DF770C38-23E8-486C-A127-3814D2DEA1A8.
+2023-01-23 14:57:50.5448|TRACE|DatabaseGeneratorChanges|Creating PropertyInfo Bookstore.Genre.IsFiction/Rhetos.DatabaseGenerator.DefaultConcepts.BoolPropertyDatabaseDefinition, ID=82DE08CF-C9DF-4612-B139-EFC9A0E50DE4.
+2023-01-23 14:57:50.5448|TRACE|DatabaseGeneratorChanges|Creating PropertyInfo Bookstore.Genre.Label/Rhetos.DatabaseGenerator.DefaultConcepts.ShortStringPropertyDatabaseDefinition, ID=6C9180A3-8B8F-4B88-BA20-4802A7F1F646.
+2023-01-23 14:57:50.5448|TRACE|DatabaseGeneratorChanges|Creating PropertyInfo Bookstore.Genre.Name/Rhetos.DatabaseGenerator.DefaultConcepts.ShortStringPropertyDatabaseDefinition, ID=7E2B2139-0F3F-4165-BA8D-73D9C529F375.
+2023-01-23 14:57:50.5448|INFO|DatabaseGenerator|Creating 7 database objects.
+2023-01-23 14:57:50.5963|INFO|DatabaseDeployment|Deleting redundant migration data.
+2023-01-23 14:57:50.6081|INFO|DatabaseCleaner|Deleted 4 columns in data migration schemas, 11 remaining.
+2023-01-23 14:57:50.6081|INFO|ApplicationInitialization|Loading generated plugins.
+2023-01-23 14:57:50.6543|INFO|ApplicationInitialization|Initializing EfMappingViews.
+2023-01-23 14:57:51.3475|INFO|ApplicationInitialization|Initialization ClaimGenerator.
+2023-01-23 14:57:51.8296|INFO|ApplicationInitialization|Initialization KeepSynchronizedRecomputeOnDeploy.
+2023-01-23 14:57:51.8431|INFO|Rhetos DbUpdate|Done.
