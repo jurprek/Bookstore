@@ -1,6 +1,15 @@
 ﻿<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
   <EntityContainerMapping StorageEntityContainer="CodeFirstDatabase" CdmEntityContainer="EntityFrameworkContext">
     
+  <EntitySetMapping Name="Bookstore_ApproveShipment">
+    <EntityTypeMapping TypeName="Rhetos.Bookstore_ApproveShipment">
+      <MappingFragment StoreEntitySet="Bookstore_ApproveShipment">
+        <ScalarProperty Name="ID" ColumnName="ID" />
+        <ScalarProperty Name="EffectiveSince" ColumnName="EffectiveSince" />
+        <ScalarProperty Name="ShipmentID" ColumnName="ShipmentID" />
+      </MappingFragment>
+    </EntityTypeMapping>
+  </EntitySetMapping>
   <EntitySetMapping Name="Bookstore_Author">
     <EntityTypeMapping TypeName="Rhetos.Bookstore_Author">
       <MappingFragment StoreEntitySet="Bookstore_Author">
@@ -135,6 +144,33 @@
       <MappingFragment StoreEntitySet="Bookstore_Managers">
         <ScalarProperty Name="ID" ColumnName="ID" />
         <ScalarProperty Name="Bonus" ColumnName="Bonus" />
+      </MappingFragment>
+    </EntityTypeMapping>
+  </EntitySetMapping>
+  <EntitySetMapping Name="Bookstore_Shipment">
+    <EntityTypeMapping TypeName="Rhetos.Bookstore_Shipment">
+      <MappingFragment StoreEntitySet="Bookstore_Shipment">
+        <ScalarProperty Name="ID" ColumnName="ID" />
+      </MappingFragment>
+    </EntityTypeMapping>
+  </EntitySetMapping>
+  <EntitySetMapping Name="Bookstore_ShipmentEvent">
+    <EntityTypeMapping TypeName="Rhetos.Bookstore_ShipmentEvent">
+      <MappingFragment StoreEntitySet="Bookstore_ShipmentEvent">
+        <ScalarProperty Name="ID" ColumnName="ID" />
+        <ScalarProperty Name="ApproveShipmentID" ColumnName="ApproveShipmentID" />
+        <ScalarProperty Name="EffectiveSince" ColumnName="EffectiveSince" />
+        <ScalarProperty Name="ShipmentID" ColumnName="ShipmentID" />
+        <ScalarProperty Name="Subtype" ColumnName="Subtype" />
+        <ScalarProperty Name="NewStatusID" ColumnName="NewStatusID" />
+      </MappingFragment>
+    </EntityTypeMapping>
+  </EntitySetMapping>
+  <EntitySetMapping Name="Bookstore_ShipmentStatus">
+    <EntityTypeMapping TypeName="Rhetos.Bookstore_ShipmentStatus">
+      <MappingFragment StoreEntitySet="Bookstore_ShipmentStatus">
+        <ScalarProperty Name="ID" ColumnName="ID" />
+        <ScalarProperty Name="Name" ColumnName="Name" />
       </MappingFragment>
     </EntityTypeMapping>
   </EntitySetMapping>

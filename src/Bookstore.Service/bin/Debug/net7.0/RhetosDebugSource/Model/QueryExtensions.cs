@@ -15,6 +15,16 @@ namespace System.Linq
     public static class QueryExtensions
     {
         /// <summary>Converts the objects with navigation properties to simple objects with primitive properties.</summary>
+        public static IQueryable<Bookstore.ApproveShipment> ToSimple(this IQueryable<Common.Queryable.Bookstore_ApproveShipment> query)
+        {
+            return query.Select(item => new Bookstore.ApproveShipment
+            {
+                ID = item.ID,
+                EffectiveSince = item.EffectiveSince,
+                ShipmentID = item.ShipmentID/*DataStructureInfo AssignSimpleProperty Bookstore.ApproveShipment*/
+            });
+        }
+        /// <summary>Converts the objects with navigation properties to simple objects with primitive properties.</summary>
         public static IQueryable<Bookstore.Author> ToSimple(this IQueryable<Common.Queryable.Bookstore_Author> query)
         {
             return query.Select(item => new Bookstore.Author
@@ -173,6 +183,36 @@ namespace System.Linq
             {
                 ID = item.ID,
                 Bonus = item.Bonus/*DataStructureInfo AssignSimpleProperty Bookstore.Managers*/
+            });
+        }
+        /// <summary>Converts the objects with navigation properties to simple objects with primitive properties.</summary>
+        public static IQueryable<Bookstore.Shipment> ToSimple(this IQueryable<Common.Queryable.Bookstore_Shipment> query)
+        {
+            return query.Select(item => new Bookstore.Shipment
+            {
+                ID = item.ID/*DataStructureInfo AssignSimpleProperty Bookstore.Shipment*/
+            });
+        }
+        /// <summary>Converts the objects with navigation properties to simple objects with primitive properties.</summary>
+        public static IQueryable<Bookstore.ShipmentEvent> ToSimple(this IQueryable<Common.Queryable.Bookstore_ShipmentEvent> query)
+        {
+            return query.Select(item => new Bookstore.ShipmentEvent
+            {
+                ID = item.ID,
+                ApproveShipmentID = item.ApproveShipmentID,
+                EffectiveSince = item.EffectiveSince,
+                ShipmentID = item.ShipmentID,
+                Subtype = item.Subtype,
+                NewStatusID = item.NewStatusID/*DataStructureInfo AssignSimpleProperty Bookstore.ShipmentEvent*/
+            });
+        }
+        /// <summary>Converts the objects with navigation properties to simple objects with primitive properties.</summary>
+        public static IQueryable<Bookstore.ShipmentStatus> ToSimple(this IQueryable<Common.Queryable.Bookstore_ShipmentStatus> query)
+        {
+            return query.Select(item => new Bookstore.ShipmentStatus
+            {
+                ID = item.ID,
+                Name = item.Name/*DataStructureInfo AssignSimpleProperty Bookstore.ShipmentStatus*/
             });
         }
         /// <summary>Converts the objects with navigation properties to simple objects with primitive properties.</summary>

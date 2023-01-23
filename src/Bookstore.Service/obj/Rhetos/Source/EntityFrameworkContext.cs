@@ -40,6 +40,7 @@ namespace Common
             this.Database.CommandTimeout = Rhetos.Utilities.SqlUtility.SqlCommandTimeout;
         }
 
+        public System.Data.Entity.DbSet<Common.Queryable.Bookstore_ApproveShipment> Bookstore_ApproveShipment { get; set; }
         public System.Data.Entity.DbSet<Common.Queryable.Bookstore_Author> Bookstore_Author { get; set; }
         public System.Data.Entity.DbSet<Common.Queryable.Bookstore_Book> Bookstore_Book { get; set; }
         public System.Data.Entity.DbSet<Common.Queryable.Bookstore_BookAuthor> Bookstore_BookAuthor { get; set; }
@@ -55,6 +56,9 @@ namespace Common
         public System.Data.Entity.DbSet<Common.Queryable.Bookstore_ForeignBook> Bookstore_ForeignBook { get; set; }
         public System.Data.Entity.DbSet<Common.Queryable.Bookstore_Genre> Bookstore_Genre { get; set; }
         public System.Data.Entity.DbSet<Common.Queryable.Bookstore_Managers> Bookstore_Managers { get; set; }
+        public System.Data.Entity.DbSet<Common.Queryable.Bookstore_Shipment> Bookstore_Shipment { get; set; }
+        public System.Data.Entity.DbSet<Common.Queryable.Bookstore_ShipmentEvent> Bookstore_ShipmentEvent { get; set; }
+        public System.Data.Entity.DbSet<Common.Queryable.Bookstore_ShipmentStatus> Bookstore_ShipmentStatus { get; set; }
         public System.Data.Entity.DbSet<Common.Queryable.Bookstore_Topic> Bookstore_Topic { get; set; }
         public System.Data.Entity.DbSet<Common.Queryable.Bookstore_Translator> Bookstore_Translator { get; set; }
         public System.Data.Entity.DbSet<Common.Queryable.Common_AutoCodeCache> Common_AutoCodeCache { get; set; }

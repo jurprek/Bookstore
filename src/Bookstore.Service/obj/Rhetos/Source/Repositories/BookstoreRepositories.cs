@@ -23,6 +23,9 @@ namespace Bookstore.Repositories
             _repositories = repositories;
         }
 
+        private ApproveShipment_Repository _ApproveShipment_Repository;
+        public ApproveShipment_Repository ApproveShipment { get { return _ApproveShipment_Repository ?? (_ApproveShipment_Repository = (ApproveShipment_Repository)Rhetos.Extensibility.NamedPluginsExtensions.GetPlugin(_repositories, @"Bookstore.ApproveShipment")); } }
+
         private Author_Repository _Author_Repository;
         public Author_Repository Author { get { return _Author_Repository ?? (_Author_Repository = (Author_Repository)Rhetos.Extensibility.NamedPluginsExtensions.GetPlugin(_repositories, @"Bookstore.Author")); } }
 
@@ -71,6 +74,15 @@ namespace Bookstore.Repositories
         private Managers_Repository _Managers_Repository;
         public Managers_Repository Managers { get { return _Managers_Repository ?? (_Managers_Repository = (Managers_Repository)Rhetos.Extensibility.NamedPluginsExtensions.GetPlugin(_repositories, @"Bookstore.Managers")); } }
 
+        private Shipment_Repository _Shipment_Repository;
+        public Shipment_Repository Shipment { get { return _Shipment_Repository ?? (_Shipment_Repository = (Shipment_Repository)Rhetos.Extensibility.NamedPluginsExtensions.GetPlugin(_repositories, @"Bookstore.Shipment")); } }
+
+        private ShipmentEvent_Repository _ShipmentEvent_Repository;
+        public ShipmentEvent_Repository ShipmentEvent { get { return _ShipmentEvent_Repository ?? (_ShipmentEvent_Repository = (ShipmentEvent_Repository)Rhetos.Extensibility.NamedPluginsExtensions.GetPlugin(_repositories, @"Bookstore.ShipmentEvent")); } }
+
+        private ShipmentStatus_Repository _ShipmentStatus_Repository;
+        public ShipmentStatus_Repository ShipmentStatus { get { return _ShipmentStatus_Repository ?? (_ShipmentStatus_Repository = (ShipmentStatus_Repository)Rhetos.Extensibility.NamedPluginsExtensions.GetPlugin(_repositories, @"Bookstore.ShipmentStatus")); } }
+
         private Topic_Repository _Topic_Repository;
         public Topic_Repository Topic { get { return _Topic_Repository ?? (_Topic_Repository = (Topic_Repository)Rhetos.Extensibility.NamedPluginsExtensions.GetPlugin(_repositories, @"Bookstore.Topic")); } }
 
@@ -81,6 +93,102 @@ namespace Bookstore.Repositories
         public BookGrid_Repository BookGrid { get { return _BookGrid_Repository ?? (_BookGrid_Repository = (BookGrid_Repository)Rhetos.Extensibility.NamedPluginsExtensions.GetPlugin(_repositories, @"Bookstore.BookGrid")); } }
 
         /*ModuleInfo RepositoryMembers Bookstore*/
+    }
+
+    /*DataStructureInfo RepositoryAttributes Bookstore.ApproveShipment*/
+    public partial class ApproveShipment_Repository : /*DataStructureInfo OverrideBaseType Bookstore.ApproveShipment*/ Common.OrmRepositoryBase<Common.Queryable.Bookstore_ApproveShipment, Bookstore.ApproveShipment> // Common.QueryableRepositoryBase<Common.Queryable.Bookstore_ApproveShipment, Bookstore.ApproveShipment> // Common.ReadableRepositoryBase<Bookstore.ApproveShipment> // global::Common.RepositoryBase
+        , IWritableRepository<Bookstore.ApproveShipment>, IValidateRepository/*DataStructureInfo RepositoryInterface Bookstore.ApproveShipment*/
+    {
+        private readonly Rhetos.Utilities.ISqlUtility _sqlUtility;
+        /*DataStructureInfo RepositoryPrivateMembers Bookstore.ApproveShipment*/
+
+        public ApproveShipment_Repository(Common.DomRepository domRepository, Common.ExecutionContext executionContext, Rhetos.Utilities.ISqlUtility _sqlUtility/*DataStructureInfo RepositoryConstructorArguments Bookstore.ApproveShipment*/)
+        {
+            _domRepository = domRepository;
+            _executionContext = executionContext;
+            this._sqlUtility = _sqlUtility;
+            /*DataStructureInfo RepositoryConstructorCode Bookstore.ApproveShipment*/
+        }
+
+        public static KeyValuePair<string, Type>[] GetReadParameterTypes()
+        {
+            return new KeyValuePair<string, Type>[]
+            {
+                /*DataStructureInfo ReadParameterTypes Bookstore.ApproveShipment*/
+            };
+        }
+        
+        public virtual void Save(IEnumerable<Bookstore.ApproveShipment> insertedNew, IEnumerable<Bookstore.ApproveShipment> updatedNew, IEnumerable<Bookstore.ApproveShipment> deletedIds, bool checkUserPermissions = false)
+        {
+            if (!DomHelper.InitializeSaveMethodItems(ref insertedNew, ref updatedNew, ref deletedIds))
+                return;
+
+            /*DataStructureInfo WritableOrm ClearContext Bookstore.ApproveShipment*/
+
+            /*DataStructureInfo WritableOrm ArgumentValidation Bookstore.ApproveShipment*/
+
+            { 
+                var now = SqlUtility.GetDatabaseTime(_executionContext.SqlExecuter);
+
+                foreach (var newItem in insertedNew)
+                    if(newItem.EffectiveSince == null)
+                        newItem.EffectiveSince = now;
+            }
+            /*DataStructureInfo WritableOrm Initialization Bookstore.ApproveShipment*/
+
+            // Using old data, including lazy loading of navigation properties:
+
+            IEnumerable<Common.Queryable.Bookstore_ApproveShipment> deleted = DomHelper.LoadOldDataWithNavigationProperties(deletedIds, this);
+            IEnumerable<Common.Queryable.Bookstore_ApproveShipment> updated = DomHelper.LoadOldDataWithNavigationProperties(updatedNew, this);
+
+            /*DataStructureInfo WritableOrm OldDataLoaded Bookstore.ApproveShipment*/
+
+            /*DataStructureInfo WritableOrm ProcessedOldData Bookstore.ApproveShipment*/
+
+            {
+                DomHelper.WriteToDatabase(insertedNew, updatedNew, deletedIds, _executionContext.PersistenceStorage, checkUserPermissions, _sqlUtility,
+                    out Exception saveException, out Rhetos.RhetosException interpretedException);
+
+                if (saveException != null)
+                {
+                    if (interpretedException is Rhetos.UserException && Rhetos.Utilities.MsSqlUtility.IsReferenceErrorOnInsertUpdate(interpretedException, @"Bookstore.Shipment", @"ID", @"FK_ApproveShipment_Shipment_ShipmentID"))
+                        ((Rhetos.UserException)interpretedException).SystemMessage = @"DataStructure:Bookstore.ApproveShipment,Property:ShipmentID,Referenced:Bookstore.Shipment";
+                    /*DataStructureInfo WritableOrm OnDatabaseError Bookstore.ApproveShipment*/
+                    DomHelper.ThrowInterpretedException(checkUserPermissions, saveException, interpretedException, _sqlUtility, "Bookstore.ApproveShipment");
+                }
+            }
+
+            deleted = null;
+            updated = this.Query(updatedNew.Select(item => item.ID));
+            IEnumerable<Common.Queryable.Bookstore_ApproveShipment> inserted = this.Query(insertedNew.Select(item => item.ID));
+
+            bool allEffectsCompleted = false;
+            try
+            {
+                /*DataStructureInfo WritableOrm OnSaveTag1 Bookstore.ApproveShipment*/
+
+                /*DataStructureInfo WritableOrm OnSaveTag2 Bookstore.ApproveShipment*/
+
+                Rhetos.Dom.DefaultConcepts.InvalidDataMessage.ValidateOnSave(insertedNew, updatedNew, this, "Bookstore.ApproveShipment");
+
+                /*DataStructureInfo WritableOrm AfterSave Bookstore.ApproveShipment*/
+
+                allEffectsCompleted = true;
+            }
+            finally
+            {
+                if (!allEffectsCompleted)
+                    _executionContext.PersistenceTransaction.DiscardOnDispose();
+            }
+        }
+
+        public IEnumerable<Rhetos.Dom.DefaultConcepts.InvalidDataMessage> Validate(IList<Guid> ids, bool onSave)
+        {
+            /*DataStructureInfo WritableOrm OnSaveValidate Bookstore.ApproveShipment*/
+            yield break;
+        }
+
+        /*DataStructureInfo RepositoryMembers Bookstore.ApproveShipment*/
     }
 
     /*DataStructureInfo RepositoryAttributes Bookstore.Author*/
@@ -2014,6 +2122,232 @@ namespace Bookstore.Repositories
         }
 
         /*DataStructureInfo RepositoryMembers Bookstore.Managers*/
+    }
+
+    /*DataStructureInfo RepositoryAttributes Bookstore.Shipment*/
+    public partial class Shipment_Repository : /*DataStructureInfo OverrideBaseType Bookstore.Shipment*/ Common.OrmRepositoryBase<Common.Queryable.Bookstore_Shipment, Bookstore.Shipment> // Common.QueryableRepositoryBase<Common.Queryable.Bookstore_Shipment, Bookstore.Shipment> // Common.ReadableRepositoryBase<Bookstore.Shipment> // global::Common.RepositoryBase
+        , IWritableRepository<Bookstore.Shipment>, IValidateRepository/*DataStructureInfo RepositoryInterface Bookstore.Shipment*/
+    {
+        private readonly Rhetos.Utilities.ISqlUtility _sqlUtility;
+        /*DataStructureInfo RepositoryPrivateMembers Bookstore.Shipment*/
+
+        public Shipment_Repository(Common.DomRepository domRepository, Common.ExecutionContext executionContext, Rhetos.Utilities.ISqlUtility _sqlUtility/*DataStructureInfo RepositoryConstructorArguments Bookstore.Shipment*/)
+        {
+            _domRepository = domRepository;
+            _executionContext = executionContext;
+            this._sqlUtility = _sqlUtility;
+            /*DataStructureInfo RepositoryConstructorCode Bookstore.Shipment*/
+        }
+
+        public static KeyValuePair<string, Type>[] GetReadParameterTypes()
+        {
+            return new KeyValuePair<string, Type>[]
+            {
+                /*DataStructureInfo ReadParameterTypes Bookstore.Shipment*/
+            };
+        }
+        
+        public virtual void Save(IEnumerable<Bookstore.Shipment> insertedNew, IEnumerable<Bookstore.Shipment> updatedNew, IEnumerable<Bookstore.Shipment> deletedIds, bool checkUserPermissions = false)
+        {
+            if (!DomHelper.InitializeSaveMethodItems(ref insertedNew, ref updatedNew, ref deletedIds))
+                return;
+
+            /*DataStructureInfo WritableOrm ClearContext Bookstore.Shipment*/
+
+            /*DataStructureInfo WritableOrm ArgumentValidation Bookstore.Shipment*/
+
+            /*DataStructureInfo WritableOrm Initialization Bookstore.Shipment*/
+
+            // Using old data, including lazy loading of navigation properties:
+
+            IEnumerable<Common.Queryable.Bookstore_Shipment> deleted = DomHelper.LoadOldDataWithNavigationProperties(deletedIds, this);
+            IEnumerable<Common.Queryable.Bookstore_Shipment> updated = DomHelper.LoadOldDataWithNavigationProperties(updatedNew, this);
+
+            /*DataStructureInfo WritableOrm OldDataLoaded Bookstore.Shipment*/
+
+            /*DataStructureInfo WritableOrm ProcessedOldData Bookstore.Shipment*/
+
+            {
+                DomHelper.WriteToDatabase(insertedNew, updatedNew, deletedIds, _executionContext.PersistenceStorage, checkUserPermissions, _sqlUtility,
+                    out Exception saveException, out Rhetos.RhetosException interpretedException);
+
+                if (saveException != null)
+                {
+                    if (interpretedException is Rhetos.UserException && Rhetos.Utilities.MsSqlUtility.IsReferenceErrorOnDelete(interpretedException, @"Bookstore.ApproveShipment", @"ShipmentID", @"FK_ApproveShipment_Shipment_ShipmentID"))
+                        ((Rhetos.UserException)interpretedException).SystemMessage = @"DataStructure:Bookstore.ApproveShipment,Property:ShipmentID,Referenced:Bookstore.Shipment";
+                    /*DataStructureInfo WritableOrm OnDatabaseError Bookstore.Shipment*/
+                    DomHelper.ThrowInterpretedException(checkUserPermissions, saveException, interpretedException, _sqlUtility, "Bookstore.Shipment");
+                }
+            }
+
+            deleted = null;
+            updated = this.Query(updatedNew.Select(item => item.ID));
+            IEnumerable<Common.Queryable.Bookstore_Shipment> inserted = this.Query(insertedNew.Select(item => item.ID));
+
+            bool allEffectsCompleted = false;
+            try
+            {
+                /*DataStructureInfo WritableOrm OnSaveTag1 Bookstore.Shipment*/
+
+                /*DataStructureInfo WritableOrm OnSaveTag2 Bookstore.Shipment*/
+
+                Rhetos.Dom.DefaultConcepts.InvalidDataMessage.ValidateOnSave(insertedNew, updatedNew, this, "Bookstore.Shipment");
+
+                /*DataStructureInfo WritableOrm AfterSave Bookstore.Shipment*/
+
+                allEffectsCompleted = true;
+            }
+            finally
+            {
+                if (!allEffectsCompleted)
+                    _executionContext.PersistenceTransaction.DiscardOnDispose();
+            }
+        }
+
+        public IEnumerable<Rhetos.Dom.DefaultConcepts.InvalidDataMessage> Validate(IList<Guid> ids, bool onSave)
+        {
+            /*DataStructureInfo WritableOrm OnSaveValidate Bookstore.Shipment*/
+            yield break;
+        }
+
+        /*DataStructureInfo RepositoryMembers Bookstore.Shipment*/
+    }
+
+    /*DataStructureInfo RepositoryAttributes Bookstore.ShipmentEvent*/
+    public partial class ShipmentEvent_Repository : /*DataStructureInfo OverrideBaseType Bookstore.ShipmentEvent*/ Common.OrmRepositoryBase<Common.Queryable.Bookstore_ShipmentEvent, Bookstore.ShipmentEvent> // Common.QueryableRepositoryBase<Common.Queryable.Bookstore_ShipmentEvent, Bookstore.ShipmentEvent> // Common.ReadableRepositoryBase<Bookstore.ShipmentEvent> // global::Common.RepositoryBase
+        /*DataStructureInfo RepositoryInterface Bookstore.ShipmentEvent*/
+    {
+        /*DataStructureInfo RepositoryPrivateMembers Bookstore.ShipmentEvent*/
+
+        public ShipmentEvent_Repository(Common.DomRepository domRepository, Common.ExecutionContext executionContext/*DataStructureInfo RepositoryConstructorArguments Bookstore.ShipmentEvent*/)
+        {
+            _domRepository = domRepository;
+            _executionContext = executionContext;
+            /*DataStructureInfo RepositoryConstructorCode Bookstore.ShipmentEvent*/
+        }
+
+        public static KeyValuePair<string, Type>[] GetReadParameterTypes()
+        {
+            return new KeyValuePair<string, Type>[]
+            {
+                new KeyValuePair<string, Type>(@"Rhetos.Dom.DefaultConcepts.FilterSubtype", typeof(Rhetos.Dom.DefaultConcepts.FilterSubtype)),
+                /*DataStructureInfo ReadParameterTypes Bookstore.ShipmentEvent*/
+            };
+        }
+        
+        public global::Bookstore.ShipmentEvent[] Load(Rhetos.Dom.DefaultConcepts.FilterSubtype filter_Parameter)
+        {
+            Func<Common.DomRepository, Rhetos.Dom.DefaultConcepts.FilterSubtype/*FilterByInfo AdditionalParametersType Bookstore.ShipmentEvent.'Rhetos.Dom.DefaultConcepts.FilterSubtype'*/, Bookstore.ShipmentEvent[]> filter_Function =
+                (repository, parameter) =>
+                {{
+                    Expression<Func<Common.Queryable.Bookstore_ShipmentEvent, bool>> filterExpression = null;
+                    parameter.ImplementationName = parameter.ImplementationName ?? "";
+                    if (parameter.Subtype == @"Bookstore.ApproveShipment" && parameter.ImplementationName == @"")
+                        filterExpression = item => item.ApproveShipmentID != null;
+                    /*PolymorphicInfo SetFilterExpression Bookstore.ShipmentEvent*/
+                    if (filterExpression == null)
+                        throw new Rhetos.ClientException(string.Format("Invalid subtype name or implementation name provided: '{0}', '{1}'.",
+                            parameter.Subtype, parameter.ImplementationName));
+                    return Filter(Query().Where(filterExpression), parameter.Ids).ToSimple().ToArray();
+                }};
+
+            return filter_Function(_domRepository, filter_Parameter/*FilterByInfo AdditionalParametersArgument Bookstore.ShipmentEvent.'Rhetos.Dom.DefaultConcepts.FilterSubtype'*/);
+        }
+
+        /*DataStructureInfo RepositoryMembers Bookstore.ShipmentEvent*/
+    }
+
+    /*DataStructureInfo RepositoryAttributes Bookstore.ShipmentStatus*/
+    public partial class ShipmentStatus_Repository : /*DataStructureInfo OverrideBaseType Bookstore.ShipmentStatus*/ Common.OrmRepositoryBase<Common.Queryable.Bookstore_ShipmentStatus, Bookstore.ShipmentStatus> // Common.QueryableRepositoryBase<Common.Queryable.Bookstore_ShipmentStatus, Bookstore.ShipmentStatus> // Common.ReadableRepositoryBase<Bookstore.ShipmentStatus> // global::Common.RepositoryBase
+        , IWritableRepository<Bookstore.ShipmentStatus>, IValidateRepository/*DataStructureInfo RepositoryInterface Bookstore.ShipmentStatus*/
+    {
+        private readonly Rhetos.Utilities.ILocalizer<Bookstore.ShipmentStatus> _localizer;
+        private readonly Rhetos.Utilities.ISqlUtility _sqlUtility;
+        /*DataStructureInfo RepositoryPrivateMembers Bookstore.ShipmentStatus*/
+
+        public ShipmentStatus_Repository(Common.DomRepository domRepository, Common.ExecutionContext executionContext, Rhetos.Utilities.ILocalizer<Bookstore.ShipmentStatus> _localizer, Rhetos.Utilities.ISqlUtility _sqlUtility/*DataStructureInfo RepositoryConstructorArguments Bookstore.ShipmentStatus*/)
+        {
+            _domRepository = domRepository;
+            _executionContext = executionContext;
+            this._localizer = _localizer;
+            this._sqlUtility = _sqlUtility;
+            /*DataStructureInfo RepositoryConstructorCode Bookstore.ShipmentStatus*/
+        }
+
+        public static KeyValuePair<string, Type>[] GetReadParameterTypes()
+        {
+            return new KeyValuePair<string, Type>[]
+            {
+                /*DataStructureInfo ReadParameterTypes Bookstore.ShipmentStatus*/
+            };
+        }
+        
+        public virtual void Save(IEnumerable<Bookstore.ShipmentStatus> insertedNew, IEnumerable<Bookstore.ShipmentStatus> updatedNew, IEnumerable<Bookstore.ShipmentStatus> deletedIds, bool checkUserPermissions = false)
+        {
+            if (!DomHelper.InitializeSaveMethodItems(ref insertedNew, ref updatedNew, ref deletedIds))
+                return;
+
+            /*DataStructureInfo WritableOrm ClearContext Bookstore.ShipmentStatus*/
+
+            throw new Rhetos.UserException("It is not allowed to modify hard-coded data in {0}.", new [] { _localizer["Bookstore.ShipmentStatus"] }, null, null);
+            /*DataStructureInfo WritableOrm ArgumentValidation Bookstore.ShipmentStatus*/
+
+            /*DataStructureInfo WritableOrm Initialization Bookstore.ShipmentStatus*/
+
+            // Using old data, including lazy loading of navigation properties:
+
+            IEnumerable<Common.Queryable.Bookstore_ShipmentStatus> deleted = DomHelper.LoadOldDataWithNavigationProperties(deletedIds, this);
+            IEnumerable<Common.Queryable.Bookstore_ShipmentStatus> updated = DomHelper.LoadOldDataWithNavigationProperties(updatedNew, this);
+
+            foreach (var newItem in insertedNew.Concat(updatedNew))
+                ShortStringPropertyCodeGenerator.CheckMaxLength(newItem.Name, newItem, "Bookstore", "ShipmentStatus", "Name");
+
+            /*DataStructureInfo WritableOrm OldDataLoaded Bookstore.ShipmentStatus*/
+
+            /*DataStructureInfo WritableOrm ProcessedOldData Bookstore.ShipmentStatus*/
+
+            {
+                DomHelper.WriteToDatabase(insertedNew, updatedNew, deletedIds, _executionContext.PersistenceStorage, checkUserPermissions, _sqlUtility,
+                    out Exception saveException, out Rhetos.RhetosException interpretedException);
+
+                if (saveException != null)
+                {
+                    /*DataStructureInfo WritableOrm OnDatabaseError Bookstore.ShipmentStatus*/
+                    DomHelper.ThrowInterpretedException(checkUserPermissions, saveException, interpretedException, _sqlUtility, "Bookstore.ShipmentStatus");
+                }
+            }
+
+            deleted = null;
+            updated = this.Query(updatedNew.Select(item => item.ID));
+            IEnumerable<Common.Queryable.Bookstore_ShipmentStatus> inserted = this.Query(insertedNew.Select(item => item.ID));
+
+            bool allEffectsCompleted = false;
+            try
+            {
+                /*DataStructureInfo WritableOrm OnSaveTag1 Bookstore.ShipmentStatus*/
+
+                /*DataStructureInfo WritableOrm OnSaveTag2 Bookstore.ShipmentStatus*/
+
+                Rhetos.Dom.DefaultConcepts.InvalidDataMessage.ValidateOnSave(insertedNew, updatedNew, this, "Bookstore.ShipmentStatus");
+
+                /*DataStructureInfo WritableOrm AfterSave Bookstore.ShipmentStatus*/
+
+                allEffectsCompleted = true;
+            }
+            finally
+            {
+                if (!allEffectsCompleted)
+                    _executionContext.PersistenceTransaction.DiscardOnDispose();
+            }
+        }
+
+        public IEnumerable<Rhetos.Dom.DefaultConcepts.InvalidDataMessage> Validate(IList<Guid> ids, bool onSave)
+        {
+            /*DataStructureInfo WritableOrm OnSaveValidate Bookstore.ShipmentStatus*/
+            yield break;
+        }
+
+        /*DataStructureInfo RepositoryMembers Bookstore.ShipmentStatus*/
     }
 
     /*DataStructureInfo RepositoryAttributes Bookstore.Topic*/

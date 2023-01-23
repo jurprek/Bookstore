@@ -20,6 +20,16 @@ namespace Bookstore
         /*DataStructureInfo ClassBody Bookstore.AgeFrom_AgeTo_RangeFilter*/
     }
 
+    /*DataStructureInfo ClassAttributes Bookstore.ApproveShipment*/
+    public class ApproveShipment : EntityBase<Bookstore.ApproveShipment>/*Next DataStructureInfo ClassInterace Bookstore.ApproveShipment*/
+    {
+        /*PropertyInfo Attribute Bookstore.ApproveShipment.EffectiveSince*/
+        public DateTime? EffectiveSince { get; set; }
+        /*PropertyInfo Attribute Bookstore.ApproveShipment.ShipmentID*/
+        public Guid? ShipmentID { get; set; }
+        /*DataStructureInfo ClassBody Bookstore.ApproveShipment*/
+    }
+
     /*DataStructureInfo ClassAttributes Bookstore.Author*/
     public class Author : EntityBase<Bookstore.Author>/*Next DataStructureInfo ClassInterace Bookstore.Author*/
     {
@@ -204,6 +214,42 @@ namespace Bookstore
         /*DataStructureInfo ClassBody Bookstore.NumberOfPages_MaxValueFilter*/
     }
 
+    /*DataStructureInfo ClassAttributes Bookstore.Shipment*/
+    public class Shipment : EntityBase<Bookstore.Shipment>/*Next DataStructureInfo ClassInterace Bookstore.Shipment*/
+    {
+        /*DataStructureInfo ClassBody Bookstore.Shipment*/
+    }
+
+    /*DataStructureInfo ClassAttributes Bookstore.ShipmentEvent*/
+    public class ShipmentEvent : EntityBase<Bookstore.ShipmentEvent>/*Next DataStructureInfo ClassInterace Bookstore.ShipmentEvent*/
+    {
+        /*PropertyInfo Attribute Bookstore.ShipmentEvent.ApproveShipmentID*/
+        public Guid? ApproveShipmentID { get; set; }
+        /*PropertyInfo Attribute Bookstore.ShipmentEvent.EffectiveSince*/
+        public DateTime? EffectiveSince { get; set; }
+        /*PropertyInfo Attribute Bookstore.ShipmentEvent.ShipmentID*/
+        public Guid? ShipmentID { get; set; }
+        /*PropertyInfo Attribute Bookstore.ShipmentEvent.Subtype*/
+        public string Subtype { get; set; }
+        /*PropertyInfo Attribute Bookstore.ShipmentEvent.NewStatusID*/
+        public Guid? NewStatusID { get; set; }
+        /*DataStructureInfo ClassBody Bookstore.ShipmentEvent*/
+    }
+
+    /*DataStructureInfo ClassAttributes Bookstore.ShipmentStatus*/
+    public class ShipmentStatus : EntityBase<Bookstore.ShipmentStatus>/*Next DataStructureInfo ClassInterace Bookstore.ShipmentStatus*/
+    {
+        public static readonly Guid Approved = new Guid("402eb487-a2c2-e090-1d87-b721bf381c3c");
+
+        public static readonly Guid Delivered = new Guid("65156190-9073-67f3-5639-f46a572eee06");
+
+        public static readonly Guid Preparing = new Guid("cca61acf-5159-f4b3-9fab-29021827d202");
+
+        /*PropertyInfo Attribute Bookstore.ShipmentStatus.Name*/
+        public string Name { get; set; }
+        /*DataStructureInfo ClassBody Bookstore.ShipmentStatus*/
+    }
+
     /*DataStructureInfo ClassAttributes Bookstore.SystemRequiredBook*/
     public class SystemRequiredBook/*DataStructureInfo ClassInterace Bookstore.SystemRequiredBook*/
     {
@@ -277,6 +323,32 @@ namespace Common.Queryable
     using System.Runtime.Serialization;
     using Rhetos.Dom.DefaultConcepts;
     using Rhetos.Utilities;
+
+    /*DataStructureInfo QueryableClassAttributes Bookstore.ApproveShipment*/
+    public class Bookstore_ApproveShipment : global::Bookstore.ApproveShipment, IQueryableEntity<Bookstore.ApproveShipment>, System.IEquatable<Bookstore_ApproveShipment>/*DataStructureInfo QueryableClassInterace Bookstore.ApproveShipment*/
+    {
+        /*DataStructureQueryable PropertyAttribute Bookstore.ApproveShipment.Shipment*/
+        public virtual Common.Queryable.Bookstore_Shipment Shipment { get; init; }
+
+        /*DataStructureInfo QueryableClassMembers Bookstore.ApproveShipment*/
+
+        public bool Equals(Bookstore_ApproveShipment other)
+        {
+            return other != null && other.ID == ID;
+        }
+
+        /// <summary>Converts the object with navigation properties to a simple object with primitive properties.</summary>
+        public Bookstore.ApproveShipment ToSimple()
+        {
+            var item = this;
+            return new Bookstore.ApproveShipment
+            {
+                ID = item.ID,
+                EffectiveSince = item.EffectiveSince,
+                ShipmentID = item.ShipmentID/*DataStructureInfo AssignSimpleProperty Bookstore.ApproveShipment*/
+            };
+        }
+    }
 
     /*DataStructureInfo QueryableClassAttributes Bookstore.Author*/
     public class Bookstore_Author : global::Bookstore.Author, IQueryableEntity<Bookstore.Author>, System.IEquatable<Bookstore_Author>/*DataStructureInfo QueryableClassInterace Bookstore.Author*/
@@ -712,6 +784,84 @@ namespace Common.Queryable
             {
                 ID = item.ID,
                 Bonus = item.Bonus/*DataStructureInfo AssignSimpleProperty Bookstore.Managers*/
+            };
+        }
+    }
+
+    /*DataStructureInfo QueryableClassAttributes Bookstore.Shipment*/
+    public class Bookstore_Shipment : global::Bookstore.Shipment, IQueryableEntity<Bookstore.Shipment>, System.IEquatable<Bookstore_Shipment>/*DataStructureInfo QueryableClassInterace Bookstore.Shipment*/
+    {
+        /*DataStructureInfo QueryableClassMembers Bookstore.Shipment*/
+
+        public bool Equals(Bookstore_Shipment other)
+        {
+            return other != null && other.ID == ID;
+        }
+
+        /// <summary>Converts the object with navigation properties to a simple object with primitive properties.</summary>
+        public Bookstore.Shipment ToSimple()
+        {
+            var item = this;
+            return new Bookstore.Shipment
+            {
+                ID = item.ID/*DataStructureInfo AssignSimpleProperty Bookstore.Shipment*/
+            };
+        }
+    }
+
+    /*DataStructureInfo QueryableClassAttributes Bookstore.ShipmentEvent*/
+    public class Bookstore_ShipmentEvent : global::Bookstore.ShipmentEvent, IQueryableEntity<Bookstore.ShipmentEvent>, System.IEquatable<Bookstore_ShipmentEvent>/*DataStructureInfo QueryableClassInterace Bookstore.ShipmentEvent*/
+    {
+        /*DataStructureQueryable PropertyAttribute Bookstore.ShipmentEvent.ApproveShipment*/
+        public virtual Common.Queryable.Bookstore_ApproveShipment ApproveShipment { get; init; }
+
+        /*DataStructureQueryable PropertyAttribute Bookstore.ShipmentEvent.Shipment*/
+        public virtual Common.Queryable.Bookstore_Shipment Shipment { get; init; }
+
+        /*DataStructureQueryable PropertyAttribute Bookstore.ShipmentEvent.NewStatus*/
+        public virtual Common.Queryable.Bookstore_ShipmentStatus NewStatus { get; init; }
+
+        /*DataStructureInfo QueryableClassMembers Bookstore.ShipmentEvent*/
+
+        public bool Equals(Bookstore_ShipmentEvent other)
+        {
+            return other != null && other.ID == ID;
+        }
+
+        /// <summary>Converts the object with navigation properties to a simple object with primitive properties.</summary>
+        public Bookstore.ShipmentEvent ToSimple()
+        {
+            var item = this;
+            return new Bookstore.ShipmentEvent
+            {
+                ID = item.ID,
+                ApproveShipmentID = item.ApproveShipmentID,
+                EffectiveSince = item.EffectiveSince,
+                ShipmentID = item.ShipmentID,
+                Subtype = item.Subtype,
+                NewStatusID = item.NewStatusID/*DataStructureInfo AssignSimpleProperty Bookstore.ShipmentEvent*/
+            };
+        }
+    }
+
+    /*DataStructureInfo QueryableClassAttributes Bookstore.ShipmentStatus*/
+    public class Bookstore_ShipmentStatus : global::Bookstore.ShipmentStatus, IQueryableEntity<Bookstore.ShipmentStatus>, System.IEquatable<Bookstore_ShipmentStatus>/*DataStructureInfo QueryableClassInterace Bookstore.ShipmentStatus*/
+    {
+        /*DataStructureInfo QueryableClassMembers Bookstore.ShipmentStatus*/
+
+        public bool Equals(Bookstore_ShipmentStatus other)
+        {
+            return other != null && other.ID == ID;
+        }
+
+        /// <summary>Converts the object with navigation properties to a simple object with primitive properties.</summary>
+        public Bookstore.ShipmentStatus ToSimple()
+        {
+            var item = this;
+            return new Bookstore.ShipmentStatus
+            {
+                ID = item.ID,
+                Name = item.Name/*DataStructureInfo AssignSimpleProperty Bookstore.ShipmentStatus*/
             };
         }
     }

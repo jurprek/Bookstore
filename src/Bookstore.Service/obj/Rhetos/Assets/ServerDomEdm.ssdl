@@ -30,6 +30,14 @@
     <Parameter Name = "concatenatedids" Mode = "In" Type = "nvarchar" />
   </Function>
 
+  <EntityType Name="Bookstore_ApproveShipment">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="EffectiveSince" Type="datetime2" Precision="3" Nullable="true" />
+    <Property Name="ShipmentID" Type="uniqueidentifier" customannotation:Index="{ Name: IX_ShipmentID, Order: 0 }" Nullable="true" />
+  </EntityType>
   <EntityType Name="Bookstore_Author">
     <Key>
       <PropertyRef Name="ID" />
@@ -151,6 +159,30 @@
     </Key>
     <Property Name="ID" Type="uniqueidentifier" Nullable="false"  customannotation:Index="{ Name: IX_ID, Order: 0 }"/>
     <Property Name="Bonus" Type="nvarchar(max)" Nullable="true" />
+  </EntityType>
+  <EntityType Name="Bookstore_Shipment">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="uniqueidentifier" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Bookstore_ShipmentEvent">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="ApproveShipmentID" Type="uniqueidentifier" customannotation:Index="{ Name: IX_ApproveShipmentID, Order: 0 }" Nullable="true" />
+    <Property Name="EffectiveSince" Type="datetime2" Precision="3" Nullable="true" />
+    <Property Name="ShipmentID" Type="uniqueidentifier" customannotation:Index="{ Name: IX_ShipmentID, Order: 0 }" Nullable="true" />
+    <Property Name="Subtype" Type="nvarchar(max)" Nullable="true" />
+    <Property Name="NewStatusID" Type="uniqueidentifier" customannotation:Index="{ Name: IX_NewStatusID, Order: 0 }" Nullable="true" />
+  </EntityType>
+  <EntityType Name="Bookstore_ShipmentStatus">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="Name" Type="nvarchar(max)" Nullable="true" />
   </EntityType>
   <EntityType Name="Bookstore_Topic">
     <Key>
@@ -486,6 +518,54 @@
       </Dependent>
     </ReferentialConstraint>
   </Association>
+  <Association Name="Bookstore_ApproveShipment_Shipment">
+    <End Role="Bookstore_Shipment" Type="Self.Bookstore_Shipment" Multiplicity="0..1" />
+    <End Role="Bookstore_ApproveShipment" Type="Self.Bookstore_ApproveShipment" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Bookstore_Shipment">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="Bookstore_ApproveShipment">
+        <PropertyRef Name="ShipmentID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="Bookstore_ShipmentEvent_ApproveShipment">
+    <End Role="Bookstore_ApproveShipment" Type="Self.Bookstore_ApproveShipment" Multiplicity="0..1" />
+    <End Role="Bookstore_ShipmentEvent" Type="Self.Bookstore_ShipmentEvent" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Bookstore_ApproveShipment">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="Bookstore_ShipmentEvent">
+        <PropertyRef Name="ApproveShipmentID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="Bookstore_ShipmentEvent_Shipment">
+    <End Role="Bookstore_Shipment" Type="Self.Bookstore_Shipment" Multiplicity="0..1" />
+    <End Role="Bookstore_ShipmentEvent" Type="Self.Bookstore_ShipmentEvent" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Bookstore_Shipment">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="Bookstore_ShipmentEvent">
+        <PropertyRef Name="ShipmentID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="Bookstore_ShipmentEvent_NewStatus">
+    <End Role="Bookstore_ShipmentStatus" Type="Self.Bookstore_ShipmentStatus" Multiplicity="0..1" />
+    <End Role="Bookstore_ShipmentEvent" Type="Self.Bookstore_ShipmentEvent" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Bookstore_ShipmentStatus">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="Bookstore_ShipmentEvent">
+        <PropertyRef Name="NewStatusID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
   <Association Name="Bookstore_BookTopic_Topic">
     <End Role="Bookstore_Topic" Type="Self.Bookstore_Topic" Multiplicity="0..1" />
     <End Role="Bookstore_BookTopic" Type="Self.Bookstore_BookTopic" Multiplicity="*" />
@@ -656,6 +736,7 @@
   </Association>
   <EntityContainer Name="CodeFirstDatabase">
     
+    <EntitySet Name="Bookstore_ApproveShipment" EntityType="Self.Bookstore_ApproveShipment" Schema="Bookstore" Table="ApproveShipment" />
     <EntitySet Name="Bookstore_Author" EntityType="Self.Bookstore_Author" Schema="Bookstore" Table="Author" />
     <EntitySet Name="Bookstore_Book" EntityType="Self.Bookstore_Book" Schema="Bookstore" Table="Book" />
     <EntitySet Name="Bookstore_BookAuthor" EntityType="Self.Bookstore_BookAuthor" Schema="Bookstore" Table="BookAuthor" />
@@ -671,6 +752,9 @@
     <EntitySet Name="Bookstore_ForeignBook" EntityType="Self.Bookstore_ForeignBook" Schema="Bookstore" Table="ForeignBook" />
     <EntitySet Name="Bookstore_Genre" EntityType="Self.Bookstore_Genre" Schema="Bookstore" Table="Genre" />
     <EntitySet Name="Bookstore_Managers" EntityType="Self.Bookstore_Managers" Schema="Bookstore" Table="Managers" />
+    <EntitySet Name="Bookstore_Shipment" EntityType="Self.Bookstore_Shipment" Schema="Bookstore" Table="Shipment" />
+    <EntitySet Name="Bookstore_ShipmentEvent" EntityType="Self.Bookstore_ShipmentEvent" Schema="Bookstore" Table="ShipmentEvent" />
+    <EntitySet Name="Bookstore_ShipmentStatus" EntityType="Self.Bookstore_ShipmentStatus" Schema="Bookstore" Table="ShipmentStatus" />
     <EntitySet Name="Bookstore_Topic" EntityType="Self.Bookstore_Topic" Schema="Bookstore" Table="Topic" />
     <EntitySet Name="Bookstore_Translator" EntityType="Self.Bookstore_Translator" Schema="Bookstore" Table="Translator" />
     <EntitySet Name="Common_AutoCodeCache" EntityType="Self.Common_AutoCodeCache" Schema="Common" Table="AutoCodeCache" />
@@ -740,6 +824,22 @@
   <AssociationSet Name="Bookstore_Managers_Base" Association="Self.Bookstore_Managers_Base">
     <End Role="Bookstore_Employees" EntitySet="Bookstore_Employees" />
     <End Role="Bookstore_Managers" EntitySet="Bookstore_Managers" />
+  </AssociationSet>
+  <AssociationSet Name="Bookstore_ApproveShipment_Shipment" Association="Self.Bookstore_ApproveShipment_Shipment">
+    <End Role="Bookstore_Shipment" EntitySet="Bookstore_Shipment" />
+    <End Role="Bookstore_ApproveShipment" EntitySet="Bookstore_ApproveShipment" />
+  </AssociationSet>
+  <AssociationSet Name="Bookstore_ShipmentEvent_ApproveShipment" Association="Self.Bookstore_ShipmentEvent_ApproveShipment">
+    <End Role="Bookstore_ApproveShipment" EntitySet="Bookstore_ApproveShipment" />
+    <End Role="Bookstore_ShipmentEvent" EntitySet="Bookstore_ShipmentEvent" />
+  </AssociationSet>
+  <AssociationSet Name="Bookstore_ShipmentEvent_Shipment" Association="Self.Bookstore_ShipmentEvent_Shipment">
+    <End Role="Bookstore_Shipment" EntitySet="Bookstore_Shipment" />
+    <End Role="Bookstore_ShipmentEvent" EntitySet="Bookstore_ShipmentEvent" />
+  </AssociationSet>
+  <AssociationSet Name="Bookstore_ShipmentEvent_NewStatus" Association="Self.Bookstore_ShipmentEvent_NewStatus">
+    <End Role="Bookstore_ShipmentStatus" EntitySet="Bookstore_ShipmentStatus" />
+    <End Role="Bookstore_ShipmentEvent" EntitySet="Bookstore_ShipmentEvent" />
   </AssociationSet>
   <AssociationSet Name="Bookstore_BookTopic_Topic" Association="Self.Bookstore_BookTopic_Topic">
     <End Role="Bookstore_Topic" EntitySet="Bookstore_Topic" />

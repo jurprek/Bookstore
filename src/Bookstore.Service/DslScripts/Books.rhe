@@ -181,6 +181,39 @@ Module Bookstore  //https://github.com/Rhetos/Rhetos/wiki/Data-model-and-relatio
             Value IsFiction 0;
         }
     }
+
+    Entity Shipment
+    {
+       
+    }
+
+    Hardcoded ShipmentStatus
+    {
+        Entry Preparing;
+        Entry Approved;
+        Entry Delivered;
+    }
+
+    Polymorphic ShipmentEvent
+    {
+        DateTime EffectiveSince;
+        Reference Shipment;
+        Reference NewStatus Bookstore.ShipmentStatus;
+    }
+
+    Entity ApproveShipment
+    {
+        DateTime EffectiveSince { CreationTime; }
+        Reference Shipment;
+
+        Is Bookstore.ShipmentEvent
+        {
+            Implements Bookstore.ShipmentEvent.NewStatus Bookstore.ShipmentStatus.Approved;
+
+            // Slower alternative: Calling the database function:
+            //Implements Bookstore.ShipmentEvent.NewStatus "Bookstore.ShipmentStatus_Approved()";
+        }
+    }
 }
 
 // Relationships summary

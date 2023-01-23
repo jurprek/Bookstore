@@ -55,6 +55,7 @@ namespace Common
 
         public static readonly Dictionary<string, Func<KeyValuePair<string, Type>[]>> DataStructuresReadParameterTypes = new()
         {
+            { "Bookstore.ApproveShipment", Bookstore.Repositories.ApproveShipment_Repository.GetReadParameterTypes },
             { "Bookstore.Author", Bookstore.Repositories.Author_Repository.GetReadParameterTypes },
             { "Bookstore.Book", Bookstore.Repositories.Book_Repository.GetReadParameterTypes },
             { "Bookstore.BookAuthor", Bookstore.Repositories.BookAuthor_Repository.GetReadParameterTypes },
@@ -71,6 +72,9 @@ namespace Common
             { "Bookstore.ForeignBook", Bookstore.Repositories.ForeignBook_Repository.GetReadParameterTypes },
             { "Bookstore.Genre", Bookstore.Repositories.Genre_Repository.GetReadParameterTypes },
             { "Bookstore.Managers", Bookstore.Repositories.Managers_Repository.GetReadParameterTypes },
+            { "Bookstore.Shipment", Bookstore.Repositories.Shipment_Repository.GetReadParameterTypes },
+            { "Bookstore.ShipmentEvent", Bookstore.Repositories.ShipmentEvent_Repository.GetReadParameterTypes },
+            { "Bookstore.ShipmentStatus", Bookstore.Repositories.ShipmentStatus_Repository.GetReadParameterTypes },
             { "Bookstore.Topic", Bookstore.Repositories.Topic_Repository.GetReadParameterTypes },
             { "Bookstore.Translator", Bookstore.Repositories.Translator_Repository.GetReadParameterTypes },
             { "Common.AutoCodeCache", Common.Repositories.AutoCodeCache_Repository.GetReadParameterTypes },
@@ -203,6 +207,7 @@ namespace Common
             builder.Register<IDataStructureReadParameters>(context => new Rhetos.Dom.DefaultConcepts.DataStructureReadParameters(Infrastructure.DataStructuresReadParameterTypes)).SingleInstance();
             
             builder.RegisterInstance(Infrastructure.CurrentKeepSynchronizedMetadata).ExternallyOwned();
+            builder.RegisterType<Bookstore.Repositories.ApproveShipment_Repository>().Keyed<IRepository>("Bookstore.ApproveShipment").InstancePerLifetimeScope();
             builder.RegisterType<Bookstore.Repositories.Author_Repository>().Keyed<IRepository>("Bookstore.Author").InstancePerLifetimeScope();
             builder.RegisterType<Bookstore.Repositories.Book_Repository>().Keyed<IRepository>("Bookstore.Book").InstancePerLifetimeScope();
             builder.RegisterType<Bookstore.Repositories.BookAuthor_Repository>().Keyed<IRepository>("Bookstore.BookAuthor").InstancePerLifetimeScope();
@@ -219,6 +224,9 @@ namespace Common
             builder.RegisterType<Bookstore.Repositories.ForeignBook_Repository>().Keyed<IRepository>("Bookstore.ForeignBook").InstancePerLifetimeScope();
             builder.RegisterType<Bookstore.Repositories.Genre_Repository>().Keyed<IRepository>("Bookstore.Genre").InstancePerLifetimeScope();
             builder.RegisterType<Bookstore.Repositories.Managers_Repository>().Keyed<IRepository>("Bookstore.Managers").InstancePerLifetimeScope();
+            builder.RegisterType<Bookstore.Repositories.Shipment_Repository>().Keyed<IRepository>("Bookstore.Shipment").InstancePerLifetimeScope();
+            builder.RegisterType<Bookstore.Repositories.ShipmentEvent_Repository>().Keyed<IRepository>("Bookstore.ShipmentEvent").InstancePerLifetimeScope();
+            builder.RegisterType<Bookstore.Repositories.ShipmentStatus_Repository>().Keyed<IRepository>("Bookstore.ShipmentStatus").InstancePerLifetimeScope();
             builder.RegisterType<Bookstore.Repositories.Topic_Repository>().Keyed<IRepository>("Bookstore.Topic").InstancePerLifetimeScope();
             builder.RegisterType<Bookstore.Repositories.Translator_Repository>().Keyed<IRepository>("Bookstore.Translator").InstancePerLifetimeScope();
             builder.RegisterType<Common.Repositories.AddToLog_Repository>().Keyed<IRepository>("Common.AddToLog").InstancePerLifetimeScope();

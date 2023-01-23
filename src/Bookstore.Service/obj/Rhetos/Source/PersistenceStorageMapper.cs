@@ -16,6 +16,7 @@ namespace Common
 
         public PersistenceStorageObjectMappings()
         {
+            _mappings.Add(typeof(Bookstore.ApproveShipment), new Bookstore_ApproveShipment_Mapper());
             _mappings.Add(typeof(Bookstore.Author), new Bookstore_Author_Mapper());
             _mappings.Add(typeof(Bookstore.Book), new Bookstore_Book_Mapper());
             _mappings.Add(typeof(Bookstore.BookAuthor), new Bookstore_BookAuthor_Mapper());
@@ -30,6 +31,8 @@ namespace Common
             _mappings.Add(typeof(Bookstore.ForeignBook), new Bookstore_ForeignBook_Mapper());
             _mappings.Add(typeof(Bookstore.Genre), new Bookstore_Genre_Mapper());
             _mappings.Add(typeof(Bookstore.Managers), new Bookstore_Managers_Mapper());
+            _mappings.Add(typeof(Bookstore.Shipment), new Bookstore_Shipment_Mapper());
+            _mappings.Add(typeof(Bookstore.ShipmentStatus), new Bookstore_ShipmentStatus_Mapper());
             _mappings.Add(typeof(Bookstore.Topic), new Bookstore_Topic_Mapper());
             _mappings.Add(typeof(Bookstore.Translator), new Bookstore_Translator_Mapper());
             _mappings.Add(typeof(Common.AutoCodeCache), new Common_AutoCodeCache_Mapper());
@@ -55,6 +58,33 @@ namespace Common
                 return mapper;
             else
                 throw new Rhetos.FrameworkException($"There is no mapping associated with the type '{type}'. The mapping definition is required for database save operations.");
+        }
+    }
+
+    public class Bookstore_ApproveShipment_Mapper : IPersistenceStorageObjectMapper
+    {
+        public PersistenceStorageObjectParameter[] GetParameters(IEntity genericEntity)
+        {
+            var entity = (Bookstore.ApproveShipment)genericEntity;
+            return new PersistenceStorageObjectParameter[]
+            {
+                new PersistenceStorageObjectParameter("ID", new SqlParameter("", System.Data.SqlDbType.UniqueIdentifier) { Value = entity.ID }),
+                new PersistenceStorageObjectParameter("EffectiveSince", new SqlParameter("", System.Data.SqlDbType.DateTime2) { Value = ((object)entity.EffectiveSince) ?? DBNull.Value, Scale = 3 }),
+                new PersistenceStorageObjectParameter("ShipmentID", new SqlParameter("", System.Data.SqlDbType.UniqueIdentifier) { Value = ((object)entity.ShipmentID) ?? DBNull.Value }),
+                /*DataStructureInfo PersistenceStorageMapperPropertyMapping Bookstore.ApproveShipment*/
+            };
+        }
+    
+    	public IEnumerable<Guid> GetDependencies(IEntity genericEntity)
+        {
+            var entity = (Bookstore.ApproveShipment)genericEntity;
+            /*DataStructureInfo PersistenceStorageMapperDependencyResolution Bookstore.ApproveShipment*/
+            yield break;
+        }
+    
+    	public string GetTableName()
+        {
+            return "Bookstore.ApproveShipment";
         }
     }
 
@@ -436,6 +466,57 @@ namespace Common
     	public string GetTableName()
         {
             return "Bookstore.Managers";
+        }
+    }
+
+    public class Bookstore_Shipment_Mapper : IPersistenceStorageObjectMapper
+    {
+        public PersistenceStorageObjectParameter[] GetParameters(IEntity genericEntity)
+        {
+            var entity = (Bookstore.Shipment)genericEntity;
+            return new PersistenceStorageObjectParameter[]
+            {
+                new PersistenceStorageObjectParameter("ID", new SqlParameter("", System.Data.SqlDbType.UniqueIdentifier) { Value = entity.ID }),
+                /*DataStructureInfo PersistenceStorageMapperPropertyMapping Bookstore.Shipment*/
+            };
+        }
+    
+    	public IEnumerable<Guid> GetDependencies(IEntity genericEntity)
+        {
+            var entity = (Bookstore.Shipment)genericEntity;
+            /*DataStructureInfo PersistenceStorageMapperDependencyResolution Bookstore.Shipment*/
+            yield break;
+        }
+    
+    	public string GetTableName()
+        {
+            return "Bookstore.Shipment";
+        }
+    }
+
+    public class Bookstore_ShipmentStatus_Mapper : IPersistenceStorageObjectMapper
+    {
+        public PersistenceStorageObjectParameter[] GetParameters(IEntity genericEntity)
+        {
+            var entity = (Bookstore.ShipmentStatus)genericEntity;
+            return new PersistenceStorageObjectParameter[]
+            {
+                new PersistenceStorageObjectParameter("ID", new SqlParameter("", System.Data.SqlDbType.UniqueIdentifier) { Value = entity.ID }),
+                new PersistenceStorageObjectParameter("Name", new SqlParameter("", System.Data.SqlDbType.NVarChar) { Value = ((object)entity.Name) ?? DBNull.Value }),
+                /*DataStructureInfo PersistenceStorageMapperPropertyMapping Bookstore.ShipmentStatus*/
+            };
+        }
+    
+    	public IEnumerable<Guid> GetDependencies(IEntity genericEntity)
+        {
+            var entity = (Bookstore.ShipmentStatus)genericEntity;
+            /*DataStructureInfo PersistenceStorageMapperDependencyResolution Bookstore.ShipmentStatus*/
+            yield break;
+        }
+    
+    	public string GetTableName()
+        {
+            return "Bookstore.ShipmentStatus";
         }
     }
 
