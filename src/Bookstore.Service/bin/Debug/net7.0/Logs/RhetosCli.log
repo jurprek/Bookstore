@@ -1509,3 +1509,39 @@ New: DECLARE @columnList NVARCHAR(MAX);\r\nSET @columnList = N', ApproveShipment
 2023-01-23 15:31:25.9407|INFO|ApplicationInitialization|Initialization ClaimGenerator.
 2023-01-23 15:31:26.3577|INFO|ApplicationInitialization|Initialization KeepSynchronizedRecomputeOnDeploy.
 2023-01-23 15:31:26.3750|INFO|Rhetos DbUpdate|Done.
+2023-01-24 08:27:04.8890|INFO|Rhetos DbUpdate base|Started 'dotnet' process 13820.
+2023-01-24 08:27:05.1797|INFO|Rhetos DbUpdate|Started in C:\Users\jpreksavec\source\repos\Bookstore\src\Bookstore.Service\bin\Debug\net7.0\
+2023-01-24 08:27:05.2062|INFO|DatabaseUpdate|Loading plugins.
+2023-01-24 08:27:05.2972|ERROR|Rhetos DbUpdate|System.InvalidOperationException: The entry point exited without ever building an IHost.    at Microsoft.Extensions.Hosting.HostFactoryResolver.HostingListener.CreateHost()    at Microsoft.Extensions.Hosting.HostFactoryResolver.<>c__DisplayClass10_0.<ResolveHostFactory>b__0(String[] args)    at Rhetos.HostResolver.ResolveHost(String rhetosHostAssemblyPath, String[] args, Action`1 configureHostBuilder)    at Rhetos.RhetosHost.GetHostServices(String rhetosHostAssemblyPath, Action`1 configureRhetos ... (see build output for more info)
+2023-01-24 08:27:05.2972|INFO|Rhetos DbUpdate|System.InvalidOperationException: The entry point exited without ever building an IHost.
+   at Microsoft.Extensions.Hosting.HostFactoryResolver.HostingListener.CreateHost()
+   at Microsoft.Extensions.Hosting.HostFactoryResolver.<>c__DisplayClass10_0.<ResolveHostFactory>b__0(String[] args)
+   at Rhetos.HostResolver.ResolveHost(String rhetosHostAssemblyPath, String[] args, Action`1 configureHostBuilder)
+   at Rhetos.RhetosHost.GetHostServices(String rhetosHostAssemblyPath, Action`1 configureRhetosHost, Action`2 configureServices)
+   at Rhetos.RhetosHost.CreateFrom(String rhetosHostAssemblyPath, Action`1 configureRhetosHost, Action`2 configureServices)
+   at Rhetos.Program.<>c__DisplayClass11_0.<DbUpdate>g__CreateRhetosHost|0(Action`1 configureRhetosHost)
+   at Rhetos.Deployment.DatabaseUpdate.UpdateDatabase()
+   at Rhetos.Program.DbUpdate(String startupAssembly, Boolean shortTransactions, Boolean skipRecompute)
+   at Rhetos.Program.<>c__DisplayClass8_2.<Run>b__7()
+   at Rhetos.Program.SafeExecuteCommand(Action action, String commandName)
+2023-01-24 08:27:27.3747|INFO|Rhetos DbUpdate base|Started 'dotnet' process 23704.
+2023-01-24 08:27:27.6450|INFO|Rhetos DbUpdate|Started in C:\Users\jpreksavec\source\repos\Bookstore\src\Bookstore.Service\bin\Debug\net7.0\
+2023-01-24 08:27:27.6711|INFO|DatabaseUpdate|Loading plugins.
+2023-01-24 08:27:28.0917|INFO|DatabaseDeployment|SQL connection: DataSource=JPREKSAVEC-LAP, InitialCatalog=Bookstore
+2023-01-24 08:27:28.2091|INFO|DatabaseDeployment|Preparing Rhetos database.
+2023-01-24 08:27:28.4001|INFO|DatabaseDeployment|Cleaning old migration data.
+2023-01-24 08:27:28.4218|INFO|DatabaseCleaner|Deleted 0 columns in data migration schemas, 12 remaining.
+2023-01-24 08:27:28.4218|INFO|DatabaseDeployment|Executing data migration scripts.
+2023-01-24 08:27:28.4338|INFO|ConceptDataMigration|Executing 2 before-data-migration scripts.
+2023-01-24 08:27:28.7000|INFO|DataMigration|Executed 0 of 12 scripts.
+2023-01-24 08:27:28.7000|INFO|ConceptDataMigration|Executing 2 after-data-migration scripts.
+2023-01-24 08:27:28.7196|INFO|DatabaseDeployment|Upgrading database.
+2023-01-24 08:27:28.7732|INFO|DatabaseGenerator|Removing 0 database objects.
+2023-01-24 08:27:28.7732|INFO|DatabaseGenerator|Creating 0 database objects.
+2023-01-24 08:27:28.7732|INFO|DatabaseDeployment|Deleting redundant migration data.
+2023-01-24 08:27:28.8019|INFO|DatabaseCleaner|Deleted 5 columns in data migration schemas, 12 remaining.
+2023-01-24 08:27:28.8061|INFO|ApplicationInitialization|Loading generated plugins.
+2023-01-24 08:27:28.8529|INFO|ApplicationInitialization|Initializing EfMappingViews.
+2023-01-24 08:27:29.4289|INFO|ApplicationInitialization|Initialization ClaimGenerator.
+2023-01-24 08:27:29.8567|INFO|ApplicationInitialization|Initialization KeepSynchronizedRecomputeOnDeploy.
+2023-01-24 08:27:29.8725|INFO|Rhetos DbUpdate|Done.
