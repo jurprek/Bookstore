@@ -10,14 +10,6 @@
       </MappingFragment>
     </EntityTypeMapping>
   </EntitySetMapping>
-  <EntitySetMapping Name="Bookstore_Author">
-    <EntityTypeMapping TypeName="Rhetos.Bookstore_Author">
-      <MappingFragment StoreEntitySet="Bookstore_Author">
-        <ScalarProperty Name="ID" ColumnName="ID" />
-        <ScalarProperty Name="Name" ColumnName="Name" />
-      </MappingFragment>
-    </EntityTypeMapping>
-  </EntitySetMapping>
   <EntitySetMapping Name="Bookstore_Book">
     <EntityTypeMapping TypeName="Rhetos.Bookstore_Book">
       <MappingFragment StoreEntitySet="Bookstore_Book">
@@ -25,15 +17,7 @@
         <ScalarProperty Name="Code" ColumnName="Code" />
         <ScalarProperty Name="NumberOfPages" ColumnName="NumberOfPages" />
         <ScalarProperty Name="Title" ColumnName="Title" />
-      </MappingFragment>
-    </EntityTypeMapping>
-  </EntitySetMapping>
-  <EntitySetMapping Name="Bookstore_BookAuthor">
-    <EntityTypeMapping TypeName="Rhetos.Bookstore_BookAuthor">
-      <MappingFragment StoreEntitySet="Bookstore_BookAuthor">
-        <ScalarProperty Name="ID" ColumnName="ID" />
         <ScalarProperty Name="AuthorID" ColumnName="AuthorID" />
-        <ScalarProperty Name="BookID" ColumnName="BookID" />
       </MappingFragment>
     </EntityTypeMapping>
   </EntitySetMapping>
@@ -122,8 +106,8 @@
     <EntityTypeMapping TypeName="Rhetos.Bookstore_ForeignBook">
       <MappingFragment StoreEntitySet="Bookstore_ForeignBook">
         <ScalarProperty Name="ID" ColumnName="ID" />
-        <ScalarProperty Name="AuthorID" ColumnName="AuthorID" />
         <ScalarProperty Name="OriginalLanguage" ColumnName="OriginalLanguage" />
+        <ScalarProperty Name="AuthorID" ColumnName="AuthorID" />
         <ScalarProperty Name="TranslatorID" ColumnName="TranslatorID" />
       </MappingFragment>
     </EntityTypeMapping>
@@ -144,6 +128,14 @@
       <MappingFragment StoreEntitySet="Bookstore_Managers">
         <ScalarProperty Name="ID" ColumnName="ID" />
         <ScalarProperty Name="Bonus" ColumnName="Bonus" />
+      </MappingFragment>
+    </EntityTypeMapping>
+  </EntitySetMapping>
+  <EntitySetMapping Name="Bookstore_Person">
+    <EntityTypeMapping TypeName="Rhetos.Bookstore_Person">
+      <MappingFragment StoreEntitySet="Bookstore_Person">
+        <ScalarProperty Name="ID" ColumnName="ID" />
+        <ScalarProperty Name="Name" ColumnName="Name" />
       </MappingFragment>
     </EntityTypeMapping>
   </EntitySetMapping>

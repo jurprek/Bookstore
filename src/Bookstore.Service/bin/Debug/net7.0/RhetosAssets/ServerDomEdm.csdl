@@ -88,13 +88,6 @@
     <Property Name="ShipmentID" Type="Guid" />
     <NavigationProperty Name="Shipment" Relationship="Self.Bookstore_ApproveShipment_Shipment" FromRole="Bookstore_ApproveShipment_Shipment_Source" ToRole="Bookstore_ApproveShipment_Shipment_Target" />
   </EntityType>
-  <EntityType Name="Bookstore_Author" customannotation:ClrType="Common.Queryable.Bookstore_Author, Bookstore.Service">
-    <Key>
-      <PropertyRef Name="ID" />
-    </Key>
-    <Property Name="ID" Type="Guid" Nullable="false" />
-    <Property Name="Name" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
-  </EntityType>
   <EntityType Name="Bookstore_Book" customannotation:ClrType="Common.Queryable.Bookstore_Book, Bookstore.Service">
     <Key>
       <PropertyRef Name="ID" />
@@ -103,19 +96,11 @@
     <Property Name="Code" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
     <Property Name="NumberOfPages" Type="Int32" />
     <Property Name="Title" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="AuthorID" Type="Guid" />
     <NavigationProperty Name="Extension_BookInfo" Relationship="Self.Bookstore_BookInfo_Base" FromRole="Bookstore_BookInfo_Base_Target" ToRole="Bookstore_BookInfo_Base_Source" />
     <NavigationProperty Name="Extension_ChildrensBook" Relationship="Self.Bookstore_ChildrensBook_Base" FromRole="Bookstore_ChildrensBook_Base_Target" ToRole="Bookstore_ChildrensBook_Base_Source" />
     <NavigationProperty Name="Extension_ForeignBook" Relationship="Self.Bookstore_ForeignBook_Base" FromRole="Bookstore_ForeignBook_Base_Target" ToRole="Bookstore_ForeignBook_Base_Source" />
-  </EntityType>
-  <EntityType Name="Bookstore_BookAuthor" customannotation:ClrType="Common.Queryable.Bookstore_BookAuthor, Bookstore.Service">
-    <Key>
-      <PropertyRef Name="ID" />
-    </Key>
-    <Property Name="ID" Type="Guid" Nullable="false" />
-    <Property Name="AuthorID" Type="Guid" />
-    <Property Name="BookID" Type="Guid" />
-    <NavigationProperty Name="Author" Relationship="Self.Bookstore_BookAuthor_Author" FromRole="Bookstore_BookAuthor_Author_Source" ToRole="Bookstore_BookAuthor_Author_Target" />
-    <NavigationProperty Name="Book" Relationship="Self.Bookstore_BookAuthor_Book" FromRole="Bookstore_BookAuthor_Book_Source" ToRole="Bookstore_BookAuthor_Book_Target" />
+    <NavigationProperty Name="Author" Relationship="Self.Bookstore_Book_Author" FromRole="Bookstore_Book_Author_Source" ToRole="Bookstore_Book_Author_Target" />
   </EntityType>
   <EntityType Name="Bookstore_BookInfo" customannotation:ClrType="Common.Queryable.Bookstore_BookInfo, Bookstore.Service">
     <Key>
@@ -205,11 +190,11 @@
       <PropertyRef Name="ID" />
     </Key>
     <Property Name="ID" Type="Guid" Nullable="false" />
-    <Property Name="AuthorID" Type="Guid" />
     <Property Name="OriginalLanguage" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="AuthorID" Type="Guid" />
     <Property Name="TranslatorID" Type="Guid" />
-    <NavigationProperty Name="Author" Relationship="Self.Bookstore_ForeignBook_Author" FromRole="Bookstore_ForeignBook_Author_Source" ToRole="Bookstore_ForeignBook_Author_Target" />
     <NavigationProperty Name="Base" Relationship="Self.Bookstore_ForeignBook_Base" FromRole="Bookstore_ForeignBook_Base_Source" ToRole="Bookstore_ForeignBook_Base_Target" />
+    <NavigationProperty Name="Author" Relationship="Self.Bookstore_ForeignBook_Author" FromRole="Bookstore_ForeignBook_Author_Source" ToRole="Bookstore_ForeignBook_Author_Target" />
     <NavigationProperty Name="Translator" Relationship="Self.Bookstore_ForeignBook_Translator" FromRole="Bookstore_ForeignBook_Translator_Source" ToRole="Bookstore_ForeignBook_Translator_Target" />
   </EntityType>
   <EntityType Name="Bookstore_Genre" customannotation:ClrType="Common.Queryable.Bookstore_Genre, Bookstore.Service">
@@ -229,6 +214,13 @@
     <Property Name="ID" Type="Guid" Nullable="false" />
     <Property Name="Bonus" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
     <NavigationProperty Name="Base" Relationship="Self.Bookstore_Managers_Base" FromRole="Bookstore_Managers_Base_Source" ToRole="Bookstore_Managers_Base_Target" />
+  </EntityType>
+  <EntityType Name="Bookstore_Person" customannotation:ClrType="Common.Queryable.Bookstore_Person, Bookstore.Service">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Guid" Nullable="false" />
+    <Property Name="Name" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
   </EntityType>
   <EntityType Name="Bookstore_Shipment" customannotation:ClrType="Common.Queryable.Bookstore_Shipment, Bookstore.Service">
     <Key>
@@ -446,30 +438,6 @@
     <NavigationProperty Name="Claim" Relationship="Self.Common_RolePermission_Claim" FromRole="Common_RolePermission_Claim_Source" ToRole="Common_RolePermission_Claim_Target" />
     <NavigationProperty Name="Role" Relationship="Self.Common_RolePermission_Role" FromRole="Common_RolePermission_Role_Source" ToRole="Common_RolePermission_Role_Target" />
   </EntityType>
-  <Association Name="Bookstore_BookAuthor_Author">
-    <End Role="Bookstore_BookAuthor_Author_Source" Type="Self.Bookstore_BookAuthor" Multiplicity="*" />
-    <End Role="Bookstore_BookAuthor_Author_Target" Type="Self.Bookstore_Author" Multiplicity="0..1" />
-    <ReferentialConstraint>
-      <Principal Role="Bookstore_BookAuthor_Author_Target">
-        <PropertyRef Name="ID" />
-      </Principal>
-      <Dependent Role="Bookstore_BookAuthor_Author_Source">
-        <PropertyRef Name="AuthorID" />
-      </Dependent>
-    </ReferentialConstraint>
-  </Association>
-  <Association Name="Bookstore_BookAuthor_Book">
-    <End Role="Bookstore_BookAuthor_Book_Source" Type="Self.Bookstore_BookAuthor" Multiplicity="*" />
-    <End Role="Bookstore_BookAuthor_Book_Target" Type="Self.Bookstore_Book" Multiplicity="0..1" />
-    <ReferentialConstraint>
-      <Principal Role="Bookstore_BookAuthor_Book_Target">
-        <PropertyRef Name="ID" />
-      </Principal>
-      <Dependent Role="Bookstore_BookAuthor_Book_Source">
-        <PropertyRef Name="BookID" />
-      </Dependent>
-    </ReferentialConstraint>
-  </Association>
   <Association Name="Bookstore_BookInfo_Base">
     <End Role="Bookstore_BookInfo_Base_Source" Type="Self.Bookstore_BookInfo" Multiplicity="0..1" />
     <End Role="Bookstore_BookInfo_Base_Target" Type="Self.Bookstore_Book" Multiplicity="1" />
@@ -566,18 +534,6 @@
       </Dependent>
     </ReferentialConstraint>
   </Association>
-  <Association Name="Bookstore_ForeignBook_Author">
-    <End Role="Bookstore_ForeignBook_Author_Source" Type="Self.Bookstore_ForeignBook" Multiplicity="*" />
-    <End Role="Bookstore_ForeignBook_Author_Target" Type="Self.Bookstore_Author" Multiplicity="0..1" />
-    <ReferentialConstraint>
-      <Principal Role="Bookstore_ForeignBook_Author_Target">
-        <PropertyRef Name="ID" />
-      </Principal>
-      <Dependent Role="Bookstore_ForeignBook_Author_Source">
-        <PropertyRef Name="AuthorID" />
-      </Dependent>
-    </ReferentialConstraint>
-  </Association>
   <Association Name="Bookstore_ForeignBook_Base">
     <End Role="Bookstore_ForeignBook_Base_Source" Type="Self.Bookstore_ForeignBook" Multiplicity="0..1" />
     <End Role="Bookstore_ForeignBook_Base_Target" Type="Self.Bookstore_Book" Multiplicity="1" />
@@ -599,6 +555,30 @@
       </Principal>
       <Dependent Role="Bookstore_Managers_Base_Source">
         <PropertyRef Name="ID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="Bookstore_Book_Author">
+    <End Role="Bookstore_Book_Author_Source" Type="Self.Bookstore_Book" Multiplicity="*" />
+    <End Role="Bookstore_Book_Author_Target" Type="Self.Bookstore_Person" Multiplicity="0..1" />
+    <ReferentialConstraint>
+      <Principal Role="Bookstore_Book_Author_Target">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="Bookstore_Book_Author_Source">
+        <PropertyRef Name="AuthorID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="Bookstore_ForeignBook_Author">
+    <End Role="Bookstore_ForeignBook_Author_Source" Type="Self.Bookstore_ForeignBook" Multiplicity="*" />
+    <End Role="Bookstore_ForeignBook_Author_Target" Type="Self.Bookstore_Person" Multiplicity="0..1" />
+    <ReferentialConstraint>
+      <Principal Role="Bookstore_ForeignBook_Author_Target">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="Bookstore_ForeignBook_Author_Source">
+        <PropertyRef Name="AuthorID" />
       </Dependent>
     </ReferentialConstraint>
   </Association>
@@ -821,9 +801,7 @@
   <EntityContainer Name="EntityFrameworkContext" customannotation:UseClrTypes="true">
     
     <EntitySet Name="Bookstore_ApproveShipment" EntityType="Self.Bookstore_ApproveShipment" />
-    <EntitySet Name="Bookstore_Author" EntityType="Self.Bookstore_Author" />
     <EntitySet Name="Bookstore_Book" EntityType="Self.Bookstore_Book" />
-    <EntitySet Name="Bookstore_BookAuthor" EntityType="Self.Bookstore_BookAuthor" />
     <EntitySet Name="Bookstore_BookInfo" EntityType="Self.Bookstore_BookInfo" />
     <EntitySet Name="Bookstore_BookTopic" EntityType="Self.Bookstore_BookTopic" />
     <EntitySet Name="Bookstore_BookTranslator" EntityType="Self.Bookstore_BookTranslator" />
@@ -836,6 +814,7 @@
     <EntitySet Name="Bookstore_ForeignBook" EntityType="Self.Bookstore_ForeignBook" />
     <EntitySet Name="Bookstore_Genre" EntityType="Self.Bookstore_Genre" />
     <EntitySet Name="Bookstore_Managers" EntityType="Self.Bookstore_Managers" />
+    <EntitySet Name="Bookstore_Person" EntityType="Self.Bookstore_Person" />
     <EntitySet Name="Bookstore_Shipment" EntityType="Self.Bookstore_Shipment" />
     <EntitySet Name="Bookstore_ShipmentEvent" EntityType="Self.Bookstore_ShipmentEvent" />
     <EntitySet Name="Bookstore_ShipmentStatus" EntityType="Self.Bookstore_ShipmentStatus" />
@@ -857,14 +836,6 @@
     <EntitySet Name="Common_Role" EntityType="Self.Common_Role" />
     <EntitySet Name="Common_RoleInheritsRole" EntityType="Self.Common_RoleInheritsRole" />
     <EntitySet Name="Common_RolePermission" EntityType="Self.Common_RolePermission" />
-	<AssociationSet Name="Bookstore_BookAuthor_Author" Association="Self.Bookstore_BookAuthor_Author">
-		<End Role="Bookstore_BookAuthor_Author_Source" EntitySet="Bookstore_BookAuthor" />
-		<End Role="Bookstore_BookAuthor_Author_Target" EntitySet="Bookstore_Author" />
-	</AssociationSet>
-	<AssociationSet Name="Bookstore_BookAuthor_Book" Association="Self.Bookstore_BookAuthor_Book">
-		<End Role="Bookstore_BookAuthor_Book_Source" EntitySet="Bookstore_BookAuthor" />
-		<End Role="Bookstore_BookAuthor_Book_Target" EntitySet="Bookstore_Book" />
-	</AssociationSet>
 	<AssociationSet Name="Bookstore_BookInfo_Base" Association="Self.Bookstore_BookInfo_Base">
 		<End Role="Bookstore_BookInfo_Base_Source" EntitySet="Bookstore_BookInfo" />
 		<End Role="Bookstore_BookInfo_Base_Target" EntitySet="Bookstore_Book" />
@@ -897,10 +868,6 @@
 		<End Role="Bookstore_EmployeesDepartment_Employees_Source" EntitySet="Bookstore_EmployeesDepartment" />
 		<End Role="Bookstore_EmployeesDepartment_Employees_Target" EntitySet="Bookstore_Employees" />
 	</AssociationSet>
-	<AssociationSet Name="Bookstore_ForeignBook_Author" Association="Self.Bookstore_ForeignBook_Author">
-		<End Role="Bookstore_ForeignBook_Author_Source" EntitySet="Bookstore_ForeignBook" />
-		<End Role="Bookstore_ForeignBook_Author_Target" EntitySet="Bookstore_Author" />
-	</AssociationSet>
 	<AssociationSet Name="Bookstore_ForeignBook_Base" Association="Self.Bookstore_ForeignBook_Base">
 		<End Role="Bookstore_ForeignBook_Base_Source" EntitySet="Bookstore_ForeignBook" />
 		<End Role="Bookstore_ForeignBook_Base_Target" EntitySet="Bookstore_Book" />
@@ -908,6 +875,14 @@
 	<AssociationSet Name="Bookstore_Managers_Base" Association="Self.Bookstore_Managers_Base">
 		<End Role="Bookstore_Managers_Base_Source" EntitySet="Bookstore_Managers" />
 		<End Role="Bookstore_Managers_Base_Target" EntitySet="Bookstore_Employees" />
+	</AssociationSet>
+	<AssociationSet Name="Bookstore_Book_Author" Association="Self.Bookstore_Book_Author">
+		<End Role="Bookstore_Book_Author_Source" EntitySet="Bookstore_Book" />
+		<End Role="Bookstore_Book_Author_Target" EntitySet="Bookstore_Person" />
+	</AssociationSet>
+	<AssociationSet Name="Bookstore_ForeignBook_Author" Association="Self.Bookstore_ForeignBook_Author">
+		<End Role="Bookstore_ForeignBook_Author_Source" EntitySet="Bookstore_ForeignBook" />
+		<End Role="Bookstore_ForeignBook_Author_Target" EntitySet="Bookstore_Person" />
 	</AssociationSet>
 	<AssociationSet Name="Bookstore_ApproveShipment_Shipment" Association="Self.Bookstore_ApproveShipment_Shipment">
 		<End Role="Bookstore_ApproveShipment_Shipment_Source" EntitySet="Bookstore_ApproveShipment" />

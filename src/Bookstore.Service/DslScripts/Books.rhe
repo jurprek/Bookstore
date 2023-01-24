@@ -12,10 +12,21 @@ Module Bookstore  //https://github.com/Rhetos/Rhetos/wiki/Data-model-and-relatio
       ItemFilter CommonMisspelling 'book => book.Title.Contains("curiousity")';
       InvalidData CommonMisspelling 'It is not allowed to enter misspelled word "curiousity".';
       
+      Reference Author Bookstore.Person;
+
 	  ItemFilter NameTooLong 'item => item.Title.Length > 100';
       //Lock NameTooLong 'item => item.Title.Length > 100';
       InvalidData NameTooLong '[Test] Longer than 100.'; // { AllowSave; }
 
+      ItemFilter LongBooks 'item => item.NumberOfPages >= 500';
+
+      ComposableFilterBy LongBooks2 '(query, repository, parameter) =>
+      {
+        return query.Where(item => item.NumberOfPages >= 300);
+      }';
+
+      ItemFilter ForeignAuthorXWithComments 'item => item.Author.Name.StartsWith("X") && item.Extension_ForeignBook.ID != null && _domRepository.Bookstore.Comment.Subquery.Where(c => c.BookID == item.ID).Count() >= 3';     //Write a filter that will return books that are foreign (if a record exists in the extension entity ForeignBook), but only if the author's name starts with X (see the referenced entity Person) and only if the book has at least 3 comments entered (in the detail entity Comment).
+    
       Logging
       {
             Log Bookstore.Book.Title;
@@ -23,8 +34,14 @@ Module Bookstore  //https://github.com/Rhetos/Rhetos/wiki/Data-model-and-relatio
             // 'Description' property is long and not interesting, so we don't want to log its values.
       }
    }
+    
+   Parameter LongBooks2
+   {
+       Integer MinimumPages;
+       Bool ForeignBooksOnly;
+   }
 
-   Entity Author
+   Entity Person
    {
       ShortString Name;
    }
@@ -32,14 +49,6 @@ Module Bookstore  //https://github.com/Rhetos/Rhetos/wiki/Data-model-and-relatio
    Entity Translator
    {
       ShortString Name;
-   }
-
-    Entity BookAuthor
-   {
-      Reference Book { Detail; }
-      Reference Author { Required; }
-
-      UniqueMultiple 'Book Author';
    }
 
     Entity BookTranslator
@@ -73,8 +82,7 @@ Module Bookstore  //https://github.com/Rhetos/Rhetos/wiki/Data-model-and-relatio
 
       ShortString OriginalLanguage;
       Reference Translator Bookstore.Translator;
-      Reference Author Bookstore.Author;
-
+      Reference Author Bookstore.Person;
    }
 
    Entity Topic  //Many-to-many relationship (join table). "N : N" relationship is usually implemented as an associative table. 
@@ -94,7 +102,7 @@ Module Bookstore  //https://github.com/Rhetos/Rhetos/wiki/Data-model-and-relatio
    {
         Take Code;
         Take Title;
-        Take AuthorName 'Extension_ForeignBook.Author.Name';
+        Take 'Author.Name';
         Take TranslatorName 'Extension_ForeignBook.Translator.Name';
         Take NumberOfComments 'Extension_BookInfo.NumberOfComments';
    }

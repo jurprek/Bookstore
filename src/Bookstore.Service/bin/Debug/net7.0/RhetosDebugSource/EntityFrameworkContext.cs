@@ -41,9 +41,7 @@ namespace Common
         }
 
         public System.Data.Entity.DbSet<Common.Queryable.Bookstore_ApproveShipment> Bookstore_ApproveShipment { get; set; }
-        public System.Data.Entity.DbSet<Common.Queryable.Bookstore_Author> Bookstore_Author { get; set; }
         public System.Data.Entity.DbSet<Common.Queryable.Bookstore_Book> Bookstore_Book { get; set; }
-        public System.Data.Entity.DbSet<Common.Queryable.Bookstore_BookAuthor> Bookstore_BookAuthor { get; set; }
         public System.Data.Entity.DbSet<Common.Queryable.Bookstore_BookInfo> Bookstore_BookInfo { get; set; }
         public System.Data.Entity.DbSet<Common.Queryable.Bookstore_BookTopic> Bookstore_BookTopic { get; set; }
         public System.Data.Entity.DbSet<Common.Queryable.Bookstore_BookTranslator> Bookstore_BookTranslator { get; set; }
@@ -56,6 +54,7 @@ namespace Common
         public System.Data.Entity.DbSet<Common.Queryable.Bookstore_ForeignBook> Bookstore_ForeignBook { get; set; }
         public System.Data.Entity.DbSet<Common.Queryable.Bookstore_Genre> Bookstore_Genre { get; set; }
         public System.Data.Entity.DbSet<Common.Queryable.Bookstore_Managers> Bookstore_Managers { get; set; }
+        public System.Data.Entity.DbSet<Common.Queryable.Bookstore_Person> Bookstore_Person { get; set; }
         public System.Data.Entity.DbSet<Common.Queryable.Bookstore_Shipment> Bookstore_Shipment { get; set; }
         public System.Data.Entity.DbSet<Common.Queryable.Bookstore_ShipmentEvent> Bookstore_ShipmentEvent { get; set; }
         public System.Data.Entity.DbSet<Common.Queryable.Bookstore_ShipmentStatus> Bookstore_ShipmentStatus { get; set; }
