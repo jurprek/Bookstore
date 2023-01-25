@@ -1,10 +1,10 @@
 ﻿{
   "RhetosBuildEnvironment": {
-    "ProjectFolder": "C:\\Users\\jpreksavec\\source\\repos\\Bookstore\\src\\Bookstore.Service",
+    "ProjectFolder": "c:\\Users\\jpreksavec\\source\\repos\\Bookstore\\src\\Bookstore.Service",
     "OutputAssemblyName": "Bookstore.Service",
-    "CacheFolder": "C:\\Users\\jpreksavec\\source\\repos\\Bookstore\\src\\Bookstore.Service\\obj\\Rhetos",
-    "GeneratedAssetsFolder": "C:\\Users\\jpreksavec\\source\\repos\\Bookstore\\src\\Bookstore.Service\\obj\\Rhetos\\Assets",
-    "GeneratedSourceFolder": "C:\\Users\\jpreksavec\\source\\repos\\Bookstore\\src\\Bookstore.Service\\obj\\Rhetos\\Source"
+    "CacheFolder": "c:\\Users\\jpreksavec\\source\\repos\\Bookstore\\src\\Bookstore.Service\\obj\\Rhetos",
+    "GeneratedAssetsFolder": "c:\\Users\\jpreksavec\\source\\repos\\Bookstore\\src\\Bookstore.Service\\obj\\Rhetos\\Assets",
+    "GeneratedSourceFolder": "c:\\Users\\jpreksavec\\source\\repos\\Bookstore\\src\\Bookstore.Service\\obj\\Rhetos\\Source"
   },
   "RhetosProjectAssets": {
     "InstalledPackages": {
@@ -10471,14 +10471,14 @@
               "VersionsRange": "[6.4.0, )"
             }
           ],
-          "Folder": "C:\\Users\\jpreksavec\\source\\repos\\Bookstore\\src\\Bookstore.Service\\.",
+          "Folder": "c:\\Users\\jpreksavec\\source\\repos\\Bookstore\\src\\Bookstore.Service\\.",
           "ContentFiles": [
             {
-              "PhysicalPath": "C:\\Users\\jpreksavec\\source\\repos\\Bookstore\\src\\Bookstore.Service\\DslScripts\\Books.rhe",
+              "PhysicalPath": "c:\\Users\\jpreksavec\\source\\repos\\Bookstore\\src\\Bookstore.Service\\DslScripts\\Books.rhe",
               "InPackagePath": "DslScripts\\Books.rhe"
             },
             {
-              "PhysicalPath": "C:\\Users\\jpreksavec\\source\\repos\\Bookstore\\src\\Bookstore.Service\\DslScripts\\Employees.rhe",
+              "PhysicalPath": "c:\\Users\\jpreksavec\\source\\repos\\Bookstore\\src\\Bookstore.Service\\DslScripts\\Employees.rhe",
               "InPackagePath": "DslScripts\\Employees.rhe"
             }
           ]
