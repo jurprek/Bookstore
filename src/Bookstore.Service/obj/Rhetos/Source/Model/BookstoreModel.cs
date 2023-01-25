@@ -98,6 +98,18 @@ namespace Bookstore
         /*DataStructureInfo ClassBody Bookstore.CommonMisspelling*/
     }
 
+    /*DataStructureInfo ClassAttributes Bookstore.ComplexSearch*/
+    public class ComplexSearch/*DataStructureInfo ClassInterace Bookstore.ComplexSearch*/
+    {
+        /*PropertyInfo Attribute Bookstore.ComplexSearch.ForeignBooksOnly*/
+        public bool? ForeignBooksOnly { get; set; }
+        /*PropertyInfo Attribute Bookstore.ComplexSearch.MaskTitles*/
+        public bool? MaskTitles { get; set; }
+        /*PropertyInfo Attribute Bookstore.ComplexSearch.MinimumPages*/
+        public int? MinimumPages { get; set; }
+        /*DataStructureInfo ClassBody Bookstore.ComplexSearch*/
+    }
+
     /*DataStructureInfo ClassAttributes Bookstore.Department*/
     public class Department : EntityBase<Bookstore.Department>/*Next DataStructureInfo ClassInterace Bookstore.Department*/
     {

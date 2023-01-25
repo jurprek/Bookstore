@@ -209,6 +209,7 @@ namespace Bookstore.Repositories
         {
             return new KeyValuePair<string, Type>[]
             {
+                new KeyValuePair<string, Type>(@"ComplexSearch", typeof(ComplexSearch)),
                 new KeyValuePair<string, Type>(@"Bookstore.CommonMisspelling", typeof(Bookstore.CommonMisspelling)),
                 new KeyValuePair<string, Type>(@"Bookstore.ForeignAuthorXWithComments", typeof(Bookstore.ForeignAuthorXWithComments)),
                 new KeyValuePair<string, Type>(@"Bookstore.LongBooks", typeof(Bookstore.LongBooks)),
@@ -436,6 +437,24 @@ namespace Bookstore.Repositories
             }
             /*DataStructureInfo WritableOrm OnSaveValidate Bookstore.Book*/
             yield break;
+        }
+
+        public global::Bookstore.Book[] Load(ComplexSearch filter_Parameter)
+        {
+            Func<Common.DomRepository, ComplexSearch/*FilterByInfo AdditionalParametersType Bookstore.Book.ComplexSearch*/, Bookstore.Book[]> filter_Function =
+                (repository, parameter) =>
+      {
+          var query = repository.Bookstore.Book.Query(item => item.NumberOfPages >= parameter.MinimumPages);
+          if (parameter.ForeignBooksOnly == true)
+               query = query.Where(item => item.Extension_ForeignBook.ID != null);
+          Book[] books = query.ToSimple().ToArray();
+          
+          if (parameter.MaskTitles == true)
+              foreach (var book in books.Where(b => !string.IsNullOrEmpty(b.Title))) book.Title = book.Title.First() + "***" + book.Title.Last();
+          return books;
+      };
+
+            return filter_Function(_domRepository, filter_Parameter/*FilterByInfo AdditionalParametersArgument Bookstore.Book.ComplexSearch*/);
         }
 
         public IEnumerable<InvalidDataMessage> GetErrorMessage_NumberOfPages_MaxValueFilter(IEnumerable<Guid> invalidData_Ids)
