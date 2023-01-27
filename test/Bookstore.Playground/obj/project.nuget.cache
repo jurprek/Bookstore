@@ -1,12 +1,14 @@
 {
   "version": 2,
-  "dgSpecHash": "2iT3ehJcfdCkTAmIRa40zQouK+e/Ch8o9wEeikKwjcKUbyEix/PvX/PTbuDjvfNVsWqnS3wLw7/iPKlNqOK40Q==",
+  "dgSpecHash": "3r4Hl/ghNyO9H8mytMsUSlAhgGZuNRLiltW2GJSpdrKYJPl3Z5gmhhBwMcTW3iJXx8NHtHDwBDs8ZS50sAg3aw==",
   "success": true,
   "projectFilePath": "C:\\Users\\jpreksavec\\source\\repos\\Bookstore\\test\\Bookstore.Playground\\Bookstore.Playground.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\jpreksavec\\.nuget\\packages\\autofac\\6.3.0\\autofac.6.3.0.nupkg.sha512",
     "C:\\Users\\jpreksavec\\.nuget\\packages\\consoledump\\0.7.0\\consoledump.0.7.0.nupkg.sha512",
     "C:\\Users\\jpreksavec\\.nuget\\packages\\entityframework\\6.4.4\\entityframework.6.4.4.nupkg.sha512",
+    "C:\\Users\\jpreksavec\\.nuget\\packages\\microsoft.aspnetcore.jsonpatch\\7.0.2\\microsoft.aspnetcore.jsonpatch.7.0.2.nupkg.sha512",
+    "C:\\Users\\jpreksavec\\.nuget\\packages\\microsoft.aspnetcore.mvc.newtonsoftjson\\7.0.2\\microsoft.aspnetcore.mvc.newtonsoftjson.7.0.2.nupkg.sha512",
     "C:\\Users\\jpreksavec\\.nuget\\packages\\microsoft.aspnetcore.openapi\\7.0.2\\microsoft.aspnetcore.openapi.7.0.2.nupkg.sha512",
     "C:\\Users\\jpreksavec\\.nuget\\packages\\microsoft.codeanalysis.analyzers\\3.3.2\\microsoft.codeanalysis.analyzers.3.3.2.nupkg.sha512",
     "C:\\Users\\jpreksavec\\.nuget\\packages\\microsoft.codeanalysis.common\\3.11.0\\microsoft.codeanalysis.common.3.11.0.nupkg.sha512",
@@ -44,6 +46,7 @@
     "C:\\Users\\jpreksavec\\.nuget\\packages\\microsoft.win32.registry\\4.7.0\\microsoft.win32.registry.4.7.0.nupkg.sha512",
     "C:\\Users\\jpreksavec\\.nuget\\packages\\microsoft.win32.systemevents\\6.0.0\\microsoft.win32.systemevents.6.0.0.nupkg.sha512",
     "C:\\Users\\jpreksavec\\.nuget\\packages\\newtonsoft.json\\13.0.1\\newtonsoft.json.13.0.1.nupkg.sha512",
+    "C:\\Users\\jpreksavec\\.nuget\\packages\\newtonsoft.json.bson\\1.0.2\\newtonsoft.json.bson.1.0.2.nupkg.sha512",
     "C:\\Users\\jpreksavec\\.nuget\\packages\\nlog\\4.7.11\\nlog.4.7.11.nupkg.sha512",
     "C:\\Users\\jpreksavec\\.nuget\\packages\\nlog.extensions.logging\\1.7.0\\nlog.extensions.logging.1.7.0.nupkg.sha512",
     "C:\\Users\\jpreksavec\\.nuget\\packages\\nlog.web.aspnetcore\\4.10.0\\nlog.web.aspnetcore.4.10.0.nupkg.sha512",

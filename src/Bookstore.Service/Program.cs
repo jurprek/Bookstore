@@ -18,7 +18,17 @@ builder.Services.AddRhetosHost((serviceProvider, rhetosHostBuilder) => rhetosHos
 
 // Add services to the container.
 
-builder.Services.AddControllers();
+builder.Services.AddControllers()
+    .AddNewtonsoftJson(o =>
+    {
+        // Using NewtonsoftJson for backward-compatibility with older versions of RestGenerator:
+        // 1. Properties starting with uppercase in JSON objects.
+        o.UseMemberCasing();
+        // 2. Legacy Microsoft DateTime serialization.
+        o.SerializerSettings.DateFormatHandling = Newtonsoft.Json.DateFormatHandling.MicrosoftDateFormat;
+        // 3. byte[] serialization as JSON array of integers instead of Base64 string.
+        o.SerializerSettings.Converters.Add(new Rhetos.Host.AspNet.RestApi.Utilities.ByteArrayConverter());
+    });
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen(o => o.CustomSchemaIds(type => type.ToString())); // CustomSchemaIds allows multiple entities with the same name in different modules.
