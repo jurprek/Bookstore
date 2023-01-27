@@ -166,3 +166,6 @@ C:\Users\jpreksavec\Source\Repos\Bookstore\src\Bookstore.Service\bin\Debug\net7.
 C:\Users\jpreksavec\Source\Repos\Bookstore\src\Bookstore.Service\bin\Debug\net7.0\NLog.Extensions.Logging.dll
 C:\Users\jpreksavec\Source\Repos\Bookstore\src\Bookstore.Service\bin\Debug\net7.0\NLog.Web.AspNetCore.dll
 C:\Users\jpreksavec\Source\Repos\Bookstore\src\Bookstore.Service\bin\Debug\net7.0\nlog.config
+C:\Users\jpreksavec\source\repos\Bookstore\src\Bookstore.Service\bin\Debug\net7.0\Microsoft.AspNetCore.JsonPatch.dll
+C:\Users\jpreksavec\source\repos\Bookstore\src\Bookstore.Service\bin\Debug\net7.0\Microsoft.AspNetCore.Mvc.NewtonsoftJson.dll
+C:\Users\jpreksavec\source\repos\Bookstore\src\Bookstore.Service\bin\Debug\net7.0\Newtonsoft.Json.Bson.dll

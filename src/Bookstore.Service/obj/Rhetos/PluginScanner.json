@@ -640,6 +640,10 @@
     "C:\\Users\\jpreksavec\\.nuget\\packages\\nlog.web.aspnetcore\\4.10.0\\lib\\netcoreapp3.0\\NLog.Web.AspNetCore.dll": {
       "ModifiedTime": "2020-12-30T20:06:04.0000000Z",
       "TypesWithExports": []
+    },
+    "C:\\Users\\jpreksavec\\.nuget\\packages\\newtonsoft.json.bson\\1.0.2\\lib\\netstandard2.0\\Newtonsoft.Json.Bson.dll": {
+      "ModifiedTime": "2018-11-27T23:10:18.0000000Z",
+      "TypesWithExports": []
     }
   }
 }

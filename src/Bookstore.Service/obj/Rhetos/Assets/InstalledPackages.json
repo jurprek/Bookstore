@@ -2668,6 +2668,75 @@
       ]
     },
     {
+      "Id": "Newtonsoft.Json.Bson",
+      "Version": "1.0.2.0",
+      "Dependencies": [
+        {
+          "Id": "Newtonsoft.Json",
+          "VersionsRange": "12.0.1"
+        }
+      ],
+      "Folder": "C:\\Users\\jpreksavec\\.nuget\\packages\\newtonsoft.json.bson\\1.0.2",
+      "ContentFiles": [
+        {
+          "PhysicalPath": "C:\\Users\\jpreksavec\\.nuget\\packages\\newtonsoft.json.bson\\1.0.2\\.nupkg.metadata",
+          "InPackagePath": ".nupkg.metadata"
+        },
+        {
+          "PhysicalPath": "C:\\Users\\jpreksavec\\.nuget\\packages\\newtonsoft.json.bson\\1.0.2\\.signature.p7s",
+          "InPackagePath": ".signature.p7s"
+        },
+        {
+          "PhysicalPath": "C:\\Users\\jpreksavec\\.nuget\\packages\\newtonsoft.json.bson\\1.0.2\\LICENSE.md",
+          "InPackagePath": "LICENSE.md"
+        },
+        {
+          "PhysicalPath": "C:\\Users\\jpreksavec\\.nuget\\packages\\newtonsoft.json.bson\\1.0.2\\lib\\net45\\Newtonsoft.Json.Bson.dll",
+          "InPackagePath": "lib\\net45\\Newtonsoft.Json.Bson.dll"
+        },
+        {
+          "PhysicalPath": "C:\\Users\\jpreksavec\\.nuget\\packages\\newtonsoft.json.bson\\1.0.2\\lib\\net45\\Newtonsoft.Json.Bson.pdb",
+          "InPackagePath": "lib\\net45\\Newtonsoft.Json.Bson.pdb"
+        },
+        {
+          "PhysicalPath": "C:\\Users\\jpreksavec\\.nuget\\packages\\newtonsoft.json.bson\\1.0.2\\lib\\net45\\Newtonsoft.Json.Bson.xml",
+          "InPackagePath": "lib\\net45\\Newtonsoft.Json.Bson.xml"
+        },
+        {
+          "PhysicalPath": "C:\\Users\\jpreksavec\\.nuget\\packages\\newtonsoft.json.bson\\1.0.2\\lib\\netstandard1.3\\Newtonsoft.Json.Bson.dll",
+          "InPackagePath": "lib\\netstandard1.3\\Newtonsoft.Json.Bson.dll"
+        },
+        {
+          "PhysicalPath": "C:\\Users\\jpreksavec\\.nuget\\packages\\newtonsoft.json.bson\\1.0.2\\lib\\netstandard1.3\\Newtonsoft.Json.Bson.pdb",
+          "InPackagePath": "lib\\netstandard1.3\\Newtonsoft.Json.Bson.pdb"
+        },
+        {
+          "PhysicalPath": "C:\\Users\\jpreksavec\\.nuget\\packages\\newtonsoft.json.bson\\1.0.2\\lib\\netstandard1.3\\Newtonsoft.Json.Bson.xml",
+          "InPackagePath": "lib\\netstandard1.3\\Newtonsoft.Json.Bson.xml"
+        },
+        {
+          "PhysicalPath": "C:\\Users\\jpreksavec\\.nuget\\packages\\newtonsoft.json.bson\\1.0.2\\lib\\netstandard2.0\\Newtonsoft.Json.Bson.dll",
+          "InPackagePath": "lib\\netstandard2.0\\Newtonsoft.Json.Bson.dll"
+        },
+        {
+          "PhysicalPath": "C:\\Users\\jpreksavec\\.nuget\\packages\\newtonsoft.json.bson\\1.0.2\\lib\\netstandard2.0\\Newtonsoft.Json.Bson.pdb",
+          "InPackagePath": "lib\\netstandard2.0\\Newtonsoft.Json.Bson.pdb"
+        },
+        {
+          "PhysicalPath": "C:\\Users\\jpreksavec\\.nuget\\packages\\newtonsoft.json.bson\\1.0.2\\lib\\netstandard2.0\\Newtonsoft.Json.Bson.xml",
+          "InPackagePath": "lib\\netstandard2.0\\Newtonsoft.Json.Bson.xml"
+        },
+        {
+          "PhysicalPath": "C:\\Users\\jpreksavec\\.nuget\\packages\\newtonsoft.json.bson\\1.0.2\\newtonsoft.json.bson.1.0.2.nupkg.sha512",
+          "InPackagePath": "newtonsoft.json.bson.1.0.2.nupkg.sha512"
+        },
+        {
+          "PhysicalPath": "C:\\Users\\jpreksavec\\.nuget\\packages\\newtonsoft.json.bson\\1.0.2\\newtonsoft.json.bson.nuspec",
+          "InPackagePath": "newtonsoft.json.bson.nuspec"
+        }
+      ]
+    },
+    {
       "Id": "Microsoft.Win32.SystemEvents",
       "Version": "6.0.0.0",
       "Dependencies": [],
@@ -9001,6 +9070,124 @@
       ]
     },
     {
+      "Id": "Microsoft.AspNetCore.JsonPatch",
+      "Version": "7.0.2.0",
+      "Dependencies": [
+        {
+          "Id": "Microsoft.CSharp",
+          "VersionsRange": "4.7.0"
+        },
+        {
+          "Id": "Newtonsoft.Json",
+          "VersionsRange": "13.0.1"
+        }
+      ],
+      "Folder": "C:\\Users\\jpreksavec\\.nuget\\packages\\microsoft.aspnetcore.jsonpatch\\7.0.2",
+      "ContentFiles": [
+        {
+          "PhysicalPath": "C:\\Users\\jpreksavec\\.nuget\\packages\\microsoft.aspnetcore.jsonpatch\\7.0.2\\.nupkg.metadata",
+          "InPackagePath": ".nupkg.metadata"
+        },
+        {
+          "PhysicalPath": "C:\\Users\\jpreksavec\\.nuget\\packages\\microsoft.aspnetcore.jsonpatch\\7.0.2\\.signature.p7s",
+          "InPackagePath": ".signature.p7s"
+        },
+        {
+          "PhysicalPath": "C:\\Users\\jpreksavec\\.nuget\\packages\\microsoft.aspnetcore.jsonpatch\\7.0.2\\Icon.png",
+          "InPackagePath": "Icon.png"
+        },
+        {
+          "PhysicalPath": "C:\\Users\\jpreksavec\\.nuget\\packages\\microsoft.aspnetcore.jsonpatch\\7.0.2\\THIRD-PARTY-NOTICES.TXT",
+          "InPackagePath": "THIRD-PARTY-NOTICES.TXT"
+        },
+        {
+          "PhysicalPath": "C:\\Users\\jpreksavec\\.nuget\\packages\\microsoft.aspnetcore.jsonpatch\\7.0.2\\lib\\net462\\Microsoft.AspNetCore.JsonPatch.dll",
+          "InPackagePath": "lib\\net462\\Microsoft.AspNetCore.JsonPatch.dll"
+        },
+        {
+          "PhysicalPath": "C:\\Users\\jpreksavec\\.nuget\\packages\\microsoft.aspnetcore.jsonpatch\\7.0.2\\lib\\net462\\Microsoft.AspNetCore.JsonPatch.xml",
+          "InPackagePath": "lib\\net462\\Microsoft.AspNetCore.JsonPatch.xml"
+        },
+        {
+          "PhysicalPath": "C:\\Users\\jpreksavec\\.nuget\\packages\\microsoft.aspnetcore.jsonpatch\\7.0.2\\lib\\net7.0\\Microsoft.AspNetCore.JsonPatch.dll",
+          "InPackagePath": "lib\\net7.0\\Microsoft.AspNetCore.JsonPatch.dll"
+        },
+        {
+          "PhysicalPath": "C:\\Users\\jpreksavec\\.nuget\\packages\\microsoft.aspnetcore.jsonpatch\\7.0.2\\lib\\net7.0\\Microsoft.AspNetCore.JsonPatch.xml",
+          "InPackagePath": "lib\\net7.0\\Microsoft.AspNetCore.JsonPatch.xml"
+        },
+        {
+          "PhysicalPath": "C:\\Users\\jpreksavec\\.nuget\\packages\\microsoft.aspnetcore.jsonpatch\\7.0.2\\lib\\netstandard2.0\\Microsoft.AspNetCore.JsonPatch.dll",
+          "InPackagePath": "lib\\netstandard2.0\\Microsoft.AspNetCore.JsonPatch.dll"
+        },
+        {
+          "PhysicalPath": "C:\\Users\\jpreksavec\\.nuget\\packages\\microsoft.aspnetcore.jsonpatch\\7.0.2\\lib\\netstandard2.0\\Microsoft.AspNetCore.JsonPatch.xml",
+          "InPackagePath": "lib\\netstandard2.0\\Microsoft.AspNetCore.JsonPatch.xml"
+        },
+        {
+          "PhysicalPath": "C:\\Users\\jpreksavec\\.nuget\\packages\\microsoft.aspnetcore.jsonpatch\\7.0.2\\microsoft.aspnetcore.jsonpatch.7.0.2.nupkg.sha512",
+          "InPackagePath": "microsoft.aspnetcore.jsonpatch.7.0.2.nupkg.sha512"
+        },
+        {
+          "PhysicalPath": "C:\\Users\\jpreksavec\\.nuget\\packages\\microsoft.aspnetcore.jsonpatch\\7.0.2\\microsoft.aspnetcore.jsonpatch.nuspec",
+          "InPackagePath": "microsoft.aspnetcore.jsonpatch.nuspec"
+        }
+      ]
+    },
+    {
+      "Id": "Microsoft.AspNetCore.Mvc.NewtonsoftJson",
+      "Version": "7.0.2.0",
+      "Dependencies": [
+        {
+          "Id": "Microsoft.AspNetCore.JsonPatch",
+          "VersionsRange": "7.0.2"
+        },
+        {
+          "Id": "Newtonsoft.Json",
+          "VersionsRange": "13.0.1"
+        },
+        {
+          "Id": "Newtonsoft.Json.Bson",
+          "VersionsRange": "1.0.2"
+        }
+      ],
+      "Folder": "C:\\Users\\jpreksavec\\.nuget\\packages\\microsoft.aspnetcore.mvc.newtonsoftjson\\7.0.2",
+      "ContentFiles": [
+        {
+          "PhysicalPath": "C:\\Users\\jpreksavec\\.nuget\\packages\\microsoft.aspnetcore.mvc.newtonsoftjson\\7.0.2\\.nupkg.metadata",
+          "InPackagePath": ".nupkg.metadata"
+        },
+        {
+          "PhysicalPath": "C:\\Users\\jpreksavec\\.nuget\\packages\\microsoft.aspnetcore.mvc.newtonsoftjson\\7.0.2\\.signature.p7s",
+          "InPackagePath": ".signature.p7s"
+        },
+        {
+          "PhysicalPath": "C:\\Users\\jpreksavec\\.nuget\\packages\\microsoft.aspnetcore.mvc.newtonsoftjson\\7.0.2\\Icon.png",
+          "InPackagePath": "Icon.png"
+        },
+        {
+          "PhysicalPath": "C:\\Users\\jpreksavec\\.nuget\\packages\\microsoft.aspnetcore.mvc.newtonsoftjson\\7.0.2\\THIRD-PARTY-NOTICES.TXT",
+          "InPackagePath": "THIRD-PARTY-NOTICES.TXT"
+        },
+        {
+          "PhysicalPath": "C:\\Users\\jpreksavec\\.nuget\\packages\\microsoft.aspnetcore.mvc.newtonsoftjson\\7.0.2\\lib\\net7.0\\Microsoft.AspNetCore.Mvc.NewtonsoftJson.dll",
+          "InPackagePath": "lib\\net7.0\\Microsoft.AspNetCore.Mvc.NewtonsoftJson.dll"
+        },
+        {
+          "PhysicalPath": "C:\\Users\\jpreksavec\\.nuget\\packages\\microsoft.aspnetcore.mvc.newtonsoftjson\\7.0.2\\lib\\net7.0\\Microsoft.AspNetCore.Mvc.NewtonsoftJson.xml",
+          "InPackagePath": "lib\\net7.0\\Microsoft.AspNetCore.Mvc.NewtonsoftJson.xml"
+        },
+        {
+          "PhysicalPath": "C:\\Users\\jpreksavec\\.nuget\\packages\\microsoft.aspnetcore.mvc.newtonsoftjson\\7.0.2\\microsoft.aspnetcore.mvc.newtonsoftjson.7.0.2.nupkg.sha512",
+          "InPackagePath": "microsoft.aspnetcore.mvc.newtonsoftjson.7.0.2.nupkg.sha512"
+        },
+        {
+          "PhysicalPath": "C:\\Users\\jpreksavec\\.nuget\\packages\\microsoft.aspnetcore.mvc.newtonsoftjson\\7.0.2\\microsoft.aspnetcore.mvc.newtonsoftjson.nuspec",
+          "InPackagePath": "microsoft.aspnetcore.mvc.newtonsoftjson.nuspec"
+        }
+      ]
+    },
+    {
       "Id": "EntityFramework",
       "Version": "6.4.4.0",
       "Dependencies": [
@@ -10425,6 +10612,10 @@
       "Id": "Bookstore.Service",
       "Version": "",
       "Dependencies": [
+        {
+          "Id": "Microsoft.AspNetCore.Mvc.NewtonsoftJson",
+          "VersionsRange": "[7.0.2, )"
+        },
         {
           "Id": "Microsoft.AspNetCore.OpenApi",
           "VersionsRange": "[7.0.2, )"
