@@ -1954,3 +1954,24 @@ New: DECLARE @columnList NVARCHAR(MAX);\r\nSET @columnList = N', ApproveShipment
 2023-01-26 15:26:02.5199|INFO|ApplicationInitialization|Initialization ClaimGenerator.
 2023-01-26 15:26:02.9239|INFO|ApplicationInitialization|Initialization KeepSynchronizedRecomputeOnDeploy.
 2023-01-26 15:26:02.9363|INFO|Rhetos DbUpdate|Done.
+2023-01-27 08:43:33.9313|INFO|Rhetos DbUpdate base|Started 'dotnet' process 35804.
+2023-01-27 08:43:34.2510|INFO|Rhetos DbUpdate|Started in C:\Users\jpreksavec\source\repos\Bookstore\src\Bookstore.Service\bin\Debug\net7.0\
+2023-01-27 08:43:34.2923|INFO|DatabaseUpdate|Loading plugins.
+2023-01-27 08:43:34.8476|INFO|DatabaseDeployment|SQL connection: DataSource=JPREKSAVEC-LAP, InitialCatalog=Bookstore
+2023-01-27 08:43:34.9846|INFO|DatabaseDeployment|Preparing Rhetos database.
+2023-01-27 08:43:35.2212|INFO|DatabaseDeployment|Cleaning old migration data.
+2023-01-27 08:43:35.2466|INFO|DatabaseCleaner|Deleted 0 columns in data migration schemas, 15 remaining.
+2023-01-27 08:43:35.2466|INFO|DatabaseDeployment|Executing data migration scripts.
+2023-01-27 08:43:35.2548|INFO|ConceptDataMigration|Executing 2 before-data-migration scripts.
+2023-01-27 08:43:35.5252|INFO|DataMigration|Executed 0 of 12 scripts.
+2023-01-27 08:43:35.5252|INFO|ConceptDataMigration|Executing 2 after-data-migration scripts.
+2023-01-27 08:43:35.5500|INFO|DatabaseDeployment|Upgrading database.
+2023-01-27 08:43:35.6166|INFO|DatabaseGenerator|Removing 0 database objects.
+2023-01-27 08:43:35.6302|INFO|DatabaseGenerator|Creating 0 database objects.
+2023-01-27 08:43:35.6302|INFO|DatabaseDeployment|Deleting redundant migration data.
+2023-01-27 08:43:35.6578|INFO|DatabaseCleaner|Deleted 5 columns in data migration schemas, 15 remaining.
+2023-01-27 08:43:35.6626|INFO|ApplicationInitialization|Loading generated plugins.
+2023-01-27 08:43:35.7337|INFO|ApplicationInitialization|Initializing EfMappingViews.
+2023-01-27 08:43:36.4035|INFO|ApplicationInitialization|Initialization ClaimGenerator.
+2023-01-27 08:43:36.8394|INFO|ApplicationInitialization|Initialization KeepSynchronizedRecomputeOnDeploy.
+2023-01-27 08:43:36.8521|INFO|Rhetos DbUpdate|Done.
