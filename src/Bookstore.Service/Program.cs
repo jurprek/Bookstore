@@ -33,7 +33,7 @@ builder.Services.AddControllers()
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen(o => {
     o.CustomSchemaIds(type => type.ToString()); // CustomSchemaIds allows multiple entities with the same name in different modules.
-    o.SwaggerDoc("rhetos", new OpenApiInfo { Title = "Rhetos REST API", Version = "v1" });
+    //o.SwaggerDoc("rhetos", new OpenApiInfo { Title = "Rhetos REST API", Version = "v1" });
     });
 builder.Host.UseNLog();
 
