@@ -46,6 +46,15 @@ namespace System.Linq
             });
         }
         /// <summary>Converts the objects with navigation properties to simple objects with primitive properties.</summary>
+        public static IQueryable<Bookstore.BookRating> ToSimple(this IQueryable<Common.Queryable.Bookstore_BookRating> query)
+        {
+            return query.Select(item => new Bookstore.BookRating
+            {
+                ID = item.ID,
+                Rating = item.Rating/*DataStructureInfo AssignSimpleProperty Bookstore.BookRating*/
+            });
+        }
+        /// <summary>Converts the objects with navigation properties to simple objects with primitive properties.</summary>
         public static IQueryable<Bookstore.BookTopic> ToSimple(this IQueryable<Common.Queryable.Bookstore_BookTopic> query)
         {
             return query.Select(item => new Bookstore.BookTopic
@@ -93,6 +102,17 @@ namespace System.Linq
                 ID = item.ID,
                 Code = item.Code,
                 Description = item.Description/*DataStructureInfo AssignSimpleProperty Bookstore.Department*/
+            });
+        }
+        /// <summary>Converts the objects with navigation properties to simple objects with primitive properties.</summary>
+        public static IQueryable<Bookstore.Disposal> ToSimple(this IQueryable<Common.Queryable.Bookstore_Disposal> query)
+        {
+            return query.Select(item => new Bookstore.Disposal
+            {
+                ID = item.ID,
+                BookID = item.BookID,
+                EffectiveSince = item.EffectiveSince,
+                Explanation = item.Explanation/*DataStructureInfo AssignSimpleProperty Bookstore.Disposal*/
             });
         }
         /// <summary>Converts the objects with navigation properties to simple objects with primitive properties.</summary>
@@ -222,6 +242,16 @@ namespace System.Linq
             {
                 ID = item.ID,
                 Name = item.Name/*DataStructureInfo AssignSimpleProperty Bookstore.Translator*/
+            });
+        }
+        /// <summary>Converts the objects with navigation properties to simple objects with primitive properties.</summary>
+        public static IQueryable<Bookstore.WishList> ToSimple(this IQueryable<Common.Queryable.Bookstore_WishList> query)
+        {
+            return query.Select(item => new Bookstore.WishList
+            {
+                ID = item.ID,
+                BookTitle = item.BookTitle,
+                HighPriority = item.HighPriority/*DataStructureInfo AssignSimpleProperty Bookstore.WishList*/
             });
         }
         /// <summary>Converts the objects with navigation properties to simple objects with primitive properties.</summary>

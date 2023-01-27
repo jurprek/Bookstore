@@ -43,11 +43,13 @@ namespace Common
         public System.Data.Entity.DbSet<Common.Queryable.Bookstore_ApproveShipment> Bookstore_ApproveShipment { get; set; }
         public System.Data.Entity.DbSet<Common.Queryable.Bookstore_Book> Bookstore_Book { get; set; }
         public System.Data.Entity.DbSet<Common.Queryable.Bookstore_BookInfo> Bookstore_BookInfo { get; set; }
+        public System.Data.Entity.DbSet<Common.Queryable.Bookstore_BookRating> Bookstore_BookRating { get; set; }
         public System.Data.Entity.DbSet<Common.Queryable.Bookstore_BookTopic> Bookstore_BookTopic { get; set; }
         public System.Data.Entity.DbSet<Common.Queryable.Bookstore_BookTranslator> Bookstore_BookTranslator { get; set; }
         public System.Data.Entity.DbSet<Common.Queryable.Bookstore_ChildrensBook> Bookstore_ChildrensBook { get; set; }
         public System.Data.Entity.DbSet<Common.Queryable.Bookstore_Comment> Bookstore_Comment { get; set; }
         public System.Data.Entity.DbSet<Common.Queryable.Bookstore_Department> Bookstore_Department { get; set; }
+        public System.Data.Entity.DbSet<Common.Queryable.Bookstore_Disposal> Bookstore_Disposal { get; set; }
         public System.Data.Entity.DbSet<Common.Queryable.Bookstore_Education> Bookstore_Education { get; set; }
         public System.Data.Entity.DbSet<Common.Queryable.Bookstore_Employees> Bookstore_Employees { get; set; }
         public System.Data.Entity.DbSet<Common.Queryable.Bookstore_EmployeesDepartment> Bookstore_EmployeesDepartment { get; set; }
@@ -60,6 +62,7 @@ namespace Common
         public System.Data.Entity.DbSet<Common.Queryable.Bookstore_ShipmentStatus> Bookstore_ShipmentStatus { get; set; }
         public System.Data.Entity.DbSet<Common.Queryable.Bookstore_Topic> Bookstore_Topic { get; set; }
         public System.Data.Entity.DbSet<Common.Queryable.Bookstore_Translator> Bookstore_Translator { get; set; }
+        public System.Data.Entity.DbSet<Common.Queryable.Bookstore_WishList> Bookstore_WishList { get; set; }
         public System.Data.Entity.DbSet<Common.Queryable.Common_AutoCodeCache> Common_AutoCodeCache { get; set; }
         public System.Data.Entity.DbSet<Common.Queryable.Common_Claim> Common_Claim { get; set; }
         public System.Data.Entity.DbSet<Common.Queryable.Common_ExclusiveLock> Common_ExclusiveLock { get; set; }

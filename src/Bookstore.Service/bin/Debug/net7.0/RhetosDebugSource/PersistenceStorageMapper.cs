@@ -18,11 +18,13 @@ namespace Common
         {
             _mappings.Add(typeof(Bookstore.ApproveShipment), new Bookstore_ApproveShipment_Mapper());
             _mappings.Add(typeof(Bookstore.Book), new Bookstore_Book_Mapper());
+            _mappings.Add(typeof(Bookstore.BookRating), new Bookstore_BookRating_Mapper());
             _mappings.Add(typeof(Bookstore.BookTopic), new Bookstore_BookTopic_Mapper());
             _mappings.Add(typeof(Bookstore.BookTranslator), new Bookstore_BookTranslator_Mapper());
             _mappings.Add(typeof(Bookstore.ChildrensBook), new Bookstore_ChildrensBook_Mapper());
             _mappings.Add(typeof(Bookstore.Comment), new Bookstore_Comment_Mapper());
             _mappings.Add(typeof(Bookstore.Department), new Bookstore_Department_Mapper());
+            _mappings.Add(typeof(Bookstore.Disposal), new Bookstore_Disposal_Mapper());
             _mappings.Add(typeof(Bookstore.Education), new Bookstore_Education_Mapper());
             _mappings.Add(typeof(Bookstore.Employees), new Bookstore_Employees_Mapper());
             _mappings.Add(typeof(Bookstore.EmployeesDepartment), new Bookstore_EmployeesDepartment_Mapper());
@@ -34,6 +36,7 @@ namespace Common
             _mappings.Add(typeof(Bookstore.ShipmentStatus), new Bookstore_ShipmentStatus_Mapper());
             _mappings.Add(typeof(Bookstore.Topic), new Bookstore_Topic_Mapper());
             _mappings.Add(typeof(Bookstore.Translator), new Bookstore_Translator_Mapper());
+            _mappings.Add(typeof(Bookstore.WishList), new Bookstore_WishList_Mapper());
             _mappings.Add(typeof(Common.AutoCodeCache), new Common_AutoCodeCache_Mapper());
             _mappings.Add(typeof(Common.Claim), new Common_Claim_Mapper());
             _mappings.Add(typeof(Common.ExclusiveLock), new Common_ExclusiveLock_Mapper());
@@ -113,6 +116,32 @@ namespace Common
     	public string GetTableName()
         {
             return "Bookstore.Book";
+        }
+    }
+
+    public class Bookstore_BookRating_Mapper : IPersistenceStorageObjectMapper
+    {
+        public PersistenceStorageObjectParameter[] GetParameters(IEntity genericEntity)
+        {
+            var entity = (Bookstore.BookRating)genericEntity;
+            return new PersistenceStorageObjectParameter[]
+            {
+                new PersistenceStorageObjectParameter("ID", new SqlParameter("", System.Data.SqlDbType.UniqueIdentifier) { Value = entity.ID }),
+                new PersistenceStorageObjectParameter("Rating", new SqlParameter("", System.Data.SqlDbType.Decimal) { Value = ((object)entity.Rating) ?? DBNull.Value, Precision = 28, Scale = 10 }),
+                /*DataStructureInfo PersistenceStorageMapperPropertyMapping Bookstore.BookRating*/
+            };
+        }
+    
+    	public IEnumerable<Guid> GetDependencies(IEntity genericEntity)
+        {
+            var entity = (Bookstore.BookRating)genericEntity;
+            /*DataStructureInfo PersistenceStorageMapperDependencyResolution Bookstore.BookRating*/
+            yield break;
+        }
+    
+    	public string GetTableName()
+        {
+            return "Bookstore.BookRating";
         }
     }
 
@@ -248,6 +277,34 @@ namespace Common
     	public string GetTableName()
         {
             return "Bookstore.Department";
+        }
+    }
+
+    public class Bookstore_Disposal_Mapper : IPersistenceStorageObjectMapper
+    {
+        public PersistenceStorageObjectParameter[] GetParameters(IEntity genericEntity)
+        {
+            var entity = (Bookstore.Disposal)genericEntity;
+            return new PersistenceStorageObjectParameter[]
+            {
+                new PersistenceStorageObjectParameter("ID", new SqlParameter("", System.Data.SqlDbType.UniqueIdentifier) { Value = entity.ID }),
+                new PersistenceStorageObjectParameter("BookID", new SqlParameter("", System.Data.SqlDbType.UniqueIdentifier) { Value = ((object)entity.BookID) ?? DBNull.Value }),
+                new PersistenceStorageObjectParameter("EffectiveSince", new SqlParameter("", System.Data.SqlDbType.DateTime2) { Value = ((object)entity.EffectiveSince) ?? DBNull.Value, Scale = 3 }),
+                new PersistenceStorageObjectParameter("Explanation", new SqlParameter("", System.Data.SqlDbType.NVarChar) { Value = ((object)entity.Explanation) ?? DBNull.Value }),
+                /*DataStructureInfo PersistenceStorageMapperPropertyMapping Bookstore.Disposal*/
+            };
+        }
+    
+    	public IEnumerable<Guid> GetDependencies(IEntity genericEntity)
+        {
+            var entity = (Bookstore.Disposal)genericEntity;
+            /*DataStructureInfo PersistenceStorageMapperDependencyResolution Bookstore.Disposal*/
+            yield break;
+        }
+    
+    	public string GetTableName()
+        {
+            return "Bookstore.Disposal";
         }
     }
 
@@ -542,6 +599,33 @@ namespace Common
     	public string GetTableName()
         {
             return "Bookstore.Translator";
+        }
+    }
+
+    public class Bookstore_WishList_Mapper : IPersistenceStorageObjectMapper
+    {
+        public PersistenceStorageObjectParameter[] GetParameters(IEntity genericEntity)
+        {
+            var entity = (Bookstore.WishList)genericEntity;
+            return new PersistenceStorageObjectParameter[]
+            {
+                new PersistenceStorageObjectParameter("ID", new SqlParameter("", System.Data.SqlDbType.UniqueIdentifier) { Value = entity.ID }),
+                new PersistenceStorageObjectParameter("BookTitle", new SqlParameter("", System.Data.SqlDbType.NVarChar) { Value = ((object)entity.BookTitle) ?? DBNull.Value }),
+                new PersistenceStorageObjectParameter("HighPriority", new SqlParameter("", System.Data.SqlDbType.Bit) { Value = ((object)entity.HighPriority) ?? DBNull.Value }),
+                /*DataStructureInfo PersistenceStorageMapperPropertyMapping Bookstore.WishList*/
+            };
+        }
+    
+    	public IEnumerable<Guid> GetDependencies(IEntity genericEntity)
+        {
+            var entity = (Bookstore.WishList)genericEntity;
+            /*DataStructureInfo PersistenceStorageMapperDependencyResolution Bookstore.WishList*/
+            yield break;
+        }
+    
+    	public string GetTableName()
+        {
+            return "Bookstore.WishList";
         }
     }
 

@@ -4746,6 +4746,7 @@
       "Microsoft.AspNetCore.OpenApi >= 7.0.2",
       "Microsoft.Extensions.Configuration >= 7.0.0",
       "NLog.Web.AspNetCore >= 4.10.0",
+      "Rhetos >= 5.3.0",
       "Rhetos.CommonConcepts >= 5.3.0",
       "Rhetos.Host >= 5.3.0",
       "Rhetos.Host.AspNet >= 5.3.0",
@@ -4760,11 +4761,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\jpreksavec\\Source\\Repos\\Bookstore\\src\\Bookstore.Service\\Bookstore.Service.csproj",
+      "projectUniqueName": "C:\\Users\\jpreksavec\\source\\repos\\Bookstore\\src\\Bookstore.Service\\Bookstore.Service.csproj",
       "projectName": "Bookstore.Service",
-      "projectPath": "C:\\Users\\jpreksavec\\Source\\Repos\\Bookstore\\src\\Bookstore.Service\\Bookstore.Service.csproj",
+      "projectPath": "C:\\Users\\jpreksavec\\source\\repos\\Bookstore\\src\\Bookstore.Service\\Bookstore.Service.csproj",
       "packagesPath": "C:\\Users\\jpreksavec\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\jpreksavec\\Source\\Repos\\Bookstore\\src\\Bookstore.Service\\obj\\",
+      "outputPath": "C:\\Users\\jpreksavec\\source\\repos\\Bookstore\\src\\Bookstore.Service\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\jpreksavec\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -4804,6 +4805,10 @@
           "NLog.Web.AspNetCore": {
             "target": "Package",
             "version": "[4.10.0, )"
+          },
+          "Rhetos": {
+            "target": "Package",
+            "version": "[5.3.0, )"
           },
           "Rhetos.CommonConcepts": {
             "target": "Package",

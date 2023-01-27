@@ -443,3 +443,231 @@ Command: SaveEntityCommandInfo Bookstore.Book, update 1
 2023-01-25 14:52:23.9286|INFO|Microsoft.Hosting.Lifetime|Application started. Press Ctrl+C to shut down.
 2023-01-25 14:52:23.9408|INFO|Microsoft.Hosting.Lifetime|Hosting environment: Development
 2023-01-25 14:52:23.9408|INFO|Microsoft.Hosting.Lifetime|Content root path: C:\Users\jpreksavec\source\repos\Bookstore\src\Bookstore.Service
+2023-01-26 13:35:00.5759|INFO|Microsoft.Hosting.Lifetime|Now listening on: https://localhost:7194
+2023-01-26 13:35:00.6051|INFO|Microsoft.Hosting.Lifetime|Now listening on: http://localhost:5138
+2023-01-26 13:35:00.6130|INFO|Microsoft.Hosting.Lifetime|Application started. Press Ctrl+C to shut down.
+2023-01-26 13:35:00.6130|INFO|Microsoft.Hosting.Lifetime|Hosting environment: Development
+2023-01-26 13:35:00.6366|INFO|Microsoft.Hosting.Lifetime|Content root path: C:\Users\jpreksavec\source\repos\Bookstore\src\Bookstore.Service
+2023-01-26 13:43:55.9180|INFO|Microsoft.Hosting.Lifetime|Now listening on: https://localhost:7194
+2023-01-26 13:43:55.9441|INFO|Microsoft.Hosting.Lifetime|Now listening on: http://localhost:5138
+2023-01-26 13:43:55.9441|INFO|Microsoft.Hosting.Lifetime|Application started. Press Ctrl+C to shut down.
+2023-01-26 13:43:55.9441|INFO|Microsoft.Hosting.Lifetime|Hosting environment: Development
+2023-01-26 13:43:55.9606|INFO|Microsoft.Hosting.Lifetime|Content root path: C:\Users\jpreksavec\source\repos\Bookstore\src\Bookstore.Service
+2023-01-26 13:47:16.5591|INFO|Microsoft.Hosting.Lifetime|Now listening on: https://localhost:7194
+2023-01-26 13:47:16.5798|INFO|Microsoft.Hosting.Lifetime|Now listening on: http://localhost:5138
+2023-01-26 13:47:16.5876|INFO|Microsoft.Hosting.Lifetime|Application started. Press Ctrl+C to shut down.
+2023-01-26 13:47:16.5876|INFO|Microsoft.Hosting.Lifetime|Hosting environment: Development
+2023-01-26 13:47:16.5876|INFO|Microsoft.Hosting.Lifetime|Content root path: C:\Users\jpreksavec\source\repos\Bookstore\src\Bookstore.Service
+2023-01-26 13:49:09.3314|INFO|Microsoft.Hosting.Lifetime|Now listening on: https://localhost:7194
+2023-01-26 13:49:09.3515|INFO|Microsoft.Hosting.Lifetime|Now listening on: http://localhost:5138
+2023-01-26 13:49:09.3604|INFO|Microsoft.Hosting.Lifetime|Application started. Press Ctrl+C to shut down.
+2023-01-26 13:49:09.3604|INFO|Microsoft.Hosting.Lifetime|Hosting environment: Development
+2023-01-26 13:49:09.3604|INFO|Microsoft.Hosting.Lifetime|Content root path: C:\Users\jpreksavec\source\repos\Bookstore\src\Bookstore.Service
+2023-01-26 13:50:50.8193|INFO|Microsoft.Hosting.Lifetime|Now listening on: https://localhost:7194
+2023-01-26 13:50:50.8400|INFO|Microsoft.Hosting.Lifetime|Now listening on: http://localhost:5138
+2023-01-26 13:50:50.8400|INFO|Microsoft.Hosting.Lifetime|Application started. Press Ctrl+C to shut down.
+2023-01-26 13:50:50.8400|INFO|Microsoft.Hosting.Lifetime|Hosting environment: Development
+2023-01-26 13:50:50.8400|INFO|Microsoft.Hosting.Lifetime|Content root path: C:\Users\jpreksavec\source\repos\Bookstore\src\Bookstore.Service
+2023-01-26 14:14:05.1583|INFO|Microsoft.Hosting.Lifetime|Now listening on: https://localhost:7194
+2023-01-26 14:14:05.1848|INFO|Microsoft.Hosting.Lifetime|Now listening on: http://localhost:5138
+2023-01-26 14:14:05.1848|INFO|Microsoft.Hosting.Lifetime|Application started. Press Ctrl+C to shut down.
+2023-01-26 14:14:05.1848|INFO|Microsoft.Hosting.Lifetime|Hosting environment: Development
+2023-01-26 14:14:05.2004|INFO|Microsoft.Hosting.Lifetime|Content root path: C:\Users\jpreksavec\source\repos\Bookstore\src\Bookstore.Service
+2023-01-26 14:16:33.4991|INFO|Microsoft.Hosting.Lifetime|Now listening on: https://localhost:7194
+2023-01-26 14:16:33.5336|INFO|Microsoft.Hosting.Lifetime|Now listening on: http://localhost:5138
+2023-01-26 14:16:33.5452|INFO|Microsoft.Hosting.Lifetime|Application started. Press Ctrl+C to shut down.
+2023-01-26 14:16:33.5452|INFO|Microsoft.Hosting.Lifetime|Hosting environment: Development
+2023-01-26 14:16:33.5452|INFO|Microsoft.Hosting.Lifetime|Content root path: C:\Users\jpreksavec\source\repos\Bookstore\src\Bookstore.Service
+2023-01-26 15:26:07.6485|INFO|Microsoft.Hosting.Lifetime|Now listening on: https://localhost:7194
+2023-01-26 15:26:07.6718|INFO|Microsoft.Hosting.Lifetime|Now listening on: http://localhost:5138
+2023-01-26 15:26:07.6718|INFO|Microsoft.Hosting.Lifetime|Application started. Press Ctrl+C to shut down.
+2023-01-26 15:26:07.6718|INFO|Microsoft.Hosting.Lifetime|Hosting environment: Development
+2023-01-26 15:26:07.6874|INFO|Microsoft.Hosting.Lifetime|Content root path: C:\Users\jpreksavec\source\repos\Bookstore\src\Bookstore.Service
+2023-01-26 15:32:24.1355|INFO|Microsoft.Hosting.Lifetime|Now listening on: https://localhost:7194
+2023-01-26 15:32:24.1908|INFO|Microsoft.Hosting.Lifetime|Now listening on: http://localhost:5138
+2023-01-26 15:32:24.1908|INFO|Microsoft.Hosting.Lifetime|Application started. Press Ctrl+C to shut down.
+2023-01-26 15:32:24.2077|INFO|Microsoft.Hosting.Lifetime|Hosting environment: Development
+2023-01-26 15:32:24.2077|INFO|Microsoft.Hosting.Lifetime|Content root path: C:\Users\jpreksavec\source\repos\Bookstore\src\Bookstore.Service
+2023-01-26 15:34:17.7637|INFO|Rhetos.Host.AspNet.RestApi.Filters.ApiExceptionFilter|Rhetos.ClientException: The provided filter parameter has invalid JSON format. See server log for more information.
+ ---> Newtonsoft.Json.JsonReaderException: Invalid character after parsing property name. Expected ':' but got: }. Path '[0].Property', line 1, position 23.
+   at Newtonsoft.Json.JsonTextReader.ParseProperty()
+   at Newtonsoft.Json.JsonTextReader.ParseObject()
+   at Newtonsoft.Json.Serialization.JsonSerializerInternalReader.PopulateObject(Object newObject, JsonReader reader, JsonObjectContract contract, JsonProperty member, String id)
+   at Newtonsoft.Json.Serialization.JsonSerializerInternalReader.CreateObject(JsonReader reader, Type objectType, JsonContract contract, JsonProperty member, JsonContainerContract containerContract, JsonProperty containerMember, Object existingValue)
+   at Newtonsoft.Json.Serialization.JsonSerializerInternalReader.CreateValueInternal(JsonReader reader, Type objectType, JsonContract contract, JsonProperty member, JsonContainerContract containerContract, JsonProperty containerMember, Object existingValue)
+   at Newtonsoft.Json.Serialization.JsonSerializerInternalReader.PopulateList(IList list, JsonReader reader, JsonArrayContract contract, JsonProperty containerProperty, String id)
+   --- End of inner exception stack trace ---
+   at Rhetos.Host.AspNet.RestApi.Utilities.JsonHelper.DeserializeOrException(String serialized, Type type)
+   at Rhetos.Host.AspNet.RestApi.Utilities.JsonHelper.DeserializeOrException[T](String serialized)
+   at Rhetos.Host.AspNet.RestApi.Utilities.QueryParameters.ParseFilterParameters(String filter, String fparam, String genericfilter, String filters, String dataStructureFullName)
+   at Rhetos.Host.AspNet.RestApi.Utilities.ServiceUtility.GetData[T](String filter, String fparam, String genericfilter, String filters, Int32 top, Int32 skip, Int32 page, Int32 psize, String sort, Boolean readRecords, Boolean readTotalCount)
+   at Rhetos.Host.AspNet.RestApi.Controllers.ReadDataApiController`1.Get(String filter, String fparam, String genericfilter, String filters, Int32 top, Int32 skip, Int32 page, Int32 psize, String sort)
+   at lambda_method919(Closure, Object, Object[])
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.SyncObjectResultExecutor.Execute(ActionContext actionContext, IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Logged|12_1(ControllerActionInvoker invoker)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+Command: Filter parameter: '[{"Property":"Title",""}]'.
+2023-01-26 15:34:27.3848|INFO|Rhetos.Host.AspNet.RestApi.Filters.ApiExceptionFilter|Rhetos.ClientException: The provided filter parameter has invalid JSON format. See server log for more information.
+ ---> Newtonsoft.Json.JsonReaderException: Invalid character after parsing property name. Expected ':' but got: }. Path '[0].Property', line 1, position 23.
+   at Newtonsoft.Json.JsonTextReader.ParseProperty()
+   at Newtonsoft.Json.JsonTextReader.ParseObject()
+   at Newtonsoft.Json.Serialization.JsonSerializerInternalReader.PopulateObject(Object newObject, JsonReader reader, JsonObjectContract contract, JsonProperty member, String id)
+   at Newtonsoft.Json.Serialization.JsonSerializerInternalReader.CreateObject(JsonReader reader, Type objectType, JsonContract contract, JsonProperty member, JsonContainerContract containerContract, JsonProperty containerMember, Object existingValue)
+   at Newtonsoft.Json.Serialization.JsonSerializerInternalReader.CreateValueInternal(JsonReader reader, Type objectType, JsonContract contract, JsonProperty member, JsonContainerContract containerContract, JsonProperty containerMember, Object existingValue)
+   at Newtonsoft.Json.Serialization.JsonSerializerInternalReader.PopulateList(IList list, JsonReader reader, JsonArrayContract contract, JsonProperty containerProperty, String id)
+   --- End of inner exception stack trace ---
+   at Rhetos.Host.AspNet.RestApi.Utilities.JsonHelper.DeserializeOrException(String serialized, Type type)
+   at Rhetos.Host.AspNet.RestApi.Utilities.JsonHelper.DeserializeOrException[T](String serialized)
+   at Rhetos.Host.AspNet.RestApi.Utilities.QueryParameters.ParseFilterParameters(String filter, String fparam, String genericfilter, String filters, String dataStructureFullName)
+   at Rhetos.Host.AspNet.RestApi.Utilities.ServiceUtility.GetData[T](String filter, String fparam, String genericfilter, String filters, Int32 top, Int32 skip, Int32 page, Int32 psize, String sort, Boolean readRecords, Boolean readTotalCount)
+   at Rhetos.Host.AspNet.RestApi.Controllers.ReadDataApiController`1.Get(String filter, String fparam, String genericfilter, String filters, Int32 top, Int32 skip, Int32 page, Int32 psize, String sort)
+   at lambda_method919(Closure, Object, Object[])
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.SyncObjectResultExecutor.Execute(ActionContext actionContext, IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Logged|12_1(ControllerActionInvoker invoker)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+Command: Filter parameter: '[{"Property":"Title",""}]'.
+2023-01-26 15:34:34.9756|INFO|Rhetos.Host.AspNet.RestApi.Filters.ApiExceptionFilter|Rhetos.ClientException: The provided filter parameter has invalid JSON format. See server log for more information.
+ ---> Newtonsoft.Json.JsonReaderException: After parsing a value an unexpected character was encountered: ;. Path '[0].Property', line 1, position 20.
+   at Newtonsoft.Json.JsonTextReader.ParsePostValue(Boolean ignoreComments)
+   at Newtonsoft.Json.JsonTextReader.Read()
+   at Newtonsoft.Json.Serialization.JsonSerializerInternalReader.PopulateObject(Object newObject, JsonReader reader, JsonObjectContract contract, JsonProperty member, String id)
+   at Newtonsoft.Json.Serialization.JsonSerializerInternalReader.CreateObject(JsonReader reader, Type objectType, JsonContract contract, JsonProperty member, JsonContainerContract containerContract, JsonProperty containerMember, Object existingValue)
+   at Newtonsoft.Json.Serialization.JsonSerializerInternalReader.CreateValueInternal(JsonReader reader, Type objectType, JsonContract contract, JsonProperty member, JsonContainerContract containerContract, JsonProperty containerMember, Object existingValue)
+   at Newtonsoft.Json.Serialization.JsonSerializerInternalReader.PopulateList(IList list, JsonReader reader, JsonArrayContract contract, JsonProperty containerProperty, String id)
+   --- End of inner exception stack trace ---
+   at Rhetos.Host.AspNet.RestApi.Utilities.JsonHelper.DeserializeOrException(String serialized, Type type)
+   at Rhetos.Host.AspNet.RestApi.Utilities.JsonHelper.DeserializeOrException[T](String serialized)
+   at Rhetos.Host.AspNet.RestApi.Utilities.QueryParameters.ParseFilterParameters(String filter, String fparam, String genericfilter, String filters, String dataStructureFullName)
+   at Rhetos.Host.AspNet.RestApi.Utilities.ServiceUtility.GetData[T](String filter, String fparam, String genericfilter, String filters, Int32 top, Int32 skip, Int32 page, Int32 psize, String sort, Boolean readRecords, Boolean readTotalCount)
+   at Rhetos.Host.AspNet.RestApi.Controllers.ReadDataApiController`1.Get(String filter, String fparam, String genericfilter, String filters, Int32 top, Int32 skip, Int32 page, Int32 psize, String sort)
+   at lambda_method919(Closure, Object, Object[])
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.SyncObjectResultExecutor.Execute(ActionContext actionContext, IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Logged|12_1(ControllerActionInvoker invoker)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+Command: Filter parameter: '[{"Property":"Title";}]'.
+2023-01-26 15:34:55.3309|INFO|Rhetos.Host.AspNet.RestApi.Filters.ApiExceptionFilter|Rhetos.ClientException: The provided filter parameter has invalid JSON format. See server log for more information.
+ ---> Newtonsoft.Json.JsonReaderException: After parsing a value an unexpected character was encountered: ;. Path '[0].Property', line 1, position 20.
+   at Newtonsoft.Json.JsonTextReader.ParsePostValue(Boolean ignoreComments)
+   at Newtonsoft.Json.JsonTextReader.Read()
+   at Newtonsoft.Json.Serialization.JsonSerializerInternalReader.PopulateObject(Object newObject, JsonReader reader, JsonObjectContract contract, JsonProperty member, String id)
+   at Newtonsoft.Json.Serialization.JsonSerializerInternalReader.CreateObject(JsonReader reader, Type objectType, JsonContract contract, JsonProperty member, JsonContainerContract containerContract, JsonProperty containerMember, Object existingValue)
+   at Newtonsoft.Json.Serialization.JsonSerializerInternalReader.CreateValueInternal(JsonReader reader, Type objectType, JsonContract contract, JsonProperty member, JsonContainerContract containerContract, JsonProperty containerMember, Object existingValue)
+   at Newtonsoft.Json.Serialization.JsonSerializerInternalReader.PopulateList(IList list, JsonReader reader, JsonArrayContract contract, JsonProperty containerProperty, String id)
+   --- End of inner exception stack trace ---
+   at Rhetos.Host.AspNet.RestApi.Utilities.JsonHelper.DeserializeOrException(String serialized, Type type)
+   at Rhetos.Host.AspNet.RestApi.Utilities.JsonHelper.DeserializeOrException[T](String serialized)
+   at Rhetos.Host.AspNet.RestApi.Utilities.QueryParameters.ParseFilterParameters(String filter, String fparam, String genericfilter, String filters, String dataStructureFullName)
+   at Rhetos.Host.AspNet.RestApi.Utilities.ServiceUtility.GetData[T](String filter, String fparam, String genericfilter, String filters, Int32 top, Int32 skip, Int32 page, Int32 psize, String sort, Boolean readRecords, Boolean readTotalCount)
+   at Rhetos.Host.AspNet.RestApi.Controllers.ReadDataApiController`1.Get(String filter, String fparam, String genericfilter, String filters, Int32 top, Int32 skip, Int32 page, Int32 psize, String sort)
+   at lambda_method919(Closure, Object, Object[])
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.SyncObjectResultExecutor.Execute(ActionContext actionContext, IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Logged|12_1(ControllerActionInvoker invoker)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+Command: Filter parameter: '[{"Property":"Title";}]'.
+2023-01-26 15:35:00.9028|INFO|Rhetos.Host.AspNet.RestApi.Filters.ApiExceptionFilter|Rhetos.ClientException: Invalid generic filter criteria: Operation is not set. (Property = 'Title')
+   at Rhetos.Dom.DefaultConcepts.GenericFilterHelper.ValidateAndPrepare(FilterCriteria filter)
+   at Rhetos.Dom.DefaultConcepts.GenericFilterHelper.ToFilterObjects(String dataStructureFullName, IEnumerable`1 genericFilter)
+   at Rhetos.Dom.DefaultConcepts.GenericRepository`1.ExecuteGenericFilter(IEnumerable`1 genericFilter, Boolean preferQuery, IEnumerable`1 items)
+   at Rhetos.Dom.DefaultConcepts.GenericRepository`1.Read(Object parameter, Type parameterType, Boolean preferQuery)
+   at Rhetos.Processing.DefaultCommands.ReadCommand.ReadData(ReadCommandInfo commandInfo, GenericRepository`1 genericRepository)
+   at Rhetos.Processing.DefaultCommands.ReadCommand.Execute(ReadCommandInfo readInfo)
+   at Rhetos.Processing.ICommandImplementation`2.Rhetos.Processing.ICommandImplementation.Execute(Object parameter)
+   at Rhetos.Processing.ProcessingEngine.ExecuteCommand(ICommandInfo commandInfo)
+   at Rhetos.Processing.ProcessingEngine.Execute(IList`1 commands)
+--- End of stack trace from previous location ---
+   at Rhetos.Utilities.ExceptionsUtility.Rethrow(Exception exception)
+   at Rhetos.Processing.ProcessingEngine.Execute(IList`1 commands)
+   at Rhetos.Processing.ProcessingEngineExtensions.Execute[TCommandResult](IProcessingEngine processingEngine, ICommandInfo`1 command)
+   at Rhetos.Host.AspNet.RestApi.Utilities.ServiceUtility.ExecuteReadCommand(ReadCommandInfo commandInfo)
+   at Rhetos.Host.AspNet.RestApi.Utilities.ServiceUtility.GetData[T](String filter, String fparam, String genericfilter, String filters, Int32 top, Int32 skip, Int32 page, Int32 psize, String sort, Boolean readRecords, Boolean readTotalCount)
+   at Rhetos.Host.AspNet.RestApi.Controllers.ReadDataApiController`1.Get(String filter, String fparam, String genericfilter, String filters, Int32 top, Int32 skip, Int32 page, Int32 psize, String sort)
+   at lambda_method919(Closure, Object, Object[])
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.SyncObjectResultExecutor.Execute(ActionContext actionContext, IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Logged|12_1(ControllerActionInvoker invoker)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+Command: ReadCommandInfo Bookstore.Book records, filters: Title
+2023-01-26 15:35:07.3193|INFO|Rhetos.Host.AspNet.RestApi.Filters.ApiExceptionFilter|Rhetos.ClientException: The provided filter parameter has invalid JSON format. See server log for more information.
+ ---> Newtonsoft.Json.JsonReaderException: Invalid character after parsing property name. Expected ':' but got: }. Path '[0]', line 1, position 9.
+   at Newtonsoft.Json.JsonTextReader.ParseProperty()
+   at Newtonsoft.Json.JsonTextReader.ParseObject()
+   at Newtonsoft.Json.JsonReader.ReadAndAssert()
+   at Newtonsoft.Json.Serialization.JsonSerializerInternalReader.CreateObject(JsonReader reader, Type objectType, JsonContract contract, JsonProperty member, JsonContainerContract containerContract, JsonProperty containerMember, Object existingValue)
+   at Newtonsoft.Json.Serialization.JsonSerializerInternalReader.CreateValueInternal(JsonReader reader, Type objectType, JsonContract contract, JsonProperty member, JsonContainerContract containerContract, JsonProperty containerMember, Object existingValue)
+   at Newtonsoft.Json.Serialization.JsonSerializerInternalReader.PopulateList(IList list, JsonReader reader, JsonArrayContract contract, JsonProperty containerProperty, String id)
+   --- End of inner exception stack trace ---
+   at Rhetos.Host.AspNet.RestApi.Utilities.JsonHelper.DeserializeOrException(String serialized, Type type)
+   at Rhetos.Host.AspNet.RestApi.Utilities.JsonHelper.DeserializeOrException[T](String serialized)
+   at Rhetos.Host.AspNet.RestApi.Utilities.QueryParameters.ParseFilterParameters(String filter, String fparam, String genericfilter, String filters, String dataStructureFullName)
+   at Rhetos.Host.AspNet.RestApi.Utilities.ServiceUtility.GetData[T](String filter, String fparam, String genericfilter, String filters, Int32 top, Int32 skip, Int32 page, Int32 psize, String sort, Boolean readRecords, Boolean readTotalCount)
+   at Rhetos.Host.AspNet.RestApi.Controllers.ReadDataApiController`1.Get(String filter, String fparam, String genericfilter, String filters, Int32 top, Int32 skip, Int32 page, Int32 psize, String sort)
+   at lambda_method919(Closure, Object, Object[])
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.SyncObjectResultExecutor.Execute(ActionContext actionContext, IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Logged|12_1(ControllerActionInvoker invoker)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+Command: Filter parameter: '[{"Title"}]'.
+2023-01-26 15:36:11.2796|INFO|Rhetos.Host.AspNet.RestApi.Filters.ApiExceptionFilter|Rhetos.ClientException: Invalid generic filter criteria: Operation is not set. (Property = 'Title')
+   at Rhetos.Dom.DefaultConcepts.GenericFilterHelper.ValidateAndPrepare(FilterCriteria filter)
+   at Rhetos.Dom.DefaultConcepts.GenericFilterHelper.ToFilterObjects(String dataStructureFullName, IEnumerable`1 genericFilter)
+   at Rhetos.Dom.DefaultConcepts.GenericRepository`1.ExecuteGenericFilter(IEnumerable`1 genericFilter, Boolean preferQuery, IEnumerable`1 items)
+   at Rhetos.Dom.DefaultConcepts.GenericRepository`1.Read(Object parameter, Type parameterType, Boolean preferQuery)
+   at Rhetos.Processing.DefaultCommands.ReadCommand.ReadData(ReadCommandInfo commandInfo, GenericRepository`1 genericRepository)
+   at Rhetos.Processing.DefaultCommands.ReadCommand.Execute(ReadCommandInfo readInfo)
+   at Rhetos.Processing.ICommandImplementation`2.Rhetos.Processing.ICommandImplementation.Execute(Object parameter)
+   at Rhetos.Processing.ProcessingEngine.ExecuteCommand(ICommandInfo commandInfo)
+   at Rhetos.Processing.ProcessingEngine.Execute(IList`1 commands)
+--- End of stack trace from previous location ---
+   at Rhetos.Utilities.ExceptionsUtility.Rethrow(Exception exception)
+   at Rhetos.Processing.ProcessingEngine.Execute(IList`1 commands)
+   at Rhetos.Processing.ProcessingEngineExtensions.Execute[TCommandResult](IProcessingEngine processingEngine, ICommandInfo`1 command)
+   at Rhetos.Host.AspNet.RestApi.Utilities.ServiceUtility.ExecuteReadCommand(ReadCommandInfo commandInfo)
+   at Rhetos.Host.AspNet.RestApi.Utilities.ServiceUtility.GetData[T](String filter, String fparam, String genericfilter, String filters, Int32 top, Int32 skip, Int32 page, Int32 psize, String sort, Boolean readRecords, Boolean readTotalCount)
+   at Rhetos.Host.AspNet.RestApi.Controllers.ReadDataApiController`1.Get(String filter, String fparam, String genericfilter, String filters, Int32 top, Int32 skip, Int32 page, Int32 psize, String sort)
+   at lambda_method919(Closure, Object, Object[])
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.SyncObjectResultExecutor.Execute(ActionContext actionContext, IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Logged|12_1(ControllerActionInvoker invoker)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+Command: ReadCommandInfo Bookstore.Book records, filters: Title
+2023-01-26 15:36:56.8011|INFO|Rhetos.Host.AspNet.RestApi.Filters.ApiExceptionFilter|Rhetos.ClientException: Invalid generic filter criteria: Property, Filter and Value are null.
+   at Rhetos.Dom.DefaultConcepts.GenericFilterHelper.ValidateAndPrepare(FilterCriteria filter)
+   at Rhetos.Dom.DefaultConcepts.GenericFilterHelper.ToFilterObjects(String dataStructureFullName, IEnumerable`1 genericFilter)
+   at Rhetos.Dom.DefaultConcepts.GenericRepository`1.ExecuteGenericFilter(IEnumerable`1 genericFilter, Boolean preferQuery, IEnumerable`1 items)
+   at Rhetos.Dom.DefaultConcepts.GenericRepository`1.Read(Object parameter, Type parameterType, Boolean preferQuery)
+   at Rhetos.Processing.DefaultCommands.ReadCommand.ReadData(ReadCommandInfo commandInfo, GenericRepository`1 genericRepository)
+   at Rhetos.Processing.DefaultCommands.ReadCommand.Execute(ReadCommandInfo readInfo)
+   at Rhetos.Processing.ICommandImplementation`2.Rhetos.Processing.ICommandImplementation.Execute(Object parameter)
+   at Rhetos.Processing.ProcessingEngine.ExecuteCommand(ICommandInfo commandInfo)
+   at Rhetos.Processing.ProcessingEngine.Execute(IList`1 commands)
+--- End of stack trace from previous location ---
+   at Rhetos.Utilities.ExceptionsUtility.Rethrow(Exception exception)
+   at Rhetos.Processing.ProcessingEngine.Execute(IList`1 commands)
+   at Rhetos.Processing.ProcessingEngineExtensions.Execute[TCommandResult](IProcessingEngine processingEngine, ICommandInfo`1 command)
+   at Rhetos.Host.AspNet.RestApi.Utilities.ServiceUtility.ExecuteReadCommand(ReadCommandInfo commandInfo)
+   at Rhetos.Host.AspNet.RestApi.Utilities.ServiceUtility.GetData[T](String filter, String fparam, String genericfilter, String filters, Int32 top, Int32 skip, Int32 page, Int32 psize, String sort, Boolean readRecords, Boolean readTotalCount)
+   at Rhetos.Host.AspNet.RestApi.Controllers.ReadDataApiController`1.Get(String filter, String fparam, String genericfilter, String filters, Int32 top, Int32 skip, Int32 page, Int32 psize, String sort)
+   at lambda_method919(Closure, Object, Object[])
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.SyncObjectResultExecutor.Execute(ActionContext actionContext, IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Logged|12_1(ControllerActionInvoker invoker)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+Command: ReadCommandInfo Bookstore.Book records, filters: <null>
+2023-01-26 15:37:00.0122|INFO|Rhetos.Host.AspNet.RestApi.Filters.ApiExceptionFilter|Rhetos.ClientException: Invalid generic filter criteria: Property, Filter and Value are null.
+   at Rhetos.Dom.DefaultConcepts.GenericFilterHelper.ValidateAndPrepare(FilterCriteria filter)
+   at Rhetos.Dom.DefaultConcepts.GenericFilterHelper.ToFilterObjects(String dataStructureFullName, IEnumerable`1 genericFilter)
+   at Rhetos.Dom.DefaultConcepts.GenericRepository`1.ExecuteGenericFilter(IEnumerable`1 genericFilter, Boolean preferQuery, IEnumerable`1 items)
+   at Rhetos.Dom.DefaultConcepts.GenericRepository`1.Read(Object parameter, Type parameterType, Boolean preferQuery)
+   at Rhetos.Processing.DefaultCommands.ReadCommand.ReadData(ReadCommandInfo commandInfo, GenericRepository`1 genericRepository)
+   at Rhetos.Processing.DefaultCommands.ReadCommand.Execute(ReadCommandInfo readInfo)
+   at Rhetos.Processing.ICommandImplementation`2.Rhetos.Processing.ICommandImplementation.Execute(Object parameter)
+   at Rhetos.Processing.ProcessingEngine.ExecuteCommand(ICommandInfo commandInfo)
+   at Rhetos.Processing.ProcessingEngine.Execute(IList`1 commands)
+--- End of stack trace from previous location ---
+   at Rhetos.Utilities.ExceptionsUtility.Rethrow(Exception exception)
+   at Rhetos.Processing.ProcessingEngine.Execute(IList`1 commands)
+   at Rhetos.Processing.ProcessingEngineExtensions.Execute[TCommandResult](IProcessingEngine processingEngine, ICommandInfo`1 command)
+   at Rhetos.Host.AspNet.RestApi.Utilities.ServiceUtility.ExecuteReadCommand(ReadCommandInfo commandInfo)
+   at Rhetos.Host.AspNet.RestApi.Utilities.ServiceUtility.GetData[T](String filter, String fparam, String genericfilter, String filters, Int32 top, Int32 skip, Int32 page, Int32 psize, String sort, Boolean readRecords, Boolean readTotalCount)
+   at Rhetos.Host.AspNet.RestApi.Controllers.ReadDataApiController`1.Get(String filter, String fparam, String genericfilter, String filters, Int32 top, Int32 skip, Int32 page, Int32 psize, String sort)
+   at lambda_method919(Closure, Object, Object[])
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.SyncObjectResultExecutor.Execute(ActionContext actionContext, IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Logged|12_1(ControllerActionInvoker invoker)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+Command: ReadCommandInfo Bookstore.Book records, filters: <null>

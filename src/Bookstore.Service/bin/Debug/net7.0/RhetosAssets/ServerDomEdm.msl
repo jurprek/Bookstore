@@ -29,6 +29,14 @@
       </MappingFragment>
     </EntityTypeMapping>
   </EntitySetMapping>
+  <EntitySetMapping Name="Bookstore_BookRating">
+    <EntityTypeMapping TypeName="Rhetos.Bookstore_BookRating">
+      <MappingFragment StoreEntitySet="Bookstore_BookRating">
+        <ScalarProperty Name="ID" ColumnName="ID" />
+        <ScalarProperty Name="Rating" ColumnName="Rating" />
+      </MappingFragment>
+    </EntityTypeMapping>
+  </EntitySetMapping>
   <EntitySetMapping Name="Bookstore_BookTopic">
     <EntityTypeMapping TypeName="Rhetos.Bookstore_BookTopic">
       <MappingFragment StoreEntitySet="Bookstore_BookTopic">
@@ -71,6 +79,16 @@
         <ScalarProperty Name="ID" ColumnName="ID" />
         <ScalarProperty Name="Code" ColumnName="Code" />
         <ScalarProperty Name="Description" ColumnName="Description" />
+      </MappingFragment>
+    </EntityTypeMapping>
+  </EntitySetMapping>
+  <EntitySetMapping Name="Bookstore_Disposal">
+    <EntityTypeMapping TypeName="Rhetos.Bookstore_Disposal">
+      <MappingFragment StoreEntitySet="Bookstore_Disposal">
+        <ScalarProperty Name="ID" ColumnName="ID" />
+        <ScalarProperty Name="BookID" ColumnName="BookID" />
+        <ScalarProperty Name="EffectiveSince" ColumnName="EffectiveSince" />
+        <ScalarProperty Name="Explanation" ColumnName="Explanation" />
       </MappingFragment>
     </EntityTypeMapping>
   </EntitySetMapping>
@@ -179,6 +197,15 @@
       <MappingFragment StoreEntitySet="Bookstore_Translator">
         <ScalarProperty Name="ID" ColumnName="ID" />
         <ScalarProperty Name="Name" ColumnName="Name" />
+      </MappingFragment>
+    </EntityTypeMapping>
+  </EntitySetMapping>
+  <EntitySetMapping Name="Bookstore_WishList">
+    <EntityTypeMapping TypeName="Rhetos.Bookstore_WishList">
+      <MappingFragment StoreEntitySet="Bookstore_WishList">
+        <ScalarProperty Name="ID" ColumnName="ID" />
+        <ScalarProperty Name="BookTitle" ColumnName="BookTitle" />
+        <ScalarProperty Name="HighPriority" ColumnName="HighPriority" />
       </MappingFragment>
     </EntityTypeMapping>
   </EntitySetMapping>

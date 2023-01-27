@@ -10438,6 +10438,10 @@
           "VersionsRange": "[4.10.0, )"
         },
         {
+          "Id": "Rhetos",
+          "VersionsRange": "[5.3.0, )"
+        },
+        {
           "Id": "Rhetos.CommonConcepts",
           "VersionsRange": "[5.3.0, )"
         },

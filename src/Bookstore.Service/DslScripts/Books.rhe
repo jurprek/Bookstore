@@ -48,6 +48,25 @@ Module Bookstore  //https://github.com/Rhetos/Rhetos/wiki/Data-model-and-relatio
       }';
    }
 
+   Entity Disposal
+   {
+        Reference Book { Required; }
+        LongString Explanation { Required; }
+        DateTime EffectiveSince { CreationTime; }
+
+        ItemFilter ImportantBookExplanation 'item => item.Book.Title.Contains("important") && item.Explanation.Length < 50';        
+        ItemFilter HighRating 'item => item.Book.Extension_BookRating.Rating > 100';
+
+        InvalidData HighRating 'You are not allowed to dispose a book with rating above 100.';
+        InvalidData ImportantBookExplanation 'When disposing an important book, the explanation should be at least 50 characters long.';
+   }
+
+   Entity BookRating
+   {
+        Extends Bookstore.Book;
+        Decimal Rating; // ComputedFrom Bookstore.ComputeBookRating
+   }
+
    Parameter ComplexSearch
    {
         Integer MinimumPages;
@@ -118,13 +137,47 @@ Module Bookstore  //https://github.com/Rhetos/Rhetos/wiki/Data-model-and-relatio
       UniqueMultiple 'Book Topic';
    }
 
+   Entity WishList
+   {
+        ShortString BookTitle;
+        Bool HighPriority;
+   }
+
    Browse BookGrid Bookstore.Book
    {
         Take Code;
         Take Title;
         Take 'Author.Name';
         Take TranslatorName 'Extension_ForeignBook.Translator.Name';
+        //Take Description 'Extension_BookDescription.Description';
         Take NumberOfComments 'Extension_BookInfo.NumberOfComments';
+
+        // This query is an alternative data source for BookGrid.
+        // Instead of reading data from the `Bookstore.Book`, it provides the new data from WantedBooks.
+        Query 'Bookstore.WantedBooks' 'parameter =>
+            {
+                var wishList = _domRepository.Bookstore.WishList.Query();
+                if (parameter != null && parameter.HighPriorityOnly == true)
+                    wishList = wishList.Where(item => item.HighPriority == true);
+
+                var wantedBooks = wishList.Select(wish => new Common.Queryable.Bookstore_BookGrid
+                {
+                    // All properies must be declared here, otherwise EF will throw a NotSupportedException.
+                    ID = wish.ID,
+                    Code = null,
+                    Title = wish.BookTitle,
+                    AuthorName = "unknown",
+                    TranslatorName = null,
+                    //Description = null,
+                    NumberOfComments = null
+                });
+                return wantedBooks;
+            }';
+   }
+
+   Parameter WantedBooks
+   {
+        Bool HighPriorityOnly;
    }
 
    //SqlQueryable BookInfo

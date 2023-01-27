@@ -55,6 +55,13 @@
     <Property Name="ID" Type="uniqueidentifier" Nullable="false"  customannotation:Index="{ Name: IX_ID, Order: 0 }"/>
     <Property Name="NumberOfComments" Type="int" Nullable="true" />
   </EntityType>
+  <EntityType Name="Bookstore_BookRating">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="uniqueidentifier" Nullable="false"  customannotation:Index="{ Name: IX_ID, Order: 0 }"/>
+    <Property Name="Rating" Type="decimal" Precision="28" Scale="10" Nullable="true" />
+  </EntityType>
   <EntityType Name="Bookstore_BookTopic">
     <Key>
       <PropertyRef Name="ID" />
@@ -94,6 +101,15 @@
     <Property Name="ID" Type="uniqueidentifier" Nullable="false" />
     <Property Name="Code" Type="nvarchar(max)" Nullable="true" />
     <Property Name="Description" Type="nvarchar(max)" Nullable="true" />
+  </EntityType>
+  <EntityType Name="Bookstore_Disposal">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="BookID" Type="uniqueidentifier" customannotation:Index="{ Name: IX_BookID, Order: 0 }" Nullable="true" />
+    <Property Name="EffectiveSince" Type="datetime2" Precision="3" Nullable="true" />
+    <Property Name="Explanation" Type="nvarchar(max)" Nullable="true" />
   </EntityType>
   <EntityType Name="Bookstore_Education">
     <Key>
@@ -190,6 +206,14 @@
     </Key>
     <Property Name="ID" Type="uniqueidentifier" Nullable="false" />
     <Property Name="Name" Type="nvarchar(max)" Nullable="true" />
+  </EntityType>
+  <EntityType Name="Bookstore_WishList">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="BookTitle" Type="nvarchar(max)" Nullable="true" />
+    <Property Name="HighPriority" Type="bit" Nullable="true" />
   </EntityType>
   <EntityType Name="Common_AutoCodeCache">
     <Key>
@@ -367,6 +391,18 @@
       </Dependent>
     </ReferentialConstraint>
   </Association>
+  <Association Name="Bookstore_BookRating_Base">
+    <End Role="Bookstore_Book" Type="Self.Bookstore_Book" Multiplicity="1" />
+    <End Role="Bookstore_BookRating" Type="Self.Bookstore_BookRating" Multiplicity="0..1" />
+    <ReferentialConstraint>
+      <Principal Role="Bookstore_Book">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="Bookstore_BookRating">
+        <PropertyRef Name="ID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
   <Association Name="Bookstore_BookTopic_Book">
     <End Role="Bookstore_Book" Type="Self.Bookstore_Book" Multiplicity="0..1" />
     <End Role="Bookstore_BookTopic" Type="Self.Bookstore_BookTopic" Multiplicity="*" />
@@ -411,6 +447,18 @@
         <PropertyRef Name="ID" />
       </Principal>
       <Dependent Role="Bookstore_Comment">
+        <PropertyRef Name="BookID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="Bookstore_Disposal_Book">
+    <End Role="Bookstore_Book" Type="Self.Bookstore_Book" Multiplicity="0..1" />
+    <End Role="Bookstore_Disposal" Type="Self.Bookstore_Disposal" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Bookstore_Book">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="Bookstore_Disposal">
         <PropertyRef Name="BookID" />
       </Dependent>
     </ReferentialConstraint>
@@ -720,11 +768,13 @@
     <EntitySet Name="Bookstore_ApproveShipment" EntityType="Self.Bookstore_ApproveShipment" Schema="Bookstore" Table="ApproveShipment" />
     <EntitySet Name="Bookstore_Book" EntityType="Self.Bookstore_Book" Schema="Bookstore" Table="Book" />
     <EntitySet Name="Bookstore_BookInfo" EntityType="Self.Bookstore_BookInfo" Schema="Bookstore" Table="BookInfo" />
+    <EntitySet Name="Bookstore_BookRating" EntityType="Self.Bookstore_BookRating" Schema="Bookstore" Table="BookRating" />
     <EntitySet Name="Bookstore_BookTopic" EntityType="Self.Bookstore_BookTopic" Schema="Bookstore" Table="BookTopic" />
     <EntitySet Name="Bookstore_BookTranslator" EntityType="Self.Bookstore_BookTranslator" Schema="Bookstore" Table="BookTranslator" />
     <EntitySet Name="Bookstore_ChildrensBook" EntityType="Self.Bookstore_ChildrensBook" Schema="Bookstore" Table="ChildrensBook" />
     <EntitySet Name="Bookstore_Comment" EntityType="Self.Bookstore_Comment" Schema="Bookstore" Table="Comment" />
     <EntitySet Name="Bookstore_Department" EntityType="Self.Bookstore_Department" Schema="Bookstore" Table="Department" />
+    <EntitySet Name="Bookstore_Disposal" EntityType="Self.Bookstore_Disposal" Schema="Bookstore" Table="Disposal" />
     <EntitySet Name="Bookstore_Education" EntityType="Self.Bookstore_Education" Schema="Bookstore" Table="Education" />
     <EntitySet Name="Bookstore_Employees" EntityType="Self.Bookstore_Employees" Schema="Bookstore" Table="Employees" />
     <EntitySet Name="Bookstore_EmployeesDepartment" EntityType="Self.Bookstore_EmployeesDepartment" Schema="Bookstore" Table="EmployeesDepartment" />
@@ -737,6 +787,7 @@
     <EntitySet Name="Bookstore_ShipmentStatus" EntityType="Self.Bookstore_ShipmentStatus" Schema="Bookstore" Table="ShipmentStatus" />
     <EntitySet Name="Bookstore_Topic" EntityType="Self.Bookstore_Topic" Schema="Bookstore" Table="Topic" />
     <EntitySet Name="Bookstore_Translator" EntityType="Self.Bookstore_Translator" Schema="Bookstore" Table="Translator" />
+    <EntitySet Name="Bookstore_WishList" EntityType="Self.Bookstore_WishList" Schema="Bookstore" Table="WishList" />
     <EntitySet Name="Common_AutoCodeCache" EntityType="Self.Common_AutoCodeCache" Schema="Common" Table="AutoCodeCache" />
     <EntitySet Name="Common_Claim" EntityType="Self.Common_Claim" Schema="Common" Table="Claim" />
     <EntitySet Name="Common_ExclusiveLock" EntityType="Self.Common_ExclusiveLock" Schema="Common" Table="ExclusiveLock" />
@@ -757,6 +808,10 @@
     <End Role="Bookstore_Book" EntitySet="Bookstore_Book" />
     <End Role="Bookstore_BookInfo" EntitySet="Bookstore_BookInfo" />
   </AssociationSet>
+  <AssociationSet Name="Bookstore_BookRating_Base" Association="Self.Bookstore_BookRating_Base">
+    <End Role="Bookstore_Book" EntitySet="Bookstore_Book" />
+    <End Role="Bookstore_BookRating" EntitySet="Bookstore_BookRating" />
+  </AssociationSet>
   <AssociationSet Name="Bookstore_BookTopic_Book" Association="Self.Bookstore_BookTopic_Book">
     <End Role="Bookstore_Book" EntitySet="Bookstore_Book" />
     <End Role="Bookstore_BookTopic" EntitySet="Bookstore_BookTopic" />
@@ -772,6 +827,10 @@
   <AssociationSet Name="Bookstore_Comment_Book" Association="Self.Bookstore_Comment_Book">
     <End Role="Bookstore_Book" EntitySet="Bookstore_Book" />
     <End Role="Bookstore_Comment" EntitySet="Bookstore_Comment" />
+  </AssociationSet>
+  <AssociationSet Name="Bookstore_Disposal_Book" Association="Self.Bookstore_Disposal_Book">
+    <End Role="Bookstore_Book" EntitySet="Bookstore_Book" />
+    <End Role="Bookstore_Disposal" EntitySet="Bookstore_Disposal" />
   </AssociationSet>
   <AssociationSet Name="Bookstore_Education_Employees" Association="Self.Bookstore_Education_Employees">
     <End Role="Bookstore_Employees" EntitySet="Bookstore_Employees" />
