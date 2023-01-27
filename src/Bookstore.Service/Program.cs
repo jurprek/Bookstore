@@ -12,7 +12,7 @@ builder.Services.AddRhetosHost((serviceProvider, rhetosHostBuilder) => rhetosHos
               .AddRestApi(o =>
               {
                   o.BaseRoute = "rest";
-                  o.GroupNameMapper = (conceptInfo, controller, oldName) => "v1";
+                  o.GroupNameMapper = (conceptInfo, controller, oldName) => "rhetos";
               })
               .AddHostLogging();
 
@@ -31,7 +31,10 @@ builder.Services.AddControllers()
     });
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
 builder.Services.AddEndpointsApiExplorer();
-builder.Services.AddSwaggerGen(o => o.CustomSchemaIds(type => type.ToString())); // CustomSchemaIds allows multiple entities with the same name in different modules.
+builder.Services.AddSwaggerGen(o => {
+    o.CustomSchemaIds(type => type.ToString()); // CustomSchemaIds allows multiple entities with the same name in different modules.
+    o.SwaggerDoc("rhetos", new OpenApiInfo { Title = "Rhetos REST API", Version = "v1" });
+    });
 builder.Host.UseNLog();
 
 var app = builder.Build();
