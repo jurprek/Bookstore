@@ -2,7 +2,7 @@ Module Bookstore  //https://github.com/Rhetos/Rhetos/wiki/Data-model-and-relatio
 {
     AutodetectSqlDependencies;
 
-   Entity Book   //One-to-many relationship (master-detail). "1 : N" relationship is declared by the Reference from the dependent entity to the other one.
+   Entity Book //One-to-many relationship (master-detail). "1 : N" relationship is declared by the Reference from the dependent entity to the other one.
    {
       ShortString Code { AutoCode; DenyUserEdit; }
       //ShortString Code { RegExMatch "\d{7,10}" "Code must have 7 to 10 digits."; }

@@ -676,3 +676,8 @@ Command: ReadCommandInfo Bookstore.Book records, filters: <null>
 2023-01-27 08:43:43.4436|INFO|Microsoft.Hosting.Lifetime|Application started. Press Ctrl+C to shut down.
 2023-01-27 08:43:43.4550|INFO|Microsoft.Hosting.Lifetime|Hosting environment: Development
 2023-01-27 08:43:43.4550|INFO|Microsoft.Hosting.Lifetime|Content root path: C:\Users\jpreksavec\source\repos\Bookstore\src\Bookstore.Service
+2023-01-27 09:36:06.9510|INFO|Microsoft.Hosting.Lifetime|Now listening on: https://localhost:7194
+2023-01-27 09:36:06.9773|INFO|Microsoft.Hosting.Lifetime|Now listening on: http://localhost:5138
+2023-01-27 09:36:06.9855|INFO|Microsoft.Hosting.Lifetime|Application started. Press Ctrl+C to shut down.
+2023-01-27 09:36:06.9855|INFO|Microsoft.Hosting.Lifetime|Hosting environment: Development
+2023-01-27 09:36:06.9855|INFO|Microsoft.Hosting.Lifetime|Content root path: C:\Users\jpreksavec\source\repos\Bookstore\src\Bookstore.Service
