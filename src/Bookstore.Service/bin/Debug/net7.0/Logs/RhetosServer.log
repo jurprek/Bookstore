@@ -676,3 +676,79 @@ Command: ReadCommandInfo Bookstore.Book records, filters: <null>
 2023-01-27 08:43:43.4436|INFO|Microsoft.Hosting.Lifetime|Application started. Press Ctrl+C to shut down.
 2023-01-27 08:43:43.4550|INFO|Microsoft.Hosting.Lifetime|Hosting environment: Development
 2023-01-27 08:43:43.4550|INFO|Microsoft.Hosting.Lifetime|Content root path: C:\Users\jpreksavec\source\repos\Bookstore\src\Bookstore.Service
+2023-01-27 10:08:16.7330|INFO|Microsoft.Hosting.Lifetime|Now listening on: https://localhost:7194
+2023-01-27 10:08:16.7561|INFO|Microsoft.Hosting.Lifetime|Now listening on: http://localhost:5138
+2023-01-27 10:08:16.7561|INFO|Microsoft.Hosting.Lifetime|Application started. Press Ctrl+C to shut down.
+2023-01-27 10:08:16.7561|INFO|Microsoft.Hosting.Lifetime|Hosting environment: Development
+2023-01-27 10:08:16.7561|INFO|Microsoft.Hosting.Lifetime|Content root path: C:\Users\jpreksavec\source\repos\Bookstore\src\Bookstore.Service
+2023-01-27 10:52:53.3556|INFO|Microsoft.Hosting.Lifetime|Now listening on: https://localhost:7194
+2023-01-27 10:52:53.3792|INFO|Microsoft.Hosting.Lifetime|Now listening on: http://localhost:5138
+2023-01-27 10:52:53.3792|INFO|Microsoft.Hosting.Lifetime|Application started. Press Ctrl+C to shut down.
+2023-01-27 10:52:53.3792|INFO|Microsoft.Hosting.Lifetime|Hosting environment: Development
+2023-01-27 10:52:53.3792|INFO|Microsoft.Hosting.Lifetime|Content root path: C:\Users\jpreksavec\source\repos\Bookstore\src\Bookstore.Service
+2023-01-27 10:53:00.6335|INFO|Rhetos.Host.AspNet.RestApi.Filters.ApiExceptionFilter|Rhetos.ClientException: Invalid generic filter criteria: Property, Filter and Value are null.
+   at Rhetos.Dom.DefaultConcepts.GenericFilterHelper.ValidateAndPrepare(FilterCriteria filter)
+   at Rhetos.Dom.DefaultConcepts.GenericFilterHelper.ToFilterObjects(String dataStructureFullName, IEnumerable`1 genericFilter)
+   at Rhetos.Dom.DefaultConcepts.GenericRepository`1.ExecuteGenericFilter(IEnumerable`1 genericFilter, Boolean preferQuery, IEnumerable`1 items)
+   at Rhetos.Dom.DefaultConcepts.GenericRepository`1.Read(Object parameter, Type parameterType, Boolean preferQuery)
+   at Rhetos.Processing.DefaultCommands.ReadCommand.ReadData(ReadCommandInfo commandInfo, GenericRepository`1 genericRepository)
+   at Rhetos.Processing.DefaultCommands.ReadCommand.Execute(ReadCommandInfo readInfo)
+   at Rhetos.Processing.ICommandImplementation`2.Rhetos.Processing.ICommandImplementation.Execute(Object parameter)
+   at Rhetos.Processing.ProcessingEngine.ExecuteCommand(ICommandInfo commandInfo)
+   at Rhetos.Processing.ProcessingEngine.Execute(IList`1 commands)
+--- End of stack trace from previous location ---
+   at Rhetos.Utilities.ExceptionsUtility.Rethrow(Exception exception)
+   at Rhetos.Processing.ProcessingEngine.Execute(IList`1 commands)
+   at Rhetos.Processing.ProcessingEngineExtensions.Execute[TCommandResult](IProcessingEngine processingEngine, ICommandInfo`1 command)
+   at Rhetos.Host.AspNet.RestApi.Utilities.ServiceUtility.ExecuteReadCommand(ReadCommandInfo commandInfo)
+   at Rhetos.Host.AspNet.RestApi.Utilities.ServiceUtility.GetData[T](String filter, String fparam, String genericfilter, String filters, Int32 top, Int32 skip, Int32 page, Int32 psize, String sort, Boolean readRecords, Boolean readTotalCount)
+   at Rhetos.Host.AspNet.RestApi.Controllers.ReadDataApiController`1.Get(String filter, String fparam, String genericfilter, String filters, Int32 top, Int32 skip, Int32 page, Int32 psize, String sort)
+   at lambda_method919(Closure, Object, Object[])
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.SyncObjectResultExecutor.Execute(ActionContext actionContext, IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Logged|12_1(ControllerActionInvoker invoker)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+Command: ReadCommandInfo Bookstore.Book records, filters: <null>
+2023-01-27 10:59:24.4758|INFO|Rhetos.Host.AspNet.RestApi.Filters.ApiExceptionFilter|Rhetos.ClientException: Invalid generic filter parameter: Type 'Common.Queryable.Bookstore_Book' does not have property 'Name'.
+   at Rhetos.Dom.DefaultConcepts.GenericFilterHelper.ToExpression(IEnumerable`1 propertyFilters, Type parameterType)
+   at Rhetos.Dom.DefaultConcepts.GenericRepository`1.Read(Object parameter, Type parameterType, Boolean preferQuery)
+   at Rhetos.Dom.DefaultConcepts.GenericRepository`1.ExecuteGenericFilter(IEnumerable`1 genericFilter, Boolean preferQuery, IEnumerable`1 items)
+   at Rhetos.Dom.DefaultConcepts.GenericRepository`1.Read(Object parameter, Type parameterType, Boolean preferQuery)
+   at Rhetos.Processing.DefaultCommands.ReadCommand.ReadData(ReadCommandInfo commandInfo, GenericRepository`1 genericRepository)
+   at Rhetos.Processing.DefaultCommands.ReadCommand.Execute(ReadCommandInfo readInfo)
+   at Rhetos.Processing.ICommandImplementation`2.Rhetos.Processing.ICommandImplementation.Execute(Object parameter)
+   at Rhetos.Processing.ProcessingEngine.ExecuteCommand(ICommandInfo commandInfo)
+   at Rhetos.Processing.ProcessingEngine.Execute(IList`1 commands)
+--- End of stack trace from previous location ---
+   at Rhetos.Utilities.ExceptionsUtility.Rethrow(Exception exception)
+   at Rhetos.Processing.ProcessingEngine.Execute(IList`1 commands)
+   at Rhetos.Processing.ProcessingEngineExtensions.Execute[TCommandResult](IProcessingEngine processingEngine, ICommandInfo`1 command)
+   at Rhetos.Host.AspNet.RestApi.Utilities.ServiceUtility.ExecuteReadCommand(ReadCommandInfo commandInfo)
+   at Rhetos.Host.AspNet.RestApi.Utilities.ServiceUtility.GetData[T](String filter, String fparam, String genericfilter, String filters, Int32 top, Int32 skip, Int32 page, Int32 psize, String sort, Boolean readRecords, Boolean readTotalCount)
+   at Rhetos.Host.AspNet.RestApi.Controllers.ReadDataApiController`1.Get(String filter, String fparam, String genericfilter, String filters, Int32 top, Int32 skip, Int32 page, Int32 psize, String sort)
+   at lambda_method919(Closure, Object, Object[])
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.SyncObjectResultExecutor.Execute(ActionContext actionContext, IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Logged|12_1(ControllerActionInvoker invoker)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+Command: ReadCommandInfo Bookstore.Book records, filters: Name equal ""
+2023-01-27 10:59:58.7080|INFO|Rhetos.Host.AspNet.RestApi.Filters.ApiExceptionFilter|Rhetos.ClientException: Invalid generic filter criteria: Operation is not set. (Property = 'Title')
+   at Rhetos.Dom.DefaultConcepts.GenericFilterHelper.ValidateAndPrepare(FilterCriteria filter)
+   at Rhetos.Dom.DefaultConcepts.GenericFilterHelper.ToFilterObjects(String dataStructureFullName, IEnumerable`1 genericFilter)
+   at Rhetos.Dom.DefaultConcepts.GenericRepository`1.ExecuteGenericFilter(IEnumerable`1 genericFilter, Boolean preferQuery, IEnumerable`1 items)
+   at Rhetos.Dom.DefaultConcepts.GenericRepository`1.Read(Object parameter, Type parameterType, Boolean preferQuery)
+   at Rhetos.Processing.DefaultCommands.ReadCommand.ReadData(ReadCommandInfo commandInfo, GenericRepository`1 genericRepository)
+   at Rhetos.Processing.DefaultCommands.ReadCommand.Execute(ReadCommandInfo readInfo)
+   at Rhetos.Processing.ICommandImplementation`2.Rhetos.Processing.ICommandImplementation.Execute(Object parameter)
+   at Rhetos.Processing.ProcessingEngine.ExecuteCommand(ICommandInfo commandInfo)
+   at Rhetos.Processing.ProcessingEngine.Execute(IList`1 commands)
+--- End of stack trace from previous location ---
+   at Rhetos.Utilities.ExceptionsUtility.Rethrow(Exception exception)
+   at Rhetos.Processing.ProcessingEngine.Execute(IList`1 commands)
+   at Rhetos.Processing.ProcessingEngineExtensions.Execute[TCommandResult](IProcessingEngine processingEngine, ICommandInfo`1 command)
+   at Rhetos.Host.AspNet.RestApi.Utilities.ServiceUtility.ExecuteReadCommand(ReadCommandInfo commandInfo)
+   at Rhetos.Host.AspNet.RestApi.Utilities.ServiceUtility.GetData[T](String filter, String fparam, String genericfilter, String filters, Int32 top, Int32 skip, Int32 page, Int32 psize, String sort, Boolean readRecords, Boolean readTotalCount)
+   at Rhetos.Host.AspNet.RestApi.Controllers.ReadDataApiController`1.Get(String filter, String fparam, String genericfilter, String filters, Int32 top, Int32 skip, Int32 page, Int32 psize, String sort)
+   at lambda_method919(Closure, Object, Object[])
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.SyncObjectResultExecutor.Execute(ActionContext actionContext, IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Logged|12_1(ControllerActionInvoker invoker)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+Command: ReadCommandInfo Bookstore.Book records, filters: Title ""
