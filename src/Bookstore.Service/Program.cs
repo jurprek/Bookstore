@@ -1,7 +1,29 @@
 using Rhetos;
 using NLog.Web;
+using Microsoft.AspNetCore.Localization;
+using System.Collections.Generic;
+using System.Globalization;
+using Microsoft.AspNetCore.Authentication.Negotiate;
+using Microsoft.AspNetCore.Authentication.Cookies;
+using Microsoft.AspNetCore.Http;
 
 var builder = WebApplication.CreateBuilder(args);
+
+builder.Services.AddAuthentication(NegotiateDefaults.AuthenticationScheme)
+   .AddNegotiate();
+
+builder.Services.AddAuthorization(options =>
+{
+    options.FallbackPolicy = options.DefaultPolicy;
+});
+builder.Services.AddRazorPages();
+
+builder.Services.AddAuthentication(CookieAuthenticationDefaults.AuthenticationScheme)
+    .AddCookie(o => o.Events.OnRedirectToLogin = context =>
+    {
+        context.Response.StatusCode = StatusCodes.Status401Unauthorized;
+        return Task.CompletedTask;
+    });
 
 builder.Services.AddRhetosHost((serviceProvider, rhetosHostBuilder) => rhetosHostBuilder
                   .ConfigureRhetosAppDefaults()
@@ -12,9 +34,12 @@ builder.Services.AddRhetosHost((serviceProvider, rhetosHostBuilder) => rhetosHos
               .AddRestApi(o =>
               {
                   o.BaseRoute = "rest";
-                  o.GroupNameMapper = (conceptInfo, controller, oldName) => "v1";
+                  o.GroupNameMapper = (conceptInfo, controller, oldName) => "v1"; 
               })
               .AddHostLogging();
+    //.AddHostLocalization();
+
+
 
 // Add services to the container.
 
@@ -35,7 +60,6 @@ builder.Services.AddSwaggerGen(o => o.CustomSchemaIds(type => type.ToString()));
 builder.Host.UseNLog();
 
 var app = builder.Build();
-
 // Configure the HTTP request pipeline.
 if (app.Environment.IsDevelopment())
 {
@@ -44,9 +68,11 @@ if (app.Environment.IsDevelopment())
 }
 
 app.UseHttpsRedirection();
-
+app.UseStaticFiles();
+app.UseRouting();
+app.UseAuthentication();
 app.UseAuthorization();
-
+//app.MapRazorPages();
 app.UseRhetosRestApi();
 
 app.MapControllers();

@@ -1212,6 +1212,94 @@
       ]
     },
     {
+      "Id": "System.IO.Pipelines",
+      "Version": "7.0.0.0",
+      "Dependencies": [],
+      "Folder": "C:\\Users\\jpreksavec\\.nuget\\packages\\system.io.pipelines\\7.0.0",
+      "ContentFiles": [
+        {
+          "PhysicalPath": "C:\\Users\\jpreksavec\\.nuget\\packages\\system.io.pipelines\\7.0.0\\.nupkg.metadata",
+          "InPackagePath": ".nupkg.metadata"
+        },
+        {
+          "PhysicalPath": "C:\\Users\\jpreksavec\\.nuget\\packages\\system.io.pipelines\\7.0.0\\.signature.p7s",
+          "InPackagePath": ".signature.p7s"
+        },
+        {
+          "PhysicalPath": "C:\\Users\\jpreksavec\\.nuget\\packages\\system.io.pipelines\\7.0.0\\Icon.png",
+          "InPackagePath": "Icon.png"
+        },
+        {
+          "PhysicalPath": "C:\\Users\\jpreksavec\\.nuget\\packages\\system.io.pipelines\\7.0.0\\LICENSE.TXT",
+          "InPackagePath": "LICENSE.TXT"
+        },
+        {
+          "PhysicalPath": "C:\\Users\\jpreksavec\\.nuget\\packages\\system.io.pipelines\\7.0.0\\THIRD-PARTY-NOTICES.TXT",
+          "InPackagePath": "THIRD-PARTY-NOTICES.TXT"
+        },
+        {
+          "PhysicalPath": "C:\\Users\\jpreksavec\\.nuget\\packages\\system.io.pipelines\\7.0.0\\buildTransitive\\net461\\System.IO.Pipelines.targets",
+          "InPackagePath": "buildTransitive\\net461\\System.IO.Pipelines.targets"
+        },
+        {
+          "PhysicalPath": "C:\\Users\\jpreksavec\\.nuget\\packages\\system.io.pipelines\\7.0.0\\buildTransitive\\net462\\_._",
+          "InPackagePath": "buildTransitive\\net462\\_._"
+        },
+        {
+          "PhysicalPath": "C:\\Users\\jpreksavec\\.nuget\\packages\\system.io.pipelines\\7.0.0\\buildTransitive\\net6.0\\_._",
+          "InPackagePath": "buildTransitive\\net6.0\\_._"
+        },
+        {
+          "PhysicalPath": "C:\\Users\\jpreksavec\\.nuget\\packages\\system.io.pipelines\\7.0.0\\buildTransitive\\netcoreapp2.0\\System.IO.Pipelines.targets",
+          "InPackagePath": "buildTransitive\\netcoreapp2.0\\System.IO.Pipelines.targets"
+        },
+        {
+          "PhysicalPath": "C:\\Users\\jpreksavec\\.nuget\\packages\\system.io.pipelines\\7.0.0\\lib\\net462\\System.IO.Pipelines.dll",
+          "InPackagePath": "lib\\net462\\System.IO.Pipelines.dll"
+        },
+        {
+          "PhysicalPath": "C:\\Users\\jpreksavec\\.nuget\\packages\\system.io.pipelines\\7.0.0\\lib\\net462\\System.IO.Pipelines.xml",
+          "InPackagePath": "lib\\net462\\System.IO.Pipelines.xml"
+        },
+        {
+          "PhysicalPath": "C:\\Users\\jpreksavec\\.nuget\\packages\\system.io.pipelines\\7.0.0\\lib\\net6.0\\System.IO.Pipelines.dll",
+          "InPackagePath": "lib\\net6.0\\System.IO.Pipelines.dll"
+        },
+        {
+          "PhysicalPath": "C:\\Users\\jpreksavec\\.nuget\\packages\\system.io.pipelines\\7.0.0\\lib\\net6.0\\System.IO.Pipelines.xml",
+          "InPackagePath": "lib\\net6.0\\System.IO.Pipelines.xml"
+        },
+        {
+          "PhysicalPath": "C:\\Users\\jpreksavec\\.nuget\\packages\\system.io.pipelines\\7.0.0\\lib\\net7.0\\System.IO.Pipelines.dll",
+          "InPackagePath": "lib\\net7.0\\System.IO.Pipelines.dll"
+        },
+        {
+          "PhysicalPath": "C:\\Users\\jpreksavec\\.nuget\\packages\\system.io.pipelines\\7.0.0\\lib\\net7.0\\System.IO.Pipelines.xml",
+          "InPackagePath": "lib\\net7.0\\System.IO.Pipelines.xml"
+        },
+        {
+          "PhysicalPath": "C:\\Users\\jpreksavec\\.nuget\\packages\\system.io.pipelines\\7.0.0\\lib\\netstandard2.0\\System.IO.Pipelines.dll",
+          "InPackagePath": "lib\\netstandard2.0\\System.IO.Pipelines.dll"
+        },
+        {
+          "PhysicalPath": "C:\\Users\\jpreksavec\\.nuget\\packages\\system.io.pipelines\\7.0.0\\lib\\netstandard2.0\\System.IO.Pipelines.xml",
+          "InPackagePath": "lib\\netstandard2.0\\System.IO.Pipelines.xml"
+        },
+        {
+          "PhysicalPath": "C:\\Users\\jpreksavec\\.nuget\\packages\\system.io.pipelines\\7.0.0\\system.io.pipelines.7.0.0.nupkg.sha512",
+          "InPackagePath": "system.io.pipelines.7.0.0.nupkg.sha512"
+        },
+        {
+          "PhysicalPath": "C:\\Users\\jpreksavec\\.nuget\\packages\\system.io.pipelines\\7.0.0\\system.io.pipelines.nuspec",
+          "InPackagePath": "system.io.pipelines.nuspec"
+        },
+        {
+          "PhysicalPath": "C:\\Users\\jpreksavec\\.nuget\\packages\\system.io.pipelines\\7.0.0\\useSharedDesignerContext.txt",
+          "InPackagePath": "useSharedDesignerContext.txt"
+        }
+      ]
+    },
+    {
       "Id": "System.IO.FileSystem.AccessControl",
       "Version": "5.0.0.0",
       "Dependencies": [
@@ -1373,6 +1461,130 @@
         {
           "PhysicalPath": "C:\\Users\\jpreksavec\\.nuget\\packages\\system.io.filesystem.accesscontrol\\5.0.0\\version.txt",
           "InPackagePath": "version.txt"
+        }
+      ]
+    },
+    {
+      "Id": "System.DirectoryServices.Protocols",
+      "Version": "7.0.0.0",
+      "Dependencies": [],
+      "Folder": "C:\\Users\\jpreksavec\\.nuget\\packages\\system.directoryservices.protocols\\7.0.0",
+      "ContentFiles": [
+        {
+          "PhysicalPath": "C:\\Users\\jpreksavec\\.nuget\\packages\\system.directoryservices.protocols\\7.0.0\\.nupkg.metadata",
+          "InPackagePath": ".nupkg.metadata"
+        },
+        {
+          "PhysicalPath": "C:\\Users\\jpreksavec\\.nuget\\packages\\system.directoryservices.protocols\\7.0.0\\.signature.p7s",
+          "InPackagePath": ".signature.p7s"
+        },
+        {
+          "PhysicalPath": "C:\\Users\\jpreksavec\\.nuget\\packages\\system.directoryservices.protocols\\7.0.0\\Icon.png",
+          "InPackagePath": "Icon.png"
+        },
+        {
+          "PhysicalPath": "C:\\Users\\jpreksavec\\.nuget\\packages\\system.directoryservices.protocols\\7.0.0\\LICENSE.TXT",
+          "InPackagePath": "LICENSE.TXT"
+        },
+        {
+          "PhysicalPath": "C:\\Users\\jpreksavec\\.nuget\\packages\\system.directoryservices.protocols\\7.0.0\\THIRD-PARTY-NOTICES.TXT",
+          "InPackagePath": "THIRD-PARTY-NOTICES.TXT"
+        },
+        {
+          "PhysicalPath": "C:\\Users\\jpreksavec\\.nuget\\packages\\system.directoryservices.protocols\\7.0.0\\buildTransitive\\net6.0\\_._",
+          "InPackagePath": "buildTransitive\\net6.0\\_._"
+        },
+        {
+          "PhysicalPath": "C:\\Users\\jpreksavec\\.nuget\\packages\\system.directoryservices.protocols\\7.0.0\\buildTransitive\\netcoreapp2.0\\System.DirectoryServices.Protocols.targets",
+          "InPackagePath": "buildTransitive\\netcoreapp2.0\\System.DirectoryServices.Protocols.targets"
+        },
+        {
+          "PhysicalPath": "C:\\Users\\jpreksavec\\.nuget\\packages\\system.directoryservices.protocols\\7.0.0\\lib\\net462\\_._",
+          "InPackagePath": "lib\\net462\\_._"
+        },
+        {
+          "PhysicalPath": "C:\\Users\\jpreksavec\\.nuget\\packages\\system.directoryservices.protocols\\7.0.0\\lib\\net6.0\\System.DirectoryServices.Protocols.dll",
+          "InPackagePath": "lib\\net6.0\\System.DirectoryServices.Protocols.dll"
+        },
+        {
+          "PhysicalPath": "C:\\Users\\jpreksavec\\.nuget\\packages\\system.directoryservices.protocols\\7.0.0\\lib\\net6.0\\System.DirectoryServices.Protocols.xml",
+          "InPackagePath": "lib\\net6.0\\System.DirectoryServices.Protocols.xml"
+        },
+        {
+          "PhysicalPath": "C:\\Users\\jpreksavec\\.nuget\\packages\\system.directoryservices.protocols\\7.0.0\\lib\\net7.0\\System.DirectoryServices.Protocols.dll",
+          "InPackagePath": "lib\\net7.0\\System.DirectoryServices.Protocols.dll"
+        },
+        {
+          "PhysicalPath": "C:\\Users\\jpreksavec\\.nuget\\packages\\system.directoryservices.protocols\\7.0.0\\lib\\net7.0\\System.DirectoryServices.Protocols.xml",
+          "InPackagePath": "lib\\net7.0\\System.DirectoryServices.Protocols.xml"
+        },
+        {
+          "PhysicalPath": "C:\\Users\\jpreksavec\\.nuget\\packages\\system.directoryservices.protocols\\7.0.0\\lib\\netstandard2.0\\System.DirectoryServices.Protocols.dll",
+          "InPackagePath": "lib\\netstandard2.0\\System.DirectoryServices.Protocols.dll"
+        },
+        {
+          "PhysicalPath": "C:\\Users\\jpreksavec\\.nuget\\packages\\system.directoryservices.protocols\\7.0.0\\lib\\netstandard2.0\\System.DirectoryServices.Protocols.xml",
+          "InPackagePath": "lib\\netstandard2.0\\System.DirectoryServices.Protocols.xml"
+        },
+        {
+          "PhysicalPath": "C:\\Users\\jpreksavec\\.nuget\\packages\\system.directoryservices.protocols\\7.0.0\\runtimes\\linux\\lib\\net6.0\\System.DirectoryServices.Protocols.dll",
+          "InPackagePath": "runtimes\\linux\\lib\\net6.0\\System.DirectoryServices.Protocols.dll"
+        },
+        {
+          "PhysicalPath": "C:\\Users\\jpreksavec\\.nuget\\packages\\system.directoryservices.protocols\\7.0.0\\runtimes\\linux\\lib\\net6.0\\System.DirectoryServices.Protocols.xml",
+          "InPackagePath": "runtimes\\linux\\lib\\net6.0\\System.DirectoryServices.Protocols.xml"
+        },
+        {
+          "PhysicalPath": "C:\\Users\\jpreksavec\\.nuget\\packages\\system.directoryservices.protocols\\7.0.0\\runtimes\\linux\\lib\\net7.0\\System.DirectoryServices.Protocols.dll",
+          "InPackagePath": "runtimes\\linux\\lib\\net7.0\\System.DirectoryServices.Protocols.dll"
+        },
+        {
+          "PhysicalPath": "C:\\Users\\jpreksavec\\.nuget\\packages\\system.directoryservices.protocols\\7.0.0\\runtimes\\linux\\lib\\net7.0\\System.DirectoryServices.Protocols.xml",
+          "InPackagePath": "runtimes\\linux\\lib\\net7.0\\System.DirectoryServices.Protocols.xml"
+        },
+        {
+          "PhysicalPath": "C:\\Users\\jpreksavec\\.nuget\\packages\\system.directoryservices.protocols\\7.0.0\\runtimes\\osx\\lib\\net6.0\\System.DirectoryServices.Protocols.dll",
+          "InPackagePath": "runtimes\\osx\\lib\\net6.0\\System.DirectoryServices.Protocols.dll"
+        },
+        {
+          "PhysicalPath": "C:\\Users\\jpreksavec\\.nuget\\packages\\system.directoryservices.protocols\\7.0.0\\runtimes\\osx\\lib\\net6.0\\System.DirectoryServices.Protocols.xml",
+          "InPackagePath": "runtimes\\osx\\lib\\net6.0\\System.DirectoryServices.Protocols.xml"
+        },
+        {
+          "PhysicalPath": "C:\\Users\\jpreksavec\\.nuget\\packages\\system.directoryservices.protocols\\7.0.0\\runtimes\\osx\\lib\\net7.0\\System.DirectoryServices.Protocols.dll",
+          "InPackagePath": "runtimes\\osx\\lib\\net7.0\\System.DirectoryServices.Protocols.dll"
+        },
+        {
+          "PhysicalPath": "C:\\Users\\jpreksavec\\.nuget\\packages\\system.directoryservices.protocols\\7.0.0\\runtimes\\osx\\lib\\net7.0\\System.DirectoryServices.Protocols.xml",
+          "InPackagePath": "runtimes\\osx\\lib\\net7.0\\System.DirectoryServices.Protocols.xml"
+        },
+        {
+          "PhysicalPath": "C:\\Users\\jpreksavec\\.nuget\\packages\\system.directoryservices.protocols\\7.0.0\\runtimes\\win\\lib\\net6.0\\System.DirectoryServices.Protocols.dll",
+          "InPackagePath": "runtimes\\win\\lib\\net6.0\\System.DirectoryServices.Protocols.dll"
+        },
+        {
+          "PhysicalPath": "C:\\Users\\jpreksavec\\.nuget\\packages\\system.directoryservices.protocols\\7.0.0\\runtimes\\win\\lib\\net6.0\\System.DirectoryServices.Protocols.xml",
+          "InPackagePath": "runtimes\\win\\lib\\net6.0\\System.DirectoryServices.Protocols.xml"
+        },
+        {
+          "PhysicalPath": "C:\\Users\\jpreksavec\\.nuget\\packages\\system.directoryservices.protocols\\7.0.0\\runtimes\\win\\lib\\net7.0\\System.DirectoryServices.Protocols.dll",
+          "InPackagePath": "runtimes\\win\\lib\\net7.0\\System.DirectoryServices.Protocols.dll"
+        },
+        {
+          "PhysicalPath": "C:\\Users\\jpreksavec\\.nuget\\packages\\system.directoryservices.protocols\\7.0.0\\runtimes\\win\\lib\\net7.0\\System.DirectoryServices.Protocols.xml",
+          "InPackagePath": "runtimes\\win\\lib\\net7.0\\System.DirectoryServices.Protocols.xml"
+        },
+        {
+          "PhysicalPath": "C:\\Users\\jpreksavec\\.nuget\\packages\\system.directoryservices.protocols\\7.0.0\\system.directoryservices.protocols.7.0.0.nupkg.sha512",
+          "InPackagePath": "system.directoryservices.protocols.7.0.0.nupkg.sha512"
+        },
+        {
+          "PhysicalPath": "C:\\Users\\jpreksavec\\.nuget\\packages\\system.directoryservices.protocols\\7.0.0\\system.directoryservices.protocols.nuspec",
+          "InPackagePath": "system.directoryservices.protocols.nuspec"
+        },
+        {
+          "PhysicalPath": "C:\\Users\\jpreksavec\\.nuget\\packages\\system.directoryservices.protocols\\7.0.0\\useSharedDesignerContext.txt",
+          "InPackagePath": "useSharedDesignerContext.txt"
         }
       ]
     },
@@ -4184,157 +4396,52 @@
     },
     {
       "Id": "Microsoft.NETCore.Platforms",
-      "Version": "5.0.4.0",
+      "Version": "5.0.0.0",
       "Dependencies": [],
-      "Folder": "C:\\Users\\jpreksavec\\.nuget\\packages\\microsoft.netcore.platforms\\5.0.4",
+      "Folder": "C:\\Users\\jpreksavec\\.nuget\\packages\\microsoft.netcore.platforms\\5.0.0",
       "ContentFiles": [
         {
-          "PhysicalPath": "C:\\Users\\jpreksavec\\.nuget\\packages\\microsoft.netcore.platforms\\5.0.4\\.nupkg.metadata",
+          "PhysicalPath": "C:\\Users\\jpreksavec\\.nuget\\packages\\microsoft.netcore.platforms\\5.0.0\\.nupkg.metadata",
           "InPackagePath": ".nupkg.metadata"
         },
         {
-          "PhysicalPath": "C:\\Users\\jpreksavec\\.nuget\\packages\\microsoft.netcore.platforms\\5.0.4\\.signature.p7s",
+          "PhysicalPath": "C:\\Users\\jpreksavec\\.nuget\\packages\\microsoft.netcore.platforms\\5.0.0\\.signature.p7s",
           "InPackagePath": ".signature.p7s"
         },
         {
-          "PhysicalPath": "C:\\Users\\jpreksavec\\.nuget\\packages\\microsoft.netcore.platforms\\5.0.4\\Icon.png",
+          "PhysicalPath": "C:\\Users\\jpreksavec\\.nuget\\packages\\microsoft.netcore.platforms\\5.0.0\\Icon.png",
           "InPackagePath": "Icon.png"
         },
         {
-          "PhysicalPath": "C:\\Users\\jpreksavec\\.nuget\\packages\\microsoft.netcore.platforms\\5.0.4\\LICENSE.TXT",
+          "PhysicalPath": "C:\\Users\\jpreksavec\\.nuget\\packages\\microsoft.netcore.platforms\\5.0.0\\LICENSE.TXT",
           "InPackagePath": "LICENSE.TXT"
         },
         {
-          "PhysicalPath": "C:\\Users\\jpreksavec\\.nuget\\packages\\microsoft.netcore.platforms\\5.0.4\\THIRD-PARTY-NOTICES.TXT",
+          "PhysicalPath": "C:\\Users\\jpreksavec\\.nuget\\packages\\microsoft.netcore.platforms\\5.0.0\\THIRD-PARTY-NOTICES.TXT",
           "InPackagePath": "THIRD-PARTY-NOTICES.TXT"
         },
         {
-          "PhysicalPath": "C:\\Users\\jpreksavec\\.nuget\\packages\\microsoft.netcore.platforms\\5.0.4\\lib\\netstandard1.0\\_._",
+          "PhysicalPath": "C:\\Users\\jpreksavec\\.nuget\\packages\\microsoft.netcore.platforms\\5.0.0\\lib\\netstandard1.0\\_._",
           "InPackagePath": "lib\\netstandard1.0\\_._"
         },
         {
-          "PhysicalPath": "C:\\Users\\jpreksavec\\.nuget\\packages\\microsoft.netcore.platforms\\5.0.4\\microsoft.netcore.platforms.5.0.4.nupkg.sha512",
-          "InPackagePath": "microsoft.netcore.platforms.5.0.4.nupkg.sha512"
+          "PhysicalPath": "C:\\Users\\jpreksavec\\.nuget\\packages\\microsoft.netcore.platforms\\5.0.0\\microsoft.netcore.platforms.5.0.0.nupkg.sha512",
+          "InPackagePath": "microsoft.netcore.platforms.5.0.0.nupkg.sha512"
         },
         {
-          "PhysicalPath": "C:\\Users\\jpreksavec\\.nuget\\packages\\microsoft.netcore.platforms\\5.0.4\\microsoft.netcore.platforms.nuspec",
+          "PhysicalPath": "C:\\Users\\jpreksavec\\.nuget\\packages\\microsoft.netcore.platforms\\5.0.0\\microsoft.netcore.platforms.nuspec",
           "InPackagePath": "microsoft.netcore.platforms.nuspec"
         },
         {
-          "PhysicalPath": "C:\\Users\\jpreksavec\\.nuget\\packages\\microsoft.netcore.platforms\\5.0.4\\runtime.json",
+          "PhysicalPath": "C:\\Users\\jpreksavec\\.nuget\\packages\\microsoft.netcore.platforms\\5.0.0\\runtime.json",
           "InPackagePath": "runtime.json"
         },
         {
-          "PhysicalPath": "C:\\Users\\jpreksavec\\.nuget\\packages\\microsoft.netcore.platforms\\5.0.4\\useSharedDesignerContext.txt",
+          "PhysicalPath": "C:\\Users\\jpreksavec\\.nuget\\packages\\microsoft.netcore.platforms\\5.0.0\\useSharedDesignerContext.txt",
           "InPackagePath": "useSharedDesignerContext.txt"
         },
         {
-          "PhysicalPath": "C:\\Users\\jpreksavec\\.nuget\\packages\\microsoft.netcore.platforms\\5.0.4\\version.txt",
-          "InPackagePath": "version.txt"
-        }
-      ]
-    },
-    {
-      "Id": "System.DirectoryServices.Protocols",
-      "Version": "5.0.1.0",
-      "Dependencies": [
-        {
-          "Id": "Microsoft.NETCore.Platforms",
-          "VersionsRange": "5.0.4"
-        },
-        {
-          "Id": "System.Security.Principal.Windows",
-          "VersionsRange": "5.0.0"
-        }
-      ],
-      "Folder": "C:\\Users\\jpreksavec\\.nuget\\packages\\system.directoryservices.protocols\\5.0.1",
-      "ContentFiles": [
-        {
-          "PhysicalPath": "C:\\Users\\jpreksavec\\.nuget\\packages\\system.directoryservices.protocols\\5.0.1\\.nupkg.metadata",
-          "InPackagePath": ".nupkg.metadata"
-        },
-        {
-          "PhysicalPath": "C:\\Users\\jpreksavec\\.nuget\\packages\\system.directoryservices.protocols\\5.0.1\\.signature.p7s",
-          "InPackagePath": ".signature.p7s"
-        },
-        {
-          "PhysicalPath": "C:\\Users\\jpreksavec\\.nuget\\packages\\system.directoryservices.protocols\\5.0.1\\Icon.png",
-          "InPackagePath": "Icon.png"
-        },
-        {
-          "PhysicalPath": "C:\\Users\\jpreksavec\\.nuget\\packages\\system.directoryservices.protocols\\5.0.1\\LICENSE.TXT",
-          "InPackagePath": "LICENSE.TXT"
-        },
-        {
-          "PhysicalPath": "C:\\Users\\jpreksavec\\.nuget\\packages\\system.directoryservices.protocols\\5.0.1\\THIRD-PARTY-NOTICES.TXT",
-          "InPackagePath": "THIRD-PARTY-NOTICES.TXT"
-        },
-        {
-          "PhysicalPath": "C:\\Users\\jpreksavec\\.nuget\\packages\\system.directoryservices.protocols\\5.0.1\\lib\\net45\\_._",
-          "InPackagePath": "lib\\net45\\_._"
-        },
-        {
-          "PhysicalPath": "C:\\Users\\jpreksavec\\.nuget\\packages\\system.directoryservices.protocols\\5.0.1\\lib\\netstandard2.0\\System.DirectoryServices.Protocols.dll",
-          "InPackagePath": "lib\\netstandard2.0\\System.DirectoryServices.Protocols.dll"
-        },
-        {
-          "PhysicalPath": "C:\\Users\\jpreksavec\\.nuget\\packages\\system.directoryservices.protocols\\5.0.1\\lib\\netstandard2.0\\System.DirectoryServices.Protocols.xml",
-          "InPackagePath": "lib\\netstandard2.0\\System.DirectoryServices.Protocols.xml"
-        },
-        {
-          "PhysicalPath": "C:\\Users\\jpreksavec\\.nuget\\packages\\system.directoryservices.protocols\\5.0.1\\ref\\net45\\_._",
-          "InPackagePath": "ref\\net45\\_._"
-        },
-        {
-          "PhysicalPath": "C:\\Users\\jpreksavec\\.nuget\\packages\\system.directoryservices.protocols\\5.0.1\\ref\\netstandard2.0\\System.DirectoryServices.Protocols.dll",
-          "InPackagePath": "ref\\netstandard2.0\\System.DirectoryServices.Protocols.dll"
-        },
-        {
-          "PhysicalPath": "C:\\Users\\jpreksavec\\.nuget\\packages\\system.directoryservices.protocols\\5.0.1\\ref\\netstandard2.0\\System.DirectoryServices.Protocols.xml",
-          "InPackagePath": "ref\\netstandard2.0\\System.DirectoryServices.Protocols.xml"
-        },
-        {
-          "PhysicalPath": "C:\\Users\\jpreksavec\\.nuget\\packages\\system.directoryservices.protocols\\5.0.1\\runtimes\\linux\\lib\\netcoreapp2.0\\System.DirectoryServices.Protocols.dll",
-          "InPackagePath": "runtimes\\linux\\lib\\netcoreapp2.0\\System.DirectoryServices.Protocols.dll"
-        },
-        {
-          "PhysicalPath": "C:\\Users\\jpreksavec\\.nuget\\packages\\system.directoryservices.protocols\\5.0.1\\runtimes\\linux\\lib\\netcoreapp2.0\\System.DirectoryServices.Protocols.xml",
-          "InPackagePath": "runtimes\\linux\\lib\\netcoreapp2.0\\System.DirectoryServices.Protocols.xml"
-        },
-        {
-          "PhysicalPath": "C:\\Users\\jpreksavec\\.nuget\\packages\\system.directoryservices.protocols\\5.0.1\\runtimes\\osx\\lib\\netcoreapp2.0\\System.DirectoryServices.Protocols.dll",
-          "InPackagePath": "runtimes\\osx\\lib\\netcoreapp2.0\\System.DirectoryServices.Protocols.dll"
-        },
-        {
-          "PhysicalPath": "C:\\Users\\jpreksavec\\.nuget\\packages\\system.directoryservices.protocols\\5.0.1\\runtimes\\osx\\lib\\netcoreapp2.0\\System.DirectoryServices.Protocols.xml",
-          "InPackagePath": "runtimes\\osx\\lib\\netcoreapp2.0\\System.DirectoryServices.Protocols.xml"
-        },
-        {
-          "PhysicalPath": "C:\\Users\\jpreksavec\\.nuget\\packages\\system.directoryservices.protocols\\5.0.1\\runtimes\\win\\lib\\net45\\_._",
-          "InPackagePath": "runtimes\\win\\lib\\net45\\_._"
-        },
-        {
-          "PhysicalPath": "C:\\Users\\jpreksavec\\.nuget\\packages\\system.directoryservices.protocols\\5.0.1\\runtimes\\win\\lib\\netcoreapp2.0\\System.DirectoryServices.Protocols.dll",
-          "InPackagePath": "runtimes\\win\\lib\\netcoreapp2.0\\System.DirectoryServices.Protocols.dll"
-        },
-        {
-          "PhysicalPath": "C:\\Users\\jpreksavec\\.nuget\\packages\\system.directoryservices.protocols\\5.0.1\\runtimes\\win\\lib\\netcoreapp2.0\\System.DirectoryServices.Protocols.xml",
-          "InPackagePath": "runtimes\\win\\lib\\netcoreapp2.0\\System.DirectoryServices.Protocols.xml"
-        },
-        {
-          "PhysicalPath": "C:\\Users\\jpreksavec\\.nuget\\packages\\system.directoryservices.protocols\\5.0.1\\system.directoryservices.protocols.5.0.1.nupkg.sha512",
-          "InPackagePath": "system.directoryservices.protocols.5.0.1.nupkg.sha512"
-        },
-        {
-          "PhysicalPath": "C:\\Users\\jpreksavec\\.nuget\\packages\\system.directoryservices.protocols\\5.0.1\\system.directoryservices.protocols.nuspec",
-          "InPackagePath": "system.directoryservices.protocols.nuspec"
-        },
-        {
-          "PhysicalPath": "C:\\Users\\jpreksavec\\.nuget\\packages\\system.directoryservices.protocols\\5.0.1\\useSharedDesignerContext.txt",
-          "InPackagePath": "useSharedDesignerContext.txt"
-        },
-        {
-          "PhysicalPath": "C:\\Users\\jpreksavec\\.nuget\\packages\\system.directoryservices.protocols\\5.0.1\\version.txt",
+          "PhysicalPath": "C:\\Users\\jpreksavec\\.nuget\\packages\\microsoft.netcore.platforms\\5.0.0\\version.txt",
           "InPackagePath": "version.txt"
         }
       ]
@@ -4591,188 +4698,260 @@
     },
     {
       "Id": "Microsoft.Extensions.Logging.Abstractions",
-      "Version": "6.0.0.0",
+      "Version": "7.0.0.0",
       "Dependencies": [],
-      "Folder": "C:\\Users\\jpreksavec\\.nuget\\packages\\microsoft.extensions.logging.abstractions\\6.0.0",
+      "Folder": "C:\\Users\\jpreksavec\\.nuget\\packages\\microsoft.extensions.logging.abstractions\\7.0.0",
       "ContentFiles": [
         {
-          "PhysicalPath": "C:\\Users\\jpreksavec\\.nuget\\packages\\microsoft.extensions.logging.abstractions\\6.0.0\\.nupkg.metadata",
+          "PhysicalPath": "C:\\Users\\jpreksavec\\.nuget\\packages\\microsoft.extensions.logging.abstractions\\7.0.0\\.nupkg.metadata",
           "InPackagePath": ".nupkg.metadata"
         },
         {
-          "PhysicalPath": "C:\\Users\\jpreksavec\\.nuget\\packages\\microsoft.extensions.logging.abstractions\\6.0.0\\.signature.p7s",
+          "PhysicalPath": "C:\\Users\\jpreksavec\\.nuget\\packages\\microsoft.extensions.logging.abstractions\\7.0.0\\.signature.p7s",
           "InPackagePath": ".signature.p7s"
         },
         {
-          "PhysicalPath": "C:\\Users\\jpreksavec\\.nuget\\packages\\microsoft.extensions.logging.abstractions\\6.0.0\\Icon.png",
+          "PhysicalPath": "C:\\Users\\jpreksavec\\.nuget\\packages\\microsoft.extensions.logging.abstractions\\7.0.0\\Icon.png",
           "InPackagePath": "Icon.png"
         },
         {
-          "PhysicalPath": "C:\\Users\\jpreksavec\\.nuget\\packages\\microsoft.extensions.logging.abstractions\\6.0.0\\LICENSE.TXT",
+          "PhysicalPath": "C:\\Users\\jpreksavec\\.nuget\\packages\\microsoft.extensions.logging.abstractions\\7.0.0\\LICENSE.TXT",
           "InPackagePath": "LICENSE.TXT"
         },
         {
-          "PhysicalPath": "C:\\Users\\jpreksavec\\.nuget\\packages\\microsoft.extensions.logging.abstractions\\6.0.0\\THIRD-PARTY-NOTICES.TXT",
+          "PhysicalPath": "C:\\Users\\jpreksavec\\.nuget\\packages\\microsoft.extensions.logging.abstractions\\7.0.0\\THIRD-PARTY-NOTICES.TXT",
           "InPackagePath": "THIRD-PARTY-NOTICES.TXT"
         },
         {
-          "PhysicalPath": "C:\\Users\\jpreksavec\\.nuget\\packages\\microsoft.extensions.logging.abstractions\\6.0.0\\analyzers\\dotnet\\roslyn3.11\\cs\\Microsoft.Extensions.Logging.Generators.dll",
+          "PhysicalPath": "C:\\Users\\jpreksavec\\.nuget\\packages\\microsoft.extensions.logging.abstractions\\7.0.0\\analyzers\\dotnet\\roslyn3.11\\cs\\Microsoft.Extensions.Logging.Generators.dll",
           "InPackagePath": "analyzers\\dotnet\\roslyn3.11\\cs\\Microsoft.Extensions.Logging.Generators.dll"
         },
         {
-          "PhysicalPath": "C:\\Users\\jpreksavec\\.nuget\\packages\\microsoft.extensions.logging.abstractions\\6.0.0\\analyzers\\dotnet\\roslyn3.11\\cs\\cs\\Microsoft.Extensions.Logging.Generators.resources.dll",
+          "PhysicalPath": "C:\\Users\\jpreksavec\\.nuget\\packages\\microsoft.extensions.logging.abstractions\\7.0.0\\analyzers\\dotnet\\roslyn3.11\\cs\\cs\\Microsoft.Extensions.Logging.Generators.resources.dll",
           "InPackagePath": "analyzers\\dotnet\\roslyn3.11\\cs\\cs\\Microsoft.Extensions.Logging.Generators.resources.dll"
         },
         {
-          "PhysicalPath": "C:\\Users\\jpreksavec\\.nuget\\packages\\microsoft.extensions.logging.abstractions\\6.0.0\\analyzers\\dotnet\\roslyn3.11\\cs\\de\\Microsoft.Extensions.Logging.Generators.resources.dll",
+          "PhysicalPath": "C:\\Users\\jpreksavec\\.nuget\\packages\\microsoft.extensions.logging.abstractions\\7.0.0\\analyzers\\dotnet\\roslyn3.11\\cs\\de\\Microsoft.Extensions.Logging.Generators.resources.dll",
           "InPackagePath": "analyzers\\dotnet\\roslyn3.11\\cs\\de\\Microsoft.Extensions.Logging.Generators.resources.dll"
         },
         {
-          "PhysicalPath": "C:\\Users\\jpreksavec\\.nuget\\packages\\microsoft.extensions.logging.abstractions\\6.0.0\\analyzers\\dotnet\\roslyn3.11\\cs\\es\\Microsoft.Extensions.Logging.Generators.resources.dll",
+          "PhysicalPath": "C:\\Users\\jpreksavec\\.nuget\\packages\\microsoft.extensions.logging.abstractions\\7.0.0\\analyzers\\dotnet\\roslyn3.11\\cs\\es\\Microsoft.Extensions.Logging.Generators.resources.dll",
           "InPackagePath": "analyzers\\dotnet\\roslyn3.11\\cs\\es\\Microsoft.Extensions.Logging.Generators.resources.dll"
         },
         {
-          "PhysicalPath": "C:\\Users\\jpreksavec\\.nuget\\packages\\microsoft.extensions.logging.abstractions\\6.0.0\\analyzers\\dotnet\\roslyn3.11\\cs\\fr\\Microsoft.Extensions.Logging.Generators.resources.dll",
+          "PhysicalPath": "C:\\Users\\jpreksavec\\.nuget\\packages\\microsoft.extensions.logging.abstractions\\7.0.0\\analyzers\\dotnet\\roslyn3.11\\cs\\fr\\Microsoft.Extensions.Logging.Generators.resources.dll",
           "InPackagePath": "analyzers\\dotnet\\roslyn3.11\\cs\\fr\\Microsoft.Extensions.Logging.Generators.resources.dll"
         },
         {
-          "PhysicalPath": "C:\\Users\\jpreksavec\\.nuget\\packages\\microsoft.extensions.logging.abstractions\\6.0.0\\analyzers\\dotnet\\roslyn3.11\\cs\\it\\Microsoft.Extensions.Logging.Generators.resources.dll",
+          "PhysicalPath": "C:\\Users\\jpreksavec\\.nuget\\packages\\microsoft.extensions.logging.abstractions\\7.0.0\\analyzers\\dotnet\\roslyn3.11\\cs\\it\\Microsoft.Extensions.Logging.Generators.resources.dll",
           "InPackagePath": "analyzers\\dotnet\\roslyn3.11\\cs\\it\\Microsoft.Extensions.Logging.Generators.resources.dll"
         },
         {
-          "PhysicalPath": "C:\\Users\\jpreksavec\\.nuget\\packages\\microsoft.extensions.logging.abstractions\\6.0.0\\analyzers\\dotnet\\roslyn3.11\\cs\\ja\\Microsoft.Extensions.Logging.Generators.resources.dll",
+          "PhysicalPath": "C:\\Users\\jpreksavec\\.nuget\\packages\\microsoft.extensions.logging.abstractions\\7.0.0\\analyzers\\dotnet\\roslyn3.11\\cs\\ja\\Microsoft.Extensions.Logging.Generators.resources.dll",
           "InPackagePath": "analyzers\\dotnet\\roslyn3.11\\cs\\ja\\Microsoft.Extensions.Logging.Generators.resources.dll"
         },
         {
-          "PhysicalPath": "C:\\Users\\jpreksavec\\.nuget\\packages\\microsoft.extensions.logging.abstractions\\6.0.0\\analyzers\\dotnet\\roslyn3.11\\cs\\ko\\Microsoft.Extensions.Logging.Generators.resources.dll",
+          "PhysicalPath": "C:\\Users\\jpreksavec\\.nuget\\packages\\microsoft.extensions.logging.abstractions\\7.0.0\\analyzers\\dotnet\\roslyn3.11\\cs\\ko\\Microsoft.Extensions.Logging.Generators.resources.dll",
           "InPackagePath": "analyzers\\dotnet\\roslyn3.11\\cs\\ko\\Microsoft.Extensions.Logging.Generators.resources.dll"
         },
         {
-          "PhysicalPath": "C:\\Users\\jpreksavec\\.nuget\\packages\\microsoft.extensions.logging.abstractions\\6.0.0\\analyzers\\dotnet\\roslyn3.11\\cs\\pl\\Microsoft.Extensions.Logging.Generators.resources.dll",
+          "PhysicalPath": "C:\\Users\\jpreksavec\\.nuget\\packages\\microsoft.extensions.logging.abstractions\\7.0.0\\analyzers\\dotnet\\roslyn3.11\\cs\\pl\\Microsoft.Extensions.Logging.Generators.resources.dll",
           "InPackagePath": "analyzers\\dotnet\\roslyn3.11\\cs\\pl\\Microsoft.Extensions.Logging.Generators.resources.dll"
         },
         {
-          "PhysicalPath": "C:\\Users\\jpreksavec\\.nuget\\packages\\microsoft.extensions.logging.abstractions\\6.0.0\\analyzers\\dotnet\\roslyn3.11\\cs\\pt-BR\\Microsoft.Extensions.Logging.Generators.resources.dll",
+          "PhysicalPath": "C:\\Users\\jpreksavec\\.nuget\\packages\\microsoft.extensions.logging.abstractions\\7.0.0\\analyzers\\dotnet\\roslyn3.11\\cs\\pt-BR\\Microsoft.Extensions.Logging.Generators.resources.dll",
           "InPackagePath": "analyzers\\dotnet\\roslyn3.11\\cs\\pt-BR\\Microsoft.Extensions.Logging.Generators.resources.dll"
         },
         {
-          "PhysicalPath": "C:\\Users\\jpreksavec\\.nuget\\packages\\microsoft.extensions.logging.abstractions\\6.0.0\\analyzers\\dotnet\\roslyn3.11\\cs\\ru\\Microsoft.Extensions.Logging.Generators.resources.dll",
+          "PhysicalPath": "C:\\Users\\jpreksavec\\.nuget\\packages\\microsoft.extensions.logging.abstractions\\7.0.0\\analyzers\\dotnet\\roslyn3.11\\cs\\ru\\Microsoft.Extensions.Logging.Generators.resources.dll",
           "InPackagePath": "analyzers\\dotnet\\roslyn3.11\\cs\\ru\\Microsoft.Extensions.Logging.Generators.resources.dll"
         },
         {
-          "PhysicalPath": "C:\\Users\\jpreksavec\\.nuget\\packages\\microsoft.extensions.logging.abstractions\\6.0.0\\analyzers\\dotnet\\roslyn3.11\\cs\\tr\\Microsoft.Extensions.Logging.Generators.resources.dll",
+          "PhysicalPath": "C:\\Users\\jpreksavec\\.nuget\\packages\\microsoft.extensions.logging.abstractions\\7.0.0\\analyzers\\dotnet\\roslyn3.11\\cs\\tr\\Microsoft.Extensions.Logging.Generators.resources.dll",
           "InPackagePath": "analyzers\\dotnet\\roslyn3.11\\cs\\tr\\Microsoft.Extensions.Logging.Generators.resources.dll"
         },
         {
-          "PhysicalPath": "C:\\Users\\jpreksavec\\.nuget\\packages\\microsoft.extensions.logging.abstractions\\6.0.0\\analyzers\\dotnet\\roslyn3.11\\cs\\zh-Hans\\Microsoft.Extensions.Logging.Generators.resources.dll",
+          "PhysicalPath": "C:\\Users\\jpreksavec\\.nuget\\packages\\microsoft.extensions.logging.abstractions\\7.0.0\\analyzers\\dotnet\\roslyn3.11\\cs\\zh-Hans\\Microsoft.Extensions.Logging.Generators.resources.dll",
           "InPackagePath": "analyzers\\dotnet\\roslyn3.11\\cs\\zh-Hans\\Microsoft.Extensions.Logging.Generators.resources.dll"
         },
         {
-          "PhysicalPath": "C:\\Users\\jpreksavec\\.nuget\\packages\\microsoft.extensions.logging.abstractions\\6.0.0\\analyzers\\dotnet\\roslyn3.11\\cs\\zh-Hant\\Microsoft.Extensions.Logging.Generators.resources.dll",
+          "PhysicalPath": "C:\\Users\\jpreksavec\\.nuget\\packages\\microsoft.extensions.logging.abstractions\\7.0.0\\analyzers\\dotnet\\roslyn3.11\\cs\\zh-Hant\\Microsoft.Extensions.Logging.Generators.resources.dll",
           "InPackagePath": "analyzers\\dotnet\\roslyn3.11\\cs\\zh-Hant\\Microsoft.Extensions.Logging.Generators.resources.dll"
         },
         {
-          "PhysicalPath": "C:\\Users\\jpreksavec\\.nuget\\packages\\microsoft.extensions.logging.abstractions\\6.0.0\\analyzers\\dotnet\\roslyn4.0\\cs\\Microsoft.Extensions.Logging.Generators.dll",
+          "PhysicalPath": "C:\\Users\\jpreksavec\\.nuget\\packages\\microsoft.extensions.logging.abstractions\\7.0.0\\analyzers\\dotnet\\roslyn4.0\\cs\\Microsoft.Extensions.Logging.Generators.dll",
           "InPackagePath": "analyzers\\dotnet\\roslyn4.0\\cs\\Microsoft.Extensions.Logging.Generators.dll"
         },
         {
-          "PhysicalPath": "C:\\Users\\jpreksavec\\.nuget\\packages\\microsoft.extensions.logging.abstractions\\6.0.0\\analyzers\\dotnet\\roslyn4.0\\cs\\cs\\Microsoft.Extensions.Logging.Generators.resources.dll",
+          "PhysicalPath": "C:\\Users\\jpreksavec\\.nuget\\packages\\microsoft.extensions.logging.abstractions\\7.0.0\\analyzers\\dotnet\\roslyn4.0\\cs\\cs\\Microsoft.Extensions.Logging.Generators.resources.dll",
           "InPackagePath": "analyzers\\dotnet\\roslyn4.0\\cs\\cs\\Microsoft.Extensions.Logging.Generators.resources.dll"
         },
         {
-          "PhysicalPath": "C:\\Users\\jpreksavec\\.nuget\\packages\\microsoft.extensions.logging.abstractions\\6.0.0\\analyzers\\dotnet\\roslyn4.0\\cs\\de\\Microsoft.Extensions.Logging.Generators.resources.dll",
+          "PhysicalPath": "C:\\Users\\jpreksavec\\.nuget\\packages\\microsoft.extensions.logging.abstractions\\7.0.0\\analyzers\\dotnet\\roslyn4.0\\cs\\de\\Microsoft.Extensions.Logging.Generators.resources.dll",
           "InPackagePath": "analyzers\\dotnet\\roslyn4.0\\cs\\de\\Microsoft.Extensions.Logging.Generators.resources.dll"
         },
         {
-          "PhysicalPath": "C:\\Users\\jpreksavec\\.nuget\\packages\\microsoft.extensions.logging.abstractions\\6.0.0\\analyzers\\dotnet\\roslyn4.0\\cs\\es\\Microsoft.Extensions.Logging.Generators.resources.dll",
+          "PhysicalPath": "C:\\Users\\jpreksavec\\.nuget\\packages\\microsoft.extensions.logging.abstractions\\7.0.0\\analyzers\\dotnet\\roslyn4.0\\cs\\es\\Microsoft.Extensions.Logging.Generators.resources.dll",
           "InPackagePath": "analyzers\\dotnet\\roslyn4.0\\cs\\es\\Microsoft.Extensions.Logging.Generators.resources.dll"
         },
         {
-          "PhysicalPath": "C:\\Users\\jpreksavec\\.nuget\\packages\\microsoft.extensions.logging.abstractions\\6.0.0\\analyzers\\dotnet\\roslyn4.0\\cs\\fr\\Microsoft.Extensions.Logging.Generators.resources.dll",
+          "PhysicalPath": "C:\\Users\\jpreksavec\\.nuget\\packages\\microsoft.extensions.logging.abstractions\\7.0.0\\analyzers\\dotnet\\roslyn4.0\\cs\\fr\\Microsoft.Extensions.Logging.Generators.resources.dll",
           "InPackagePath": "analyzers\\dotnet\\roslyn4.0\\cs\\fr\\Microsoft.Extensions.Logging.Generators.resources.dll"
         },
         {
-          "PhysicalPath": "C:\\Users\\jpreksavec\\.nuget\\packages\\microsoft.extensions.logging.abstractions\\6.0.0\\analyzers\\dotnet\\roslyn4.0\\cs\\it\\Microsoft.Extensions.Logging.Generators.resources.dll",
+          "PhysicalPath": "C:\\Users\\jpreksavec\\.nuget\\packages\\microsoft.extensions.logging.abstractions\\7.0.0\\analyzers\\dotnet\\roslyn4.0\\cs\\it\\Microsoft.Extensions.Logging.Generators.resources.dll",
           "InPackagePath": "analyzers\\dotnet\\roslyn4.0\\cs\\it\\Microsoft.Extensions.Logging.Generators.resources.dll"
         },
         {
-          "PhysicalPath": "C:\\Users\\jpreksavec\\.nuget\\packages\\microsoft.extensions.logging.abstractions\\6.0.0\\analyzers\\dotnet\\roslyn4.0\\cs\\ja\\Microsoft.Extensions.Logging.Generators.resources.dll",
+          "PhysicalPath": "C:\\Users\\jpreksavec\\.nuget\\packages\\microsoft.extensions.logging.abstractions\\7.0.0\\analyzers\\dotnet\\roslyn4.0\\cs\\ja\\Microsoft.Extensions.Logging.Generators.resources.dll",
           "InPackagePath": "analyzers\\dotnet\\roslyn4.0\\cs\\ja\\Microsoft.Extensions.Logging.Generators.resources.dll"
         },
         {
-          "PhysicalPath": "C:\\Users\\jpreksavec\\.nuget\\packages\\microsoft.extensions.logging.abstractions\\6.0.0\\analyzers\\dotnet\\roslyn4.0\\cs\\ko\\Microsoft.Extensions.Logging.Generators.resources.dll",
+          "PhysicalPath": "C:\\Users\\jpreksavec\\.nuget\\packages\\microsoft.extensions.logging.abstractions\\7.0.0\\analyzers\\dotnet\\roslyn4.0\\cs\\ko\\Microsoft.Extensions.Logging.Generators.resources.dll",
           "InPackagePath": "analyzers\\dotnet\\roslyn4.0\\cs\\ko\\Microsoft.Extensions.Logging.Generators.resources.dll"
         },
         {
-          "PhysicalPath": "C:\\Users\\jpreksavec\\.nuget\\packages\\microsoft.extensions.logging.abstractions\\6.0.0\\analyzers\\dotnet\\roslyn4.0\\cs\\pl\\Microsoft.Extensions.Logging.Generators.resources.dll",
+          "PhysicalPath": "C:\\Users\\jpreksavec\\.nuget\\packages\\microsoft.extensions.logging.abstractions\\7.0.0\\analyzers\\dotnet\\roslyn4.0\\cs\\pl\\Microsoft.Extensions.Logging.Generators.resources.dll",
           "InPackagePath": "analyzers\\dotnet\\roslyn4.0\\cs\\pl\\Microsoft.Extensions.Logging.Generators.resources.dll"
         },
         {
-          "PhysicalPath": "C:\\Users\\jpreksavec\\.nuget\\packages\\microsoft.extensions.logging.abstractions\\6.0.0\\analyzers\\dotnet\\roslyn4.0\\cs\\pt-BR\\Microsoft.Extensions.Logging.Generators.resources.dll",
+          "PhysicalPath": "C:\\Users\\jpreksavec\\.nuget\\packages\\microsoft.extensions.logging.abstractions\\7.0.0\\analyzers\\dotnet\\roslyn4.0\\cs\\pt-BR\\Microsoft.Extensions.Logging.Generators.resources.dll",
           "InPackagePath": "analyzers\\dotnet\\roslyn4.0\\cs\\pt-BR\\Microsoft.Extensions.Logging.Generators.resources.dll"
         },
         {
-          "PhysicalPath": "C:\\Users\\jpreksavec\\.nuget\\packages\\microsoft.extensions.logging.abstractions\\6.0.0\\analyzers\\dotnet\\roslyn4.0\\cs\\ru\\Microsoft.Extensions.Logging.Generators.resources.dll",
+          "PhysicalPath": "C:\\Users\\jpreksavec\\.nuget\\packages\\microsoft.extensions.logging.abstractions\\7.0.0\\analyzers\\dotnet\\roslyn4.0\\cs\\ru\\Microsoft.Extensions.Logging.Generators.resources.dll",
           "InPackagePath": "analyzers\\dotnet\\roslyn4.0\\cs\\ru\\Microsoft.Extensions.Logging.Generators.resources.dll"
         },
         {
-          "PhysicalPath": "C:\\Users\\jpreksavec\\.nuget\\packages\\microsoft.extensions.logging.abstractions\\6.0.0\\analyzers\\dotnet\\roslyn4.0\\cs\\tr\\Microsoft.Extensions.Logging.Generators.resources.dll",
+          "PhysicalPath": "C:\\Users\\jpreksavec\\.nuget\\packages\\microsoft.extensions.logging.abstractions\\7.0.0\\analyzers\\dotnet\\roslyn4.0\\cs\\tr\\Microsoft.Extensions.Logging.Generators.resources.dll",
           "InPackagePath": "analyzers\\dotnet\\roslyn4.0\\cs\\tr\\Microsoft.Extensions.Logging.Generators.resources.dll"
         },
         {
-          "PhysicalPath": "C:\\Users\\jpreksavec\\.nuget\\packages\\microsoft.extensions.logging.abstractions\\6.0.0\\analyzers\\dotnet\\roslyn4.0\\cs\\zh-Hans\\Microsoft.Extensions.Logging.Generators.resources.dll",
+          "PhysicalPath": "C:\\Users\\jpreksavec\\.nuget\\packages\\microsoft.extensions.logging.abstractions\\7.0.0\\analyzers\\dotnet\\roslyn4.0\\cs\\zh-Hans\\Microsoft.Extensions.Logging.Generators.resources.dll",
           "InPackagePath": "analyzers\\dotnet\\roslyn4.0\\cs\\zh-Hans\\Microsoft.Extensions.Logging.Generators.resources.dll"
         },
         {
-          "PhysicalPath": "C:\\Users\\jpreksavec\\.nuget\\packages\\microsoft.extensions.logging.abstractions\\6.0.0\\analyzers\\dotnet\\roslyn4.0\\cs\\zh-Hant\\Microsoft.Extensions.Logging.Generators.resources.dll",
+          "PhysicalPath": "C:\\Users\\jpreksavec\\.nuget\\packages\\microsoft.extensions.logging.abstractions\\7.0.0\\analyzers\\dotnet\\roslyn4.0\\cs\\zh-Hant\\Microsoft.Extensions.Logging.Generators.resources.dll",
           "InPackagePath": "analyzers\\dotnet\\roslyn4.0\\cs\\zh-Hant\\Microsoft.Extensions.Logging.Generators.resources.dll"
         },
         {
-          "PhysicalPath": "C:\\Users\\jpreksavec\\.nuget\\packages\\microsoft.extensions.logging.abstractions\\6.0.0\\build\\Microsoft.Extensions.Logging.Abstractions.targets",
-          "InPackagePath": "build\\Microsoft.Extensions.Logging.Abstractions.targets"
+          "PhysicalPath": "C:\\Users\\jpreksavec\\.nuget\\packages\\microsoft.extensions.logging.abstractions\\7.0.0\\analyzers\\dotnet\\roslyn4.4\\cs\\Microsoft.Extensions.Logging.Generators.dll",
+          "InPackagePath": "analyzers\\dotnet\\roslyn4.4\\cs\\Microsoft.Extensions.Logging.Generators.dll"
         },
         {
-          "PhysicalPath": "C:\\Users\\jpreksavec\\.nuget\\packages\\microsoft.extensions.logging.abstractions\\6.0.0\\buildTransitive\\netcoreapp2.0\\Microsoft.Extensions.Logging.Abstractions.targets",
+          "PhysicalPath": "C:\\Users\\jpreksavec\\.nuget\\packages\\microsoft.extensions.logging.abstractions\\7.0.0\\analyzers\\dotnet\\roslyn4.4\\cs\\cs\\Microsoft.Extensions.Logging.Generators.resources.dll",
+          "InPackagePath": "analyzers\\dotnet\\roslyn4.4\\cs\\cs\\Microsoft.Extensions.Logging.Generators.resources.dll"
+        },
+        {
+          "PhysicalPath": "C:\\Users\\jpreksavec\\.nuget\\packages\\microsoft.extensions.logging.abstractions\\7.0.0\\analyzers\\dotnet\\roslyn4.4\\cs\\de\\Microsoft.Extensions.Logging.Generators.resources.dll",
+          "InPackagePath": "analyzers\\dotnet\\roslyn4.4\\cs\\de\\Microsoft.Extensions.Logging.Generators.resources.dll"
+        },
+        {
+          "PhysicalPath": "C:\\Users\\jpreksavec\\.nuget\\packages\\microsoft.extensions.logging.abstractions\\7.0.0\\analyzers\\dotnet\\roslyn4.4\\cs\\es\\Microsoft.Extensions.Logging.Generators.resources.dll",
+          "InPackagePath": "analyzers\\dotnet\\roslyn4.4\\cs\\es\\Microsoft.Extensions.Logging.Generators.resources.dll"
+        },
+        {
+          "PhysicalPath": "C:\\Users\\jpreksavec\\.nuget\\packages\\microsoft.extensions.logging.abstractions\\7.0.0\\analyzers\\dotnet\\roslyn4.4\\cs\\fr\\Microsoft.Extensions.Logging.Generators.resources.dll",
+          "InPackagePath": "analyzers\\dotnet\\roslyn4.4\\cs\\fr\\Microsoft.Extensions.Logging.Generators.resources.dll"
+        },
+        {
+          "PhysicalPath": "C:\\Users\\jpreksavec\\.nuget\\packages\\microsoft.extensions.logging.abstractions\\7.0.0\\analyzers\\dotnet\\roslyn4.4\\cs\\it\\Microsoft.Extensions.Logging.Generators.resources.dll",
+          "InPackagePath": "analyzers\\dotnet\\roslyn4.4\\cs\\it\\Microsoft.Extensions.Logging.Generators.resources.dll"
+        },
+        {
+          "PhysicalPath": "C:\\Users\\jpreksavec\\.nuget\\packages\\microsoft.extensions.logging.abstractions\\7.0.0\\analyzers\\dotnet\\roslyn4.4\\cs\\ja\\Microsoft.Extensions.Logging.Generators.resources.dll",
+          "InPackagePath": "analyzers\\dotnet\\roslyn4.4\\cs\\ja\\Microsoft.Extensions.Logging.Generators.resources.dll"
+        },
+        {
+          "PhysicalPath": "C:\\Users\\jpreksavec\\.nuget\\packages\\microsoft.extensions.logging.abstractions\\7.0.0\\analyzers\\dotnet\\roslyn4.4\\cs\\ko\\Microsoft.Extensions.Logging.Generators.resources.dll",
+          "InPackagePath": "analyzers\\dotnet\\roslyn4.4\\cs\\ko\\Microsoft.Extensions.Logging.Generators.resources.dll"
+        },
+        {
+          "PhysicalPath": "C:\\Users\\jpreksavec\\.nuget\\packages\\microsoft.extensions.logging.abstractions\\7.0.0\\analyzers\\dotnet\\roslyn4.4\\cs\\pl\\Microsoft.Extensions.Logging.Generators.resources.dll",
+          "InPackagePath": "analyzers\\dotnet\\roslyn4.4\\cs\\pl\\Microsoft.Extensions.Logging.Generators.resources.dll"
+        },
+        {
+          "PhysicalPath": "C:\\Users\\jpreksavec\\.nuget\\packages\\microsoft.extensions.logging.abstractions\\7.0.0\\analyzers\\dotnet\\roslyn4.4\\cs\\pt-BR\\Microsoft.Extensions.Logging.Generators.resources.dll",
+          "InPackagePath": "analyzers\\dotnet\\roslyn4.4\\cs\\pt-BR\\Microsoft.Extensions.Logging.Generators.resources.dll"
+        },
+        {
+          "PhysicalPath": "C:\\Users\\jpreksavec\\.nuget\\packages\\microsoft.extensions.logging.abstractions\\7.0.0\\analyzers\\dotnet\\roslyn4.4\\cs\\ru\\Microsoft.Extensions.Logging.Generators.resources.dll",
+          "InPackagePath": "analyzers\\dotnet\\roslyn4.4\\cs\\ru\\Microsoft.Extensions.Logging.Generators.resources.dll"
+        },
+        {
+          "PhysicalPath": "C:\\Users\\jpreksavec\\.nuget\\packages\\microsoft.extensions.logging.abstractions\\7.0.0\\analyzers\\dotnet\\roslyn4.4\\cs\\tr\\Microsoft.Extensions.Logging.Generators.resources.dll",
+          "InPackagePath": "analyzers\\dotnet\\roslyn4.4\\cs\\tr\\Microsoft.Extensions.Logging.Generators.resources.dll"
+        },
+        {
+          "PhysicalPath": "C:\\Users\\jpreksavec\\.nuget\\packages\\microsoft.extensions.logging.abstractions\\7.0.0\\analyzers\\dotnet\\roslyn4.4\\cs\\zh-Hans\\Microsoft.Extensions.Logging.Generators.resources.dll",
+          "InPackagePath": "analyzers\\dotnet\\roslyn4.4\\cs\\zh-Hans\\Microsoft.Extensions.Logging.Generators.resources.dll"
+        },
+        {
+          "PhysicalPath": "C:\\Users\\jpreksavec\\.nuget\\packages\\microsoft.extensions.logging.abstractions\\7.0.0\\analyzers\\dotnet\\roslyn4.4\\cs\\zh-Hant\\Microsoft.Extensions.Logging.Generators.resources.dll",
+          "InPackagePath": "analyzers\\dotnet\\roslyn4.4\\cs\\zh-Hant\\Microsoft.Extensions.Logging.Generators.resources.dll"
+        },
+        {
+          "PhysicalPath": "C:\\Users\\jpreksavec\\.nuget\\packages\\microsoft.extensions.logging.abstractions\\7.0.0\\buildTransitive\\net461\\Microsoft.Extensions.Logging.Abstractions.targets",
+          "InPackagePath": "buildTransitive\\net461\\Microsoft.Extensions.Logging.Abstractions.targets"
+        },
+        {
+          "PhysicalPath": "C:\\Users\\jpreksavec\\.nuget\\packages\\microsoft.extensions.logging.abstractions\\7.0.0\\buildTransitive\\net462\\Microsoft.Extensions.Logging.Abstractions.targets",
+          "InPackagePath": "buildTransitive\\net462\\Microsoft.Extensions.Logging.Abstractions.targets"
+        },
+        {
+          "PhysicalPath": "C:\\Users\\jpreksavec\\.nuget\\packages\\microsoft.extensions.logging.abstractions\\7.0.0\\buildTransitive\\net6.0\\Microsoft.Extensions.Logging.Abstractions.targets",
+          "InPackagePath": "buildTransitive\\net6.0\\Microsoft.Extensions.Logging.Abstractions.targets"
+        },
+        {
+          "PhysicalPath": "C:\\Users\\jpreksavec\\.nuget\\packages\\microsoft.extensions.logging.abstractions\\7.0.0\\buildTransitive\\netcoreapp2.0\\Microsoft.Extensions.Logging.Abstractions.targets",
           "InPackagePath": "buildTransitive\\netcoreapp2.0\\Microsoft.Extensions.Logging.Abstractions.targets"
         },
         {
-          "PhysicalPath": "C:\\Users\\jpreksavec\\.nuget\\packages\\microsoft.extensions.logging.abstractions\\6.0.0\\buildTransitive\\netcoreapp3.1\\_._",
-          "InPackagePath": "buildTransitive\\netcoreapp3.1\\_._"
+          "PhysicalPath": "C:\\Users\\jpreksavec\\.nuget\\packages\\microsoft.extensions.logging.abstractions\\7.0.0\\buildTransitive\\netstandard2.0\\Microsoft.Extensions.Logging.Abstractions.targets",
+          "InPackagePath": "buildTransitive\\netstandard2.0\\Microsoft.Extensions.Logging.Abstractions.targets"
         },
         {
-          "PhysicalPath": "C:\\Users\\jpreksavec\\.nuget\\packages\\microsoft.extensions.logging.abstractions\\6.0.0\\lib\\net461\\Microsoft.Extensions.Logging.Abstractions.dll",
-          "InPackagePath": "lib\\net461\\Microsoft.Extensions.Logging.Abstractions.dll"
+          "PhysicalPath": "C:\\Users\\jpreksavec\\.nuget\\packages\\microsoft.extensions.logging.abstractions\\7.0.0\\lib\\net462\\Microsoft.Extensions.Logging.Abstractions.dll",
+          "InPackagePath": "lib\\net462\\Microsoft.Extensions.Logging.Abstractions.dll"
         },
         {
-          "PhysicalPath": "C:\\Users\\jpreksavec\\.nuget\\packages\\microsoft.extensions.logging.abstractions\\6.0.0\\lib\\net461\\Microsoft.Extensions.Logging.Abstractions.xml",
-          "InPackagePath": "lib\\net461\\Microsoft.Extensions.Logging.Abstractions.xml"
+          "PhysicalPath": "C:\\Users\\jpreksavec\\.nuget\\packages\\microsoft.extensions.logging.abstractions\\7.0.0\\lib\\net462\\Microsoft.Extensions.Logging.Abstractions.xml",
+          "InPackagePath": "lib\\net462\\Microsoft.Extensions.Logging.Abstractions.xml"
         },
         {
-          "PhysicalPath": "C:\\Users\\jpreksavec\\.nuget\\packages\\microsoft.extensions.logging.abstractions\\6.0.0\\lib\\net6.0\\Microsoft.Extensions.Logging.Abstractions.dll",
+          "PhysicalPath": "C:\\Users\\jpreksavec\\.nuget\\packages\\microsoft.extensions.logging.abstractions\\7.0.0\\lib\\net6.0\\Microsoft.Extensions.Logging.Abstractions.dll",
           "InPackagePath": "lib\\net6.0\\Microsoft.Extensions.Logging.Abstractions.dll"
         },
         {
-          "PhysicalPath": "C:\\Users\\jpreksavec\\.nuget\\packages\\microsoft.extensions.logging.abstractions\\6.0.0\\lib\\net6.0\\Microsoft.Extensions.Logging.Abstractions.xml",
+          "PhysicalPath": "C:\\Users\\jpreksavec\\.nuget\\packages\\microsoft.extensions.logging.abstractions\\7.0.0\\lib\\net6.0\\Microsoft.Extensions.Logging.Abstractions.xml",
           "InPackagePath": "lib\\net6.0\\Microsoft.Extensions.Logging.Abstractions.xml"
         },
         {
-          "PhysicalPath": "C:\\Users\\jpreksavec\\.nuget\\packages\\microsoft.extensions.logging.abstractions\\6.0.0\\lib\\netstandard2.0\\Microsoft.Extensions.Logging.Abstractions.dll",
+          "PhysicalPath": "C:\\Users\\jpreksavec\\.nuget\\packages\\microsoft.extensions.logging.abstractions\\7.0.0\\lib\\net7.0\\Microsoft.Extensions.Logging.Abstractions.dll",
+          "InPackagePath": "lib\\net7.0\\Microsoft.Extensions.Logging.Abstractions.dll"
+        },
+        {
+          "PhysicalPath": "C:\\Users\\jpreksavec\\.nuget\\packages\\microsoft.extensions.logging.abstractions\\7.0.0\\lib\\net7.0\\Microsoft.Extensions.Logging.Abstractions.xml",
+          "InPackagePath": "lib\\net7.0\\Microsoft.Extensions.Logging.Abstractions.xml"
+        },
+        {
+          "PhysicalPath": "C:\\Users\\jpreksavec\\.nuget\\packages\\microsoft.extensions.logging.abstractions\\7.0.0\\lib\\netstandard2.0\\Microsoft.Extensions.Logging.Abstractions.dll",
           "InPackagePath": "lib\\netstandard2.0\\Microsoft.Extensions.Logging.Abstractions.dll"
         },
         {
-          "PhysicalPath": "C:\\Users\\jpreksavec\\.nuget\\packages\\microsoft.extensions.logging.abstractions\\6.0.0\\lib\\netstandard2.0\\Microsoft.Extensions.Logging.Abstractions.xml",
+          "PhysicalPath": "C:\\Users\\jpreksavec\\.nuget\\packages\\microsoft.extensions.logging.abstractions\\7.0.0\\lib\\netstandard2.0\\Microsoft.Extensions.Logging.Abstractions.xml",
           "InPackagePath": "lib\\netstandard2.0\\Microsoft.Extensions.Logging.Abstractions.xml"
         },
         {
-          "PhysicalPath": "C:\\Users\\jpreksavec\\.nuget\\packages\\microsoft.extensions.logging.abstractions\\6.0.0\\microsoft.extensions.logging.abstractions.6.0.0.nupkg.sha512",
-          "InPackagePath": "microsoft.extensions.logging.abstractions.6.0.0.nupkg.sha512"
+          "PhysicalPath": "C:\\Users\\jpreksavec\\.nuget\\packages\\microsoft.extensions.logging.abstractions\\7.0.0\\microsoft.extensions.logging.abstractions.7.0.0.nupkg.sha512",
+          "InPackagePath": "microsoft.extensions.logging.abstractions.7.0.0.nupkg.sha512"
         },
         {
-          "PhysicalPath": "C:\\Users\\jpreksavec\\.nuget\\packages\\microsoft.extensions.logging.abstractions\\6.0.0\\microsoft.extensions.logging.abstractions.nuspec",
+          "PhysicalPath": "C:\\Users\\jpreksavec\\.nuget\\packages\\microsoft.extensions.logging.abstractions\\7.0.0\\microsoft.extensions.logging.abstractions.nuspec",
           "InPackagePath": "microsoft.extensions.logging.abstractions.nuspec"
         },
         {
-          "PhysicalPath": "C:\\Users\\jpreksavec\\.nuget\\packages\\microsoft.extensions.logging.abstractions\\6.0.0\\useSharedDesignerContext.txt",
+          "PhysicalPath": "C:\\Users\\jpreksavec\\.nuget\\packages\\microsoft.extensions.logging.abstractions\\7.0.0\\useSharedDesignerContext.txt",
           "InPackagePath": "useSharedDesignerContext.txt"
         }
       ]
@@ -5068,154 +5247,258 @@
       ]
     },
     {
-      "Id": "Microsoft.Extensions.DependencyInjection.Abstractions",
-      "Version": "6.0.0.0",
+      "Id": "Microsoft.Extensions.Features",
+      "Version": "7.0.2.0",
       "Dependencies": [],
-      "Folder": "C:\\Users\\jpreksavec\\.nuget\\packages\\microsoft.extensions.dependencyinjection.abstractions\\6.0.0",
+      "Folder": "C:\\Users\\jpreksavec\\.nuget\\packages\\microsoft.extensions.features\\7.0.2",
       "ContentFiles": [
         {
-          "PhysicalPath": "C:\\Users\\jpreksavec\\.nuget\\packages\\microsoft.extensions.dependencyinjection.abstractions\\6.0.0\\.nupkg.metadata",
+          "PhysicalPath": "C:\\Users\\jpreksavec\\.nuget\\packages\\microsoft.extensions.features\\7.0.2\\.nupkg.metadata",
           "InPackagePath": ".nupkg.metadata"
         },
         {
-          "PhysicalPath": "C:\\Users\\jpreksavec\\.nuget\\packages\\microsoft.extensions.dependencyinjection.abstractions\\6.0.0\\.signature.p7s",
+          "PhysicalPath": "C:\\Users\\jpreksavec\\.nuget\\packages\\microsoft.extensions.features\\7.0.2\\.signature.p7s",
           "InPackagePath": ".signature.p7s"
         },
         {
-          "PhysicalPath": "C:\\Users\\jpreksavec\\.nuget\\packages\\microsoft.extensions.dependencyinjection.abstractions\\6.0.0\\Icon.png",
+          "PhysicalPath": "C:\\Users\\jpreksavec\\.nuget\\packages\\microsoft.extensions.features\\7.0.2\\Icon.png",
           "InPackagePath": "Icon.png"
         },
         {
-          "PhysicalPath": "C:\\Users\\jpreksavec\\.nuget\\packages\\microsoft.extensions.dependencyinjection.abstractions\\6.0.0\\LICENSE.TXT",
-          "InPackagePath": "LICENSE.TXT"
-        },
-        {
-          "PhysicalPath": "C:\\Users\\jpreksavec\\.nuget\\packages\\microsoft.extensions.dependencyinjection.abstractions\\6.0.0\\THIRD-PARTY-NOTICES.TXT",
+          "PhysicalPath": "C:\\Users\\jpreksavec\\.nuget\\packages\\microsoft.extensions.features\\7.0.2\\THIRD-PARTY-NOTICES.TXT",
           "InPackagePath": "THIRD-PARTY-NOTICES.TXT"
         },
         {
-          "PhysicalPath": "C:\\Users\\jpreksavec\\.nuget\\packages\\microsoft.extensions.dependencyinjection.abstractions\\6.0.0\\buildTransitive\\netcoreapp2.0\\Microsoft.Extensions.DependencyInjection.Abstractions.targets",
+          "PhysicalPath": "C:\\Users\\jpreksavec\\.nuget\\packages\\microsoft.extensions.features\\7.0.2\\lib\\net462\\Microsoft.Extensions.Features.dll",
+          "InPackagePath": "lib\\net462\\Microsoft.Extensions.Features.dll"
+        },
+        {
+          "PhysicalPath": "C:\\Users\\jpreksavec\\.nuget\\packages\\microsoft.extensions.features\\7.0.2\\lib\\net462\\Microsoft.Extensions.Features.xml",
+          "InPackagePath": "lib\\net462\\Microsoft.Extensions.Features.xml"
+        },
+        {
+          "PhysicalPath": "C:\\Users\\jpreksavec\\.nuget\\packages\\microsoft.extensions.features\\7.0.2\\lib\\net7.0\\Microsoft.Extensions.Features.dll",
+          "InPackagePath": "lib\\net7.0\\Microsoft.Extensions.Features.dll"
+        },
+        {
+          "PhysicalPath": "C:\\Users\\jpreksavec\\.nuget\\packages\\microsoft.extensions.features\\7.0.2\\lib\\net7.0\\Microsoft.Extensions.Features.xml",
+          "InPackagePath": "lib\\net7.0\\Microsoft.Extensions.Features.xml"
+        },
+        {
+          "PhysicalPath": "C:\\Users\\jpreksavec\\.nuget\\packages\\microsoft.extensions.features\\7.0.2\\lib\\netstandard2.0\\Microsoft.Extensions.Features.dll",
+          "InPackagePath": "lib\\netstandard2.0\\Microsoft.Extensions.Features.dll"
+        },
+        {
+          "PhysicalPath": "C:\\Users\\jpreksavec\\.nuget\\packages\\microsoft.extensions.features\\7.0.2\\lib\\netstandard2.0\\Microsoft.Extensions.Features.xml",
+          "InPackagePath": "lib\\netstandard2.0\\Microsoft.Extensions.Features.xml"
+        },
+        {
+          "PhysicalPath": "C:\\Users\\jpreksavec\\.nuget\\packages\\microsoft.extensions.features\\7.0.2\\microsoft.extensions.features.7.0.2.nupkg.sha512",
+          "InPackagePath": "microsoft.extensions.features.7.0.2.nupkg.sha512"
+        },
+        {
+          "PhysicalPath": "C:\\Users\\jpreksavec\\.nuget\\packages\\microsoft.extensions.features\\7.0.2\\microsoft.extensions.features.nuspec",
+          "InPackagePath": "microsoft.extensions.features.nuspec"
+        }
+      ]
+    },
+    {
+      "Id": "Microsoft.Extensions.DependencyInjection.Abstractions",
+      "Version": "7.0.0.0",
+      "Dependencies": [],
+      "Folder": "C:\\Users\\jpreksavec\\.nuget\\packages\\microsoft.extensions.dependencyinjection.abstractions\\7.0.0",
+      "ContentFiles": [
+        {
+          "PhysicalPath": "C:\\Users\\jpreksavec\\.nuget\\packages\\microsoft.extensions.dependencyinjection.abstractions\\7.0.0\\.nupkg.metadata",
+          "InPackagePath": ".nupkg.metadata"
+        },
+        {
+          "PhysicalPath": "C:\\Users\\jpreksavec\\.nuget\\packages\\microsoft.extensions.dependencyinjection.abstractions\\7.0.0\\.signature.p7s",
+          "InPackagePath": ".signature.p7s"
+        },
+        {
+          "PhysicalPath": "C:\\Users\\jpreksavec\\.nuget\\packages\\microsoft.extensions.dependencyinjection.abstractions\\7.0.0\\Icon.png",
+          "InPackagePath": "Icon.png"
+        },
+        {
+          "PhysicalPath": "C:\\Users\\jpreksavec\\.nuget\\packages\\microsoft.extensions.dependencyinjection.abstractions\\7.0.0\\LICENSE.TXT",
+          "InPackagePath": "LICENSE.TXT"
+        },
+        {
+          "PhysicalPath": "C:\\Users\\jpreksavec\\.nuget\\packages\\microsoft.extensions.dependencyinjection.abstractions\\7.0.0\\THIRD-PARTY-NOTICES.TXT",
+          "InPackagePath": "THIRD-PARTY-NOTICES.TXT"
+        },
+        {
+          "PhysicalPath": "C:\\Users\\jpreksavec\\.nuget\\packages\\microsoft.extensions.dependencyinjection.abstractions\\7.0.0\\buildTransitive\\net461\\Microsoft.Extensions.DependencyInjection.Abstractions.targets",
+          "InPackagePath": "buildTransitive\\net461\\Microsoft.Extensions.DependencyInjection.Abstractions.targets"
+        },
+        {
+          "PhysicalPath": "C:\\Users\\jpreksavec\\.nuget\\packages\\microsoft.extensions.dependencyinjection.abstractions\\7.0.0\\buildTransitive\\net462\\_._",
+          "InPackagePath": "buildTransitive\\net462\\_._"
+        },
+        {
+          "PhysicalPath": "C:\\Users\\jpreksavec\\.nuget\\packages\\microsoft.extensions.dependencyinjection.abstractions\\7.0.0\\buildTransitive\\net6.0\\_._",
+          "InPackagePath": "buildTransitive\\net6.0\\_._"
+        },
+        {
+          "PhysicalPath": "C:\\Users\\jpreksavec\\.nuget\\packages\\microsoft.extensions.dependencyinjection.abstractions\\7.0.0\\buildTransitive\\netcoreapp2.0\\Microsoft.Extensions.DependencyInjection.Abstractions.targets",
           "InPackagePath": "buildTransitive\\netcoreapp2.0\\Microsoft.Extensions.DependencyInjection.Abstractions.targets"
         },
         {
-          "PhysicalPath": "C:\\Users\\jpreksavec\\.nuget\\packages\\microsoft.extensions.dependencyinjection.abstractions\\6.0.0\\buildTransitive\\netcoreapp3.1\\_._",
-          "InPackagePath": "buildTransitive\\netcoreapp3.1\\_._"
+          "PhysicalPath": "C:\\Users\\jpreksavec\\.nuget\\packages\\microsoft.extensions.dependencyinjection.abstractions\\7.0.0\\lib\\net462\\Microsoft.Extensions.DependencyInjection.Abstractions.dll",
+          "InPackagePath": "lib\\net462\\Microsoft.Extensions.DependencyInjection.Abstractions.dll"
         },
         {
-          "PhysicalPath": "C:\\Users\\jpreksavec\\.nuget\\packages\\microsoft.extensions.dependencyinjection.abstractions\\6.0.0\\lib\\net461\\Microsoft.Extensions.DependencyInjection.Abstractions.dll",
-          "InPackagePath": "lib\\net461\\Microsoft.Extensions.DependencyInjection.Abstractions.dll"
+          "PhysicalPath": "C:\\Users\\jpreksavec\\.nuget\\packages\\microsoft.extensions.dependencyinjection.abstractions\\7.0.0\\lib\\net462\\Microsoft.Extensions.DependencyInjection.Abstractions.xml",
+          "InPackagePath": "lib\\net462\\Microsoft.Extensions.DependencyInjection.Abstractions.xml"
         },
         {
-          "PhysicalPath": "C:\\Users\\jpreksavec\\.nuget\\packages\\microsoft.extensions.dependencyinjection.abstractions\\6.0.0\\lib\\net461\\Microsoft.Extensions.DependencyInjection.Abstractions.xml",
-          "InPackagePath": "lib\\net461\\Microsoft.Extensions.DependencyInjection.Abstractions.xml"
-        },
-        {
-          "PhysicalPath": "C:\\Users\\jpreksavec\\.nuget\\packages\\microsoft.extensions.dependencyinjection.abstractions\\6.0.0\\lib\\net6.0\\Microsoft.Extensions.DependencyInjection.Abstractions.dll",
+          "PhysicalPath": "C:\\Users\\jpreksavec\\.nuget\\packages\\microsoft.extensions.dependencyinjection.abstractions\\7.0.0\\lib\\net6.0\\Microsoft.Extensions.DependencyInjection.Abstractions.dll",
           "InPackagePath": "lib\\net6.0\\Microsoft.Extensions.DependencyInjection.Abstractions.dll"
         },
         {
-          "PhysicalPath": "C:\\Users\\jpreksavec\\.nuget\\packages\\microsoft.extensions.dependencyinjection.abstractions\\6.0.0\\lib\\net6.0\\Microsoft.Extensions.DependencyInjection.Abstractions.xml",
+          "PhysicalPath": "C:\\Users\\jpreksavec\\.nuget\\packages\\microsoft.extensions.dependencyinjection.abstractions\\7.0.0\\lib\\net6.0\\Microsoft.Extensions.DependencyInjection.Abstractions.xml",
           "InPackagePath": "lib\\net6.0\\Microsoft.Extensions.DependencyInjection.Abstractions.xml"
         },
         {
-          "PhysicalPath": "C:\\Users\\jpreksavec\\.nuget\\packages\\microsoft.extensions.dependencyinjection.abstractions\\6.0.0\\lib\\netstandard2.0\\Microsoft.Extensions.DependencyInjection.Abstractions.dll",
+          "PhysicalPath": "C:\\Users\\jpreksavec\\.nuget\\packages\\microsoft.extensions.dependencyinjection.abstractions\\7.0.0\\lib\\net7.0\\Microsoft.Extensions.DependencyInjection.Abstractions.dll",
+          "InPackagePath": "lib\\net7.0\\Microsoft.Extensions.DependencyInjection.Abstractions.dll"
+        },
+        {
+          "PhysicalPath": "C:\\Users\\jpreksavec\\.nuget\\packages\\microsoft.extensions.dependencyinjection.abstractions\\7.0.0\\lib\\net7.0\\Microsoft.Extensions.DependencyInjection.Abstractions.xml",
+          "InPackagePath": "lib\\net7.0\\Microsoft.Extensions.DependencyInjection.Abstractions.xml"
+        },
+        {
+          "PhysicalPath": "C:\\Users\\jpreksavec\\.nuget\\packages\\microsoft.extensions.dependencyinjection.abstractions\\7.0.0\\lib\\netstandard2.0\\Microsoft.Extensions.DependencyInjection.Abstractions.dll",
           "InPackagePath": "lib\\netstandard2.0\\Microsoft.Extensions.DependencyInjection.Abstractions.dll"
         },
         {
-          "PhysicalPath": "C:\\Users\\jpreksavec\\.nuget\\packages\\microsoft.extensions.dependencyinjection.abstractions\\6.0.0\\lib\\netstandard2.0\\Microsoft.Extensions.DependencyInjection.Abstractions.xml",
+          "PhysicalPath": "C:\\Users\\jpreksavec\\.nuget\\packages\\microsoft.extensions.dependencyinjection.abstractions\\7.0.0\\lib\\netstandard2.0\\Microsoft.Extensions.DependencyInjection.Abstractions.xml",
           "InPackagePath": "lib\\netstandard2.0\\Microsoft.Extensions.DependencyInjection.Abstractions.xml"
         },
         {
-          "PhysicalPath": "C:\\Users\\jpreksavec\\.nuget\\packages\\microsoft.extensions.dependencyinjection.abstractions\\6.0.0\\lib\\netstandard2.1\\Microsoft.Extensions.DependencyInjection.Abstractions.dll",
+          "PhysicalPath": "C:\\Users\\jpreksavec\\.nuget\\packages\\microsoft.extensions.dependencyinjection.abstractions\\7.0.0\\lib\\netstandard2.1\\Microsoft.Extensions.DependencyInjection.Abstractions.dll",
           "InPackagePath": "lib\\netstandard2.1\\Microsoft.Extensions.DependencyInjection.Abstractions.dll"
         },
         {
-          "PhysicalPath": "C:\\Users\\jpreksavec\\.nuget\\packages\\microsoft.extensions.dependencyinjection.abstractions\\6.0.0\\lib\\netstandard2.1\\Microsoft.Extensions.DependencyInjection.Abstractions.xml",
+          "PhysicalPath": "C:\\Users\\jpreksavec\\.nuget\\packages\\microsoft.extensions.dependencyinjection.abstractions\\7.0.0\\lib\\netstandard2.1\\Microsoft.Extensions.DependencyInjection.Abstractions.xml",
           "InPackagePath": "lib\\netstandard2.1\\Microsoft.Extensions.DependencyInjection.Abstractions.xml"
         },
         {
-          "PhysicalPath": "C:\\Users\\jpreksavec\\.nuget\\packages\\microsoft.extensions.dependencyinjection.abstractions\\6.0.0\\microsoft.extensions.dependencyinjection.abstractions.6.0.0.nupkg.sha512",
-          "InPackagePath": "microsoft.extensions.dependencyinjection.abstractions.6.0.0.nupkg.sha512"
+          "PhysicalPath": "C:\\Users\\jpreksavec\\.nuget\\packages\\microsoft.extensions.dependencyinjection.abstractions\\7.0.0\\microsoft.extensions.dependencyinjection.abstractions.7.0.0.nupkg.sha512",
+          "InPackagePath": "microsoft.extensions.dependencyinjection.abstractions.7.0.0.nupkg.sha512"
         },
         {
-          "PhysicalPath": "C:\\Users\\jpreksavec\\.nuget\\packages\\microsoft.extensions.dependencyinjection.abstractions\\6.0.0\\microsoft.extensions.dependencyinjection.abstractions.nuspec",
+          "PhysicalPath": "C:\\Users\\jpreksavec\\.nuget\\packages\\microsoft.extensions.dependencyinjection.abstractions\\7.0.0\\microsoft.extensions.dependencyinjection.abstractions.nuspec",
           "InPackagePath": "microsoft.extensions.dependencyinjection.abstractions.nuspec"
         },
         {
-          "PhysicalPath": "C:\\Users\\jpreksavec\\.nuget\\packages\\microsoft.extensions.dependencyinjection.abstractions\\6.0.0\\useSharedDesignerContext.txt",
+          "PhysicalPath": "C:\\Users\\jpreksavec\\.nuget\\packages\\microsoft.extensions.dependencyinjection.abstractions\\7.0.0\\useSharedDesignerContext.txt",
           "InPackagePath": "useSharedDesignerContext.txt"
         }
       ]
     },
     {
       "Id": "Microsoft.Extensions.Options",
-      "Version": "6.0.0.0",
+      "Version": "7.0.0.0",
       "Dependencies": [
         {
           "Id": "Microsoft.Extensions.DependencyInjection.Abstractions",
-          "VersionsRange": "6.0.0"
+          "VersionsRange": "7.0.0"
         },
         {
           "Id": "Microsoft.Extensions.Primitives",
-          "VersionsRange": "6.0.0"
+          "VersionsRange": "7.0.0"
         }
       ],
-      "Folder": "C:\\Users\\jpreksavec\\.nuget\\packages\\microsoft.extensions.options\\6.0.0",
+      "Folder": "C:\\Users\\jpreksavec\\.nuget\\packages\\microsoft.extensions.options\\7.0.0",
       "ContentFiles": [
         {
-          "PhysicalPath": "C:\\Users\\jpreksavec\\.nuget\\packages\\microsoft.extensions.options\\6.0.0\\.nupkg.metadata",
+          "PhysicalPath": "C:\\Users\\jpreksavec\\.nuget\\packages\\microsoft.extensions.options\\7.0.0\\.nupkg.metadata",
           "InPackagePath": ".nupkg.metadata"
         },
         {
-          "PhysicalPath": "C:\\Users\\jpreksavec\\.nuget\\packages\\microsoft.extensions.options\\6.0.0\\.signature.p7s",
+          "PhysicalPath": "C:\\Users\\jpreksavec\\.nuget\\packages\\microsoft.extensions.options\\7.0.0\\.signature.p7s",
           "InPackagePath": ".signature.p7s"
         },
         {
-          "PhysicalPath": "C:\\Users\\jpreksavec\\.nuget\\packages\\microsoft.extensions.options\\6.0.0\\Icon.png",
+          "PhysicalPath": "C:\\Users\\jpreksavec\\.nuget\\packages\\microsoft.extensions.options\\7.0.0\\Icon.png",
           "InPackagePath": "Icon.png"
         },
         {
-          "PhysicalPath": "C:\\Users\\jpreksavec\\.nuget\\packages\\microsoft.extensions.options\\6.0.0\\LICENSE.TXT",
+          "PhysicalPath": "C:\\Users\\jpreksavec\\.nuget\\packages\\microsoft.extensions.options\\7.0.0\\LICENSE.TXT",
           "InPackagePath": "LICENSE.TXT"
         },
         {
-          "PhysicalPath": "C:\\Users\\jpreksavec\\.nuget\\packages\\microsoft.extensions.options\\6.0.0\\THIRD-PARTY-NOTICES.TXT",
+          "PhysicalPath": "C:\\Users\\jpreksavec\\.nuget\\packages\\microsoft.extensions.options\\7.0.0\\THIRD-PARTY-NOTICES.TXT",
           "InPackagePath": "THIRD-PARTY-NOTICES.TXT"
         },
         {
-          "PhysicalPath": "C:\\Users\\jpreksavec\\.nuget\\packages\\microsoft.extensions.options\\6.0.0\\lib\\net461\\Microsoft.Extensions.Options.dll",
-          "InPackagePath": "lib\\net461\\Microsoft.Extensions.Options.dll"
+          "PhysicalPath": "C:\\Users\\jpreksavec\\.nuget\\packages\\microsoft.extensions.options\\7.0.0\\buildTransitive\\net461\\Microsoft.Extensions.Options.targets",
+          "InPackagePath": "buildTransitive\\net461\\Microsoft.Extensions.Options.targets"
         },
         {
-          "PhysicalPath": "C:\\Users\\jpreksavec\\.nuget\\packages\\microsoft.extensions.options\\6.0.0\\lib\\net461\\Microsoft.Extensions.Options.xml",
-          "InPackagePath": "lib\\net461\\Microsoft.Extensions.Options.xml"
+          "PhysicalPath": "C:\\Users\\jpreksavec\\.nuget\\packages\\microsoft.extensions.options\\7.0.0\\buildTransitive\\net462\\_._",
+          "InPackagePath": "buildTransitive\\net462\\_._"
         },
         {
-          "PhysicalPath": "C:\\Users\\jpreksavec\\.nuget\\packages\\microsoft.extensions.options\\6.0.0\\lib\\netstandard2.0\\Microsoft.Extensions.Options.dll",
+          "PhysicalPath": "C:\\Users\\jpreksavec\\.nuget\\packages\\microsoft.extensions.options\\7.0.0\\buildTransitive\\net6.0\\_._",
+          "InPackagePath": "buildTransitive\\net6.0\\_._"
+        },
+        {
+          "PhysicalPath": "C:\\Users\\jpreksavec\\.nuget\\packages\\microsoft.extensions.options\\7.0.0\\buildTransitive\\netcoreapp2.0\\Microsoft.Extensions.Options.targets",
+          "InPackagePath": "buildTransitive\\netcoreapp2.0\\Microsoft.Extensions.Options.targets"
+        },
+        {
+          "PhysicalPath": "C:\\Users\\jpreksavec\\.nuget\\packages\\microsoft.extensions.options\\7.0.0\\lib\\net462\\Microsoft.Extensions.Options.dll",
+          "InPackagePath": "lib\\net462\\Microsoft.Extensions.Options.dll"
+        },
+        {
+          "PhysicalPath": "C:\\Users\\jpreksavec\\.nuget\\packages\\microsoft.extensions.options\\7.0.0\\lib\\net462\\Microsoft.Extensions.Options.xml",
+          "InPackagePath": "lib\\net462\\Microsoft.Extensions.Options.xml"
+        },
+        {
+          "PhysicalPath": "C:\\Users\\jpreksavec\\.nuget\\packages\\microsoft.extensions.options\\7.0.0\\lib\\net6.0\\Microsoft.Extensions.Options.dll",
+          "InPackagePath": "lib\\net6.0\\Microsoft.Extensions.Options.dll"
+        },
+        {
+          "PhysicalPath": "C:\\Users\\jpreksavec\\.nuget\\packages\\microsoft.extensions.options\\7.0.0\\lib\\net6.0\\Microsoft.Extensions.Options.xml",
+          "InPackagePath": "lib\\net6.0\\Microsoft.Extensions.Options.xml"
+        },
+        {
+          "PhysicalPath": "C:\\Users\\jpreksavec\\.nuget\\packages\\microsoft.extensions.options\\7.0.0\\lib\\net7.0\\Microsoft.Extensions.Options.dll",
+          "InPackagePath": "lib\\net7.0\\Microsoft.Extensions.Options.dll"
+        },
+        {
+          "PhysicalPath": "C:\\Users\\jpreksavec\\.nuget\\packages\\microsoft.extensions.options\\7.0.0\\lib\\net7.0\\Microsoft.Extensions.Options.xml",
+          "InPackagePath": "lib\\net7.0\\Microsoft.Extensions.Options.xml"
+        },
+        {
+          "PhysicalPath": "C:\\Users\\jpreksavec\\.nuget\\packages\\microsoft.extensions.options\\7.0.0\\lib\\netstandard2.0\\Microsoft.Extensions.Options.dll",
           "InPackagePath": "lib\\netstandard2.0\\Microsoft.Extensions.Options.dll"
         },
         {
-          "PhysicalPath": "C:\\Users\\jpreksavec\\.nuget\\packages\\microsoft.extensions.options\\6.0.0\\lib\\netstandard2.0\\Microsoft.Extensions.Options.xml",
+          "PhysicalPath": "C:\\Users\\jpreksavec\\.nuget\\packages\\microsoft.extensions.options\\7.0.0\\lib\\netstandard2.0\\Microsoft.Extensions.Options.xml",
           "InPackagePath": "lib\\netstandard2.0\\Microsoft.Extensions.Options.xml"
         },
         {
-          "PhysicalPath": "C:\\Users\\jpreksavec\\.nuget\\packages\\microsoft.extensions.options\\6.0.0\\lib\\netstandard2.1\\Microsoft.Extensions.Options.dll",
+          "PhysicalPath": "C:\\Users\\jpreksavec\\.nuget\\packages\\microsoft.extensions.options\\7.0.0\\lib\\netstandard2.1\\Microsoft.Extensions.Options.dll",
           "InPackagePath": "lib\\netstandard2.1\\Microsoft.Extensions.Options.dll"
         },
         {
-          "PhysicalPath": "C:\\Users\\jpreksavec\\.nuget\\packages\\microsoft.extensions.options\\6.0.0\\lib\\netstandard2.1\\Microsoft.Extensions.Options.xml",
+          "PhysicalPath": "C:\\Users\\jpreksavec\\.nuget\\packages\\microsoft.extensions.options\\7.0.0\\lib\\netstandard2.1\\Microsoft.Extensions.Options.xml",
           "InPackagePath": "lib\\netstandard2.1\\Microsoft.Extensions.Options.xml"
         },
         {
-          "PhysicalPath": "C:\\Users\\jpreksavec\\.nuget\\packages\\microsoft.extensions.options\\6.0.0\\microsoft.extensions.options.6.0.0.nupkg.sha512",
-          "InPackagePath": "microsoft.extensions.options.6.0.0.nupkg.sha512"
+          "PhysicalPath": "C:\\Users\\jpreksavec\\.nuget\\packages\\microsoft.extensions.options\\7.0.0\\microsoft.extensions.options.7.0.0.nupkg.sha512",
+          "InPackagePath": "microsoft.extensions.options.7.0.0.nupkg.sha512"
         },
         {
-          "PhysicalPath": "C:\\Users\\jpreksavec\\.nuget\\packages\\microsoft.extensions.options\\6.0.0\\microsoft.extensions.options.nuspec",
+          "PhysicalPath": "C:\\Users\\jpreksavec\\.nuget\\packages\\microsoft.extensions.options\\7.0.0\\microsoft.extensions.options.nuspec",
           "InPackagePath": "microsoft.extensions.options.nuspec"
         },
         {
-          "PhysicalPath": "C:\\Users\\jpreksavec\\.nuget\\packages\\microsoft.extensions.options\\6.0.0\\useSharedDesignerContext.txt",
+          "PhysicalPath": "C:\\Users\\jpreksavec\\.nuget\\packages\\microsoft.extensions.options\\7.0.0\\useSharedDesignerContext.txt",
           "InPackagePath": "useSharedDesignerContext.txt"
         }
       ]
@@ -6952,6 +7235,208 @@
         },
         {
           "PhysicalPath": "C:\\Users\\jpreksavec\\.nuget\\packages\\microsoft.extensions.hosting\\6.0.1\\useSharedDesignerContext.txt",
+          "InPackagePath": "useSharedDesignerContext.txt"
+        }
+      ]
+    },
+    {
+      "Id": "Microsoft.Extensions.Caching.Abstractions",
+      "Version": "7.0.0.0",
+      "Dependencies": [
+        {
+          "Id": "Microsoft.Extensions.Primitives",
+          "VersionsRange": "7.0.0"
+        }
+      ],
+      "Folder": "C:\\Users\\jpreksavec\\.nuget\\packages\\microsoft.extensions.caching.abstractions\\7.0.0",
+      "ContentFiles": [
+        {
+          "PhysicalPath": "C:\\Users\\jpreksavec\\.nuget\\packages\\microsoft.extensions.caching.abstractions\\7.0.0\\.nupkg.metadata",
+          "InPackagePath": ".nupkg.metadata"
+        },
+        {
+          "PhysicalPath": "C:\\Users\\jpreksavec\\.nuget\\packages\\microsoft.extensions.caching.abstractions\\7.0.0\\.signature.p7s",
+          "InPackagePath": ".signature.p7s"
+        },
+        {
+          "PhysicalPath": "C:\\Users\\jpreksavec\\.nuget\\packages\\microsoft.extensions.caching.abstractions\\7.0.0\\Icon.png",
+          "InPackagePath": "Icon.png"
+        },
+        {
+          "PhysicalPath": "C:\\Users\\jpreksavec\\.nuget\\packages\\microsoft.extensions.caching.abstractions\\7.0.0\\LICENSE.TXT",
+          "InPackagePath": "LICENSE.TXT"
+        },
+        {
+          "PhysicalPath": "C:\\Users\\jpreksavec\\.nuget\\packages\\microsoft.extensions.caching.abstractions\\7.0.0\\THIRD-PARTY-NOTICES.TXT",
+          "InPackagePath": "THIRD-PARTY-NOTICES.TXT"
+        },
+        {
+          "PhysicalPath": "C:\\Users\\jpreksavec\\.nuget\\packages\\microsoft.extensions.caching.abstractions\\7.0.0\\buildTransitive\\net461\\Microsoft.Extensions.Caching.Abstractions.targets",
+          "InPackagePath": "buildTransitive\\net461\\Microsoft.Extensions.Caching.Abstractions.targets"
+        },
+        {
+          "PhysicalPath": "C:\\Users\\jpreksavec\\.nuget\\packages\\microsoft.extensions.caching.abstractions\\7.0.0\\buildTransitive\\net462\\_._",
+          "InPackagePath": "buildTransitive\\net462\\_._"
+        },
+        {
+          "PhysicalPath": "C:\\Users\\jpreksavec\\.nuget\\packages\\microsoft.extensions.caching.abstractions\\7.0.0\\buildTransitive\\net6.0\\_._",
+          "InPackagePath": "buildTransitive\\net6.0\\_._"
+        },
+        {
+          "PhysicalPath": "C:\\Users\\jpreksavec\\.nuget\\packages\\microsoft.extensions.caching.abstractions\\7.0.0\\buildTransitive\\netcoreapp2.0\\Microsoft.Extensions.Caching.Abstractions.targets",
+          "InPackagePath": "buildTransitive\\netcoreapp2.0\\Microsoft.Extensions.Caching.Abstractions.targets"
+        },
+        {
+          "PhysicalPath": "C:\\Users\\jpreksavec\\.nuget\\packages\\microsoft.extensions.caching.abstractions\\7.0.0\\lib\\net462\\Microsoft.Extensions.Caching.Abstractions.dll",
+          "InPackagePath": "lib\\net462\\Microsoft.Extensions.Caching.Abstractions.dll"
+        },
+        {
+          "PhysicalPath": "C:\\Users\\jpreksavec\\.nuget\\packages\\microsoft.extensions.caching.abstractions\\7.0.0\\lib\\net462\\Microsoft.Extensions.Caching.Abstractions.xml",
+          "InPackagePath": "lib\\net462\\Microsoft.Extensions.Caching.Abstractions.xml"
+        },
+        {
+          "PhysicalPath": "C:\\Users\\jpreksavec\\.nuget\\packages\\microsoft.extensions.caching.abstractions\\7.0.0\\lib\\net6.0\\Microsoft.Extensions.Caching.Abstractions.dll",
+          "InPackagePath": "lib\\net6.0\\Microsoft.Extensions.Caching.Abstractions.dll"
+        },
+        {
+          "PhysicalPath": "C:\\Users\\jpreksavec\\.nuget\\packages\\microsoft.extensions.caching.abstractions\\7.0.0\\lib\\net6.0\\Microsoft.Extensions.Caching.Abstractions.xml",
+          "InPackagePath": "lib\\net6.0\\Microsoft.Extensions.Caching.Abstractions.xml"
+        },
+        {
+          "PhysicalPath": "C:\\Users\\jpreksavec\\.nuget\\packages\\microsoft.extensions.caching.abstractions\\7.0.0\\lib\\net7.0\\Microsoft.Extensions.Caching.Abstractions.dll",
+          "InPackagePath": "lib\\net7.0\\Microsoft.Extensions.Caching.Abstractions.dll"
+        },
+        {
+          "PhysicalPath": "C:\\Users\\jpreksavec\\.nuget\\packages\\microsoft.extensions.caching.abstractions\\7.0.0\\lib\\net7.0\\Microsoft.Extensions.Caching.Abstractions.xml",
+          "InPackagePath": "lib\\net7.0\\Microsoft.Extensions.Caching.Abstractions.xml"
+        },
+        {
+          "PhysicalPath": "C:\\Users\\jpreksavec\\.nuget\\packages\\microsoft.extensions.caching.abstractions\\7.0.0\\lib\\netstandard2.0\\Microsoft.Extensions.Caching.Abstractions.dll",
+          "InPackagePath": "lib\\netstandard2.0\\Microsoft.Extensions.Caching.Abstractions.dll"
+        },
+        {
+          "PhysicalPath": "C:\\Users\\jpreksavec\\.nuget\\packages\\microsoft.extensions.caching.abstractions\\7.0.0\\lib\\netstandard2.0\\Microsoft.Extensions.Caching.Abstractions.xml",
+          "InPackagePath": "lib\\netstandard2.0\\Microsoft.Extensions.Caching.Abstractions.xml"
+        },
+        {
+          "PhysicalPath": "C:\\Users\\jpreksavec\\.nuget\\packages\\microsoft.extensions.caching.abstractions\\7.0.0\\microsoft.extensions.caching.abstractions.7.0.0.nupkg.sha512",
+          "InPackagePath": "microsoft.extensions.caching.abstractions.7.0.0.nupkg.sha512"
+        },
+        {
+          "PhysicalPath": "C:\\Users\\jpreksavec\\.nuget\\packages\\microsoft.extensions.caching.abstractions\\7.0.0\\microsoft.extensions.caching.abstractions.nuspec",
+          "InPackagePath": "microsoft.extensions.caching.abstractions.nuspec"
+        },
+        {
+          "PhysicalPath": "C:\\Users\\jpreksavec\\.nuget\\packages\\microsoft.extensions.caching.abstractions\\7.0.0\\useSharedDesignerContext.txt",
+          "InPackagePath": "useSharedDesignerContext.txt"
+        }
+      ]
+    },
+    {
+      "Id": "Microsoft.Extensions.Caching.Memory",
+      "Version": "7.0.0.0",
+      "Dependencies": [
+        {
+          "Id": "Microsoft.Extensions.Caching.Abstractions",
+          "VersionsRange": "7.0.0"
+        },
+        {
+          "Id": "Microsoft.Extensions.DependencyInjection.Abstractions",
+          "VersionsRange": "7.0.0"
+        },
+        {
+          "Id": "Microsoft.Extensions.Logging.Abstractions",
+          "VersionsRange": "7.0.0"
+        },
+        {
+          "Id": "Microsoft.Extensions.Options",
+          "VersionsRange": "7.0.0"
+        },
+        {
+          "Id": "Microsoft.Extensions.Primitives",
+          "VersionsRange": "7.0.0"
+        }
+      ],
+      "Folder": "C:\\Users\\jpreksavec\\.nuget\\packages\\microsoft.extensions.caching.memory\\7.0.0",
+      "ContentFiles": [
+        {
+          "PhysicalPath": "C:\\Users\\jpreksavec\\.nuget\\packages\\microsoft.extensions.caching.memory\\7.0.0\\.nupkg.metadata",
+          "InPackagePath": ".nupkg.metadata"
+        },
+        {
+          "PhysicalPath": "C:\\Users\\jpreksavec\\.nuget\\packages\\microsoft.extensions.caching.memory\\7.0.0\\.signature.p7s",
+          "InPackagePath": ".signature.p7s"
+        },
+        {
+          "PhysicalPath": "C:\\Users\\jpreksavec\\.nuget\\packages\\microsoft.extensions.caching.memory\\7.0.0\\Icon.png",
+          "InPackagePath": "Icon.png"
+        },
+        {
+          "PhysicalPath": "C:\\Users\\jpreksavec\\.nuget\\packages\\microsoft.extensions.caching.memory\\7.0.0\\LICENSE.TXT",
+          "InPackagePath": "LICENSE.TXT"
+        },
+        {
+          "PhysicalPath": "C:\\Users\\jpreksavec\\.nuget\\packages\\microsoft.extensions.caching.memory\\7.0.0\\THIRD-PARTY-NOTICES.TXT",
+          "InPackagePath": "THIRD-PARTY-NOTICES.TXT"
+        },
+        {
+          "PhysicalPath": "C:\\Users\\jpreksavec\\.nuget\\packages\\microsoft.extensions.caching.memory\\7.0.0\\buildTransitive\\net461\\Microsoft.Extensions.Caching.Memory.targets",
+          "InPackagePath": "buildTransitive\\net461\\Microsoft.Extensions.Caching.Memory.targets"
+        },
+        {
+          "PhysicalPath": "C:\\Users\\jpreksavec\\.nuget\\packages\\microsoft.extensions.caching.memory\\7.0.0\\buildTransitive\\net462\\_._",
+          "InPackagePath": "buildTransitive\\net462\\_._"
+        },
+        {
+          "PhysicalPath": "C:\\Users\\jpreksavec\\.nuget\\packages\\microsoft.extensions.caching.memory\\7.0.0\\buildTransitive\\net6.0\\_._",
+          "InPackagePath": "buildTransitive\\net6.0\\_._"
+        },
+        {
+          "PhysicalPath": "C:\\Users\\jpreksavec\\.nuget\\packages\\microsoft.extensions.caching.memory\\7.0.0\\buildTransitive\\netcoreapp2.0\\Microsoft.Extensions.Caching.Memory.targets",
+          "InPackagePath": "buildTransitive\\netcoreapp2.0\\Microsoft.Extensions.Caching.Memory.targets"
+        },
+        {
+          "PhysicalPath": "C:\\Users\\jpreksavec\\.nuget\\packages\\microsoft.extensions.caching.memory\\7.0.0\\lib\\net462\\Microsoft.Extensions.Caching.Memory.dll",
+          "InPackagePath": "lib\\net462\\Microsoft.Extensions.Caching.Memory.dll"
+        },
+        {
+          "PhysicalPath": "C:\\Users\\jpreksavec\\.nuget\\packages\\microsoft.extensions.caching.memory\\7.0.0\\lib\\net462\\Microsoft.Extensions.Caching.Memory.xml",
+          "InPackagePath": "lib\\net462\\Microsoft.Extensions.Caching.Memory.xml"
+        },
+        {
+          "PhysicalPath": "C:\\Users\\jpreksavec\\.nuget\\packages\\microsoft.extensions.caching.memory\\7.0.0\\lib\\net6.0\\Microsoft.Extensions.Caching.Memory.dll",
+          "InPackagePath": "lib\\net6.0\\Microsoft.Extensions.Caching.Memory.dll"
+        },
+        {
+          "PhysicalPath": "C:\\Users\\jpreksavec\\.nuget\\packages\\microsoft.extensions.caching.memory\\7.0.0\\lib\\net6.0\\Microsoft.Extensions.Caching.Memory.xml",
+          "InPackagePath": "lib\\net6.0\\Microsoft.Extensions.Caching.Memory.xml"
+        },
+        {
+          "PhysicalPath": "C:\\Users\\jpreksavec\\.nuget\\packages\\microsoft.extensions.caching.memory\\7.0.0\\lib\\net7.0\\Microsoft.Extensions.Caching.Memory.dll",
+          "InPackagePath": "lib\\net7.0\\Microsoft.Extensions.Caching.Memory.dll"
+        },
+        {
+          "PhysicalPath": "C:\\Users\\jpreksavec\\.nuget\\packages\\microsoft.extensions.caching.memory\\7.0.0\\lib\\net7.0\\Microsoft.Extensions.Caching.Memory.xml",
+          "InPackagePath": "lib\\net7.0\\Microsoft.Extensions.Caching.Memory.xml"
+        },
+        {
+          "PhysicalPath": "C:\\Users\\jpreksavec\\.nuget\\packages\\microsoft.extensions.caching.memory\\7.0.0\\lib\\netstandard2.0\\Microsoft.Extensions.Caching.Memory.dll",
+          "InPackagePath": "lib\\netstandard2.0\\Microsoft.Extensions.Caching.Memory.dll"
+        },
+        {
+          "PhysicalPath": "C:\\Users\\jpreksavec\\.nuget\\packages\\microsoft.extensions.caching.memory\\7.0.0\\lib\\netstandard2.0\\Microsoft.Extensions.Caching.Memory.xml",
+          "InPackagePath": "lib\\netstandard2.0\\Microsoft.Extensions.Caching.Memory.xml"
+        },
+        {
+          "PhysicalPath": "C:\\Users\\jpreksavec\\.nuget\\packages\\microsoft.extensions.caching.memory\\7.0.0\\microsoft.extensions.caching.memory.7.0.0.nupkg.sha512",
+          "InPackagePath": "microsoft.extensions.caching.memory.7.0.0.nupkg.sha512"
+        },
+        {
+          "PhysicalPath": "C:\\Users\\jpreksavec\\.nuget\\packages\\microsoft.extensions.caching.memory\\7.0.0\\microsoft.extensions.caching.memory.nuspec",
+          "InPackagePath": "microsoft.extensions.caching.memory.nuspec"
+        },
+        {
+          "PhysicalPath": "C:\\Users\\jpreksavec\\.nuget\\packages\\microsoft.extensions.caching.memory\\7.0.0\\useSharedDesignerContext.txt",
           "InPackagePath": "useSharedDesignerContext.txt"
         }
       ]
@@ -9188,6 +9673,132 @@
       ]
     },
     {
+      "Id": "Microsoft.AspNetCore.Connections.Abstractions",
+      "Version": "7.0.2.0",
+      "Dependencies": [
+        {
+          "Id": "Microsoft.Extensions.Features",
+          "VersionsRange": "7.0.2"
+        },
+        {
+          "Id": "System.IO.Pipelines",
+          "VersionsRange": "7.0.0"
+        }
+      ],
+      "Folder": "C:\\Users\\jpreksavec\\.nuget\\packages\\microsoft.aspnetcore.connections.abstractions\\7.0.2",
+      "ContentFiles": [
+        {
+          "PhysicalPath": "C:\\Users\\jpreksavec\\.nuget\\packages\\microsoft.aspnetcore.connections.abstractions\\7.0.2\\.nupkg.metadata",
+          "InPackagePath": ".nupkg.metadata"
+        },
+        {
+          "PhysicalPath": "C:\\Users\\jpreksavec\\.nuget\\packages\\microsoft.aspnetcore.connections.abstractions\\7.0.2\\.signature.p7s",
+          "InPackagePath": ".signature.p7s"
+        },
+        {
+          "PhysicalPath": "C:\\Users\\jpreksavec\\.nuget\\packages\\microsoft.aspnetcore.connections.abstractions\\7.0.2\\Icon.png",
+          "InPackagePath": "Icon.png"
+        },
+        {
+          "PhysicalPath": "C:\\Users\\jpreksavec\\.nuget\\packages\\microsoft.aspnetcore.connections.abstractions\\7.0.2\\THIRD-PARTY-NOTICES.TXT",
+          "InPackagePath": "THIRD-PARTY-NOTICES.TXT"
+        },
+        {
+          "PhysicalPath": "C:\\Users\\jpreksavec\\.nuget\\packages\\microsoft.aspnetcore.connections.abstractions\\7.0.2\\lib\\net462\\Microsoft.AspNetCore.Connections.Abstractions.dll",
+          "InPackagePath": "lib\\net462\\Microsoft.AspNetCore.Connections.Abstractions.dll"
+        },
+        {
+          "PhysicalPath": "C:\\Users\\jpreksavec\\.nuget\\packages\\microsoft.aspnetcore.connections.abstractions\\7.0.2\\lib\\net462\\Microsoft.AspNetCore.Connections.Abstractions.xml",
+          "InPackagePath": "lib\\net462\\Microsoft.AspNetCore.Connections.Abstractions.xml"
+        },
+        {
+          "PhysicalPath": "C:\\Users\\jpreksavec\\.nuget\\packages\\microsoft.aspnetcore.connections.abstractions\\7.0.2\\lib\\net7.0\\Microsoft.AspNetCore.Connections.Abstractions.dll",
+          "InPackagePath": "lib\\net7.0\\Microsoft.AspNetCore.Connections.Abstractions.dll"
+        },
+        {
+          "PhysicalPath": "C:\\Users\\jpreksavec\\.nuget\\packages\\microsoft.aspnetcore.connections.abstractions\\7.0.2\\lib\\net7.0\\Microsoft.AspNetCore.Connections.Abstractions.xml",
+          "InPackagePath": "lib\\net7.0\\Microsoft.AspNetCore.Connections.Abstractions.xml"
+        },
+        {
+          "PhysicalPath": "C:\\Users\\jpreksavec\\.nuget\\packages\\microsoft.aspnetcore.connections.abstractions\\7.0.2\\lib\\netstandard2.0\\Microsoft.AspNetCore.Connections.Abstractions.dll",
+          "InPackagePath": "lib\\netstandard2.0\\Microsoft.AspNetCore.Connections.Abstractions.dll"
+        },
+        {
+          "PhysicalPath": "C:\\Users\\jpreksavec\\.nuget\\packages\\microsoft.aspnetcore.connections.abstractions\\7.0.2\\lib\\netstandard2.0\\Microsoft.AspNetCore.Connections.Abstractions.xml",
+          "InPackagePath": "lib\\netstandard2.0\\Microsoft.AspNetCore.Connections.Abstractions.xml"
+        },
+        {
+          "PhysicalPath": "C:\\Users\\jpreksavec\\.nuget\\packages\\microsoft.aspnetcore.connections.abstractions\\7.0.2\\lib\\netstandard2.1\\Microsoft.AspNetCore.Connections.Abstractions.dll",
+          "InPackagePath": "lib\\netstandard2.1\\Microsoft.AspNetCore.Connections.Abstractions.dll"
+        },
+        {
+          "PhysicalPath": "C:\\Users\\jpreksavec\\.nuget\\packages\\microsoft.aspnetcore.connections.abstractions\\7.0.2\\lib\\netstandard2.1\\Microsoft.AspNetCore.Connections.Abstractions.xml",
+          "InPackagePath": "lib\\netstandard2.1\\Microsoft.AspNetCore.Connections.Abstractions.xml"
+        },
+        {
+          "PhysicalPath": "C:\\Users\\jpreksavec\\.nuget\\packages\\microsoft.aspnetcore.connections.abstractions\\7.0.2\\microsoft.aspnetcore.connections.abstractions.7.0.2.nupkg.sha512",
+          "InPackagePath": "microsoft.aspnetcore.connections.abstractions.7.0.2.nupkg.sha512"
+        },
+        {
+          "PhysicalPath": "C:\\Users\\jpreksavec\\.nuget\\packages\\microsoft.aspnetcore.connections.abstractions\\7.0.2\\microsoft.aspnetcore.connections.abstractions.nuspec",
+          "InPackagePath": "microsoft.aspnetcore.connections.abstractions.nuspec"
+        }
+      ]
+    },
+    {
+      "Id": "Microsoft.AspNetCore.Authentication.Negotiate",
+      "Version": "7.0.2.0",
+      "Dependencies": [
+        {
+          "Id": "Microsoft.AspNetCore.Connections.Abstractions",
+          "VersionsRange": "7.0.2"
+        },
+        {
+          "Id": "Microsoft.Extensions.Caching.Memory",
+          "VersionsRange": "7.0.0"
+        },
+        {
+          "Id": "System.DirectoryServices.Protocols",
+          "VersionsRange": "7.0.0"
+        }
+      ],
+      "Folder": "C:\\Users\\jpreksavec\\.nuget\\packages\\microsoft.aspnetcore.authentication.negotiate\\7.0.2",
+      "ContentFiles": [
+        {
+          "PhysicalPath": "C:\\Users\\jpreksavec\\.nuget\\packages\\microsoft.aspnetcore.authentication.negotiate\\7.0.2\\.nupkg.metadata",
+          "InPackagePath": ".nupkg.metadata"
+        },
+        {
+          "PhysicalPath": "C:\\Users\\jpreksavec\\.nuget\\packages\\microsoft.aspnetcore.authentication.negotiate\\7.0.2\\.signature.p7s",
+          "InPackagePath": ".signature.p7s"
+        },
+        {
+          "PhysicalPath": "C:\\Users\\jpreksavec\\.nuget\\packages\\microsoft.aspnetcore.authentication.negotiate\\7.0.2\\Icon.png",
+          "InPackagePath": "Icon.png"
+        },
+        {
+          "PhysicalPath": "C:\\Users\\jpreksavec\\.nuget\\packages\\microsoft.aspnetcore.authentication.negotiate\\7.0.2\\THIRD-PARTY-NOTICES.TXT",
+          "InPackagePath": "THIRD-PARTY-NOTICES.TXT"
+        },
+        {
+          "PhysicalPath": "C:\\Users\\jpreksavec\\.nuget\\packages\\microsoft.aspnetcore.authentication.negotiate\\7.0.2\\lib\\net7.0\\Microsoft.AspNetCore.Authentication.Negotiate.dll",
+          "InPackagePath": "lib\\net7.0\\Microsoft.AspNetCore.Authentication.Negotiate.dll"
+        },
+        {
+          "PhysicalPath": "C:\\Users\\jpreksavec\\.nuget\\packages\\microsoft.aspnetcore.authentication.negotiate\\7.0.2\\lib\\net7.0\\Microsoft.AspNetCore.Authentication.Negotiate.xml",
+          "InPackagePath": "lib\\net7.0\\Microsoft.AspNetCore.Authentication.Negotiate.xml"
+        },
+        {
+          "PhysicalPath": "C:\\Users\\jpreksavec\\.nuget\\packages\\microsoft.aspnetcore.authentication.negotiate\\7.0.2\\microsoft.aspnetcore.authentication.negotiate.7.0.2.nupkg.sha512",
+          "InPackagePath": "microsoft.aspnetcore.authentication.negotiate.7.0.2.nupkg.sha512"
+        },
+        {
+          "PhysicalPath": "C:\\Users\\jpreksavec\\.nuget\\packages\\microsoft.aspnetcore.authentication.negotiate\\7.0.2\\microsoft.aspnetcore.authentication.negotiate.nuspec",
+          "InPackagePath": "microsoft.aspnetcore.authentication.negotiate.nuspec"
+        }
+      ]
+    },
+    {
       "Id": "EntityFramework",
       "Version": "6.4.4.0",
       "Dependencies": [
@@ -10612,6 +11223,10 @@
       "Id": "Bookstore.Service",
       "Version": "",
       "Dependencies": [
+        {
+          "Id": "Microsoft.AspNetCore.Authentication.Negotiate",
+          "VersionsRange": "[7.0.2, )"
+        },
         {
           "Id": "Microsoft.AspNetCore.Mvc.NewtonsoftJson",
           "VersionsRange": "[7.0.2, )"

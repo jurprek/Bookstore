@@ -41,6 +41,8 @@ namespace Bookstore
         public string Title { get; set; }
         /*PropertyInfo Attribute Bookstore.Book.AuthorID*/
         public Guid? AuthorID { get; set; }
+        /*PropertyInfo Attribute Bookstore.Book.Price*/
+        public decimal? Price { get; set; }
         /*DataStructureInfo ClassBody Bookstore.Book*/
     }
 
@@ -272,6 +274,60 @@ namespace Bookstore
         /*DataStructureInfo ClassBody Bookstore.Person*/
     }
 
+    /*DataStructureInfo ClassAttributes Bookstore.PersonFilter*/
+    public class PersonFilter/*DataStructureInfo ClassInterace Bookstore.PersonFilter*/
+    {
+        /*PropertyInfo Attribute Bookstore.PersonFilter.LimitResultCount*/
+        public int? LimitResultCount { get; set; }
+        /*PropertyInfo Attribute Bookstore.PersonFilter.NamePattern*/
+        public string NamePattern { get; set; }
+        /*DataStructureInfo ClassBody Bookstore.PersonFilter*/
+    }
+
+    /*DataStructureInfo ClassAttributes Bookstore.PersonInfo*/
+    public class PersonInfo : EntityBase<Bookstore.PersonInfo>/*Next DataStructureInfo ClassInterace Bookstore.PersonInfo*/
+    {
+        /*PropertyInfo Attribute Bookstore.PersonInfo.Name*/
+        public string Name { get; set; }
+        /*PropertyInfo Attribute Bookstore.PersonInfo.NameLength*/
+        public int? NameLength { get; set; }
+        /*PropertyInfo Attribute Bookstore.PersonInfo.PersonID*/
+        public Guid? PersonID { get; set; }
+        /*DataStructureInfo ClassBody Bookstore.PersonInfo*/
+    }
+
+    /*DataStructureInfo ClassAttributes Bookstore.SalesItem*/
+    public class SalesItem : EntityBase<Bookstore.SalesItem>/*Next DataStructureInfo ClassInterace Bookstore.SalesItem*/
+    {
+        /*PropertyInfo Attribute Bookstore.SalesItem.BookID*/
+        public Guid? BookID { get; set; }
+        /*PropertyInfo Attribute Bookstore.SalesItem.Code*/
+        public string Code { get; set; }
+        /*PropertyInfo Attribute Bookstore.SalesItem.Description*/
+        public string Description { get; set; }
+        /*PropertyInfo Attribute Bookstore.SalesItem.Subtype*/
+        public string Subtype { get; set; }
+        /*PropertyInfo Attribute Bookstore.SalesItem.Price*/
+        public decimal? Price { get; set; }
+        /*DataStructureInfo ClassBody Bookstore.SalesItem*/
+    }
+
+    /*DataStructureInfo ClassAttributes Bookstore.SalesItem_Materialized*/
+    public class SalesItem_Materialized : EntityBase<Bookstore.SalesItem_Materialized>/*Next DataStructureInfo ClassInterace Bookstore.SalesItem_Materialized*/
+    {
+        /*DataStructureInfo ClassBody Bookstore.SalesItem_Materialized*/
+    }
+
+    /*DataStructureInfo ClassAttributes Bookstore.SalesItemComment*/
+    public class SalesItemComment : EntityBase<Bookstore.SalesItemComment>/*Next DataStructureInfo ClassInterace Bookstore.SalesItemComment*/
+    {
+        /*PropertyInfo Attribute Bookstore.SalesItemComment.Comment*/
+        public string Comment { get; set; }
+        /*PropertyInfo Attribute Bookstore.SalesItemComment.SalesItemID*/
+        public Guid? SalesItemID { get; set; }
+        /*DataStructureInfo ClassBody Bookstore.SalesItemComment*/
+    }
+
     /*DataStructureInfo ClassAttributes Bookstore.Shipment*/
     public class Shipment : EntityBase<Bookstore.Shipment>/*Next DataStructureInfo ClassInterace Bookstore.Shipment*/
     {
@@ -324,6 +380,12 @@ namespace Bookstore
     public class SystemRequiredEmployees/*DataStructureInfo ClassInterace Bookstore.SystemRequiredEmployees*/
     {
         /*DataStructureInfo ClassBody Bookstore.SystemRequiredEmployees*/
+    }
+
+    /*DataStructureInfo ClassAttributes Bookstore.SystemRequiredSalesItem*/
+    public class SystemRequiredSalesItem/*DataStructureInfo ClassInterace Bookstore.SystemRequiredSalesItem*/
+    {
+        /*DataStructureInfo ClassBody Bookstore.SystemRequiredSalesItem*/
     }
 
     /*DataStructureInfo ClassAttributes Bookstore.SystemRequiredVAT*/
@@ -380,6 +442,18 @@ namespace Bookstore
         /*PropertyInfo Attribute Bookstore.BookGrid.TranslatorName*/
         public string TranslatorName { get; set; }
         /*DataStructureInfo ClassBody Bookstore.BookGrid*/
+    }
+
+    /*DataStructureInfo ClassAttributes Bookstore.SalesItemGrid*/
+    public class SalesItemGrid : EntityBase<Bookstore.SalesItemGrid>/*Next DataStructureInfo ClassInterace Bookstore.SalesItemGrid*/
+    {
+        /*PropertyInfo Attribute Bookstore.SalesItemGrid.BookNumberOfPages*/
+        public int? BookNumberOfPages { get; set; }
+        /*PropertyInfo Attribute Bookstore.SalesItemGrid.Code*/
+        public string Code { get; set; }
+        /*PropertyInfo Attribute Bookstore.SalesItemGrid.Price*/
+        public decimal? Price { get; set; }
+        /*DataStructureInfo ClassBody Bookstore.SalesItemGrid*/
     }
 
     /*ModuleInfo Body Bookstore*/
@@ -467,7 +541,8 @@ namespace Common.Queryable
                 Code = item.Code,
                 NumberOfPages = item.NumberOfPages,
                 Title = item.Title,
-                AuthorID = item.AuthorID/*DataStructureInfo AssignSimpleProperty Bookstore.Book*/
+                AuthorID = item.AuthorID,
+                Price = item.Price/*DataStructureInfo AssignSimpleProperty Bookstore.Book*/
             };
         }
     }
@@ -894,6 +969,109 @@ namespace Common.Queryable
         }
     }
 
+    /*DataStructureInfo QueryableClassAttributes Bookstore.PersonInfo*/
+    public class Bookstore_PersonInfo : global::Bookstore.PersonInfo, IQueryableEntity<Bookstore.PersonInfo>, System.IEquatable<Bookstore_PersonInfo>/*DataStructureInfo QueryableClassInterace Bookstore.PersonInfo*/
+    {
+        /*DataStructureInfo QueryableClassMembers Bookstore.PersonInfo*/
+
+        public bool Equals(Bookstore_PersonInfo other)
+        {
+            return other != null && other.ID == ID;
+        }
+
+        /// <summary>Converts the object with navigation properties to a simple object with primitive properties.</summary>
+        public Bookstore.PersonInfo ToSimple()
+        {
+            var item = this;
+            return new Bookstore.PersonInfo
+            {
+                ID = item.ID,
+                Name = item.Name,
+                NameLength = item.NameLength,
+                PersonID = item.PersonID/*DataStructureInfo AssignSimpleProperty Bookstore.PersonInfo*/
+            };
+        }
+    }
+
+    /*DataStructureInfo QueryableClassAttributes Bookstore.SalesItem*/
+    public class Bookstore_SalesItem : global::Bookstore.SalesItem, IQueryableEntity<Bookstore.SalesItem>, System.IEquatable<Bookstore_SalesItem>/*DataStructureInfo QueryableClassInterace Bookstore.SalesItem*/
+    {
+        /*DataStructureQueryable PropertyAttribute Bookstore.SalesItem.Book*/
+        public virtual Common.Queryable.Bookstore_Book Book { get; init; }
+
+        /*DataStructureQueryable PropertyAttribute Bookstore.SalesItem.Extension_SalesItemGrid*/
+        public virtual Common.Queryable.Bookstore_SalesItemGrid Extension_SalesItemGrid { get; init; }
+
+        /*DataStructureInfo QueryableClassMembers Bookstore.SalesItem*/
+
+        public bool Equals(Bookstore_SalesItem other)
+        {
+            return other != null && other.ID == ID;
+        }
+
+        /// <summary>Converts the object with navigation properties to a simple object with primitive properties.</summary>
+        public Bookstore.SalesItem ToSimple()
+        {
+            var item = this;
+            return new Bookstore.SalesItem
+            {
+                ID = item.ID,
+                BookID = item.BookID,
+                Code = item.Code,
+                Description = item.Description,
+                Subtype = item.Subtype,
+                Price = item.Price/*DataStructureInfo AssignSimpleProperty Bookstore.SalesItem*/
+            };
+        }
+    }
+
+    /*DataStructureInfo QueryableClassAttributes Bookstore.SalesItem_Materialized*/
+    public class Bookstore_SalesItem_Materialized : global::Bookstore.SalesItem_Materialized, IQueryableEntity<Bookstore.SalesItem_Materialized>, System.IEquatable<Bookstore_SalesItem_Materialized>/*DataStructureInfo QueryableClassInterace Bookstore.SalesItem_Materialized*/
+    {
+        /*DataStructureInfo QueryableClassMembers Bookstore.SalesItem_Materialized*/
+
+        public bool Equals(Bookstore_SalesItem_Materialized other)
+        {
+            return other != null && other.ID == ID;
+        }
+
+        /// <summary>Converts the object with navigation properties to a simple object with primitive properties.</summary>
+        public Bookstore.SalesItem_Materialized ToSimple()
+        {
+            var item = this;
+            return new Bookstore.SalesItem_Materialized
+            {
+                ID = item.ID/*DataStructureInfo AssignSimpleProperty Bookstore.SalesItem_Materialized*/
+            };
+        }
+    }
+
+    /*DataStructureInfo QueryableClassAttributes Bookstore.SalesItemComment*/
+    public class Bookstore_SalesItemComment : global::Bookstore.SalesItemComment, IQueryableEntity<Bookstore.SalesItemComment>, System.IEquatable<Bookstore_SalesItemComment>/*DataStructureInfo QueryableClassInterace Bookstore.SalesItemComment*/
+    {
+        /*DataStructureQueryable PropertyAttribute Bookstore.SalesItemComment.SalesItem*/
+        public virtual Common.Queryable.Bookstore_SalesItem SalesItem { get; init; }
+
+        /*DataStructureInfo QueryableClassMembers Bookstore.SalesItemComment*/
+
+        public bool Equals(Bookstore_SalesItemComment other)
+        {
+            return other != null && other.ID == ID;
+        }
+
+        /// <summary>Converts the object with navigation properties to a simple object with primitive properties.</summary>
+        public Bookstore.SalesItemComment ToSimple()
+        {
+            var item = this;
+            return new Bookstore.SalesItemComment
+            {
+                ID = item.ID,
+                Comment = item.Comment,
+                SalesItemID = item.SalesItemID/*DataStructureInfo AssignSimpleProperty Bookstore.SalesItemComment*/
+            };
+        }
+    }
+
     /*DataStructureInfo QueryableClassAttributes Bookstore.Shipment*/
     public class Bookstore_Shipment : global::Bookstore.Shipment, IQueryableEntity<Bookstore.Shipment>, System.IEquatable<Bookstore_Shipment>/*DataStructureInfo QueryableClassInterace Bookstore.Shipment*/
     {
@@ -1064,6 +1242,33 @@ namespace Common.Queryable
                 NumberOfComments = item.NumberOfComments,
                 Title = item.Title,
                 TranslatorName = item.TranslatorName/*DataStructureInfo AssignSimpleProperty Bookstore.BookGrid*/
+            };
+        }
+    }
+
+    /*DataStructureInfo QueryableClassAttributes Bookstore.SalesItemGrid*/
+    public class Bookstore_SalesItemGrid : global::Bookstore.SalesItemGrid, IQueryableEntity<Bookstore.SalesItemGrid>, System.IEquatable<Bookstore_SalesItemGrid>/*DataStructureInfo QueryableClassInterace Bookstore.SalesItemGrid*/
+    {
+        /*DataStructureQueryable PropertyAttribute Bookstore.SalesItemGrid.Base*/
+        public virtual Common.Queryable.Bookstore_SalesItem Base { get; init; }
+
+        /*DataStructureInfo QueryableClassMembers Bookstore.SalesItemGrid*/
+
+        public bool Equals(Bookstore_SalesItemGrid other)
+        {
+            return other != null && other.ID == ID;
+        }
+
+        /// <summary>Converts the object with navigation properties to a simple object with primitive properties.</summary>
+        public Bookstore.SalesItemGrid ToSimple()
+        {
+            var item = this;
+            return new Bookstore.SalesItemGrid
+            {
+                ID = item.ID,
+                BookNumberOfPages = item.BookNumberOfPages,
+                Code = item.Code,
+                Price = item.Price/*DataStructureInfo AssignSimpleProperty Bookstore.SalesItemGrid*/
             };
         }
     }

@@ -10,14 +10,6 @@
       </MappingFragment>
     </EntityTypeMapping>
   </EntitySetMapping>
-  <EntitySetMapping Name="Bookstore_Author">
-    <EntityTypeMapping TypeName="Rhetos.Bookstore_Author">
-      <MappingFragment StoreEntitySet="Bookstore_Author">
-        <ScalarProperty Name="ID" ColumnName="ID" />
-        <ScalarProperty Name="Name" ColumnName="Name" />
-      </MappingFragment>
-    </EntityTypeMapping>
-  </EntitySetMapping>
   <EntitySetMapping Name="Bookstore_Book">
     <EntityTypeMapping TypeName="Rhetos.Bookstore_Book">
       <MappingFragment StoreEntitySet="Bookstore_Book">
@@ -25,15 +17,8 @@
         <ScalarProperty Name="Code" ColumnName="Code" />
         <ScalarProperty Name="NumberOfPages" ColumnName="NumberOfPages" />
         <ScalarProperty Name="Title" ColumnName="Title" />
-      </MappingFragment>
-    </EntityTypeMapping>
-  </EntitySetMapping>
-  <EntitySetMapping Name="Bookstore_BookAuthor">
-    <EntityTypeMapping TypeName="Rhetos.Bookstore_BookAuthor">
-      <MappingFragment StoreEntitySet="Bookstore_BookAuthor">
-        <ScalarProperty Name="ID" ColumnName="ID" />
         <ScalarProperty Name="AuthorID" ColumnName="AuthorID" />
-        <ScalarProperty Name="BookID" ColumnName="BookID" />
+        <ScalarProperty Name="Price" ColumnName="Price" />
       </MappingFragment>
     </EntityTypeMapping>
   </EntitySetMapping>
@@ -42,6 +27,14 @@
       <MappingFragment StoreEntitySet="Bookstore_BookInfo">
         <ScalarProperty Name="ID" ColumnName="ID" />
         <ScalarProperty Name="NumberOfComments" ColumnName="NumberOfComments" />
+      </MappingFragment>
+    </EntityTypeMapping>
+  </EntitySetMapping>
+  <EntitySetMapping Name="Bookstore_BookRating">
+    <EntityTypeMapping TypeName="Rhetos.Bookstore_BookRating">
+      <MappingFragment StoreEntitySet="Bookstore_BookRating">
+        <ScalarProperty Name="ID" ColumnName="ID" />
+        <ScalarProperty Name="Rating" ColumnName="Rating" />
       </MappingFragment>
     </EntityTypeMapping>
   </EntitySetMapping>
@@ -90,6 +83,16 @@
       </MappingFragment>
     </EntityTypeMapping>
   </EntitySetMapping>
+  <EntitySetMapping Name="Bookstore_Disposal">
+    <EntityTypeMapping TypeName="Rhetos.Bookstore_Disposal">
+      <MappingFragment StoreEntitySet="Bookstore_Disposal">
+        <ScalarProperty Name="ID" ColumnName="ID" />
+        <ScalarProperty Name="BookID" ColumnName="BookID" />
+        <ScalarProperty Name="EffectiveSince" ColumnName="EffectiveSince" />
+        <ScalarProperty Name="Explanation" ColumnName="Explanation" />
+      </MappingFragment>
+    </EntityTypeMapping>
+  </EntitySetMapping>
   <EntitySetMapping Name="Bookstore_Education">
     <EntityTypeMapping TypeName="Rhetos.Bookstore_Education">
       <MappingFragment StoreEntitySet="Bookstore_Education">
@@ -122,8 +125,8 @@
     <EntityTypeMapping TypeName="Rhetos.Bookstore_ForeignBook">
       <MappingFragment StoreEntitySet="Bookstore_ForeignBook">
         <ScalarProperty Name="ID" ColumnName="ID" />
-        <ScalarProperty Name="AuthorID" ColumnName="AuthorID" />
         <ScalarProperty Name="OriginalLanguage" ColumnName="OriginalLanguage" />
+        <ScalarProperty Name="AuthorID" ColumnName="AuthorID" />
         <ScalarProperty Name="TranslatorID" ColumnName="TranslatorID" />
       </MappingFragment>
     </EntityTypeMapping>
@@ -144,6 +147,42 @@
       <MappingFragment StoreEntitySet="Bookstore_Managers">
         <ScalarProperty Name="ID" ColumnName="ID" />
         <ScalarProperty Name="Bonus" ColumnName="Bonus" />
+      </MappingFragment>
+    </EntityTypeMapping>
+  </EntitySetMapping>
+  <EntitySetMapping Name="Bookstore_Person">
+    <EntityTypeMapping TypeName="Rhetos.Bookstore_Person">
+      <MappingFragment StoreEntitySet="Bookstore_Person">
+        <ScalarProperty Name="ID" ColumnName="ID" />
+        <ScalarProperty Name="Name" ColumnName="Name" />
+      </MappingFragment>
+    </EntityTypeMapping>
+  </EntitySetMapping>
+  <EntitySetMapping Name="Bookstore_SalesItem">
+    <EntityTypeMapping TypeName="Rhetos.Bookstore_SalesItem">
+      <MappingFragment StoreEntitySet="Bookstore_SalesItem">
+        <ScalarProperty Name="ID" ColumnName="ID" />
+        <ScalarProperty Name="BookID" ColumnName="BookID" />
+        <ScalarProperty Name="Code" ColumnName="Code" />
+        <ScalarProperty Name="Description" ColumnName="Description" />
+        <ScalarProperty Name="Subtype" ColumnName="Subtype" />
+        <ScalarProperty Name="Price" ColumnName="Price" />
+      </MappingFragment>
+    </EntityTypeMapping>
+  </EntitySetMapping>
+  <EntitySetMapping Name="Bookstore_SalesItem_Materialized">
+    <EntityTypeMapping TypeName="Rhetos.Bookstore_SalesItem_Materialized">
+      <MappingFragment StoreEntitySet="Bookstore_SalesItem_Materialized">
+        <ScalarProperty Name="ID" ColumnName="ID" />
+      </MappingFragment>
+    </EntityTypeMapping>
+  </EntitySetMapping>
+  <EntitySetMapping Name="Bookstore_SalesItemComment">
+    <EntityTypeMapping TypeName="Rhetos.Bookstore_SalesItemComment">
+      <MappingFragment StoreEntitySet="Bookstore_SalesItemComment">
+        <ScalarProperty Name="ID" ColumnName="ID" />
+        <ScalarProperty Name="Comment" ColumnName="Comment" />
+        <ScalarProperty Name="SalesItemID" ColumnName="SalesItemID" />
       </MappingFragment>
     </EntityTypeMapping>
   </EntitySetMapping>
@@ -187,6 +226,15 @@
       <MappingFragment StoreEntitySet="Bookstore_Translator">
         <ScalarProperty Name="ID" ColumnName="ID" />
         <ScalarProperty Name="Name" ColumnName="Name" />
+      </MappingFragment>
+    </EntityTypeMapping>
+  </EntitySetMapping>
+  <EntitySetMapping Name="Bookstore_WishList">
+    <EntityTypeMapping TypeName="Rhetos.Bookstore_WishList">
+      <MappingFragment StoreEntitySet="Bookstore_WishList">
+        <ScalarProperty Name="ID" ColumnName="ID" />
+        <ScalarProperty Name="BookTitle" ColumnName="BookTitle" />
+        <ScalarProperty Name="HighPriority" ColumnName="HighPriority" />
       </MappingFragment>
     </EntityTypeMapping>
   </EntitySetMapping>
@@ -367,6 +415,199 @@
         <ScalarProperty Name="ClaimID" ColumnName="ClaimID" />
         <ScalarProperty Name="IsAuthorized" ColumnName="IsAuthorized" />
         <ScalarProperty Name="RoleID" ColumnName="RoleID" />
+      </MappingFragment>
+    </EntityTypeMapping>
+  </EntitySetMapping>
+  <EntitySetMapping Name="Demo_BorrowMoney">
+    <EntityTypeMapping TypeName="Rhetos.Demo_BorrowMoney">
+      <MappingFragment StoreEntitySet="Demo_BorrowMoney">
+        <ScalarProperty Name="ID" ColumnName="ID" />
+        <ScalarProperty Name="EventDate" ColumnName="EventDate" />
+        <ScalarProperty Name="FromWhom" ColumnName="FromWhom" />
+        <ScalarProperty Name="Amount" ColumnName="Amount" />
+      </MappingFragment>
+    </EntityTypeMapping>
+  </EntitySetMapping>
+  <EntitySetMapping Name="Demo_BorrowMoney2">
+    <EntityTypeMapping TypeName="Rhetos.Demo_BorrowMoney2">
+      <MappingFragment StoreEntitySet="Demo_BorrowMoney2">
+        <ScalarProperty Name="ID" ColumnName="ID" />
+        <ScalarProperty Name="EventDate" ColumnName="EventDate" />
+        <ScalarProperty Name="Forgotten" ColumnName="Forgotten" />
+        <ScalarProperty Name="FromWhom" ColumnName="FromWhom" />
+        <ScalarProperty Name="Amount" ColumnName="Amount" />
+      </MappingFragment>
+    </EntityTypeMapping>
+  </EntitySetMapping>
+  <EntitySetMapping Name="Demo_LendMoney">
+    <EntityTypeMapping TypeName="Rhetos.Demo_LendMoney">
+      <MappingFragment StoreEntitySet="Demo_LendMoney">
+        <ScalarProperty Name="ID" ColumnName="ID" />
+        <ScalarProperty Name="EventDate" ColumnName="EventDate" />
+        <ScalarProperty Name="ToWhom" ColumnName="ToWhom" />
+        <ScalarProperty Name="Amount" ColumnName="Amount" />
+      </MappingFragment>
+    </EntityTypeMapping>
+  </EntitySetMapping>
+  <EntitySetMapping Name="Demo_LendMoney2">
+    <EntityTypeMapping TypeName="Rhetos.Demo_LendMoney2">
+      <MappingFragment StoreEntitySet="Demo_LendMoney2">
+        <ScalarProperty Name="ID" ColumnName="ID" />
+        <ScalarProperty Name="EventDate" ColumnName="EventDate" />
+        <ScalarProperty Name="ToWhom" ColumnName="ToWhom" />
+        <ScalarProperty Name="Amount" ColumnName="Amount" />
+      </MappingFragment>
+    </EntityTypeMapping>
+  </EntitySetMapping>
+  <EntitySetMapping Name="Demo_LendMoneyAddendum">
+    <EntityTypeMapping TypeName="Rhetos.Demo_LendMoneyAddendum">
+      <MappingFragment StoreEntitySet="Demo_LendMoneyAddendum">
+        <ScalarProperty Name="ID" ColumnName="ID" />
+        <ScalarProperty Name="LendMoneyID" ColumnName="LendMoneyID" />
+        <ScalarProperty Name="AdditionalAmount" ColumnName="AdditionalAmount" />
+      </MappingFragment>
+    </EntityTypeMapping>
+  </EntitySetMapping>
+  <EntitySetMapping Name="Demo_MoneyTransaction">
+    <EntityTypeMapping TypeName="Rhetos.Demo_MoneyTransaction">
+      <MappingFragment StoreEntitySet="Demo_MoneyTransaction">
+        <ScalarProperty Name="ID" ColumnName="ID" />
+        <ScalarProperty Name="BorrowMoneyID" ColumnName="BorrowMoneyID" />
+        <ScalarProperty Name="BorrowMoney2ID" ColumnName="BorrowMoney2ID" />
+        <ScalarProperty Name="EventDate" ColumnName="EventDate" />
+        <ScalarProperty Name="LendMoneyID" ColumnName="LendMoneyID" />
+        <ScalarProperty Name="LendMoney2ID" ColumnName="LendMoney2ID" />
+        <ScalarProperty Name="LendMoneyTotalAddendumID" ColumnName="LendMoneyTotalAddendumID" />
+        <ScalarProperty Name="Subtype" ColumnName="Subtype" />
+        <ScalarProperty Name="TransferMoneyID" ColumnName="TransferMoneyID" />
+        <ScalarProperty Name="TransferMoneySubtractID" ColumnName="TransferMoneySubtractID" />
+        <ScalarProperty Name="Amount" ColumnName="Amount" />
+      </MappingFragment>
+    </EntityTypeMapping>
+  </EntitySetMapping>
+  <EntitySetMapping Name="Demo_MoneyTransaction_Materialized">
+    <EntityTypeMapping TypeName="Rhetos.Demo_MoneyTransaction_Materialized">
+      <MappingFragment StoreEntitySet="Demo_MoneyTransaction_Materialized">
+        <ScalarProperty Name="ID" ColumnName="ID" />
+      </MappingFragment>
+    </EntityTypeMapping>
+  </EntitySetMapping>
+  <EntitySetMapping Name="Demo_TransactionComment">
+    <EntityTypeMapping TypeName="Rhetos.Demo_TransactionComment">
+      <MappingFragment StoreEntitySet="Demo_TransactionComment">
+        <ScalarProperty Name="ID" ColumnName="ID" />
+        <ScalarProperty Name="Comment" ColumnName="Comment" />
+        <ScalarProperty Name="MoneyTransactionID" ColumnName="MoneyTransactionID" />
+      </MappingFragment>
+    </EntityTypeMapping>
+  </EntitySetMapping>
+  <EntitySetMapping Name="Demo_TransferMoney">
+    <EntityTypeMapping TypeName="Rhetos.Demo_TransferMoney">
+      <MappingFragment StoreEntitySet="Demo_TransferMoney">
+        <ScalarProperty Name="ID" ColumnName="ID" />
+        <ScalarProperty Name="EventDate" ColumnName="EventDate" />
+        <ScalarProperty Name="TransferFrom" ColumnName="TransferFrom" />
+        <ScalarProperty Name="TransferTo" ColumnName="TransferTo" />
+        <ScalarProperty Name="Amount" ColumnName="Amount" />
+      </MappingFragment>
+    </EntityTypeMapping>
+  </EntitySetMapping>
+  <EntitySetMapping Name="DemoRowPermissions1_Division">
+    <EntityTypeMapping TypeName="Rhetos.DemoRowPermissions1_Division">
+      <MappingFragment StoreEntitySet="DemoRowPermissions1_Division">
+        <ScalarProperty Name="ID" ColumnName="ID" />
+        <ScalarProperty Name="Name" ColumnName="Name" />
+      </MappingFragment>
+    </EntityTypeMapping>
+  </EntitySetMapping>
+  <EntitySetMapping Name="DemoRowPermissions1_Document">
+    <EntityTypeMapping TypeName="Rhetos.DemoRowPermissions1_Document">
+      <MappingFragment StoreEntitySet="DemoRowPermissions1_Document">
+        <ScalarProperty Name="ID" ColumnName="ID" />
+        <ScalarProperty Name="Created" ColumnName="Created" />
+        <ScalarProperty Name="DivisionID" ColumnName="DivisionID" />
+        <ScalarProperty Name="Title" ColumnName="Title" />
+      </MappingFragment>
+    </EntityTypeMapping>
+  </EntitySetMapping>
+  <EntitySetMapping Name="DemoRowPermissions1_Employee">
+    <EntityTypeMapping TypeName="Rhetos.DemoRowPermissions1_Employee">
+      <MappingFragment StoreEntitySet="DemoRowPermissions1_Employee">
+        <ScalarProperty Name="ID" ColumnName="ID" />
+        <ScalarProperty Name="DivisionID" ColumnName="DivisionID" />
+        <ScalarProperty Name="UserName" ColumnName="UserName" />
+      </MappingFragment>
+    </EntityTypeMapping>
+  </EntitySetMapping>
+  <EntitySetMapping Name="DemoRowPermissions2_Division">
+    <EntityTypeMapping TypeName="Rhetos.DemoRowPermissions2_Division">
+      <MappingFragment StoreEntitySet="DemoRowPermissions2_Division">
+        <ScalarProperty Name="ID" ColumnName="ID" />
+        <ScalarProperty Name="Name" ColumnName="Name" />
+        <ScalarProperty Name="RegionID" ColumnName="RegionID" />
+      </MappingFragment>
+    </EntityTypeMapping>
+  </EntitySetMapping>
+  <EntitySetMapping Name="DemoRowPermissions2_Document">
+    <EntityTypeMapping TypeName="Rhetos.DemoRowPermissions2_Document">
+      <MappingFragment StoreEntitySet="DemoRowPermissions2_Document">
+        <ScalarProperty Name="ID" ColumnName="ID" />
+        <ScalarProperty Name="Created" ColumnName="Created" />
+        <ScalarProperty Name="DivisionID" ColumnName="DivisionID" />
+        <ScalarProperty Name="Title" ColumnName="Title" />
+      </MappingFragment>
+    </EntityTypeMapping>
+  </EntitySetMapping>
+  <EntitySetMapping Name="DemoRowPermissions2_DocumentApproval">
+    <EntityTypeMapping TypeName="Rhetos.DemoRowPermissions2_DocumentApproval">
+      <MappingFragment StoreEntitySet="DemoRowPermissions2_DocumentApproval">
+        <ScalarProperty Name="ID" ColumnName="ID" />
+        <ScalarProperty Name="Note" ColumnName="Note" />
+        <ScalarProperty Name="ApprovedByID" ColumnName="ApprovedByID" />
+      </MappingFragment>
+    </EntityTypeMapping>
+  </EntitySetMapping>
+  <EntitySetMapping Name="DemoRowPermissions2_DocumentComment">
+    <EntityTypeMapping TypeName="Rhetos.DemoRowPermissions2_DocumentComment">
+      <MappingFragment StoreEntitySet="DemoRowPermissions2_DocumentComment">
+        <ScalarProperty Name="ID" ColumnName="ID" />
+        <ScalarProperty Name="Comment" ColumnName="Comment" />
+        <ScalarProperty Name="DocumentID" ColumnName="DocumentID" />
+      </MappingFragment>
+    </EntityTypeMapping>
+  </EntitySetMapping>
+  <EntitySetMapping Name="DemoRowPermissions2_DocumentInfo">
+    <EntityTypeMapping TypeName="Rhetos.DemoRowPermissions2_DocumentInfo">
+      <MappingFragment StoreEntitySet="DemoRowPermissions2_DocumentInfo">
+        <ScalarProperty Name="ID" ColumnName="ID" />
+        <ScalarProperty Name="Division2ID" ColumnName="Division2ID" />
+        <ScalarProperty Name="Title2" ColumnName="Title2" />
+      </MappingFragment>
+    </EntityTypeMapping>
+  </EntitySetMapping>
+  <EntitySetMapping Name="DemoRowPermissions2_Employee">
+    <EntityTypeMapping TypeName="Rhetos.DemoRowPermissions2_Employee">
+      <MappingFragment StoreEntitySet="DemoRowPermissions2_Employee">
+        <ScalarProperty Name="ID" ColumnName="ID" />
+        <ScalarProperty Name="DivisionID" ColumnName="DivisionID" />
+        <ScalarProperty Name="UserName" ColumnName="UserName" />
+      </MappingFragment>
+    </EntityTypeMapping>
+  </EntitySetMapping>
+  <EntitySetMapping Name="DemoRowPermissions2_Region">
+    <EntityTypeMapping TypeName="Rhetos.DemoRowPermissions2_Region">
+      <MappingFragment StoreEntitySet="DemoRowPermissions2_Region">
+        <ScalarProperty Name="ID" ColumnName="ID" />
+        <ScalarProperty Name="Name" ColumnName="Name" />
+      </MappingFragment>
+    </EntityTypeMapping>
+  </EntitySetMapping>
+  <EntitySetMapping Name="DemoRowPermissions2_RegionSupervisor">
+    <EntityTypeMapping TypeName="Rhetos.DemoRowPermissions2_RegionSupervisor">
+      <MappingFragment StoreEntitySet="DemoRowPermissions2_RegionSupervisor">
+        <ScalarProperty Name="ID" ColumnName="ID" />
+        <ScalarProperty Name="EmployeeID" ColumnName="EmployeeID" />
+        <ScalarProperty Name="RegionID" ColumnName="RegionID" />
       </MappingFragment>
     </EntityTypeMapping>
   </EntitySetMapping>

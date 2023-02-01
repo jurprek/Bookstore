@@ -25,15 +25,6 @@ namespace System.Linq
             });
         }
         /// <summary>Converts the objects with navigation properties to simple objects with primitive properties.</summary>
-        public static IQueryable<Bookstore.Author> ToSimple(this IQueryable<Common.Queryable.Bookstore_Author> query)
-        {
-            return query.Select(item => new Bookstore.Author
-            {
-                ID = item.ID,
-                Name = item.Name/*DataStructureInfo AssignSimpleProperty Bookstore.Author*/
-            });
-        }
-        /// <summary>Converts the objects with navigation properties to simple objects with primitive properties.</summary>
         public static IQueryable<Bookstore.Book> ToSimple(this IQueryable<Common.Queryable.Bookstore_Book> query)
         {
             return query.Select(item => new Bookstore.Book
@@ -41,17 +32,9 @@ namespace System.Linq
                 ID = item.ID,
                 Code = item.Code,
                 NumberOfPages = item.NumberOfPages,
-                Title = item.Title/*DataStructureInfo AssignSimpleProperty Bookstore.Book*/
-            });
-        }
-        /// <summary>Converts the objects with navigation properties to simple objects with primitive properties.</summary>
-        public static IQueryable<Bookstore.BookAuthor> ToSimple(this IQueryable<Common.Queryable.Bookstore_BookAuthor> query)
-        {
-            return query.Select(item => new Bookstore.BookAuthor
-            {
-                ID = item.ID,
+                Title = item.Title,
                 AuthorID = item.AuthorID,
-                BookID = item.BookID/*DataStructureInfo AssignSimpleProperty Bookstore.BookAuthor*/
+                Price = item.Price/*DataStructureInfo AssignSimpleProperty Bookstore.Book*/
             });
         }
         /// <summary>Converts the objects with navigation properties to simple objects with primitive properties.</summary>
@@ -61,6 +44,15 @@ namespace System.Linq
             {
                 ID = item.ID,
                 NumberOfComments = item.NumberOfComments/*DataStructureInfo AssignSimpleProperty Bookstore.BookInfo*/
+            });
+        }
+        /// <summary>Converts the objects with navigation properties to simple objects with primitive properties.</summary>
+        public static IQueryable<Bookstore.BookRating> ToSimple(this IQueryable<Common.Queryable.Bookstore_BookRating> query)
+        {
+            return query.Select(item => new Bookstore.BookRating
+            {
+                ID = item.ID,
+                Rating = item.Rating/*DataStructureInfo AssignSimpleProperty Bookstore.BookRating*/
             });
         }
         /// <summary>Converts the objects with navigation properties to simple objects with primitive properties.</summary>
@@ -114,6 +106,17 @@ namespace System.Linq
             });
         }
         /// <summary>Converts the objects with navigation properties to simple objects with primitive properties.</summary>
+        public static IQueryable<Bookstore.Disposal> ToSimple(this IQueryable<Common.Queryable.Bookstore_Disposal> query)
+        {
+            return query.Select(item => new Bookstore.Disposal
+            {
+                ID = item.ID,
+                BookID = item.BookID,
+                EffectiveSince = item.EffectiveSince,
+                Explanation = item.Explanation/*DataStructureInfo AssignSimpleProperty Bookstore.Disposal*/
+            });
+        }
+        /// <summary>Converts the objects with navigation properties to simple objects with primitive properties.</summary>
         public static IQueryable<Bookstore.Education> ToSimple(this IQueryable<Common.Queryable.Bookstore_Education> query)
         {
             return query.Select(item => new Bookstore.Education
@@ -159,8 +162,8 @@ namespace System.Linq
             return query.Select(item => new Bookstore.ForeignBook
             {
                 ID = item.ID,
-                AuthorID = item.AuthorID,
                 OriginalLanguage = item.OriginalLanguage,
+                AuthorID = item.AuthorID,
                 TranslatorID = item.TranslatorID/*DataStructureInfo AssignSimpleProperty Bookstore.ForeignBook*/
             });
         }
@@ -183,6 +186,57 @@ namespace System.Linq
             {
                 ID = item.ID,
                 Bonus = item.Bonus/*DataStructureInfo AssignSimpleProperty Bookstore.Managers*/
+            });
+        }
+        /// <summary>Converts the objects with navigation properties to simple objects with primitive properties.</summary>
+        public static IQueryable<Bookstore.Person> ToSimple(this IQueryable<Common.Queryable.Bookstore_Person> query)
+        {
+            return query.Select(item => new Bookstore.Person
+            {
+                ID = item.ID,
+                Name = item.Name/*DataStructureInfo AssignSimpleProperty Bookstore.Person*/
+            });
+        }
+        /// <summary>Converts the objects with navigation properties to simple objects with primitive properties.</summary>
+        public static IQueryable<Bookstore.PersonInfo> ToSimple(this IQueryable<Common.Queryable.Bookstore_PersonInfo> query)
+        {
+            return query.Select(item => new Bookstore.PersonInfo
+            {
+                ID = item.ID,
+                Name = item.Name,
+                NameLength = item.NameLength,
+                PersonID = item.PersonID/*DataStructureInfo AssignSimpleProperty Bookstore.PersonInfo*/
+            });
+        }
+        /// <summary>Converts the objects with navigation properties to simple objects with primitive properties.</summary>
+        public static IQueryable<Bookstore.SalesItem> ToSimple(this IQueryable<Common.Queryable.Bookstore_SalesItem> query)
+        {
+            return query.Select(item => new Bookstore.SalesItem
+            {
+                ID = item.ID,
+                BookID = item.BookID,
+                Code = item.Code,
+                Description = item.Description,
+                Subtype = item.Subtype,
+                Price = item.Price/*DataStructureInfo AssignSimpleProperty Bookstore.SalesItem*/
+            });
+        }
+        /// <summary>Converts the objects with navigation properties to simple objects with primitive properties.</summary>
+        public static IQueryable<Bookstore.SalesItem_Materialized> ToSimple(this IQueryable<Common.Queryable.Bookstore_SalesItem_Materialized> query)
+        {
+            return query.Select(item => new Bookstore.SalesItem_Materialized
+            {
+                ID = item.ID/*DataStructureInfo AssignSimpleProperty Bookstore.SalesItem_Materialized*/
+            });
+        }
+        /// <summary>Converts the objects with navigation properties to simple objects with primitive properties.</summary>
+        public static IQueryable<Bookstore.SalesItemComment> ToSimple(this IQueryable<Common.Queryable.Bookstore_SalesItemComment> query)
+        {
+            return query.Select(item => new Bookstore.SalesItemComment
+            {
+                ID = item.ID,
+                Comment = item.Comment,
+                SalesItemID = item.SalesItemID/*DataStructureInfo AssignSimpleProperty Bookstore.SalesItemComment*/
             });
         }
         /// <summary>Converts the objects with navigation properties to simple objects with primitive properties.</summary>
@@ -231,6 +285,16 @@ namespace System.Linq
             {
                 ID = item.ID,
                 Name = item.Name/*DataStructureInfo AssignSimpleProperty Bookstore.Translator*/
+            });
+        }
+        /// <summary>Converts the objects with navigation properties to simple objects with primitive properties.</summary>
+        public static IQueryable<Bookstore.WishList> ToSimple(this IQueryable<Common.Queryable.Bookstore_WishList> query)
+        {
+            return query.Select(item => new Bookstore.WishList
+            {
+                ID = item.ID,
+                BookTitle = item.BookTitle,
+                HighPriority = item.HighPriority/*DataStructureInfo AssignSimpleProperty Bookstore.WishList*/
             });
         }
         /// <summary>Converts the objects with navigation properties to simple objects with primitive properties.</summary>
@@ -430,6 +494,219 @@ namespace System.Linq
             });
         }
         /// <summary>Converts the objects with navigation properties to simple objects with primitive properties.</summary>
+        public static IQueryable<Demo.BorrowMoney> ToSimple(this IQueryable<Common.Queryable.Demo_BorrowMoney> query)
+        {
+            return query.Select(item => new Demo.BorrowMoney
+            {
+                ID = item.ID,
+                EventDate = item.EventDate,
+                FromWhom = item.FromWhom,
+                Amount = item.Amount/*DataStructureInfo AssignSimpleProperty Demo.BorrowMoney*/
+            });
+        }
+        /// <summary>Converts the objects with navigation properties to simple objects with primitive properties.</summary>
+        public static IQueryable<Demo.BorrowMoney2> ToSimple(this IQueryable<Common.Queryable.Demo_BorrowMoney2> query)
+        {
+            return query.Select(item => new Demo.BorrowMoney2
+            {
+                ID = item.ID,
+                EventDate = item.EventDate,
+                Forgotten = item.Forgotten,
+                FromWhom = item.FromWhom,
+                Amount = item.Amount/*DataStructureInfo AssignSimpleProperty Demo.BorrowMoney2*/
+            });
+        }
+        /// <summary>Converts the objects with navigation properties to simple objects with primitive properties.</summary>
+        public static IQueryable<Demo.LendMoney> ToSimple(this IQueryable<Common.Queryable.Demo_LendMoney> query)
+        {
+            return query.Select(item => new Demo.LendMoney
+            {
+                ID = item.ID,
+                EventDate = item.EventDate,
+                ToWhom = item.ToWhom,
+                Amount = item.Amount/*DataStructureInfo AssignSimpleProperty Demo.LendMoney*/
+            });
+        }
+        /// <summary>Converts the objects with navigation properties to simple objects with primitive properties.</summary>
+        public static IQueryable<Demo.LendMoney2> ToSimple(this IQueryable<Common.Queryable.Demo_LendMoney2> query)
+        {
+            return query.Select(item => new Demo.LendMoney2
+            {
+                ID = item.ID,
+                EventDate = item.EventDate,
+                ToWhom = item.ToWhom,
+                Amount = item.Amount/*DataStructureInfo AssignSimpleProperty Demo.LendMoney2*/
+            });
+        }
+        /// <summary>Converts the objects with navigation properties to simple objects with primitive properties.</summary>
+        public static IQueryable<Demo.LendMoneyAddendum> ToSimple(this IQueryable<Common.Queryable.Demo_LendMoneyAddendum> query)
+        {
+            return query.Select(item => new Demo.LendMoneyAddendum
+            {
+                ID = item.ID,
+                LendMoneyID = item.LendMoneyID,
+                AdditionalAmount = item.AdditionalAmount/*DataStructureInfo AssignSimpleProperty Demo.LendMoneyAddendum*/
+            });
+        }
+        /// <summary>Converts the objects with navigation properties to simple objects with primitive properties.</summary>
+        public static IQueryable<Demo.MoneyTransaction> ToSimple(this IQueryable<Common.Queryable.Demo_MoneyTransaction> query)
+        {
+            return query.Select(item => new Demo.MoneyTransaction
+            {
+                ID = item.ID,
+                BorrowMoneyID = item.BorrowMoneyID,
+                BorrowMoney2ID = item.BorrowMoney2ID,
+                EventDate = item.EventDate,
+                LendMoneyID = item.LendMoneyID,
+                LendMoney2ID = item.LendMoney2ID,
+                LendMoneyTotalAddendumID = item.LendMoneyTotalAddendumID,
+                Subtype = item.Subtype,
+                TransferMoneyID = item.TransferMoneyID,
+                TransferMoneySubtractID = item.TransferMoneySubtractID,
+                Amount = item.Amount/*DataStructureInfo AssignSimpleProperty Demo.MoneyTransaction*/
+            });
+        }
+        /// <summary>Converts the objects with navigation properties to simple objects with primitive properties.</summary>
+        public static IQueryable<Demo.MoneyTransaction_Materialized> ToSimple(this IQueryable<Common.Queryable.Demo_MoneyTransaction_Materialized> query)
+        {
+            return query.Select(item => new Demo.MoneyTransaction_Materialized
+            {
+                ID = item.ID/*DataStructureInfo AssignSimpleProperty Demo.MoneyTransaction_Materialized*/
+            });
+        }
+        /// <summary>Converts the objects with navigation properties to simple objects with primitive properties.</summary>
+        public static IQueryable<Demo.TransactionComment> ToSimple(this IQueryable<Common.Queryable.Demo_TransactionComment> query)
+        {
+            return query.Select(item => new Demo.TransactionComment
+            {
+                ID = item.ID,
+                Comment = item.Comment,
+                MoneyTransactionID = item.MoneyTransactionID/*DataStructureInfo AssignSimpleProperty Demo.TransactionComment*/
+            });
+        }
+        /// <summary>Converts the objects with navigation properties to simple objects with primitive properties.</summary>
+        public static IQueryable<Demo.TransferMoney> ToSimple(this IQueryable<Common.Queryable.Demo_TransferMoney> query)
+        {
+            return query.Select(item => new Demo.TransferMoney
+            {
+                ID = item.ID,
+                EventDate = item.EventDate,
+                TransferFrom = item.TransferFrom,
+                TransferTo = item.TransferTo,
+                Amount = item.Amount/*DataStructureInfo AssignSimpleProperty Demo.TransferMoney*/
+            });
+        }
+        /// <summary>Converts the objects with navigation properties to simple objects with primitive properties.</summary>
+        public static IQueryable<DemoRowPermissions1.Division> ToSimple(this IQueryable<Common.Queryable.DemoRowPermissions1_Division> query)
+        {
+            return query.Select(item => new DemoRowPermissions1.Division
+            {
+                ID = item.ID,
+                Name = item.Name/*DataStructureInfo AssignSimpleProperty DemoRowPermissions1.Division*/
+            });
+        }
+        /// <summary>Converts the objects with navigation properties to simple objects with primitive properties.</summary>
+        public static IQueryable<DemoRowPermissions1.Document> ToSimple(this IQueryable<Common.Queryable.DemoRowPermissions1_Document> query)
+        {
+            return query.Select(item => new DemoRowPermissions1.Document
+            {
+                ID = item.ID,
+                Created = item.Created,
+                DivisionID = item.DivisionID,
+                Title = item.Title/*DataStructureInfo AssignSimpleProperty DemoRowPermissions1.Document*/
+            });
+        }
+        /// <summary>Converts the objects with navigation properties to simple objects with primitive properties.</summary>
+        public static IQueryable<DemoRowPermissions1.Employee> ToSimple(this IQueryable<Common.Queryable.DemoRowPermissions1_Employee> query)
+        {
+            return query.Select(item => new DemoRowPermissions1.Employee
+            {
+                ID = item.ID,
+                DivisionID = item.DivisionID,
+                UserName = item.UserName/*DataStructureInfo AssignSimpleProperty DemoRowPermissions1.Employee*/
+            });
+        }
+        /// <summary>Converts the objects with navigation properties to simple objects with primitive properties.</summary>
+        public static IQueryable<DemoRowPermissions2.Division> ToSimple(this IQueryable<Common.Queryable.DemoRowPermissions2_Division> query)
+        {
+            return query.Select(item => new DemoRowPermissions2.Division
+            {
+                ID = item.ID,
+                Name = item.Name,
+                RegionID = item.RegionID/*DataStructureInfo AssignSimpleProperty DemoRowPermissions2.Division*/
+            });
+        }
+        /// <summary>Converts the objects with navigation properties to simple objects with primitive properties.</summary>
+        public static IQueryable<DemoRowPermissions2.Document> ToSimple(this IQueryable<Common.Queryable.DemoRowPermissions2_Document> query)
+        {
+            return query.Select(item => new DemoRowPermissions2.Document
+            {
+                ID = item.ID,
+                Created = item.Created,
+                DivisionID = item.DivisionID,
+                Title = item.Title/*DataStructureInfo AssignSimpleProperty DemoRowPermissions2.Document*/
+            });
+        }
+        /// <summary>Converts the objects with navigation properties to simple objects with primitive properties.</summary>
+        public static IQueryable<DemoRowPermissions2.DocumentApproval> ToSimple(this IQueryable<Common.Queryable.DemoRowPermissions2_DocumentApproval> query)
+        {
+            return query.Select(item => new DemoRowPermissions2.DocumentApproval
+            {
+                ID = item.ID,
+                Note = item.Note,
+                ApprovedByID = item.ApprovedByID/*DataStructureInfo AssignSimpleProperty DemoRowPermissions2.DocumentApproval*/
+            });
+        }
+        /// <summary>Converts the objects with navigation properties to simple objects with primitive properties.</summary>
+        public static IQueryable<DemoRowPermissions2.DocumentComment> ToSimple(this IQueryable<Common.Queryable.DemoRowPermissions2_DocumentComment> query)
+        {
+            return query.Select(item => new DemoRowPermissions2.DocumentComment
+            {
+                ID = item.ID,
+                Comment = item.Comment,
+                DocumentID = item.DocumentID/*DataStructureInfo AssignSimpleProperty DemoRowPermissions2.DocumentComment*/
+            });
+        }
+        /// <summary>Converts the objects with navigation properties to simple objects with primitive properties.</summary>
+        public static IQueryable<DemoRowPermissions2.DocumentInfo> ToSimple(this IQueryable<Common.Queryable.DemoRowPermissions2_DocumentInfo> query)
+        {
+            return query.Select(item => new DemoRowPermissions2.DocumentInfo
+            {
+                ID = item.ID,
+                Division2ID = item.Division2ID,
+                Title2 = item.Title2/*DataStructureInfo AssignSimpleProperty DemoRowPermissions2.DocumentInfo*/
+            });
+        }
+        /// <summary>Converts the objects with navigation properties to simple objects with primitive properties.</summary>
+        public static IQueryable<DemoRowPermissions2.Employee> ToSimple(this IQueryable<Common.Queryable.DemoRowPermissions2_Employee> query)
+        {
+            return query.Select(item => new DemoRowPermissions2.Employee
+            {
+                ID = item.ID,
+                DivisionID = item.DivisionID,
+                UserName = item.UserName/*DataStructureInfo AssignSimpleProperty DemoRowPermissions2.Employee*/
+            });
+        }
+        /// <summary>Converts the objects with navigation properties to simple objects with primitive properties.</summary>
+        public static IQueryable<DemoRowPermissions2.Region> ToSimple(this IQueryable<Common.Queryable.DemoRowPermissions2_Region> query)
+        {
+            return query.Select(item => new DemoRowPermissions2.Region
+            {
+                ID = item.ID,
+                Name = item.Name/*DataStructureInfo AssignSimpleProperty DemoRowPermissions2.Region*/
+            });
+        }
+        /// <summary>Converts the objects with navigation properties to simple objects with primitive properties.</summary>
+        public static IQueryable<DemoRowPermissions2.RegionSupervisor> ToSimple(this IQueryable<Common.Queryable.DemoRowPermissions2_RegionSupervisor> query)
+        {
+            return query.Select(item => new DemoRowPermissions2.RegionSupervisor
+            {
+                ID = item.ID,
+                EmployeeID = item.EmployeeID,
+                RegionID = item.RegionID/*DataStructureInfo AssignSimpleProperty DemoRowPermissions2.RegionSupervisor*/
+            });
+        }
+        /// <summary>Converts the objects with navigation properties to simple objects with primitive properties.</summary>
         public static IQueryable<Bookstore.BookGrid> ToSimple(this IQueryable<Common.Queryable.Bookstore_BookGrid> query)
         {
             return query.Select(item => new Bookstore.BookGrid
@@ -443,12 +720,33 @@ namespace System.Linq
             });
         }
         /// <summary>Converts the objects with navigation properties to simple objects with primitive properties.</summary>
+        public static IQueryable<Bookstore.SalesItemGrid> ToSimple(this IQueryable<Common.Queryable.Bookstore_SalesItemGrid> query)
+        {
+            return query.Select(item => new Bookstore.SalesItemGrid
+            {
+                ID = item.ID,
+                BookNumberOfPages = item.BookNumberOfPages,
+                Code = item.Code,
+                Price = item.Price/*DataStructureInfo AssignSimpleProperty Bookstore.SalesItemGrid*/
+            });
+        }
+        /// <summary>Converts the objects with navigation properties to simple objects with primitive properties.</summary>
         public static IQueryable<Common.MyClaim> ToSimple(this IQueryable<Common.Queryable.Common_MyClaim> query)
         {
             return query.Select(item => new Common.MyClaim
             {
                 ID = item.ID,
                 Applies = item.Applies/*DataStructureInfo AssignSimpleProperty Common.MyClaim*/
+            });
+        }
+        /// <summary>Converts the objects with navigation properties to simple objects with primitive properties.</summary>
+        public static IQueryable<DemoRowPermissions2.DocumentBrowse> ToSimple(this IQueryable<Common.Queryable.DemoRowPermissions2_DocumentBrowse> query)
+        {
+            return query.Select(item => new DemoRowPermissions2.DocumentBrowse
+            {
+                ID = item.ID,
+                DivisionName = item.DivisionName,
+                Title = item.Title/*DataStructureInfo AssignSimpleProperty DemoRowPermissions2.DocumentBrowse*/
             });
         }
         /*QueryExtensionsMembers*/

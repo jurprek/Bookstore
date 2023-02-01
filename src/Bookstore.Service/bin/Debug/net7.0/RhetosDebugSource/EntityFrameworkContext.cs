@@ -57,6 +57,9 @@ namespace Common
         public System.Data.Entity.DbSet<Common.Queryable.Bookstore_Genre> Bookstore_Genre { get; set; }
         public System.Data.Entity.DbSet<Common.Queryable.Bookstore_Managers> Bookstore_Managers { get; set; }
         public System.Data.Entity.DbSet<Common.Queryable.Bookstore_Person> Bookstore_Person { get; set; }
+        public System.Data.Entity.DbSet<Common.Queryable.Bookstore_SalesItem> Bookstore_SalesItem { get; set; }
+        public System.Data.Entity.DbSet<Common.Queryable.Bookstore_SalesItem_Materialized> Bookstore_SalesItem_Materialized { get; set; }
+        public System.Data.Entity.DbSet<Common.Queryable.Bookstore_SalesItemComment> Bookstore_SalesItemComment { get; set; }
         public System.Data.Entity.DbSet<Common.Queryable.Bookstore_Shipment> Bookstore_Shipment { get; set; }
         public System.Data.Entity.DbSet<Common.Queryable.Bookstore_ShipmentEvent> Bookstore_ShipmentEvent { get; set; }
         public System.Data.Entity.DbSet<Common.Queryable.Bookstore_ShipmentStatus> Bookstore_ShipmentStatus { get; set; }
@@ -79,6 +82,26 @@ namespace Common
         public System.Data.Entity.DbSet<Common.Queryable.Common_Role> Common_Role { get; set; }
         public System.Data.Entity.DbSet<Common.Queryable.Common_RoleInheritsRole> Common_RoleInheritsRole { get; set; }
         public System.Data.Entity.DbSet<Common.Queryable.Common_RolePermission> Common_RolePermission { get; set; }
+        public System.Data.Entity.DbSet<Common.Queryable.Demo_BorrowMoney> Demo_BorrowMoney { get; set; }
+        public System.Data.Entity.DbSet<Common.Queryable.Demo_BorrowMoney2> Demo_BorrowMoney2 { get; set; }
+        public System.Data.Entity.DbSet<Common.Queryable.Demo_LendMoney> Demo_LendMoney { get; set; }
+        public System.Data.Entity.DbSet<Common.Queryable.Demo_LendMoney2> Demo_LendMoney2 { get; set; }
+        public System.Data.Entity.DbSet<Common.Queryable.Demo_LendMoneyAddendum> Demo_LendMoneyAddendum { get; set; }
+        public System.Data.Entity.DbSet<Common.Queryable.Demo_MoneyTransaction> Demo_MoneyTransaction { get; set; }
+        public System.Data.Entity.DbSet<Common.Queryable.Demo_MoneyTransaction_Materialized> Demo_MoneyTransaction_Materialized { get; set; }
+        public System.Data.Entity.DbSet<Common.Queryable.Demo_TransactionComment> Demo_TransactionComment { get; set; }
+        public System.Data.Entity.DbSet<Common.Queryable.Demo_TransferMoney> Demo_TransferMoney { get; set; }
+        public System.Data.Entity.DbSet<Common.Queryable.DemoRowPermissions1_Division> DemoRowPermissions1_Division { get; set; }
+        public System.Data.Entity.DbSet<Common.Queryable.DemoRowPermissions1_Document> DemoRowPermissions1_Document { get; set; }
+        public System.Data.Entity.DbSet<Common.Queryable.DemoRowPermissions1_Employee> DemoRowPermissions1_Employee { get; set; }
+        public System.Data.Entity.DbSet<Common.Queryable.DemoRowPermissions2_Division> DemoRowPermissions2_Division { get; set; }
+        public System.Data.Entity.DbSet<Common.Queryable.DemoRowPermissions2_Document> DemoRowPermissions2_Document { get; set; }
+        public System.Data.Entity.DbSet<Common.Queryable.DemoRowPermissions2_DocumentApproval> DemoRowPermissions2_DocumentApproval { get; set; }
+        public System.Data.Entity.DbSet<Common.Queryable.DemoRowPermissions2_DocumentComment> DemoRowPermissions2_DocumentComment { get; set; }
+        public System.Data.Entity.DbSet<Common.Queryable.DemoRowPermissions2_DocumentInfo> DemoRowPermissions2_DocumentInfo { get; set; }
+        public System.Data.Entity.DbSet<Common.Queryable.DemoRowPermissions2_Employee> DemoRowPermissions2_Employee { get; set; }
+        public System.Data.Entity.DbSet<Common.Queryable.DemoRowPermissions2_Region> DemoRowPermissions2_Region { get; set; }
+        public System.Data.Entity.DbSet<Common.Queryable.DemoRowPermissions2_RegionSupervisor> DemoRowPermissions2_RegionSupervisor { get; set; }
         /*EntityFrameworkContextMembers*/
     }
 

@@ -3,8 +3,21 @@ Module Bookstore  //https://github.com/Rhetos/Rhetos/wiki/Data-model-and-relatio
     AutodetectSqlDependencies;
 
    Entity Book   //One-to-many relationship (master-detail). "1 : N" relationship is declared by the Reference from the dependent entity to the other one.
-   {//https://localhost:7194/rest/Bookstore/Book/?filters=[{%22Property%22:%22Code%22,%22Operation%22:%22equal%22,%22Value%22:%224%22}]
-      ShortString Code { AutoCode; DenyUserEdit; }
+   {             //https://localhost:7194/rest/Bookstore/Book/?filters=[{%22Property%22:%22Code%22,%22Operation%22:%22equal%22,%22Value%22:%224%22}]
+
+      ShortString Code { AutoCode; DefaultValue 'item => "B+++"'; DenyUserEdit;}
+      Money Price; // Not required. Some books are not on sale.
+      ShortString Title { Required; }
+      Integer NumberOfPages;
+      Is Bookstore.SalesItem
+      {
+            Implements Bookstore.SalesItem.Description "Title
+                + ISNULL(', ' + CAST(NumberOfPages AS NVARCHAR(10)) + ' pages', '')";
+                
+            Where 'Price IS NOT NULL';
+      }
+
+
       //ShortString Code { RegExMatch "\d{7,10}" "Code must have 7 to 10 digits."; }
       ShortString Title { Required; }
    
@@ -46,6 +59,52 @@ Module Bookstore  //https://github.com/Rhetos/Rhetos/wiki/Data-model-and-relatio
               foreach (var book in books.Where(b => !string.IsNullOrEmpty(b.Title))) book.Title = book.Title.First() + "***" + book.Title.Last();
           return books;
       }';
+   }
+   // Polymorphic can be used as any other queryable data structure:
+       
+   Polymorphic SalesItem
+   {
+        ShortString Code;
+        Money Price;
+        ShortString Description;
+   }
+   
+   Browse SalesItemGrid Bookstore.SalesItem
+   {
+        Take Code;
+        Take Price;
+        Take 'Book.NumberOfPages';
+   }
+
+    // Polymorphic can even have a detail entity:
+
+   Entity SalesItemComment
+   {
+        Reference SalesItem { Detail; }
+        LongString Comment;
+   }
+
+   Parameter PersonFilter
+      {
+        ShortString NamePattern;
+        Integer LimitResultCount;
+      }
+   Computed PersonInfo 'repository => { throw new Rhetos.UserException("Use filter \"Demo.PersonFilter\" to read the data."); }'
+   {
+        ShortString Name;
+        Integer NameLength;
+        Guid PersonID;
+
+        FilterBy PersonFilter '(repository, parameter) =>
+        {
+             // Always separate parameters to prevent SQL injection.
+             string sql = "EXEC Bookstore.ComputePersonInfo @p0, @p1";
+             var sqlParams = new object[] { parameter.NamePattern, parameter.LimitResultCount };
+             var result = _executionContext.EntityFrameworkContext.Database
+                 .SqlQuery<Bookstore.PersonInfo>(sql, sqlParams)
+                 .ToArray();
+             return result;
+        }';
    }
 
    Entity Disposal
@@ -296,13 +355,270 @@ Module Bookstore  //https://github.com/Rhetos/Rhetos/wiki/Data-model-and-relatio
     }
 }
 
-// Relationships summary
-// The following DSL keywords are available for relationships between entities (and other data structures).
-//  ------------------------------------------------------------------
-//  |            Simple relationship	|    "Part-of" relationship  |
-//  ==================================================================
-//  |  1 : N	         Reference	    |      Reference { Detail; } |
-//  ------------------------------------------------------------------
-//  |  0..1 : 1     UniqueReference     |     	Extension            |
-//  ------------------------------------------------------------------
+    // Relationships summary
+    // The following DSL keywords are available for relationships between entities (and other data structures).
+    //  ------------------------------------------------------------------
+    //  |            Simple relationship	|    "Part-of" relationship  |
+    //  ==================================================================
+    //  |  1 : N	         Reference	    |      Reference { Detail; } |
+    //  ------------------------------------------------------------------
+    //  |  0..1 : 1     UniqueReference     |     	Extension            |
+    //  ------------------------------------------------------------------
+        
+
+
+Module DemoRowPermissions1
+{
+        Entity Division
+        {
+            ShortString Name;
+        }
+        
+        Entity Employee
+        {
+            ShortString UserName;
+            Reference Division;
+        }
+        
+        Entity Document
+        {
+            ShortString Title;
+            DateTime Created { CreationTime; }
+            Reference Division;
+            
+            RowPermissions
+            {
+                Allow WithinDivision 'context =>
+                    {
+                        Guid myDivisionId = context.Repository.DemoRowPermissions1.Employee.Query()
+                            .Where(e => e.UserName == context.UserInfo.UserName)
+                            .Select(e => e.Division.ID)
+                            .SingleOrDefault();
+                        return item => item.Division.ID == myDivisionId;
+                    }';
+            }
+        }
+}
+
+    //=========================================================
+    // Combining multiple rules:
+
+Module DemoRowPermissions2
+{
+        Entity Region
+        {
+            ShortString Name;
+        }
+        
+        Entity Division
+        {
+            ShortString Name;
+            Reference Region;
+        }
+        
+        Entity Employee
+        {
+            ShortString UserName;
+            Reference Division;
+        }
+        
+        Entity RegionSupervisor
+        {
+            Reference Employee;
+            Reference Region;
+        }
+        
+        Entity Document
+        {
+            ShortString Title;
+            DateTime Created { CreationTime; }
+            Reference Division;
+            
+            RowPermissions
+            {
+                Allow WithinDivision 'context =>
+                    {
+                        Guid myDivisionId = context.Repository.DemoRowPermissions2.Employee.Query()
+                            .Where(e => e.UserName == context.UserInfo.UserName)
+                            .Select(e => e.Division.ID)
+                            .SingleOrDefault();
+                        return item => item.Division.ID == myDivisionId;
+                    }';
                 
+                AllowRead SupervisedRegions 'context =>
+                    {
+                        List<Guid> myRegionIds = context.Repository
+                          .DemoRowPermissions2.RegionSupervisor.Query()
+                            .Where(rs => rs.Employee.UserName == context.UserInfo.UserName)
+                            .Select(rs => rs.Region.ID)
+                            .ToList();
+						
+                        if (myRegionIds.Count == 0)
+                            return item => false; // Minor optimization.
+						
+                        return item => myRegionIds.Contains(item.Division.Region.ID);
+                    }';
+                
+                DenyWrite PreviousYears 'context =>
+                    {
+						var currentYear = new DateTime(DateTime.Today.Year, 1, 1);
+						return item => item.Created < currentYear;
+                    }';
+            }
+        }
+}
+
+    //=========================================================
+    // Inheriting row permissions:
+
+Module DemoRowPermissions2
+{
+        AutoInheritRowPermissions;
+        
+        Browse DocumentBrowse DemoRowPermissions2.Document
+        {
+            Take 'Title';
+            Take 'Division.Name';
+        }
+        
+        Entity DocumentComment
+        {
+            Reference Document { Detail; }
+            ShortString Comment;
+        }
+        
+        Entity DocumentApproval
+        {
+            Extends DemoRowPermissions2.Document;
+            Reference ApprovedBy DemoRowPermissions2.Employee;
+            ShortString Note;
+            
+            RowPermissions
+            {
+                // This rule is joined with the inherited rules from DemoRowPermissions2.Document.
+                DenyWrite ApprovedByCurrentUser 'context =>
+                    {
+                        var myEmployeeId = context.Repository.DemoRowPermissions2.Employee.Query()
+                            .Where(e => e.UserName == context.UserInfo.UserName)
+                            .Select(e => e.ID)
+                            .SingleOrDefault();
+                        return item => item.ApprovedBy.ID != myEmployeeId;
+                    }';
+            }
+        }
+
+        SqlQueryable DocumentInfo
+            "SELECT
+                ID,
+                Title2 = Title + '_2',
+                Division2ID = DivisionID
+            FROM
+                DemoRowPermissions2.Document"
+            {
+            Extends DemoRowPermissions2.Document;
+            ShortString Title2;
+            Reference Division2 DemoRowPermissions2.Division { SamePropertyValue 'Base.Division'; }
+
+            RowPermissions { InheritFromBase; }
+
+            AutodetectSqlDependencies;
+        }
+}
+
+
+Module Demo
+{
+    Polymorphic MoneyTransaction
+    {
+        DateTime EventDate;
+        Money Amount;
+    }
+
+    Entity BorrowMoney
+    {
+        ShortString FromWhom;
+        DateTime EventDate;
+        Money Amount;
+
+        Is Demo.MoneyTransaction;
+        // The EventDate and Amount are automatically mapped.
+    }
+
+    Entity LendMoney
+    {
+        ShortString ToWhom;
+        DateTime EventDate;
+        Money Amount;
+
+        Is Demo.MoneyTransaction
+        {
+            Implements Demo.MoneyTransaction.Amount '-Amount';
+            // The Amount in the MoneyTransaction related to the LendMoney record will have a negative value.
+        }
+    }
+
+    Entity TransferMoney
+    {
+    DateTime EventDate;
+    ShortString TransferFrom;
+    ShortString TransferTo;
+    Money Amount;
+
+    Is Demo.MoneyTransaction; // Implicitly using the 'Amount' value.
+
+        Is Demo.MoneyTransaction 'Subtract'
+        {
+            Implements Demo.MoneyTransaction.Amount '-Amount';
+        }
+    }
+
+    Entity LendMoneyAddendum
+    {
+    Reference LendMoney;
+    Money AdditionalAmount;
+    }
+
+    Entity LendMoney // Adding new features to the existing entity.
+    {
+        Is Demo.MoneyTransaction 'TotalAddendum'
+        {
+            Implements Demo.MoneyTransaction.Amount '(SELECT -SUM(AdditionalAmount) FROM Demo.LendMoneyAddendum)';
+            SqlDependsOn Demo.LendMoneyAddendum;
+        }
+    }
+
+    Entity BorrowMoney2
+    {
+    DateTime EventDate;
+    ShortString FromWhom;
+    Money Amount;
+    Bool Forgotten;
+
+        Is Demo.MoneyTransaction
+        {
+            Where 'Forgotten = 0'; // SQL snippet, the "Forgotten" column is a "bit".
+        }
+    }
+
+    Entity TransactionComment
+    {
+    Reference MoneyTransaction;
+    LongString Comment;
+    }
+
+    Entity LendMoney2
+    {
+    ShortString ToWhom;
+    // When using SqlImplementation, the properties are not automatically inherited from the polymorphic.
+    DateTime EventDate;
+    Money Amount;
+
+        Is Demo.MoneyTransaction
+        {
+            SqlImplementation "SELECT lm.ID, lm.EventDate, Amount = -lm.Amount FROM Demo.LendMoney2 lm"
+            {
+                AutoDetectSqlDependencies;
+            }
+        }
+    }
+}

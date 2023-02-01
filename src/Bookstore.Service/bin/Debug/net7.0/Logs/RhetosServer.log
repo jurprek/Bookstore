@@ -812,3 +812,437 @@ Command: ReadCommandInfo Bookstore.Book records, filters: Title ""
 2023-01-27 11:41:47.5700|INFO|Microsoft.Hosting.Lifetime|Application started. Press Ctrl+C to shut down.
 2023-01-27 11:41:47.5807|INFO|Microsoft.Hosting.Lifetime|Hosting environment: Development
 2023-01-27 11:41:47.5807|INFO|Microsoft.Hosting.Lifetime|Content root path: C:\Users\jpreksavec\source\repos\Bookstore\src\Bookstore.Service
+2023-01-27 11:56:26.0158|INFO|Microsoft.Hosting.Lifetime|Now listening on: https://localhost:7194
+2023-01-27 11:56:26.0363|INFO|Microsoft.Hosting.Lifetime|Now listening on: http://localhost:5138
+2023-01-27 11:56:26.0363|INFO|Microsoft.Hosting.Lifetime|Application started. Press Ctrl+C to shut down.
+2023-01-27 11:56:26.0363|INFO|Microsoft.Hosting.Lifetime|Hosting environment: Development
+2023-01-27 11:56:26.0519|INFO|Microsoft.Hosting.Lifetime|Content root path: C:\Users\jpreksavec\source\repos\Bookstore\src\Bookstore.Service
+2023-01-27 12:03:58.2768|INFO|Microsoft.Hosting.Lifetime|Now listening on: https://localhost:7194
+2023-01-27 12:03:58.3013|INFO|Microsoft.Hosting.Lifetime|Now listening on: http://localhost:5138
+2023-01-27 12:03:58.3094|INFO|Microsoft.Hosting.Lifetime|Application started. Press Ctrl+C to shut down.
+2023-01-27 12:03:58.3094|INFO|Microsoft.Hosting.Lifetime|Hosting environment: Development
+2023-01-27 12:03:58.3094|INFO|Microsoft.Hosting.Lifetime|Content root path: C:\Users\jpreksavec\source\repos\Bookstore\src\Bookstore.Service
+2023-01-27 12:07:36.8201|INFO|Microsoft.Hosting.Lifetime|Now listening on: https://localhost:7194
+2023-01-27 12:07:36.8615|INFO|Microsoft.Hosting.Lifetime|Now listening on: http://localhost:5138
+2023-01-27 12:07:36.8843|INFO|Microsoft.Hosting.Lifetime|Application started. Press Ctrl+C to shut down.
+2023-01-27 12:07:36.8843|INFO|Microsoft.Hosting.Lifetime|Hosting environment: Development
+2023-01-27 12:07:36.8843|INFO|Microsoft.Hosting.Lifetime|Content root path: C:\Users\jpreksavec\source\repos\Bookstore\src\Bookstore.Service
+2023-01-27 12:58:43.1362|INFO|Microsoft.Hosting.Lifetime|Now listening on: https://localhost:7194
+2023-01-27 12:58:43.2045|INFO|Microsoft.Hosting.Lifetime|Now listening on: http://localhost:5138
+2023-01-27 12:58:43.2045|INFO|Microsoft.Hosting.Lifetime|Application started. Press Ctrl+C to shut down.
+2023-01-27 12:58:43.2045|INFO|Microsoft.Hosting.Lifetime|Hosting environment: Development
+2023-01-27 12:58:43.2219|INFO|Microsoft.Hosting.Lifetime|Content root path: C:\Users\jpreksavec\source\repos\Bookstore\src\Bookstore.Service
+2023-01-27 13:01:06.2127|INFO|Microsoft.Hosting.Lifetime|Now listening on: https://localhost:7194
+2023-01-27 13:01:06.2335|INFO|Microsoft.Hosting.Lifetime|Now listening on: http://localhost:5138
+2023-01-27 13:01:06.2418|INFO|Microsoft.Hosting.Lifetime|Application started. Press Ctrl+C to shut down.
+2023-01-27 13:01:06.2418|INFO|Microsoft.Hosting.Lifetime|Hosting environment: Development
+2023-01-27 13:01:06.2418|INFO|Microsoft.Hosting.Lifetime|Content root path: C:\Users\jpreksavec\source\repos\Bookstore\src\Bookstore.Service
+2023-01-27 13:05:03.9524|INFO|Microsoft.Hosting.Lifetime|Now listening on: https://localhost:7194
+2023-01-27 13:05:03.9743|INFO|Microsoft.Hosting.Lifetime|Now listening on: http://localhost:5138
+2023-01-27 13:05:03.9743|INFO|Microsoft.Hosting.Lifetime|Application started. Press Ctrl+C to shut down.
+2023-01-27 13:05:03.9869|INFO|Microsoft.Hosting.Lifetime|Hosting environment: Development
+2023-01-27 13:05:03.9869|INFO|Microsoft.Hosting.Lifetime|Content root path: C:\Users\jpreksavec\source\repos\Bookstore\src\Bookstore.Service
+2023-01-27 13:14:51.9597|ERROR|Rhetos.Host.AspNet.RestApi.Filters.ApiExceptionFilter|Rhetos.FrameworkException: Bookstore.PersonInfo does not implement a load method, a query or a filter with parameter System.Collections.Generic.IEnumerable`1[System.Guid].
+   at Rhetos.Dom.DefaultConcepts.GenericRepository`1.Read(Object parameter, Type parameterType, Boolean preferQuery)
+   at Rhetos.Dom.DefaultConcepts.GenericRepository`1.ExecuteGenericFilter(IEnumerable`1 genericFilter, Boolean preferQuery, IEnumerable`1 items)
+   at Rhetos.Dom.DefaultConcepts.GenericRepository`1.Read(Object parameter, Type parameterType, Boolean preferQuery)
+   at Rhetos.Processing.DefaultCommands.ReadCommand.ReadData(ReadCommandInfo commandInfo, GenericRepository`1 genericRepository)
+   at Rhetos.Processing.DefaultCommands.ReadCommand.Execute(ReadCommandInfo readInfo)
+   at Rhetos.Processing.ICommandImplementation`2.Rhetos.Processing.ICommandImplementation.Execute(Object parameter)
+   at Rhetos.Processing.ProcessingEngine.ExecuteCommand(ICommandInfo commandInfo)
+   at Rhetos.Processing.ProcessingEngine.Execute(IList`1 commands)
+--- End of stack trace from previous location ---
+   at Rhetos.Utilities.ExceptionsUtility.Rethrow(Exception exception)
+   at Rhetos.Processing.ProcessingEngine.Execute(IList`1 commands)
+   at Rhetos.Processing.ProcessingEngineExtensions.Execute[TCommandResult](IProcessingEngine processingEngine, ICommandInfo`1 command)
+   at Rhetos.Host.AspNet.RestApi.Utilities.ServiceUtility.ExecuteReadCommand(ReadCommandInfo commandInfo)
+   at Rhetos.Host.AspNet.RestApi.Utilities.ServiceUtility.GetDataById[T](String idString)
+   at Rhetos.Host.AspNet.RestApi.Controllers.ReadDataApiController`1.GetById(String id)
+   at lambda_method920(Closure, Object, Object[])
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.SyncObjectResultExecutor.Execute(ActionContext actionContext, IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Logged|12_1(ControllerActionInvoker invoker)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+Command: ReadCommandInfo Bookstore.PersonInfo records, filters: System.Collections.Generic.IEnumerable`1[System.Guid] "1 items: 3fa85f64-5717-4562-b3fc-2c963f66afb7"
+2023-01-27 14:05:49.4769|INFO|Microsoft.Hosting.Lifetime|Now listening on: https://localhost:7194
+2023-01-27 14:05:49.5049|INFO|Microsoft.Hosting.Lifetime|Now listening on: http://localhost:5138
+2023-01-27 14:05:49.5126|INFO|Microsoft.Hosting.Lifetime|Application started. Press Ctrl+C to shut down.
+2023-01-27 14:05:49.5126|INFO|Microsoft.Hosting.Lifetime|Hosting environment: Development
+2023-01-27 14:05:49.5126|INFO|Microsoft.Hosting.Lifetime|Content root path: C:\Users\jpreksavec\source\repos\Bookstore\src\Bookstore.Service
+2023-01-27 14:10:11.2115|INFO|Microsoft.Hosting.Lifetime|Now listening on: https://localhost:7194
+2023-01-27 14:10:11.2479|INFO|Microsoft.Hosting.Lifetime|Now listening on: http://localhost:5138
+2023-01-27 14:10:11.2479|INFO|Microsoft.Hosting.Lifetime|Application started. Press Ctrl+C to shut down.
+2023-01-27 14:10:11.2479|INFO|Microsoft.Hosting.Lifetime|Hosting environment: Development
+2023-01-27 14:10:11.2709|INFO|Microsoft.Hosting.Lifetime|Content root path: C:\Users\jpreksavec\source\repos\Bookstore\src\Bookstore.Service
+2023-01-27 14:12:52.9496|INFO|Microsoft.Hosting.Lifetime|Now listening on: https://localhost:7194
+2023-01-27 14:12:52.9766|INFO|Microsoft.Hosting.Lifetime|Now listening on: http://localhost:5138
+2023-01-27 14:12:52.9864|INFO|Microsoft.Hosting.Lifetime|Application started. Press Ctrl+C to shut down.
+2023-01-27 14:12:52.9864|INFO|Microsoft.Hosting.Lifetime|Hosting environment: Development
+2023-01-27 14:12:52.9864|INFO|Microsoft.Hosting.Lifetime|Content root path: C:\Users\jpreksavec\source\repos\Bookstore\src\Bookstore.Service
+2023-01-27 14:13:36.0169|INFO|Microsoft.Hosting.Lifetime|Now listening on: https://localhost:7194
+2023-01-27 14:13:36.0384|INFO|Microsoft.Hosting.Lifetime|Now listening on: http://localhost:5138
+2023-01-27 14:13:36.0462|INFO|Microsoft.Hosting.Lifetime|Application started. Press Ctrl+C to shut down.
+2023-01-27 14:13:36.0462|INFO|Microsoft.Hosting.Lifetime|Hosting environment: Development
+2023-01-27 14:13:36.0462|INFO|Microsoft.Hosting.Lifetime|Content root path: C:\Users\jpreksavec\source\repos\Bookstore\src\Bookstore.Service
+2023-01-27 14:14:23.5101|INFO|Microsoft.Hosting.Lifetime|Now listening on: https://localhost:7194
+2023-01-27 14:14:23.5471|INFO|Microsoft.Hosting.Lifetime|Now listening on: http://localhost:5138
+2023-01-27 14:14:23.5471|INFO|Microsoft.Hosting.Lifetime|Application started. Press Ctrl+C to shut down.
+2023-01-27 14:14:23.5624|INFO|Microsoft.Hosting.Lifetime|Hosting environment: Development
+2023-01-27 14:14:23.5807|INFO|Microsoft.Hosting.Lifetime|Content root path: C:\Users\jpreksavec\source\repos\Bookstore\src\Bookstore.Service
+2023-01-27 14:15:42.0892|INFO|Microsoft.Hosting.Lifetime|Now listening on: https://localhost:7194
+2023-01-27 14:15:42.1105|INFO|Microsoft.Hosting.Lifetime|Now listening on: http://localhost:5138
+2023-01-27 14:15:42.1105|INFO|Microsoft.Hosting.Lifetime|Application started. Press Ctrl+C to shut down.
+2023-01-27 14:15:42.1105|INFO|Microsoft.Hosting.Lifetime|Hosting environment: Development
+2023-01-27 14:15:42.1257|INFO|Microsoft.Hosting.Lifetime|Content root path: C:\Users\jpreksavec\source\repos\Bookstore\src\Bookstore.Service
+2023-01-27 14:17:37.9994|INFO|Microsoft.Hosting.Lifetime|Now listening on: https://localhost:7194
+2023-01-27 14:17:38.0207|INFO|Microsoft.Hosting.Lifetime|Now listening on: http://localhost:5138
+2023-01-27 14:17:38.0207|INFO|Microsoft.Hosting.Lifetime|Application started. Press Ctrl+C to shut down.
+2023-01-27 14:17:38.0325|INFO|Microsoft.Hosting.Lifetime|Hosting environment: Development
+2023-01-27 14:17:38.0325|INFO|Microsoft.Hosting.Lifetime|Content root path: C:\Users\jpreksavec\source\repos\Bookstore\src\Bookstore.Service
+2023-01-30 08:13:42.8526|INFO|Microsoft.Hosting.Lifetime|Now listening on: https://localhost:7194
+2023-01-30 08:13:42.8995|INFO|Microsoft.Hosting.Lifetime|Now listening on: http://localhost:5138
+2023-01-30 08:13:42.9117|INFO|Microsoft.Hosting.Lifetime|Application started. Press Ctrl+C to shut down.
+2023-01-30 08:13:42.9117|INFO|Microsoft.Hosting.Lifetime|Hosting environment: Development
+2023-01-30 08:13:42.9117|INFO|Microsoft.Hosting.Lifetime|Content root path: C:\Users\jpreksavec\source\repos\Bookstore\src\Bookstore.Service
+2023-01-30 08:18:43.8895|INFO|Microsoft.Hosting.Lifetime|Now listening on: https://localhost:7194
+2023-01-30 08:18:44.0449|INFO|Microsoft.Hosting.Lifetime|Now listening on: http://localhost:5138
+2023-01-30 08:18:44.0708|INFO|Microsoft.Hosting.Lifetime|Application started. Press Ctrl+C to shut down.
+2023-01-30 08:18:44.0871|INFO|Microsoft.Hosting.Lifetime|Hosting environment: Development
+2023-01-30 08:18:44.0996|INFO|Microsoft.Hosting.Lifetime|Content root path: C:\Users\jpreksavec\source\repos\Bookstore\src\Bookstore.Service
+2023-01-30 08:33:51.7972|INFO|Microsoft.Hosting.Lifetime|Now listening on: https://localhost:7194
+2023-01-30 08:33:51.8313|INFO|Microsoft.Hosting.Lifetime|Now listening on: http://localhost:5138
+2023-01-30 08:33:51.8494|INFO|Microsoft.Hosting.Lifetime|Application started. Press Ctrl+C to shut down.
+2023-01-30 08:33:51.8579|INFO|Microsoft.Hosting.Lifetime|Hosting environment: Development
+2023-01-30 08:33:51.8579|INFO|Microsoft.Hosting.Lifetime|Content root path: C:\Users\jpreksavec\source\repos\Bookstore\src\Bookstore.Service
+2023-01-30 08:37:35.6300|INFO|Microsoft.Hosting.Lifetime|Now listening on: https://localhost:7194
+2023-01-30 08:37:35.6506|INFO|Microsoft.Hosting.Lifetime|Now listening on: http://localhost:5138
+2023-01-30 08:37:35.6597|INFO|Microsoft.Hosting.Lifetime|Application started. Press Ctrl+C to shut down.
+2023-01-30 08:37:35.6597|INFO|Microsoft.Hosting.Lifetime|Hosting environment: Development
+2023-01-30 08:37:35.6597|INFO|Microsoft.Hosting.Lifetime|Content root path: C:\Users\jpreksavec\source\repos\Bookstore\src\Bookstore.Service
+2023-01-30 08:45:16.9863|INFO|Microsoft.Hosting.Lifetime|Now listening on: https://localhost:7194
+2023-01-30 08:45:17.0185|INFO|Microsoft.Hosting.Lifetime|Now listening on: http://localhost:5138
+2023-01-30 08:45:17.0284|INFO|Microsoft.Hosting.Lifetime|Application started. Press Ctrl+C to shut down.
+2023-01-30 08:45:17.0284|INFO|Microsoft.Hosting.Lifetime|Hosting environment: Development
+2023-01-30 08:45:17.0284|INFO|Microsoft.Hosting.Lifetime|Content root path: C:\Users\jpreksavec\source\repos\Bookstore\src\Bookstore.Service
+2023-01-30 08:51:09.4779|INFO|Microsoft.Hosting.Lifetime|Now listening on: https://localhost:7194
+2023-01-30 08:51:09.5063|INFO|Microsoft.Hosting.Lifetime|Now listening on: http://localhost:5138
+2023-01-30 08:51:09.5138|INFO|Microsoft.Hosting.Lifetime|Application started. Press Ctrl+C to shut down.
+2023-01-30 08:51:09.5138|INFO|Microsoft.Hosting.Lifetime|Hosting environment: Development
+2023-01-30 08:51:09.5138|INFO|Microsoft.Hosting.Lifetime|Content root path: C:\Users\jpreksavec\source\repos\Bookstore\src\Bookstore.Service
+2023-01-30 08:52:40.3718|INFO|Microsoft.Hosting.Lifetime|Now listening on: https://localhost:7194
+2023-01-30 08:52:40.3913|INFO|Microsoft.Hosting.Lifetime|Now listening on: http://localhost:5138
+2023-01-30 08:52:40.3913|INFO|Microsoft.Hosting.Lifetime|Application started. Press Ctrl+C to shut down.
+2023-01-30 08:52:40.4013|INFO|Microsoft.Hosting.Lifetime|Hosting environment: Development
+2023-01-30 08:52:40.4013|INFO|Microsoft.Hosting.Lifetime|Content root path: C:\Users\jpreksavec\source\repos\Bookstore\src\Bookstore.Service
+2023-01-30 10:34:56.0876|INFO|Microsoft.Hosting.Lifetime|Now listening on: https://localhost:7194
+2023-01-30 10:34:56.1200|INFO|Microsoft.Hosting.Lifetime|Now listening on: http://localhost:5138
+2023-01-30 10:34:56.1200|INFO|Microsoft.Hosting.Lifetime|Application started. Press Ctrl+C to shut down.
+2023-01-30 10:34:56.1317|INFO|Microsoft.Hosting.Lifetime|Hosting environment: Development
+2023-01-30 10:34:56.1317|INFO|Microsoft.Hosting.Lifetime|Content root path: C:\Users\jpreksavec\source\repos\Bookstore\src\Bookstore.Service
+2023-01-30 13:07:30.3506|INFO|Microsoft.Hosting.Lifetime|Now listening on: https://localhost:7194
+2023-01-30 13:07:30.3738|INFO|Microsoft.Hosting.Lifetime|Now listening on: http://localhost:5138
+2023-01-30 13:07:30.3824|INFO|Microsoft.Hosting.Lifetime|Application started. Press Ctrl+C to shut down.
+2023-01-30 13:07:30.3824|INFO|Microsoft.Hosting.Lifetime|Hosting environment: Development
+2023-01-30 13:07:30.3824|INFO|Microsoft.Hosting.Lifetime|Content root path: C:\Users\jpreksavec\source\repos\Bookstore\src\Bookstore.Service
+2023-01-30 13:23:45.7848|INFO|Microsoft.Hosting.Lifetime|Now listening on: https://localhost:7194
+2023-01-30 13:23:45.7994|INFO|Microsoft.Hosting.Lifetime|Now listening on: http://localhost:5138
+2023-01-30 13:23:45.7994|INFO|Microsoft.Hosting.Lifetime|Application started. Press Ctrl+C to shut down.
+2023-01-30 13:23:45.7994|INFO|Microsoft.Hosting.Lifetime|Hosting environment: Development
+2023-01-30 13:23:45.7994|INFO|Microsoft.Hosting.Lifetime|Content root path: C:\Users\jpreksavec\source\repos\Bookstore\src\Bookstore.Service
+2023-01-30 13:33:10.4198|INFO|Microsoft.Hosting.Lifetime|Now listening on: https://localhost:7194
+2023-01-30 13:33:10.5025|INFO|Microsoft.Hosting.Lifetime|Now listening on: http://localhost:5138
+2023-01-30 13:33:10.5145|INFO|Microsoft.Hosting.Lifetime|Application started. Press Ctrl+C to shut down.
+2023-01-30 13:33:10.5310|INFO|Microsoft.Hosting.Lifetime|Hosting environment: Development
+2023-01-30 13:33:10.5365|INFO|Microsoft.Hosting.Lifetime|Content root path: C:\Users\jpreksavec\source\repos\Bookstore\src\Bookstore.Service
+2023-01-30 15:12:37.1884|INFO|Microsoft.Hosting.Lifetime|Now listening on: https://localhost:7194
+2023-01-30 15:12:37.2233|INFO|Microsoft.Hosting.Lifetime|Now listening on: http://localhost:5138
+2023-01-30 15:12:37.2368|INFO|Microsoft.Hosting.Lifetime|Application started. Press Ctrl+C to shut down.
+2023-01-30 15:12:37.2428|INFO|Microsoft.Hosting.Lifetime|Hosting environment: Development
+2023-01-30 15:12:37.2428|INFO|Microsoft.Hosting.Lifetime|Content root path: C:\Users\jpreksavec\source\repos\Bookstore\src\Bookstore.Service
+2023-01-30 15:12:37.9564|ERROR|Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware|An unhandled exception has occurred while executing the request.
+2023-01-30 15:15:18.9372|INFO|Microsoft.Hosting.Lifetime|Now listening on: https://localhost:7194
+2023-01-30 15:15:18.9596|INFO|Microsoft.Hosting.Lifetime|Now listening on: http://localhost:5138
+2023-01-30 15:15:18.9674|INFO|Microsoft.Hosting.Lifetime|Application started. Press Ctrl+C to shut down.
+2023-01-30 15:15:18.9674|INFO|Microsoft.Hosting.Lifetime|Hosting environment: Development
+2023-01-30 15:15:18.9674|INFO|Microsoft.Hosting.Lifetime|Content root path: C:\Users\jpreksavec\source\repos\Bookstore\src\Bookstore.Service
+2023-01-30 15:15:40.0918|INFO|Microsoft.Hosting.Lifetime|Now listening on: https://localhost:7194
+2023-01-30 15:15:40.1147|INFO|Microsoft.Hosting.Lifetime|Now listening on: http://localhost:5138
+2023-01-30 15:15:40.1218|INFO|Microsoft.Hosting.Lifetime|Application started. Press Ctrl+C to shut down.
+2023-01-30 15:15:40.1218|INFO|Microsoft.Hosting.Lifetime|Hosting environment: Development
+2023-01-30 15:15:40.1218|INFO|Microsoft.Hosting.Lifetime|Content root path: C:\Users\jpreksavec\source\repos\Bookstore\src\Bookstore.Service
+2023-01-30 15:16:34.9101|INFO|Microsoft.Hosting.Lifetime|Now listening on: https://localhost:7194
+2023-01-30 15:16:34.9493|INFO|Microsoft.Hosting.Lifetime|Now listening on: http://localhost:5138
+2023-01-30 15:16:34.9493|INFO|Microsoft.Hosting.Lifetime|Application started. Press Ctrl+C to shut down.
+2023-01-30 15:16:34.9638|INFO|Microsoft.Hosting.Lifetime|Hosting environment: Development
+2023-01-30 15:16:34.9638|INFO|Microsoft.Hosting.Lifetime|Content root path: C:\Users\jpreksavec\source\repos\Bookstore\src\Bookstore.Service
+2023-01-30 15:16:36.0113|ERROR|Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware|An unhandled exception has occurred while executing the request.
+2023-01-30 15:17:57.2510|INFO|Microsoft.Hosting.Lifetime|Now listening on: https://localhost:7194
+2023-01-30 15:17:57.2858|INFO|Microsoft.Hosting.Lifetime|Now listening on: http://localhost:5138
+2023-01-30 15:17:57.2947|INFO|Microsoft.Hosting.Lifetime|Application started. Press Ctrl+C to shut down.
+2023-01-30 15:17:57.2947|INFO|Microsoft.Hosting.Lifetime|Hosting environment: Development
+2023-01-30 15:17:57.2947|INFO|Microsoft.Hosting.Lifetime|Content root path: C:\Users\jpreksavec\source\repos\Bookstore\src\Bookstore.Service
+2023-01-30 15:24:42.7186|INFO|Microsoft.Hosting.Lifetime|Now listening on: https://localhost:7194
+2023-01-30 15:24:42.7384|INFO|Microsoft.Hosting.Lifetime|Now listening on: http://localhost:5138
+2023-01-30 15:24:42.7467|INFO|Microsoft.Hosting.Lifetime|Application started. Press Ctrl+C to shut down.
+2023-01-30 15:24:42.7467|INFO|Microsoft.Hosting.Lifetime|Hosting environment: Development
+2023-01-30 15:24:42.7467|INFO|Microsoft.Hosting.Lifetime|Content root path: C:\Users\jpreksavec\source\repos\Bookstore\src\Bookstore.Service
+2023-01-30 15:25:26.7732|INFO|Microsoft.Hosting.Lifetime|Now listening on: https://localhost:7194
+2023-01-30 15:25:26.7930|INFO|Microsoft.Hosting.Lifetime|Now listening on: http://localhost:5138
+2023-01-30 15:25:26.7930|INFO|Microsoft.Hosting.Lifetime|Application started. Press Ctrl+C to shut down.
+2023-01-30 15:25:26.7930|INFO|Microsoft.Hosting.Lifetime|Hosting environment: Development
+2023-01-30 15:25:26.7930|INFO|Microsoft.Hosting.Lifetime|Content root path: C:\Users\jpreksavec\source\repos\Bookstore\src\Bookstore.Service
+2023-01-30 15:27:00.6659|INFO|Microsoft.Hosting.Lifetime|Now listening on: https://localhost:7194
+2023-01-30 15:27:00.6868|INFO|Microsoft.Hosting.Lifetime|Now listening on: http://localhost:5138
+2023-01-30 15:27:00.6868|INFO|Microsoft.Hosting.Lifetime|Application started. Press Ctrl+C to shut down.
+2023-01-30 15:27:00.6868|INFO|Microsoft.Hosting.Lifetime|Hosting environment: Development
+2023-01-30 15:27:00.6990|INFO|Microsoft.Hosting.Lifetime|Content root path: C:\Users\jpreksavec\source\repos\Bookstore\src\Bookstore.Service
+2023-01-30 15:28:16.8856|INFO|Microsoft.Hosting.Lifetime|Now listening on: https://localhost:7194
+2023-01-30 15:28:16.9213|INFO|Microsoft.Hosting.Lifetime|Now listening on: http://localhost:5138
+2023-01-30 15:28:16.9213|INFO|Microsoft.Hosting.Lifetime|Application started. Press Ctrl+C to shut down.
+2023-01-30 15:28:16.9324|INFO|Microsoft.Hosting.Lifetime|Hosting environment: Development
+2023-01-30 15:28:16.9324|INFO|Microsoft.Hosting.Lifetime|Content root path: C:\Users\jpreksavec\source\repos\Bookstore\src\Bookstore.Service
+2023-01-30 15:29:31.7806|INFO|Microsoft.Hosting.Lifetime|Now listening on: https://localhost:7194
+2023-01-30 15:29:31.8194|INFO|Microsoft.Hosting.Lifetime|Now listening on: http://localhost:5138
+2023-01-30 15:29:31.8415|INFO|Microsoft.Hosting.Lifetime|Application started. Press Ctrl+C to shut down.
+2023-01-30 15:29:31.8565|INFO|Microsoft.Hosting.Lifetime|Hosting environment: Development
+2023-01-30 15:29:31.8565|INFO|Microsoft.Hosting.Lifetime|Content root path: C:\Users\jpreksavec\source\repos\Bookstore\src\Bookstore.Service
+2023-01-30 15:31:19.3858|INFO|Microsoft.Hosting.Lifetime|Now listening on: https://localhost:7194
+2023-01-30 15:31:19.4071|INFO|Microsoft.Hosting.Lifetime|Now listening on: http://localhost:5138
+2023-01-30 15:31:19.4071|INFO|Microsoft.Hosting.Lifetime|Application started. Press Ctrl+C to shut down.
+2023-01-30 15:31:19.4180|INFO|Microsoft.Hosting.Lifetime|Hosting environment: Development
+2023-01-30 15:31:19.4180|INFO|Microsoft.Hosting.Lifetime|Content root path: C:\Users\jpreksavec\source\repos\Bookstore\src\Bookstore.Service
+2023-01-30 15:31:49.5706|INFO|Microsoft.Hosting.Lifetime|Now listening on: https://localhost:7194
+2023-01-30 15:31:49.5954|INFO|Microsoft.Hosting.Lifetime|Now listening on: http://localhost:5138
+2023-01-30 15:31:49.5954|INFO|Microsoft.Hosting.Lifetime|Application started. Press Ctrl+C to shut down.
+2023-01-30 15:31:49.6074|INFO|Microsoft.Hosting.Lifetime|Hosting environment: Development
+2023-01-30 15:31:49.6074|INFO|Microsoft.Hosting.Lifetime|Content root path: C:\Users\jpreksavec\source\repos\Bookstore\src\Bookstore.Service
+2023-01-30 15:32:08.9968|INFO|Microsoft.Hosting.Lifetime|Now listening on: https://localhost:7194
+2023-01-30 15:32:09.0959|INFO|Microsoft.Hosting.Lifetime|Now listening on: http://localhost:5138
+2023-01-30 15:32:09.1277|INFO|Microsoft.Hosting.Lifetime|Application started. Press Ctrl+C to shut down.
+2023-01-30 15:32:09.1372|INFO|Microsoft.Hosting.Lifetime|Hosting environment: Development
+2023-01-30 15:32:09.1578|INFO|Microsoft.Hosting.Lifetime|Content root path: C:\Users\jpreksavec\source\repos\Bookstore\src\Bookstore.Service
+2023-02-01 08:55:57.3647|INFO|Microsoft.Hosting.Lifetime|Now listening on: https://localhost:7194
+2023-02-01 08:55:57.3924|INFO|Microsoft.Hosting.Lifetime|Now listening on: http://localhost:5138
+2023-02-01 08:55:57.3924|INFO|Microsoft.Hosting.Lifetime|Application started. Press Ctrl+C to shut down.
+2023-02-01 08:55:57.4058|INFO|Microsoft.Hosting.Lifetime|Hosting environment: Development
+2023-02-01 08:55:57.4058|INFO|Microsoft.Hosting.Lifetime|Content root path: C:\Users\jpreksavec\source\repos\Bookstore\src\Bookstore.Service
+2023-02-01 08:56:36.6498|INFO|Microsoft.Hosting.Lifetime|Now listening on: https://localhost:7194
+2023-02-01 08:56:36.6692|INFO|Microsoft.Hosting.Lifetime|Now listening on: http://localhost:5138
+2023-02-01 08:56:36.6692|INFO|Microsoft.Hosting.Lifetime|Application started. Press Ctrl+C to shut down.
+2023-02-01 08:56:36.6692|INFO|Microsoft.Hosting.Lifetime|Hosting environment: Development
+2023-02-01 08:56:36.6692|INFO|Microsoft.Hosting.Lifetime|Content root path: C:\Users\jpreksavec\source\repos\Bookstore\src\Bookstore.Service
+2023-02-01 08:56:58.3305|INFO|Microsoft.Hosting.Lifetime|Now listening on: https://localhost:7194
+2023-02-01 08:56:58.3580|INFO|Microsoft.Hosting.Lifetime|Now listening on: http://localhost:5138
+2023-02-01 08:56:58.3580|INFO|Microsoft.Hosting.Lifetime|Application started. Press Ctrl+C to shut down.
+2023-02-01 08:56:58.3580|INFO|Microsoft.Hosting.Lifetime|Hosting environment: Development
+2023-02-01 08:56:58.3724|INFO|Microsoft.Hosting.Lifetime|Content root path: C:\Users\jpreksavec\source\repos\Bookstore\src\Bookstore.Service
+2023-02-01 09:05:46.8208|INFO|Microsoft.Hosting.Lifetime|Now listening on: https://localhost:7194
+2023-02-01 09:05:46.8424|INFO|Microsoft.Hosting.Lifetime|Now listening on: http://localhost:5138
+2023-02-01 09:05:46.8424|INFO|Microsoft.Hosting.Lifetime|Application started. Press Ctrl+C to shut down.
+2023-02-01 09:05:46.8424|INFO|Microsoft.Hosting.Lifetime|Hosting environment: Development
+2023-02-01 09:05:46.8424|INFO|Microsoft.Hosting.Lifetime|Content root path: C:\Users\jpreksavec\source\repos\Bookstore\src\Bookstore.Service
+2023-02-01 09:06:33.2117|INFO|Microsoft.Hosting.Lifetime|Now listening on: https://localhost:7194
+2023-02-01 09:06:33.2446|INFO|Microsoft.Hosting.Lifetime|Now listening on: http://localhost:5138
+2023-02-01 09:06:33.2537|INFO|Microsoft.Hosting.Lifetime|Application started. Press Ctrl+C to shut down.
+2023-02-01 09:06:33.2537|INFO|Microsoft.Hosting.Lifetime|Hosting environment: Development
+2023-02-01 09:06:33.2537|INFO|Microsoft.Hosting.Lifetime|Content root path: C:\Users\jpreksavec\source\repos\Bookstore\src\Bookstore.Service
+2023-02-01 09:15:17.7638|INFO|Microsoft.Hosting.Lifetime|Now listening on: https://localhost:7194
+2023-02-01 09:15:17.7852|INFO|Microsoft.Hosting.Lifetime|Now listening on: http://localhost:5138
+2023-02-01 09:15:17.7852|INFO|Microsoft.Hosting.Lifetime|Application started. Press Ctrl+C to shut down.
+2023-02-01 09:15:17.7852|INFO|Microsoft.Hosting.Lifetime|Hosting environment: Development
+2023-02-01 09:15:17.7999|INFO|Microsoft.Hosting.Lifetime|Content root path: C:\Users\jpreksavec\source\repos\Bookstore\src\Bookstore.Service
+2023-02-01 09:17:53.3976|WARN|AuthorizationDataLoader|There is no principal with the username 'SampleUser' in Common.Principal.
+2023-02-01 09:18:06.1800|WARN|AuthorizationDataLoader|There is no principal with the username 'SampleUser' in Common.Principal.
+2023-02-01 09:18:11.5257|WARN|AuthorizationDataLoader|There is no principal with the username 'SampleUser' in Common.Principal.
+2023-02-01 09:18:12.6854|WARN|AuthorizationDataLoader|There is no principal with the username 'SampleUser' in Common.Principal.
+2023-02-01 09:18:13.5312|WARN|AuthorizationDataLoader|There is no principal with the username 'SampleUser' in Common.Principal.
+2023-02-01 09:18:14.4804|WARN|AuthorizationDataLoader|There is no principal with the username 'SampleUser' in Common.Principal.
+2023-02-01 09:49:41.1047|INFO|Microsoft.Hosting.Lifetime|Now listening on: https://localhost:7194
+2023-02-01 09:49:41.1269|INFO|Microsoft.Hosting.Lifetime|Now listening on: http://localhost:5138
+2023-02-01 09:49:41.1354|INFO|Microsoft.Hosting.Lifetime|Application started. Press Ctrl+C to shut down.
+2023-02-01 09:49:41.1354|INFO|Microsoft.Hosting.Lifetime|Hosting environment: Development
+2023-02-01 09:49:41.1354|INFO|Microsoft.Hosting.Lifetime|Content root path: C:\Users\jpreksavec\source\repos\Bookstore\src\Bookstore.Service
+2023-02-01 09:51:25.4638|INFO|Microsoft.Hosting.Lifetime|Now listening on: https://localhost:7194
+2023-02-01 09:51:25.4868|INFO|Microsoft.Hosting.Lifetime|Now listening on: http://localhost:5138
+2023-02-01 09:51:25.4868|INFO|Microsoft.Hosting.Lifetime|Application started. Press Ctrl+C to shut down.
+2023-02-01 09:51:25.4974|INFO|Microsoft.Hosting.Lifetime|Hosting environment: Development
+2023-02-01 09:51:25.4974|INFO|Microsoft.Hosting.Lifetime|Content root path: C:\Users\jpreksavec\source\repos\Bookstore\src\Bookstore.Service
+2023-02-01 09:53:16.8707|INFO|Microsoft.Hosting.Lifetime|Now listening on: https://localhost:7194
+2023-02-01 09:53:16.9234|INFO|Microsoft.Hosting.Lifetime|Now listening on: http://localhost:5138
+2023-02-01 09:53:16.9375|INFO|Microsoft.Hosting.Lifetime|Application started. Press Ctrl+C to shut down.
+2023-02-01 09:53:16.9375|INFO|Microsoft.Hosting.Lifetime|Hosting environment: Development
+2023-02-01 09:53:16.9481|INFO|Microsoft.Hosting.Lifetime|Content root path: C:\Users\jpreksavec\source\repos\Bookstore\src\Bookstore.Service
+2023-02-01 09:53:37.1375|INFO|Microsoft.Hosting.Lifetime|Now listening on: https://localhost:7194
+2023-02-01 09:53:37.1605|INFO|Microsoft.Hosting.Lifetime|Now listening on: http://localhost:5138
+2023-02-01 09:53:37.1680|INFO|Microsoft.Hosting.Lifetime|Application started. Press Ctrl+C to shut down.
+2023-02-01 09:53:37.1680|INFO|Microsoft.Hosting.Lifetime|Hosting environment: Development
+2023-02-01 09:53:37.1680|INFO|Microsoft.Hosting.Lifetime|Content root path: C:\Users\jpreksavec\source\repos\Bookstore\src\Bookstore.Service
+2023-02-01 10:07:59.1596|INFO|Microsoft.Hosting.Lifetime|Now listening on: https://localhost:7194
+2023-02-01 10:07:59.1802|INFO|Microsoft.Hosting.Lifetime|Now listening on: http://localhost:5138
+2023-02-01 10:07:59.1880|INFO|Microsoft.Hosting.Lifetime|Application started. Press Ctrl+C to shut down.
+2023-02-01 10:07:59.1880|INFO|Microsoft.Hosting.Lifetime|Hosting environment: Development
+2023-02-01 10:07:59.1880|INFO|Microsoft.Hosting.Lifetime|Content root path: C:\Users\jpreksavec\source\repos\Bookstore\src\Bookstore.Service
+2023-02-01 10:08:41.2084|WARN|AuthorizationDataLoader|There is no principal with the username 'SampleUser' in Common.Principal.
+2023-02-01 10:09:06.8087|WARN|AuthorizationDataLoader|There is no principal with the username 'SampleUser' in Common.Principal.
+2023-02-01 10:09:29.3800|WARN|AuthorizationDataLoader|There is no principal with the username 'SampleUser' in Common.Principal.
+2023-02-01 10:10:25.7945|INFO|Microsoft.Hosting.Lifetime|Now listening on: https://localhost:7194
+2023-02-01 10:10:25.8171|INFO|Microsoft.Hosting.Lifetime|Now listening on: http://localhost:5138
+2023-02-01 10:10:25.8171|INFO|Microsoft.Hosting.Lifetime|Application started. Press Ctrl+C to shut down.
+2023-02-01 10:10:25.8288|INFO|Microsoft.Hosting.Lifetime|Hosting environment: Development
+2023-02-01 10:10:25.8288|INFO|Microsoft.Hosting.Lifetime|Content root path: C:\Users\jpreksavec\source\repos\Bookstore\src\Bookstore.Service
+2023-02-01 10:10:46.8651|INFO|Microsoft.Hosting.Lifetime|Now listening on: https://localhost:7194
+2023-02-01 10:10:46.8922|INFO|Microsoft.Hosting.Lifetime|Now listening on: http://localhost:5138
+2023-02-01 10:10:46.8922|INFO|Microsoft.Hosting.Lifetime|Application started. Press Ctrl+C to shut down.
+2023-02-01 10:10:46.9069|INFO|Microsoft.Hosting.Lifetime|Hosting environment: Development
+2023-02-01 10:10:46.9069|INFO|Microsoft.Hosting.Lifetime|Content root path: C:\Users\jpreksavec\source\repos\Bookstore\src\Bookstore.Service
+2023-02-01 10:11:09.3272|WARN|AuthorizationDataLoader|There is no principal with the username 'SampleUser' in Common.Principal.
+2023-02-01 10:12:35.2162|INFO|Microsoft.Hosting.Lifetime|Now listening on: https://localhost:7194
+2023-02-01 10:12:35.2389|INFO|Microsoft.Hosting.Lifetime|Now listening on: http://localhost:5138
+2023-02-01 10:12:35.2389|INFO|Microsoft.Hosting.Lifetime|Application started. Press Ctrl+C to shut down.
+2023-02-01 10:12:35.2389|INFO|Microsoft.Hosting.Lifetime|Hosting environment: Development
+2023-02-01 10:12:35.2524|INFO|Microsoft.Hosting.Lifetime|Content root path: C:\Users\jpreksavec\source\repos\Bookstore\src\Bookstore.Service
+2023-02-01 10:12:53.9334|WARN|AuthorizationDataLoader|There is no principal with the username 'SampleUser' in Common.Principal.
+2023-02-01 10:19:00.1056|INFO|Microsoft.Hosting.Lifetime|Now listening on: https://localhost:7194
+2023-02-01 10:19:00.1331|INFO|Microsoft.Hosting.Lifetime|Now listening on: http://localhost:5138
+2023-02-01 10:19:00.1331|INFO|Microsoft.Hosting.Lifetime|Application started. Press Ctrl+C to shut down.
+2023-02-01 10:19:00.1442|INFO|Microsoft.Hosting.Lifetime|Hosting environment: Development
+2023-02-01 10:19:00.1442|INFO|Microsoft.Hosting.Lifetime|Content root path: C:\Users\jpreksavec\source\repos\Bookstore\src\Bookstore.Service
+2023-02-01 10:19:27.3655|ERROR|Rhetos.Host.AspNet.RestApi.Filters.ApiExceptionFilter|Rhetos.FrameworkException: Invalid security configuration settings. Both anonymous access and user-level security should not be active at the same time. Disable 'Rhetos:AppSecurity:AllClaimsForAnonymous' option.
+   at Rhetos.Security.AuthorizationManager.AssumeAllClaims()
+   at Rhetos.Security.AuthorizationManager.GetAuthorizations(IList`1 requiredClaims)
+   at Rhetos.Security.AuthorizationManager.Authorize(IList`1 commandInfos)
+   at Rhetos.Processing.ProcessingEngine.Execute(IList`1 commands)
+--- End of stack trace from previous location ---
+   at Rhetos.Utilities.ExceptionsUtility.Rethrow(Exception exception)
+   at Rhetos.Processing.ProcessingEngine.Execute(IList`1 commands)
+   at Rhetos.Processing.ProcessingEngineExtensions.Execute[TCommandResult](IProcessingEngine processingEngine, ICommandInfo`1 command)
+   at Rhetos.Host.AspNet.RestApi.Utilities.ServiceUtility.ExecuteReadCommand(ReadCommandInfo commandInfo)
+   at Rhetos.Host.AspNet.RestApi.Utilities.ServiceUtility.GetData[T](String filter, String fparam, String genericfilter, String filters, Int32 top, Int32 skip, Int32 page, Int32 psize, String sort, Boolean readRecords, Boolean readTotalCount)
+   at Rhetos.Host.AspNet.RestApi.Controllers.ReadDataApiController`1.Get(String filter, String fparam, String genericfilter, String filters, Int32 top, Int32 skip, Int32 page, Int32 psize, String sort)
+   at lambda_method1233(Closure, Object, Object[])
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.SyncObjectResultExecutor.Execute(ActionContext actionContext, IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Logged|12_1(ControllerActionInvoker invoker)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+2023-02-01 10:21:24.4842|INFO|Microsoft.Hosting.Lifetime|Now listening on: https://localhost:7194
+2023-02-01 10:21:24.5142|INFO|Microsoft.Hosting.Lifetime|Now listening on: http://localhost:5138
+2023-02-01 10:21:24.5222|INFO|Microsoft.Hosting.Lifetime|Application started. Press Ctrl+C to shut down.
+2023-02-01 10:21:24.5222|INFO|Microsoft.Hosting.Lifetime|Hosting environment: Development
+2023-02-01 10:21:24.5222|INFO|Microsoft.Hosting.Lifetime|Content root path: C:\Users\jpreksavec\source\repos\Bookstore\src\Bookstore.Service
+2023-02-01 10:23:32.1873|ERROR|Rhetos.Host.AspNet.RestApi.Filters.ApiExceptionFilter|Rhetos.FrameworkException: Invalid security configuration settings. Both anonymous access and user-level security should not be active at the same time. Disable 'Rhetos:AppSecurity:AllClaimsForAnonymous' option.
+   at Rhetos.Security.AuthorizationManager.AssumeAllClaims()
+   at Rhetos.Security.AuthorizationManager.GetAuthorizations(IList`1 requiredClaims)
+   at Rhetos.Security.AuthorizationManager.Authorize(IList`1 commandInfos)
+   at Rhetos.Processing.ProcessingEngine.Execute(IList`1 commands)
+--- End of stack trace from previous location ---
+   at Rhetos.Utilities.ExceptionsUtility.Rethrow(Exception exception)
+   at Rhetos.Processing.ProcessingEngine.Execute(IList`1 commands)
+   at Rhetos.Processing.ProcessingEngineExtensions.Execute(IProcessingEngine processingEngine, ICommandInfo command)
+   at Rhetos.Host.AspNet.RestApi.Utilities.ServiceUtility.InsertData[T](T entity)
+   at Rhetos.Host.AspNet.RestApi.Controllers.ReadWriteDataApiController`1.Insert(T item)
+   at lambda_method1233(Closure, Object, Object[])
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.SyncObjectResultExecutor.Execute(ActionContext actionContext, IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Logged|12_1(ControllerActionInvoker invoker)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+2023-02-01 10:24:33.2451|INFO|Microsoft.Hosting.Lifetime|Now listening on: https://localhost:7194
+2023-02-01 10:24:33.2803|INFO|Microsoft.Hosting.Lifetime|Now listening on: http://localhost:5138
+2023-02-01 10:24:33.2882|INFO|Microsoft.Hosting.Lifetime|Application started. Press Ctrl+C to shut down.
+2023-02-01 10:24:33.2882|INFO|Microsoft.Hosting.Lifetime|Hosting environment: Development
+2023-02-01 10:24:33.2882|INFO|Microsoft.Hosting.Lifetime|Content root path: C:\Users\jpreksavec\source\repos\Bookstore\src\Bookstore.Service
+2023-02-01 10:24:55.4055|WARN|AuthorizationDataLoader|There is no principal with the username 'SampleUser' in Common.Principal.
+2023-02-01 10:31:35.6971|INFO|Microsoft.Hosting.Lifetime|Now listening on: https://localhost:7194
+2023-02-01 10:31:35.7181|INFO|Microsoft.Hosting.Lifetime|Now listening on: http://localhost:5138
+2023-02-01 10:31:35.7279|INFO|Microsoft.Hosting.Lifetime|Application started. Press Ctrl+C to shut down.
+2023-02-01 10:31:35.7279|INFO|Microsoft.Hosting.Lifetime|Hosting environment: Development
+2023-02-01 10:31:35.7279|INFO|Microsoft.Hosting.Lifetime|Content root path: C:\Users\jpreksavec\source\repos\Bookstore\src\Bookstore.Service
+2023-02-01 10:31:53.9417|WARN|AuthorizationDataLoader|There is no principal with the username 'SampleUser' in Common.Principal.
+2023-02-01 10:32:15.8171|INFO|Microsoft.Hosting.Lifetime|Now listening on: https://localhost:7194
+2023-02-01 10:32:15.8502|INFO|Microsoft.Hosting.Lifetime|Now listening on: http://localhost:5138
+2023-02-01 10:32:15.8502|INFO|Microsoft.Hosting.Lifetime|Application started. Press Ctrl+C to shut down.
+2023-02-01 10:32:15.8502|INFO|Microsoft.Hosting.Lifetime|Hosting environment: Development
+2023-02-01 10:32:15.8639|INFO|Microsoft.Hosting.Lifetime|Content root path: C:\Users\jpreksavec\source\repos\Bookstore\src\Bookstore.Service
+2023-02-01 10:32:31.3346|ERROR|Rhetos.Host.AspNet.RestApi.Filters.ApiExceptionFilter|Rhetos.FrameworkException: Invalid security configuration settings. Both anonymous access and user-level security should not be active at the same time. Disable 'Rhetos:AppSecurity:AllClaimsForAnonymous' option.
+   at Rhetos.Security.AuthorizationManager.AssumeAllClaims()
+   at Rhetos.Security.AuthorizationManager.GetAuthorizations(IList`1 requiredClaims)
+   at Rhetos.Security.AuthorizationManager.Authorize(IList`1 commandInfos)
+   at Rhetos.Processing.ProcessingEngine.Execute(IList`1 commands)
+--- End of stack trace from previous location ---
+   at Rhetos.Utilities.ExceptionsUtility.Rethrow(Exception exception)
+   at Rhetos.Processing.ProcessingEngine.Execute(IList`1 commands)
+   at Rhetos.Processing.ProcessingEngineExtensions.Execute[TCommandResult](IProcessingEngine processingEngine, ICommandInfo`1 command)
+   at Rhetos.Host.AspNet.RestApi.Utilities.ServiceUtility.ExecuteReadCommand(ReadCommandInfo commandInfo)
+   at Rhetos.Host.AspNet.RestApi.Utilities.ServiceUtility.GetData[T](String filter, String fparam, String genericfilter, String filters, Int32 top, Int32 skip, Int32 page, Int32 psize, String sort, Boolean readRecords, Boolean readTotalCount)
+   at Rhetos.Host.AspNet.RestApi.Controllers.ReadDataApiController`1.Get(String filter, String fparam, String genericfilter, String filters, Int32 top, Int32 skip, Int32 page, Int32 psize, String sort)
+   at lambda_method1233(Closure, Object, Object[])
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.SyncObjectResultExecutor.Execute(ActionContext actionContext, IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Logged|12_1(ControllerActionInvoker invoker)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+2023-02-01 10:33:24.8452|INFO|Microsoft.Hosting.Lifetime|Now listening on: https://localhost:7194
+2023-02-01 10:33:24.8793|INFO|Microsoft.Hosting.Lifetime|Now listening on: http://localhost:5138
+2023-02-01 10:33:24.8874|INFO|Microsoft.Hosting.Lifetime|Application started. Press Ctrl+C to shut down.
+2023-02-01 10:33:24.8874|INFO|Microsoft.Hosting.Lifetime|Hosting environment: Development
+2023-02-01 10:33:24.8874|INFO|Microsoft.Hosting.Lifetime|Content root path: C:\Users\jpreksavec\source\repos\Bookstore\src\Bookstore.Service
+2023-02-01 10:33:40.6509|WARN|AuthorizationDataLoader|There is no principal with the username 'SampleUser' in Common.Principal.
+2023-02-01 10:35:16.2495|INFO|Microsoft.Hosting.Lifetime|Now listening on: https://localhost:7194
+2023-02-01 10:35:16.2754|INFO|Microsoft.Hosting.Lifetime|Now listening on: http://localhost:5138
+2023-02-01 10:35:16.2754|INFO|Microsoft.Hosting.Lifetime|Application started. Press Ctrl+C to shut down.
+2023-02-01 10:35:16.2882|INFO|Microsoft.Hosting.Lifetime|Hosting environment: Development
+2023-02-01 10:35:16.2882|INFO|Microsoft.Hosting.Lifetime|Content root path: C:\Users\jpreksavec\source\repos\Bookstore\src\Bookstore.Service
+2023-02-01 10:38:01.7539|INFO|Rhetos.Host.AspNet.RestApi.Filters.ApiExceptionFilter|Rhetos.LegacyClientException: Invalid format of GUID parametar 'ID'.
+   at Rhetos.Host.AspNet.RestApi.Utilities.ServiceUtility.GetDataById[T](String idString)
+   at Rhetos.Host.AspNet.RestApi.Controllers.ReadDataApiController`1.GetById(String id)
+   at lambda_method1350(Closure, Object, Object[])
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.SyncObjectResultExecutor.Execute(ActionContext actionContext, IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Logged|12_1(ControllerActionInvoker invoker)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+2023-02-01 10:42:14.8251|INFO|Microsoft.Hosting.Lifetime|Now listening on: https://localhost:7194
+2023-02-01 10:42:14.8469|INFO|Microsoft.Hosting.Lifetime|Now listening on: http://localhost:5138
+2023-02-01 10:42:14.8550|INFO|Microsoft.Hosting.Lifetime|Application started. Press Ctrl+C to shut down.
+2023-02-01 10:42:14.8550|INFO|Microsoft.Hosting.Lifetime|Hosting environment: Development
+2023-02-01 10:42:14.8550|INFO|Microsoft.Hosting.Lifetime|Content root path: C:\Users\jpreksavec\source\repos\Bookstore\src\Bookstore.Service
+2023-02-01 10:47:18.4397|INFO|Microsoft.Hosting.Lifetime|Now listening on: https://localhost:7194
+2023-02-01 10:47:18.4602|INFO|Microsoft.Hosting.Lifetime|Now listening on: http://localhost:5138
+2023-02-01 10:47:18.4661|INFO|Microsoft.Hosting.Lifetime|Application started. Press Ctrl+C to shut down.
+2023-02-01 10:47:18.4661|INFO|Microsoft.Hosting.Lifetime|Hosting environment: Development
+2023-02-01 10:47:18.4661|INFO|Microsoft.Hosting.Lifetime|Content root path: C:\Users\jpreksavec\source\repos\Bookstore\src\Bookstore.Service
+2023-02-01 10:49:19.8428|INFO|Rhetos.Host.AspNet.RestApi.Filters.ApiExceptionFilter|Rhetos.LegacyClientException: Invalid format of GUID parameter 'ID'.
+   at Rhetos.Host.AspNet.RestApi.Controllers.ReadWriteDataApiController`1.Update(String id, T item)
+   at Microsoft.Extensions.Internal.ObjectMethodExecutor.<>c__DisplayClass33_0.<WrapVoidMethod>b__0(Object target, Object[] parameters)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.VoidResultExecutor.Execute(ActionContext actionContext, IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Logged|12_1(ControllerActionInvoker invoker)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+2023-02-01 10:50:00.0740|INFO|Performance.ProcessingEngine|00:00:17.1106003 Command executed (Rhetos.Processing.DefaultCommands.SaveEntityCommand: SaveEntityCommandInfo Bookstore.Book, update 1).
+2023-02-01 10:50:41.0818|INFO|Rhetos.Host.AspNet.RestApi.Filters.ApiExceptionFilter|Rhetos.LegacyClientException: Given entity ID is not equal to resource ID from URI.
+   at Rhetos.Host.AspNet.RestApi.Controllers.ReadWriteDataApiController`1.Update(String id, T item)
+   at Microsoft.Extensions.Internal.ObjectMethodExecutor.<>c__DisplayClass33_0.<WrapVoidMethod>b__0(Object target, Object[] parameters)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.VoidResultExecutor.Execute(ActionContext actionContext, IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Logged|12_1(ControllerActionInvoker invoker)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+2023-02-01 10:51:24.7107|INFO|Performance.ProcessingEngine|00:00:14.4251695 Command executed (Rhetos.Processing.DefaultCommands.SaveEntityCommand: SaveEntityCommandInfo Bookstore.Book, update 1).
+2023-02-01 10:51:24.7286|INFO|Rhetos.Host.AspNet.RestApi.Filters.ApiExceptionFilter|Rhetos.ClientException: Updating a record that does not exist in database. ID=3fa85f64-5717-4562-b3fc-2c963f66afa8
+   at Rhetos.Dom.DefaultConcepts.DomHelper.WriteToDatabase[TEntity](IEnumerable`1 insertedNew, IEnumerable`1 updatedNew, IEnumerable`1 deletedIds, IPersistenceStorage persistenceStorage, Boolean checkUserPermissions, ISqlUtility sqlUtility, Exception& saveException, RhetosException& interpretedException)
+   at Bookstore.Repositories.Book_Repository.Save(IEnumerable`1 insertedNew, IEnumerable`1 updatedNew, IEnumerable`1 deletedIds, Boolean checkUserPermissions) in C:\Users\jpreksavec\source\repos\Bookstore\src\Bookstore.Service\obj\Rhetos\Source\Repositories\BookstoreRepositories.cs:line 416
+   at InvokeStub_Book_Repository.Save(Object, Object, IntPtr*)
+   at System.Reflection.MethodInvoker.Invoke(Object obj, IntPtr* args, BindingFlags invokeAttr)
+--- End of stack trace from previous location ---
+   at Rhetos.Utilities.ExceptionsUtility.Rethrow(Exception exception)
+   at Rhetos.Utilities.ExceptionsUtility.InvokeEx(MethodInfo method, Object obj, Object[] parameters)
+   at Rhetos.Dom.DefaultConcepts.GenericRepository`1.Save(IEnumerable`1 insertedNew, IEnumerable`1 updatedNew, IEnumerable`1 deletedIds, Boolean checkUserPermissions)
+   at Rhetos.Processing.DefaultCommands.SaveEntityCommand.Execute(SaveEntityCommandInfo saveInfo)
+   at Rhetos.Processing.ICommandImplementation`2.Rhetos.Processing.ICommandImplementation.Execute(Object parameter)
+   at Rhetos.Processing.ProcessingEngine.ExecuteCommand(ICommandInfo commandInfo)
+   at Rhetos.Processing.ProcessingEngine.Execute(IList`1 commands)
+--- End of stack trace from previous location ---
+   at Rhetos.Utilities.ExceptionsUtility.Rethrow(Exception exception)
+   at Rhetos.Processing.ProcessingEngine.Execute(IList`1 commands)
+   at Rhetos.Processing.ProcessingEngineExtensions.Execute(IProcessingEngine processingEngine, ICommandInfo command)
+   at Rhetos.Host.AspNet.RestApi.Utilities.ServiceUtility.UpdateData[T](T entity)
+   at Rhetos.Host.AspNet.RestApi.Controllers.ReadWriteDataApiController`1.Update(String id, T item)
+   at Microsoft.Extensions.Internal.ObjectMethodExecutor.<>c__DisplayClass33_0.<WrapVoidMethod>b__0(Object target, Object[] parameters)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.VoidResultExecutor.Execute(ActionContext actionContext, IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Logged|12_1(ControllerActionInvoker invoker)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+Command: SaveEntityCommandInfo Bookstore.Book, update 1
+2023-02-01 11:10:18.9232|INFO|Microsoft.Hosting.Lifetime|Now listening on: https://localhost:7194
+2023-02-01 11:10:18.9486|INFO|Microsoft.Hosting.Lifetime|Now listening on: http://localhost:5138
+2023-02-01 11:10:18.9584|INFO|Microsoft.Hosting.Lifetime|Application started. Press Ctrl+C to shut down.
+2023-02-01 11:10:18.9584|INFO|Microsoft.Hosting.Lifetime|Hosting environment: Development
+2023-02-01 11:10:18.9584|INFO|Microsoft.Hosting.Lifetime|Content root path: C:\Users\jpreksavec\source\repos\Bookstore\src\Bookstore.Service

@@ -97,6 +97,7 @@
     <Property Name="NumberOfPages" Type="Int32" />
     <Property Name="Title" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
     <Property Name="AuthorID" Type="Guid" />
+    <Property Name="Price" Type="Decimal" Precision="19" Scale="4" />
     <NavigationProperty Name="Extension_BookInfo" Relationship="Self.Bookstore_BookInfo_Base" FromRole="Bookstore_BookInfo_Base_Target" ToRole="Bookstore_BookInfo_Base_Source" />
     <NavigationProperty Name="Extension_BookRating" Relationship="Self.Bookstore_BookRating_Base" FromRole="Bookstore_BookRating_Base_Target" ToRole="Bookstore_BookRating_Base_Source" />
     <NavigationProperty Name="Extension_ChildrensBook" Relationship="Self.Bookstore_ChildrensBook_Base" FromRole="Bookstore_ChildrensBook_Base_Target" ToRole="Bookstore_ChildrensBook_Base_Source" />
@@ -240,6 +241,33 @@
     </Key>
     <Property Name="ID" Type="Guid" Nullable="false" />
     <Property Name="Name" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="Bookstore_SalesItem" customannotation:ClrType="Common.Queryable.Bookstore_SalesItem, Bookstore.Service">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Guid" Nullable="false" />
+    <Property Name="BookID" Type="Guid" />
+    <Property Name="Code" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="Description" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="Subtype" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="Price" Type="Decimal" Precision="19" Scale="4" />
+    <NavigationProperty Name="Book" Relationship="Self.Bookstore_SalesItem_Book" FromRole="Bookstore_SalesItem_Book_Source" ToRole="Bookstore_SalesItem_Book_Target" />
+  </EntityType>
+  <EntityType Name="Bookstore_SalesItem_Materialized" customannotation:ClrType="Common.Queryable.Bookstore_SalesItem_Materialized, Bookstore.Service">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Guid" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Bookstore_SalesItemComment" customannotation:ClrType="Common.Queryable.Bookstore_SalesItemComment, Bookstore.Service">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Guid" Nullable="false" />
+    <Property Name="Comment" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="SalesItemID" Type="Guid" />
+    <NavigationProperty Name="SalesItem" Relationship="Self.Bookstore_SalesItemComment_SalesItem" FromRole="Bookstore_SalesItemComment_SalesItem_Source" ToRole="Bookstore_SalesItemComment_SalesItem_Target" />
   </EntityType>
   <EntityType Name="Bookstore_Shipment" customannotation:ClrType="Common.Queryable.Bookstore_Shipment, Bookstore.Service">
     <Key>
@@ -465,6 +493,202 @@
     <NavigationProperty Name="Claim" Relationship="Self.Common_RolePermission_Claim" FromRole="Common_RolePermission_Claim_Source" ToRole="Common_RolePermission_Claim_Target" />
     <NavigationProperty Name="Role" Relationship="Self.Common_RolePermission_Role" FromRole="Common_RolePermission_Role_Source" ToRole="Common_RolePermission_Role_Target" />
   </EntityType>
+  <EntityType Name="Demo_BorrowMoney" customannotation:ClrType="Common.Queryable.Demo_BorrowMoney, Bookstore.Service">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Guid" Nullable="false" />
+    <Property Name="EventDate" Type="DateTime" />
+    <Property Name="FromWhom" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="Amount" Type="Decimal" Precision="19" Scale="4" />
+  </EntityType>
+  <EntityType Name="Demo_BorrowMoney2" customannotation:ClrType="Common.Queryable.Demo_BorrowMoney2, Bookstore.Service">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Guid" Nullable="false" />
+    <Property Name="EventDate" Type="DateTime" />
+    <Property Name="Forgotten" Type="Boolean" />
+    <Property Name="FromWhom" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="Amount" Type="Decimal" Precision="19" Scale="4" />
+  </EntityType>
+  <EntityType Name="Demo_LendMoney" customannotation:ClrType="Common.Queryable.Demo_LendMoney, Bookstore.Service">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Guid" Nullable="false" />
+    <Property Name="EventDate" Type="DateTime" />
+    <Property Name="ToWhom" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="Amount" Type="Decimal" Precision="19" Scale="4" />
+  </EntityType>
+  <EntityType Name="Demo_LendMoney2" customannotation:ClrType="Common.Queryable.Demo_LendMoney2, Bookstore.Service">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Guid" Nullable="false" />
+    <Property Name="EventDate" Type="DateTime" />
+    <Property Name="ToWhom" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="Amount" Type="Decimal" Precision="19" Scale="4" />
+  </EntityType>
+  <EntityType Name="Demo_LendMoneyAddendum" customannotation:ClrType="Common.Queryable.Demo_LendMoneyAddendum, Bookstore.Service">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Guid" Nullable="false" />
+    <Property Name="LendMoneyID" Type="Guid" />
+    <Property Name="AdditionalAmount" Type="Decimal" Precision="19" Scale="4" />
+    <NavigationProperty Name="LendMoney" Relationship="Self.Demo_LendMoneyAddendum_LendMoney" FromRole="Demo_LendMoneyAddendum_LendMoney_Source" ToRole="Demo_LendMoneyAddendum_LendMoney_Target" />
+  </EntityType>
+  <EntityType Name="Demo_MoneyTransaction" customannotation:ClrType="Common.Queryable.Demo_MoneyTransaction, Bookstore.Service">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Guid" Nullable="false" />
+    <Property Name="BorrowMoneyID" Type="Guid" />
+    <Property Name="BorrowMoney2ID" Type="Guid" />
+    <Property Name="EventDate" Type="DateTime" />
+    <Property Name="LendMoneyID" Type="Guid" />
+    <Property Name="LendMoney2ID" Type="Guid" />
+    <Property Name="LendMoneyTotalAddendumID" Type="Guid" />
+    <Property Name="Subtype" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="TransferMoneyID" Type="Guid" />
+    <Property Name="TransferMoneySubtractID" Type="Guid" />
+    <Property Name="Amount" Type="Decimal" Precision="19" Scale="4" />
+    <NavigationProperty Name="BorrowMoney" Relationship="Self.Demo_MoneyTransaction_BorrowMoney" FromRole="Demo_MoneyTransaction_BorrowMoney_Source" ToRole="Demo_MoneyTransaction_BorrowMoney_Target" />
+    <NavigationProperty Name="BorrowMoney2" Relationship="Self.Demo_MoneyTransaction_BorrowMoney2" FromRole="Demo_MoneyTransaction_BorrowMoney2_Source" ToRole="Demo_MoneyTransaction_BorrowMoney2_Target" />
+    <NavigationProperty Name="LendMoney" Relationship="Self.Demo_MoneyTransaction_LendMoney" FromRole="Demo_MoneyTransaction_LendMoney_Source" ToRole="Demo_MoneyTransaction_LendMoney_Target" />
+    <NavigationProperty Name="LendMoney2" Relationship="Self.Demo_MoneyTransaction_LendMoney2" FromRole="Demo_MoneyTransaction_LendMoney2_Source" ToRole="Demo_MoneyTransaction_LendMoney2_Target" />
+    <NavigationProperty Name="LendMoneyTotalAddendum" Relationship="Self.Demo_MoneyTransaction_LendMoneyTotalAddendum" FromRole="Demo_MoneyTransaction_LendMoneyTotalAddendum_Source" ToRole="Demo_MoneyTransaction_LendMoneyTotalAddendum_Target" />
+    <NavigationProperty Name="TransferMoney" Relationship="Self.Demo_MoneyTransaction_TransferMoney" FromRole="Demo_MoneyTransaction_TransferMoney_Source" ToRole="Demo_MoneyTransaction_TransferMoney_Target" />
+    <NavigationProperty Name="TransferMoneySubtract" Relationship="Self.Demo_MoneyTransaction_TransferMoneySubtract" FromRole="Demo_MoneyTransaction_TransferMoneySubtract_Source" ToRole="Demo_MoneyTransaction_TransferMoneySubtract_Target" />
+  </EntityType>
+  <EntityType Name="Demo_MoneyTransaction_Materialized" customannotation:ClrType="Common.Queryable.Demo_MoneyTransaction_Materialized, Bookstore.Service">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Guid" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Demo_TransactionComment" customannotation:ClrType="Common.Queryable.Demo_TransactionComment, Bookstore.Service">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Guid" Nullable="false" />
+    <Property Name="Comment" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="MoneyTransactionID" Type="Guid" />
+    <NavigationProperty Name="MoneyTransaction" Relationship="Self.Demo_TransactionComment_MoneyTransaction" FromRole="Demo_TransactionComment_MoneyTransaction_Source" ToRole="Demo_TransactionComment_MoneyTransaction_Target" />
+  </EntityType>
+  <EntityType Name="Demo_TransferMoney" customannotation:ClrType="Common.Queryable.Demo_TransferMoney, Bookstore.Service">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Guid" Nullable="false" />
+    <Property Name="EventDate" Type="DateTime" />
+    <Property Name="TransferFrom" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="TransferTo" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="Amount" Type="Decimal" Precision="19" Scale="4" />
+  </EntityType>
+  <EntityType Name="DemoRowPermissions1_Division" customannotation:ClrType="Common.Queryable.DemoRowPermissions1_Division, Bookstore.Service">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Guid" Nullable="false" />
+    <Property Name="Name" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="DemoRowPermissions1_Document" customannotation:ClrType="Common.Queryable.DemoRowPermissions1_Document, Bookstore.Service">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Guid" Nullable="false" />
+    <Property Name="Created" Type="DateTime" />
+    <Property Name="DivisionID" Type="Guid" />
+    <Property Name="Title" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="Division" Relationship="Self.DemoRowPermissions1_Document_Division" FromRole="DemoRowPermissions1_Document_Division_Source" ToRole="DemoRowPermissions1_Document_Division_Target" />
+  </EntityType>
+  <EntityType Name="DemoRowPermissions1_Employee" customannotation:ClrType="Common.Queryable.DemoRowPermissions1_Employee, Bookstore.Service">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Guid" Nullable="false" />
+    <Property Name="DivisionID" Type="Guid" />
+    <Property Name="UserName" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="Division" Relationship="Self.DemoRowPermissions1_Employee_Division" FromRole="DemoRowPermissions1_Employee_Division_Source" ToRole="DemoRowPermissions1_Employee_Division_Target" />
+  </EntityType>
+  <EntityType Name="DemoRowPermissions2_Division" customannotation:ClrType="Common.Queryable.DemoRowPermissions2_Division, Bookstore.Service">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Guid" Nullable="false" />
+    <Property Name="Name" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="RegionID" Type="Guid" />
+    <NavigationProperty Name="Region" Relationship="Self.DemoRowPermissions2_Division_Region" FromRole="DemoRowPermissions2_Division_Region_Source" ToRole="DemoRowPermissions2_Division_Region_Target" />
+  </EntityType>
+  <EntityType Name="DemoRowPermissions2_Document" customannotation:ClrType="Common.Queryable.DemoRowPermissions2_Document, Bookstore.Service">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Guid" Nullable="false" />
+    <Property Name="Created" Type="DateTime" />
+    <Property Name="DivisionID" Type="Guid" />
+    <Property Name="Title" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="Division" Relationship="Self.DemoRowPermissions2_Document_Division" FromRole="DemoRowPermissions2_Document_Division_Source" ToRole="DemoRowPermissions2_Document_Division_Target" />
+    <NavigationProperty Name="Extension_DocumentApproval" Relationship="Self.DemoRowPermissions2_DocumentApproval_Base" FromRole="DemoRowPermissions2_DocumentApproval_Base_Target" ToRole="DemoRowPermissions2_DocumentApproval_Base_Source" />
+    <NavigationProperty Name="Extension_DocumentInfo" Relationship="Self.DemoRowPermissions2_DocumentInfo_Base" FromRole="DemoRowPermissions2_DocumentInfo_Base_Target" ToRole="DemoRowPermissions2_DocumentInfo_Base_Source" />
+  </EntityType>
+  <EntityType Name="DemoRowPermissions2_DocumentApproval" customannotation:ClrType="Common.Queryable.DemoRowPermissions2_DocumentApproval, Bookstore.Service">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Guid" Nullable="false" />
+    <Property Name="Note" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="ApprovedByID" Type="Guid" />
+    <NavigationProperty Name="Base" Relationship="Self.DemoRowPermissions2_DocumentApproval_Base" FromRole="DemoRowPermissions2_DocumentApproval_Base_Source" ToRole="DemoRowPermissions2_DocumentApproval_Base_Target" />
+    <NavigationProperty Name="ApprovedBy" Relationship="Self.DemoRowPermissions2_DocumentApproval_ApprovedBy" FromRole="DemoRowPermissions2_DocumentApproval_ApprovedBy_Source" ToRole="DemoRowPermissions2_DocumentApproval_ApprovedBy_Target" />
+  </EntityType>
+  <EntityType Name="DemoRowPermissions2_DocumentComment" customannotation:ClrType="Common.Queryable.DemoRowPermissions2_DocumentComment, Bookstore.Service">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Guid" Nullable="false" />
+    <Property Name="Comment" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="DocumentID" Type="Guid" />
+    <NavigationProperty Name="Document" Relationship="Self.DemoRowPermissions2_DocumentComment_Document" FromRole="DemoRowPermissions2_DocumentComment_Document_Source" ToRole="DemoRowPermissions2_DocumentComment_Document_Target" />
+  </EntityType>
+  <EntityType Name="DemoRowPermissions2_DocumentInfo" customannotation:ClrType="Common.Queryable.DemoRowPermissions2_DocumentInfo, Bookstore.Service">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Guid" Nullable="false" />
+    <Property Name="Division2ID" Type="Guid" />
+    <Property Name="Title2" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="Division2" Relationship="Self.DemoRowPermissions2_DocumentInfo_Division2" FromRole="DemoRowPermissions2_DocumentInfo_Division2_Source" ToRole="DemoRowPermissions2_DocumentInfo_Division2_Target" />
+    <NavigationProperty Name="Base" Relationship="Self.DemoRowPermissions2_DocumentInfo_Base" FromRole="DemoRowPermissions2_DocumentInfo_Base_Source" ToRole="DemoRowPermissions2_DocumentInfo_Base_Target" />
+  </EntityType>
+  <EntityType Name="DemoRowPermissions2_Employee" customannotation:ClrType="Common.Queryable.DemoRowPermissions2_Employee, Bookstore.Service">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Guid" Nullable="false" />
+    <Property Name="DivisionID" Type="Guid" />
+    <Property Name="UserName" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="Division" Relationship="Self.DemoRowPermissions2_Employee_Division" FromRole="DemoRowPermissions2_Employee_Division_Source" ToRole="DemoRowPermissions2_Employee_Division_Target" />
+  </EntityType>
+  <EntityType Name="DemoRowPermissions2_Region" customannotation:ClrType="Common.Queryable.DemoRowPermissions2_Region, Bookstore.Service">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Guid" Nullable="false" />
+    <Property Name="Name" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="DemoRowPermissions2_RegionSupervisor" customannotation:ClrType="Common.Queryable.DemoRowPermissions2_RegionSupervisor, Bookstore.Service">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Guid" Nullable="false" />
+    <Property Name="EmployeeID" Type="Guid" />
+    <Property Name="RegionID" Type="Guid" />
+    <NavigationProperty Name="Employee" Relationship="Self.DemoRowPermissions2_RegionSupervisor_Employee" FromRole="DemoRowPermissions2_RegionSupervisor_Employee_Source" ToRole="DemoRowPermissions2_RegionSupervisor_Employee_Target" />
+    <NavigationProperty Name="Region" Relationship="Self.DemoRowPermissions2_RegionSupervisor_Region" FromRole="DemoRowPermissions2_RegionSupervisor_Region_Source" ToRole="DemoRowPermissions2_RegionSupervisor_Region_Target" />
+  </EntityType>
   <Association Name="Bookstore_BookInfo_Base">
     <End Role="Bookstore_BookInfo_Base_Source" Type="Self.Bookstore_BookInfo" Multiplicity="0..1" />
     <End Role="Bookstore_BookInfo_Base_Target" Type="Self.Bookstore_Book" Multiplicity="1" />
@@ -630,6 +854,30 @@
       </Principal>
       <Dependent Role="Bookstore_ForeignBook_Author_Source">
         <PropertyRef Name="AuthorID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="Bookstore_SalesItem_Book">
+    <End Role="Bookstore_SalesItem_Book_Source" Type="Self.Bookstore_SalesItem" Multiplicity="*" />
+    <End Role="Bookstore_SalesItem_Book_Target" Type="Self.Bookstore_Book" Multiplicity="0..1" />
+    <ReferentialConstraint>
+      <Principal Role="Bookstore_SalesItem_Book_Target">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="Bookstore_SalesItem_Book_Source">
+        <PropertyRef Name="BookID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="Bookstore_SalesItemComment_SalesItem">
+    <End Role="Bookstore_SalesItemComment_SalesItem_Source" Type="Self.Bookstore_SalesItemComment" Multiplicity="*" />
+    <End Role="Bookstore_SalesItemComment_SalesItem_Target" Type="Self.Bookstore_SalesItem" Multiplicity="0..1" />
+    <ReferentialConstraint>
+      <Principal Role="Bookstore_SalesItemComment_SalesItem_Target">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="Bookstore_SalesItemComment_SalesItem_Source">
+        <PropertyRef Name="SalesItemID" />
       </Dependent>
     </ReferentialConstraint>
   </Association>
@@ -849,6 +1097,258 @@
       </Dependent>
     </ReferentialConstraint>
   </Association>
+  <Association Name="Demo_LendMoneyAddendum_LendMoney">
+    <End Role="Demo_LendMoneyAddendum_LendMoney_Source" Type="Self.Demo_LendMoneyAddendum" Multiplicity="*" />
+    <End Role="Demo_LendMoneyAddendum_LendMoney_Target" Type="Self.Demo_LendMoney" Multiplicity="0..1" />
+    <ReferentialConstraint>
+      <Principal Role="Demo_LendMoneyAddendum_LendMoney_Target">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="Demo_LendMoneyAddendum_LendMoney_Source">
+        <PropertyRef Name="LendMoneyID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="Demo_MoneyTransaction_BorrowMoney">
+    <End Role="Demo_MoneyTransaction_BorrowMoney_Source" Type="Self.Demo_MoneyTransaction" Multiplicity="*" />
+    <End Role="Demo_MoneyTransaction_BorrowMoney_Target" Type="Self.Demo_BorrowMoney" Multiplicity="0..1" />
+    <ReferentialConstraint>
+      <Principal Role="Demo_MoneyTransaction_BorrowMoney_Target">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="Demo_MoneyTransaction_BorrowMoney_Source">
+        <PropertyRef Name="BorrowMoneyID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="Demo_MoneyTransaction_BorrowMoney2">
+    <End Role="Demo_MoneyTransaction_BorrowMoney2_Source" Type="Self.Demo_MoneyTransaction" Multiplicity="*" />
+    <End Role="Demo_MoneyTransaction_BorrowMoney2_Target" Type="Self.Demo_BorrowMoney2" Multiplicity="0..1" />
+    <ReferentialConstraint>
+      <Principal Role="Demo_MoneyTransaction_BorrowMoney2_Target">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="Demo_MoneyTransaction_BorrowMoney2_Source">
+        <PropertyRef Name="BorrowMoney2ID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="Demo_MoneyTransaction_LendMoney">
+    <End Role="Demo_MoneyTransaction_LendMoney_Source" Type="Self.Demo_MoneyTransaction" Multiplicity="*" />
+    <End Role="Demo_MoneyTransaction_LendMoney_Target" Type="Self.Demo_LendMoney" Multiplicity="0..1" />
+    <ReferentialConstraint>
+      <Principal Role="Demo_MoneyTransaction_LendMoney_Target">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="Demo_MoneyTransaction_LendMoney_Source">
+        <PropertyRef Name="LendMoneyID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="Demo_MoneyTransaction_LendMoney2">
+    <End Role="Demo_MoneyTransaction_LendMoney2_Source" Type="Self.Demo_MoneyTransaction" Multiplicity="*" />
+    <End Role="Demo_MoneyTransaction_LendMoney2_Target" Type="Self.Demo_LendMoney2" Multiplicity="0..1" />
+    <ReferentialConstraint>
+      <Principal Role="Demo_MoneyTransaction_LendMoney2_Target">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="Demo_MoneyTransaction_LendMoney2_Source">
+        <PropertyRef Name="LendMoney2ID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="Demo_MoneyTransaction_LendMoneyTotalAddendum">
+    <End Role="Demo_MoneyTransaction_LendMoneyTotalAddendum_Source" Type="Self.Demo_MoneyTransaction" Multiplicity="*" />
+    <End Role="Demo_MoneyTransaction_LendMoneyTotalAddendum_Target" Type="Self.Demo_LendMoney" Multiplicity="0..1" />
+    <ReferentialConstraint>
+      <Principal Role="Demo_MoneyTransaction_LendMoneyTotalAddendum_Target">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="Demo_MoneyTransaction_LendMoneyTotalAddendum_Source">
+        <PropertyRef Name="LendMoneyTotalAddendumID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="Demo_TransactionComment_MoneyTransaction">
+    <End Role="Demo_TransactionComment_MoneyTransaction_Source" Type="Self.Demo_TransactionComment" Multiplicity="*" />
+    <End Role="Demo_TransactionComment_MoneyTransaction_Target" Type="Self.Demo_MoneyTransaction" Multiplicity="0..1" />
+    <ReferentialConstraint>
+      <Principal Role="Demo_TransactionComment_MoneyTransaction_Target">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="Demo_TransactionComment_MoneyTransaction_Source">
+        <PropertyRef Name="MoneyTransactionID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="Demo_MoneyTransaction_TransferMoney">
+    <End Role="Demo_MoneyTransaction_TransferMoney_Source" Type="Self.Demo_MoneyTransaction" Multiplicity="*" />
+    <End Role="Demo_MoneyTransaction_TransferMoney_Target" Type="Self.Demo_TransferMoney" Multiplicity="0..1" />
+    <ReferentialConstraint>
+      <Principal Role="Demo_MoneyTransaction_TransferMoney_Target">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="Demo_MoneyTransaction_TransferMoney_Source">
+        <PropertyRef Name="TransferMoneyID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="Demo_MoneyTransaction_TransferMoneySubtract">
+    <End Role="Demo_MoneyTransaction_TransferMoneySubtract_Source" Type="Self.Demo_MoneyTransaction" Multiplicity="*" />
+    <End Role="Demo_MoneyTransaction_TransferMoneySubtract_Target" Type="Self.Demo_TransferMoney" Multiplicity="0..1" />
+    <ReferentialConstraint>
+      <Principal Role="Demo_MoneyTransaction_TransferMoneySubtract_Target">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="Demo_MoneyTransaction_TransferMoneySubtract_Source">
+        <PropertyRef Name="TransferMoneySubtractID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="DemoRowPermissions1_Document_Division">
+    <End Role="DemoRowPermissions1_Document_Division_Source" Type="Self.DemoRowPermissions1_Document" Multiplicity="*" />
+    <End Role="DemoRowPermissions1_Document_Division_Target" Type="Self.DemoRowPermissions1_Division" Multiplicity="0..1" />
+    <ReferentialConstraint>
+      <Principal Role="DemoRowPermissions1_Document_Division_Target">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="DemoRowPermissions1_Document_Division_Source">
+        <PropertyRef Name="DivisionID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="DemoRowPermissions1_Employee_Division">
+    <End Role="DemoRowPermissions1_Employee_Division_Source" Type="Self.DemoRowPermissions1_Employee" Multiplicity="*" />
+    <End Role="DemoRowPermissions1_Employee_Division_Target" Type="Self.DemoRowPermissions1_Division" Multiplicity="0..1" />
+    <ReferentialConstraint>
+      <Principal Role="DemoRowPermissions1_Employee_Division_Target">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="DemoRowPermissions1_Employee_Division_Source">
+        <PropertyRef Name="DivisionID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="DemoRowPermissions2_Document_Division">
+    <End Role="DemoRowPermissions2_Document_Division_Source" Type="Self.DemoRowPermissions2_Document" Multiplicity="*" />
+    <End Role="DemoRowPermissions2_Document_Division_Target" Type="Self.DemoRowPermissions2_Division" Multiplicity="0..1" />
+    <ReferentialConstraint>
+      <Principal Role="DemoRowPermissions2_Document_Division_Target">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="DemoRowPermissions2_Document_Division_Source">
+        <PropertyRef Name="DivisionID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="DemoRowPermissions2_DocumentApproval_Base">
+    <End Role="DemoRowPermissions2_DocumentApproval_Base_Source" Type="Self.DemoRowPermissions2_DocumentApproval" Multiplicity="0..1" />
+    <End Role="DemoRowPermissions2_DocumentApproval_Base_Target" Type="Self.DemoRowPermissions2_Document" Multiplicity="1" />
+    <ReferentialConstraint>
+      <Principal Role="DemoRowPermissions2_DocumentApproval_Base_Target">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="DemoRowPermissions2_DocumentApproval_Base_Source">
+        <PropertyRef Name="ID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="DemoRowPermissions2_DocumentComment_Document">
+    <End Role="DemoRowPermissions2_DocumentComment_Document_Source" Type="Self.DemoRowPermissions2_DocumentComment" Multiplicity="*" />
+    <End Role="DemoRowPermissions2_DocumentComment_Document_Target" Type="Self.DemoRowPermissions2_Document" Multiplicity="0..1" />
+    <ReferentialConstraint>
+      <Principal Role="DemoRowPermissions2_DocumentComment_Document_Target">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="DemoRowPermissions2_DocumentComment_Document_Source">
+        <PropertyRef Name="DocumentID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="DemoRowPermissions2_DocumentInfo_Division2">
+    <End Role="DemoRowPermissions2_DocumentInfo_Division2_Source" Type="Self.DemoRowPermissions2_DocumentInfo" Multiplicity="*" />
+    <End Role="DemoRowPermissions2_DocumentInfo_Division2_Target" Type="Self.DemoRowPermissions2_Division" Multiplicity="0..1" />
+    <ReferentialConstraint>
+      <Principal Role="DemoRowPermissions2_DocumentInfo_Division2_Target">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="DemoRowPermissions2_DocumentInfo_Division2_Source">
+        <PropertyRef Name="Division2ID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="DemoRowPermissions2_DocumentInfo_Base">
+    <End Role="DemoRowPermissions2_DocumentInfo_Base_Source" Type="Self.DemoRowPermissions2_DocumentInfo" Multiplicity="0..1" />
+    <End Role="DemoRowPermissions2_DocumentInfo_Base_Target" Type="Self.DemoRowPermissions2_Document" Multiplicity="1" />
+    <ReferentialConstraint>
+      <Principal Role="DemoRowPermissions2_DocumentInfo_Base_Target">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="DemoRowPermissions2_DocumentInfo_Base_Source">
+        <PropertyRef Name="ID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="DemoRowPermissions2_DocumentApproval_ApprovedBy">
+    <End Role="DemoRowPermissions2_DocumentApproval_ApprovedBy_Source" Type="Self.DemoRowPermissions2_DocumentApproval" Multiplicity="*" />
+    <End Role="DemoRowPermissions2_DocumentApproval_ApprovedBy_Target" Type="Self.DemoRowPermissions2_Employee" Multiplicity="0..1" />
+    <ReferentialConstraint>
+      <Principal Role="DemoRowPermissions2_DocumentApproval_ApprovedBy_Target">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="DemoRowPermissions2_DocumentApproval_ApprovedBy_Source">
+        <PropertyRef Name="ApprovedByID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="DemoRowPermissions2_Employee_Division">
+    <End Role="DemoRowPermissions2_Employee_Division_Source" Type="Self.DemoRowPermissions2_Employee" Multiplicity="*" />
+    <End Role="DemoRowPermissions2_Employee_Division_Target" Type="Self.DemoRowPermissions2_Division" Multiplicity="0..1" />
+    <ReferentialConstraint>
+      <Principal Role="DemoRowPermissions2_Employee_Division_Target">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="DemoRowPermissions2_Employee_Division_Source">
+        <PropertyRef Name="DivisionID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="DemoRowPermissions2_Division_Region">
+    <End Role="DemoRowPermissions2_Division_Region_Source" Type="Self.DemoRowPermissions2_Division" Multiplicity="*" />
+    <End Role="DemoRowPermissions2_Division_Region_Target" Type="Self.DemoRowPermissions2_Region" Multiplicity="0..1" />
+    <ReferentialConstraint>
+      <Principal Role="DemoRowPermissions2_Division_Region_Target">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="DemoRowPermissions2_Division_Region_Source">
+        <PropertyRef Name="RegionID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="DemoRowPermissions2_RegionSupervisor_Employee">
+    <End Role="DemoRowPermissions2_RegionSupervisor_Employee_Source" Type="Self.DemoRowPermissions2_RegionSupervisor" Multiplicity="*" />
+    <End Role="DemoRowPermissions2_RegionSupervisor_Employee_Target" Type="Self.DemoRowPermissions2_Employee" Multiplicity="0..1" />
+    <ReferentialConstraint>
+      <Principal Role="DemoRowPermissions2_RegionSupervisor_Employee_Target">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="DemoRowPermissions2_RegionSupervisor_Employee_Source">
+        <PropertyRef Name="EmployeeID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="DemoRowPermissions2_RegionSupervisor_Region">
+    <End Role="DemoRowPermissions2_RegionSupervisor_Region_Source" Type="Self.DemoRowPermissions2_RegionSupervisor" Multiplicity="*" />
+    <End Role="DemoRowPermissions2_RegionSupervisor_Region_Target" Type="Self.DemoRowPermissions2_Region" Multiplicity="0..1" />
+    <ReferentialConstraint>
+      <Principal Role="DemoRowPermissions2_RegionSupervisor_Region_Target">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="DemoRowPermissions2_RegionSupervisor_Region_Source">
+        <PropertyRef Name="RegionID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
   <EntityContainer Name="EntityFrameworkContext" customannotation:UseClrTypes="true">
     
     <EntitySet Name="Bookstore_ApproveShipment" EntityType="Self.Bookstore_ApproveShipment" />
@@ -868,6 +1368,9 @@
     <EntitySet Name="Bookstore_Genre" EntityType="Self.Bookstore_Genre" />
     <EntitySet Name="Bookstore_Managers" EntityType="Self.Bookstore_Managers" />
     <EntitySet Name="Bookstore_Person" EntityType="Self.Bookstore_Person" />
+    <EntitySet Name="Bookstore_SalesItem" EntityType="Self.Bookstore_SalesItem" />
+    <EntitySet Name="Bookstore_SalesItem_Materialized" EntityType="Self.Bookstore_SalesItem_Materialized" />
+    <EntitySet Name="Bookstore_SalesItemComment" EntityType="Self.Bookstore_SalesItemComment" />
     <EntitySet Name="Bookstore_Shipment" EntityType="Self.Bookstore_Shipment" />
     <EntitySet Name="Bookstore_ShipmentEvent" EntityType="Self.Bookstore_ShipmentEvent" />
     <EntitySet Name="Bookstore_ShipmentStatus" EntityType="Self.Bookstore_ShipmentStatus" />
@@ -890,6 +1393,26 @@
     <EntitySet Name="Common_Role" EntityType="Self.Common_Role" />
     <EntitySet Name="Common_RoleInheritsRole" EntityType="Self.Common_RoleInheritsRole" />
     <EntitySet Name="Common_RolePermission" EntityType="Self.Common_RolePermission" />
+    <EntitySet Name="Demo_BorrowMoney" EntityType="Self.Demo_BorrowMoney" />
+    <EntitySet Name="Demo_BorrowMoney2" EntityType="Self.Demo_BorrowMoney2" />
+    <EntitySet Name="Demo_LendMoney" EntityType="Self.Demo_LendMoney" />
+    <EntitySet Name="Demo_LendMoney2" EntityType="Self.Demo_LendMoney2" />
+    <EntitySet Name="Demo_LendMoneyAddendum" EntityType="Self.Demo_LendMoneyAddendum" />
+    <EntitySet Name="Demo_MoneyTransaction" EntityType="Self.Demo_MoneyTransaction" />
+    <EntitySet Name="Demo_MoneyTransaction_Materialized" EntityType="Self.Demo_MoneyTransaction_Materialized" />
+    <EntitySet Name="Demo_TransactionComment" EntityType="Self.Demo_TransactionComment" />
+    <EntitySet Name="Demo_TransferMoney" EntityType="Self.Demo_TransferMoney" />
+    <EntitySet Name="DemoRowPermissions1_Division" EntityType="Self.DemoRowPermissions1_Division" />
+    <EntitySet Name="DemoRowPermissions1_Document" EntityType="Self.DemoRowPermissions1_Document" />
+    <EntitySet Name="DemoRowPermissions1_Employee" EntityType="Self.DemoRowPermissions1_Employee" />
+    <EntitySet Name="DemoRowPermissions2_Division" EntityType="Self.DemoRowPermissions2_Division" />
+    <EntitySet Name="DemoRowPermissions2_Document" EntityType="Self.DemoRowPermissions2_Document" />
+    <EntitySet Name="DemoRowPermissions2_DocumentApproval" EntityType="Self.DemoRowPermissions2_DocumentApproval" />
+    <EntitySet Name="DemoRowPermissions2_DocumentComment" EntityType="Self.DemoRowPermissions2_DocumentComment" />
+    <EntitySet Name="DemoRowPermissions2_DocumentInfo" EntityType="Self.DemoRowPermissions2_DocumentInfo" />
+    <EntitySet Name="DemoRowPermissions2_Employee" EntityType="Self.DemoRowPermissions2_Employee" />
+    <EntitySet Name="DemoRowPermissions2_Region" EntityType="Self.DemoRowPermissions2_Region" />
+    <EntitySet Name="DemoRowPermissions2_RegionSupervisor" EntityType="Self.DemoRowPermissions2_RegionSupervisor" />
 	<AssociationSet Name="Bookstore_BookInfo_Base" Association="Self.Bookstore_BookInfo_Base">
 		<End Role="Bookstore_BookInfo_Base_Source" EntitySet="Bookstore_BookInfo" />
 		<End Role="Bookstore_BookInfo_Base_Target" EntitySet="Bookstore_Book" />
@@ -945,6 +1468,14 @@
 	<AssociationSet Name="Bookstore_ForeignBook_Author" Association="Self.Bookstore_ForeignBook_Author">
 		<End Role="Bookstore_ForeignBook_Author_Source" EntitySet="Bookstore_ForeignBook" />
 		<End Role="Bookstore_ForeignBook_Author_Target" EntitySet="Bookstore_Person" />
+	</AssociationSet>
+	<AssociationSet Name="Bookstore_SalesItem_Book" Association="Self.Bookstore_SalesItem_Book">
+		<End Role="Bookstore_SalesItem_Book_Source" EntitySet="Bookstore_SalesItem" />
+		<End Role="Bookstore_SalesItem_Book_Target" EntitySet="Bookstore_Book" />
+	</AssociationSet>
+	<AssociationSet Name="Bookstore_SalesItemComment_SalesItem" Association="Self.Bookstore_SalesItemComment_SalesItem">
+		<End Role="Bookstore_SalesItemComment_SalesItem_Source" EntitySet="Bookstore_SalesItemComment" />
+		<End Role="Bookstore_SalesItemComment_SalesItem_Target" EntitySet="Bookstore_SalesItem" />
 	</AssociationSet>
 	<AssociationSet Name="Bookstore_ApproveShipment_Shipment" Association="Self.Bookstore_ApproveShipment_Shipment">
 		<End Role="Bookstore_ApproveShipment_Shipment_Source" EntitySet="Bookstore_ApproveShipment" />
@@ -1017,6 +1548,90 @@
 	<AssociationSet Name="Common_RolePermission_Role" Association="Self.Common_RolePermission_Role">
 		<End Role="Common_RolePermission_Role_Source" EntitySet="Common_RolePermission" />
 		<End Role="Common_RolePermission_Role_Target" EntitySet="Common_Role" />
+	</AssociationSet>
+	<AssociationSet Name="Demo_LendMoneyAddendum_LendMoney" Association="Self.Demo_LendMoneyAddendum_LendMoney">
+		<End Role="Demo_LendMoneyAddendum_LendMoney_Source" EntitySet="Demo_LendMoneyAddendum" />
+		<End Role="Demo_LendMoneyAddendum_LendMoney_Target" EntitySet="Demo_LendMoney" />
+	</AssociationSet>
+	<AssociationSet Name="Demo_MoneyTransaction_BorrowMoney" Association="Self.Demo_MoneyTransaction_BorrowMoney">
+		<End Role="Demo_MoneyTransaction_BorrowMoney_Source" EntitySet="Demo_MoneyTransaction" />
+		<End Role="Demo_MoneyTransaction_BorrowMoney_Target" EntitySet="Demo_BorrowMoney" />
+	</AssociationSet>
+	<AssociationSet Name="Demo_MoneyTransaction_BorrowMoney2" Association="Self.Demo_MoneyTransaction_BorrowMoney2">
+		<End Role="Demo_MoneyTransaction_BorrowMoney2_Source" EntitySet="Demo_MoneyTransaction" />
+		<End Role="Demo_MoneyTransaction_BorrowMoney2_Target" EntitySet="Demo_BorrowMoney2" />
+	</AssociationSet>
+	<AssociationSet Name="Demo_MoneyTransaction_LendMoney" Association="Self.Demo_MoneyTransaction_LendMoney">
+		<End Role="Demo_MoneyTransaction_LendMoney_Source" EntitySet="Demo_MoneyTransaction" />
+		<End Role="Demo_MoneyTransaction_LendMoney_Target" EntitySet="Demo_LendMoney" />
+	</AssociationSet>
+	<AssociationSet Name="Demo_MoneyTransaction_LendMoney2" Association="Self.Demo_MoneyTransaction_LendMoney2">
+		<End Role="Demo_MoneyTransaction_LendMoney2_Source" EntitySet="Demo_MoneyTransaction" />
+		<End Role="Demo_MoneyTransaction_LendMoney2_Target" EntitySet="Demo_LendMoney2" />
+	</AssociationSet>
+	<AssociationSet Name="Demo_MoneyTransaction_LendMoneyTotalAddendum" Association="Self.Demo_MoneyTransaction_LendMoneyTotalAddendum">
+		<End Role="Demo_MoneyTransaction_LendMoneyTotalAddendum_Source" EntitySet="Demo_MoneyTransaction" />
+		<End Role="Demo_MoneyTransaction_LendMoneyTotalAddendum_Target" EntitySet="Demo_LendMoney" />
+	</AssociationSet>
+	<AssociationSet Name="Demo_TransactionComment_MoneyTransaction" Association="Self.Demo_TransactionComment_MoneyTransaction">
+		<End Role="Demo_TransactionComment_MoneyTransaction_Source" EntitySet="Demo_TransactionComment" />
+		<End Role="Demo_TransactionComment_MoneyTransaction_Target" EntitySet="Demo_MoneyTransaction" />
+	</AssociationSet>
+	<AssociationSet Name="Demo_MoneyTransaction_TransferMoney" Association="Self.Demo_MoneyTransaction_TransferMoney">
+		<End Role="Demo_MoneyTransaction_TransferMoney_Source" EntitySet="Demo_MoneyTransaction" />
+		<End Role="Demo_MoneyTransaction_TransferMoney_Target" EntitySet="Demo_TransferMoney" />
+	</AssociationSet>
+	<AssociationSet Name="Demo_MoneyTransaction_TransferMoneySubtract" Association="Self.Demo_MoneyTransaction_TransferMoneySubtract">
+		<End Role="Demo_MoneyTransaction_TransferMoneySubtract_Source" EntitySet="Demo_MoneyTransaction" />
+		<End Role="Demo_MoneyTransaction_TransferMoneySubtract_Target" EntitySet="Demo_TransferMoney" />
+	</AssociationSet>
+	<AssociationSet Name="DemoRowPermissions1_Document_Division" Association="Self.DemoRowPermissions1_Document_Division">
+		<End Role="DemoRowPermissions1_Document_Division_Source" EntitySet="DemoRowPermissions1_Document" />
+		<End Role="DemoRowPermissions1_Document_Division_Target" EntitySet="DemoRowPermissions1_Division" />
+	</AssociationSet>
+	<AssociationSet Name="DemoRowPermissions1_Employee_Division" Association="Self.DemoRowPermissions1_Employee_Division">
+		<End Role="DemoRowPermissions1_Employee_Division_Source" EntitySet="DemoRowPermissions1_Employee" />
+		<End Role="DemoRowPermissions1_Employee_Division_Target" EntitySet="DemoRowPermissions1_Division" />
+	</AssociationSet>
+	<AssociationSet Name="DemoRowPermissions2_Document_Division" Association="Self.DemoRowPermissions2_Document_Division">
+		<End Role="DemoRowPermissions2_Document_Division_Source" EntitySet="DemoRowPermissions2_Document" />
+		<End Role="DemoRowPermissions2_Document_Division_Target" EntitySet="DemoRowPermissions2_Division" />
+	</AssociationSet>
+	<AssociationSet Name="DemoRowPermissions2_DocumentApproval_Base" Association="Self.DemoRowPermissions2_DocumentApproval_Base">
+		<End Role="DemoRowPermissions2_DocumentApproval_Base_Source" EntitySet="DemoRowPermissions2_DocumentApproval" />
+		<End Role="DemoRowPermissions2_DocumentApproval_Base_Target" EntitySet="DemoRowPermissions2_Document" />
+	</AssociationSet>
+	<AssociationSet Name="DemoRowPermissions2_DocumentComment_Document" Association="Self.DemoRowPermissions2_DocumentComment_Document">
+		<End Role="DemoRowPermissions2_DocumentComment_Document_Source" EntitySet="DemoRowPermissions2_DocumentComment" />
+		<End Role="DemoRowPermissions2_DocumentComment_Document_Target" EntitySet="DemoRowPermissions2_Document" />
+	</AssociationSet>
+	<AssociationSet Name="DemoRowPermissions2_DocumentInfo_Division2" Association="Self.DemoRowPermissions2_DocumentInfo_Division2">
+		<End Role="DemoRowPermissions2_DocumentInfo_Division2_Source" EntitySet="DemoRowPermissions2_DocumentInfo" />
+		<End Role="DemoRowPermissions2_DocumentInfo_Division2_Target" EntitySet="DemoRowPermissions2_Division" />
+	</AssociationSet>
+	<AssociationSet Name="DemoRowPermissions2_DocumentInfo_Base" Association="Self.DemoRowPermissions2_DocumentInfo_Base">
+		<End Role="DemoRowPermissions2_DocumentInfo_Base_Source" EntitySet="DemoRowPermissions2_DocumentInfo" />
+		<End Role="DemoRowPermissions2_DocumentInfo_Base_Target" EntitySet="DemoRowPermissions2_Document" />
+	</AssociationSet>
+	<AssociationSet Name="DemoRowPermissions2_DocumentApproval_ApprovedBy" Association="Self.DemoRowPermissions2_DocumentApproval_ApprovedBy">
+		<End Role="DemoRowPermissions2_DocumentApproval_ApprovedBy_Source" EntitySet="DemoRowPermissions2_DocumentApproval" />
+		<End Role="DemoRowPermissions2_DocumentApproval_ApprovedBy_Target" EntitySet="DemoRowPermissions2_Employee" />
+	</AssociationSet>
+	<AssociationSet Name="DemoRowPermissions2_Employee_Division" Association="Self.DemoRowPermissions2_Employee_Division">
+		<End Role="DemoRowPermissions2_Employee_Division_Source" EntitySet="DemoRowPermissions2_Employee" />
+		<End Role="DemoRowPermissions2_Employee_Division_Target" EntitySet="DemoRowPermissions2_Division" />
+	</AssociationSet>
+	<AssociationSet Name="DemoRowPermissions2_Division_Region" Association="Self.DemoRowPermissions2_Division_Region">
+		<End Role="DemoRowPermissions2_Division_Region_Source" EntitySet="DemoRowPermissions2_Division" />
+		<End Role="DemoRowPermissions2_Division_Region_Target" EntitySet="DemoRowPermissions2_Region" />
+	</AssociationSet>
+	<AssociationSet Name="DemoRowPermissions2_RegionSupervisor_Employee" Association="Self.DemoRowPermissions2_RegionSupervisor_Employee">
+		<End Role="DemoRowPermissions2_RegionSupervisor_Employee_Source" EntitySet="DemoRowPermissions2_RegionSupervisor" />
+		<End Role="DemoRowPermissions2_RegionSupervisor_Employee_Target" EntitySet="DemoRowPermissions2_Employee" />
+	</AssociationSet>
+	<AssociationSet Name="DemoRowPermissions2_RegionSupervisor_Region" Association="Self.DemoRowPermissions2_RegionSupervisor_Region">
+		<End Role="DemoRowPermissions2_RegionSupervisor_Region_Source" EntitySet="DemoRowPermissions2_RegionSupervisor" />
+		<End Role="DemoRowPermissions2_RegionSupervisor_Region_Target" EntitySet="DemoRowPermissions2_Region" />
 	</AssociationSet>
   </EntityContainer>
 </Schema>

@@ -77,6 +77,18 @@ namespace Bookstore.Repositories
         private Person_Repository _Person_Repository;
         public Person_Repository Person { get { return _Person_Repository ?? (_Person_Repository = (Person_Repository)Rhetos.Extensibility.NamedPluginsExtensions.GetPlugin(_repositories, @"Bookstore.Person")); } }
 
+        private PersonInfo_Repository _PersonInfo_Repository;
+        public PersonInfo_Repository PersonInfo { get { return _PersonInfo_Repository ?? (_PersonInfo_Repository = (PersonInfo_Repository)Rhetos.Extensibility.NamedPluginsExtensions.GetPlugin(_repositories, @"Bookstore.PersonInfo")); } }
+
+        private SalesItem_Repository _SalesItem_Repository;
+        public SalesItem_Repository SalesItem { get { return _SalesItem_Repository ?? (_SalesItem_Repository = (SalesItem_Repository)Rhetos.Extensibility.NamedPluginsExtensions.GetPlugin(_repositories, @"Bookstore.SalesItem")); } }
+
+        private SalesItem_Materialized_Repository _SalesItem_Materialized_Repository;
+        public SalesItem_Materialized_Repository SalesItem_Materialized { get { return _SalesItem_Materialized_Repository ?? (_SalesItem_Materialized_Repository = (SalesItem_Materialized_Repository)Rhetos.Extensibility.NamedPluginsExtensions.GetPlugin(_repositories, @"Bookstore.SalesItem_Materialized")); } }
+
+        private SalesItemComment_Repository _SalesItemComment_Repository;
+        public SalesItemComment_Repository SalesItemComment { get { return _SalesItemComment_Repository ?? (_SalesItemComment_Repository = (SalesItemComment_Repository)Rhetos.Extensibility.NamedPluginsExtensions.GetPlugin(_repositories, @"Bookstore.SalesItemComment")); } }
+
         private Shipment_Repository _Shipment_Repository;
         public Shipment_Repository Shipment { get { return _Shipment_Repository ?? (_Shipment_Repository = (Shipment_Repository)Rhetos.Extensibility.NamedPluginsExtensions.GetPlugin(_repositories, @"Bookstore.Shipment")); } }
 
@@ -97,6 +109,9 @@ namespace Bookstore.Repositories
 
         private BookGrid_Repository _BookGrid_Repository;
         public BookGrid_Repository BookGrid { get { return _BookGrid_Repository ?? (_BookGrid_Repository = (BookGrid_Repository)Rhetos.Extensibility.NamedPluginsExtensions.GetPlugin(_repositories, @"Bookstore.BookGrid")); } }
+
+        private SalesItemGrid_Repository _SalesItemGrid_Repository;
+        public SalesItemGrid_Repository SalesItemGrid { get { return _SalesItemGrid_Repository ?? (_SalesItemGrid_Repository = (SalesItemGrid_Repository)Rhetos.Extensibility.NamedPluginsExtensions.GetPlugin(_repositories, @"Bookstore.SalesItemGrid")); } }
 
         /*ModuleInfo RepositoryMembers Bookstore*/
     }
@@ -201,14 +216,16 @@ namespace Bookstore.Repositories
     public partial class Book_Repository : /*DataStructureInfo OverrideBaseType Bookstore.Book*/ Common.OrmRepositoryBase<Common.Queryable.Bookstore_Book, Bookstore.Book> // Common.QueryableRepositoryBase<Common.Queryable.Bookstore_Book, Bookstore.Book> // Common.ReadableRepositoryBase<Bookstore.Book> // global::Common.RepositoryBase
         , IWritableRepository<Bookstore.Book>, IValidateRepository/*DataStructureInfo RepositoryInterface Bookstore.Book*/
     {
+        private readonly Rhetos.Dom.DefaultConcepts.CommonConceptsRuntimeOptions _commonConceptsRuntimeOptions;
         private readonly Rhetos.Utilities.ILocalizer<Bookstore.Book> _localizer;
         private readonly Rhetos.Utilities.ISqlUtility _sqlUtility;
         /*DataStructureInfo RepositoryPrivateMembers Bookstore.Book*/
 
-        public Book_Repository(Common.DomRepository domRepository, Common.ExecutionContext executionContext, Rhetos.Utilities.ILocalizer<Bookstore.Book> _localizer, Rhetos.Utilities.ISqlUtility _sqlUtility/*DataStructureInfo RepositoryConstructorArguments Bookstore.Book*/)
+        public Book_Repository(Common.DomRepository domRepository, Common.ExecutionContext executionContext, Rhetos.Dom.DefaultConcepts.CommonConceptsRuntimeOptions _commonConceptsRuntimeOptions, Rhetos.Utilities.ILocalizer<Bookstore.Book> _localizer, Rhetos.Utilities.ISqlUtility _sqlUtility/*DataStructureInfo RepositoryConstructorArguments Bookstore.Book*/)
         {
             _domRepository = domRepository;
             _executionContext = executionContext;
+            this._commonConceptsRuntimeOptions = _commonConceptsRuntimeOptions;
             this._localizer = _localizer;
             this._sqlUtility = _sqlUtility;
             /*DataStructureInfo RepositoryConstructorCode Bookstore.Book*/
@@ -252,6 +269,16 @@ namespace Bookstore.Repositories
 
             /*DataStructureInfo WritableOrm ArgumentValidation Bookstore.Book*/
 
+            InitializeDefaultValues(insertedNew);
+
+            if (_commonConceptsRuntimeOptions.AutoRoundMoney)
+            {
+                foreach (var item in insertedNew.Concat(updatedNew))
+                {
+                    item.Price = item.Price != null ? (long)(item.Price.Value * 100m) / 100m : null;
+                    /*MoneyRoundingInfo MoneyRounding Properties Bookstore.Book*/
+                }
+            }
             /*DataStructureInfo WritableOrm Initialization Bookstore.Book*/
 
             // Using old data, including lazy loading of navigation properties:
@@ -365,6 +392,15 @@ namespace Bookstore.Repositories
                     _domRepository.Bookstore.ForeignBook.Delete(childItems);
             }
 
+            Func<IEnumerable<Common.Queryable.Bookstore_Book>, Rhetos.Dom.DefaultConcepts.FilterSubtype> filterLoadKeepSynchronizedOnChangedItemsSalesItem_Materialized1 =
+                changedItems => new Rhetos.Dom.DefaultConcepts.FilterSubtype
+                        {
+                            Ids = changedItems.Select(item => item.ID).ToArray(),
+                            Subtype = @"Bookstore.Book",
+                            ImplementationName = @""
+                        };
+            Rhetos.Dom.DefaultConcepts.FilterSubtype filterKeepSynchronizedOnChangedItemsSalesItem_Materialized1Old = filterLoadKeepSynchronizedOnChangedItemsSalesItem_Materialized1(updated.Concat(deleted));
+
             /*DataStructureInfo WritableOrm OldDataLoaded Bookstore.Book*/
 
             {
@@ -412,6 +448,19 @@ namespace Bookstore.Repositories
             bool allEffectsCompleted = false;
             try
             {
+                /*OverrideRecompute KeepSynchronizedInfo Bookstore.SalesItem_Materialized.Bookstore.SalesItem.1*/
+                {
+                    var filteredNew = filterLoadKeepSynchronizedOnChangedItemsSalesItem_Materialized1(inserted.Concat(updated));
+                    Rhetos.Dom.DefaultConcepts.FilterSubtype optimizedFilter;
+                    if (KeepSynchronizedHelper.OptimizeFiltersUnion(filteredNew, filterKeepSynchronizedOnChangedItemsSalesItem_Materialized1Old, out optimizedFilter))
+                        _domRepository.Bookstore.SalesItem_Materialized.RecomputeFromSalesItem(optimizedFilter);
+                    else
+                    {
+                        _domRepository.Bookstore.SalesItem_Materialized.RecomputeFromSalesItem(filterKeepSynchronizedOnChangedItemsSalesItem_Materialized1Old);
+                        _domRepository.Bookstore.SalesItem_Materialized.RecomputeFromSalesItem(filteredNew);
+                    }
+                }
+
                 /*DataStructureInfo WritableOrm OnSaveTag1 Bookstore.Book*/
 
                 /*DataStructureInfo WritableOrm OnSaveTag2 Bookstore.Book*/
@@ -461,6 +510,18 @@ namespace Bookstore.Repositories
             }
             /*DataStructureInfo WritableOrm OnSaveValidate Bookstore.Book*/
             yield break;
+        }
+
+        public void InitializeDefaultValues(IEnumerable<global::Bookstore.Book> items)
+        {
+            /*DefaultValuesInfo BeforeDefaultValues Bookstore.Book*/
+            foreach (var item in items)
+            {
+                if (item.Code == null /*DefaultValueInfo DefaultValueAndCondition Bookstore.Book.Code*/)
+                    item.Code = "B+++";
+                /*DefaultValuesInfo SetDefaultValue Bookstore.Book*/
+            }
+            /*DefaultValuesInfo AfterDefaultValues Bookstore.Book*/
         }
 
         public global::Bookstore.Book[] Load(ComplexSearch filter_Parameter)
@@ -2297,6 +2358,370 @@ namespace Bookstore.Repositories
         /*DataStructureInfo RepositoryMembers Bookstore.Person*/
     }
 
+    /*DataStructureInfo RepositoryAttributes Bookstore.PersonInfo*/
+    public partial class PersonInfo_Repository : /*DataStructureInfo OverrideBaseType Bookstore.PersonInfo*/ Common.ReadableRepositoryBase<Bookstore.PersonInfo> // global::Common.RepositoryBase
+        /*DataStructureInfo RepositoryInterface Bookstore.PersonInfo*/
+    {
+        /*DataStructureInfo RepositoryPrivateMembers Bookstore.PersonInfo*/
+
+        public PersonInfo_Repository(Common.DomRepository domRepository, Common.ExecutionContext executionContext/*DataStructureInfo RepositoryConstructorArguments Bookstore.PersonInfo*/)
+        {
+            _domRepository = domRepository;
+            _executionContext = executionContext;
+            /*DataStructureInfo RepositoryConstructorCode Bookstore.PersonInfo*/
+        }
+
+        public override global::Bookstore.PersonInfo[] Load()
+        {
+            Func<Common.DomRepository/*DataStructureInfo AdditionalParametersType Bookstore.PersonInfo*/, global::Bookstore.PersonInfo[]> compute_Function =
+            repository => { throw new Rhetos.UserException("Use filter \"Demo.PersonFilter\" to read the data."); };
+
+            return compute_Function(_domRepository/*DataStructureInfo AdditionalParametersArgument Bookstore.PersonInfo*/);
+        }
+
+        public static KeyValuePair<string, Type>[] GetReadParameterTypes()
+        {
+            return new KeyValuePair<string, Type>[]
+            {
+                new KeyValuePair<string, Type>(@"PersonFilter", typeof(PersonFilter)),
+                /*DataStructureInfo ReadParameterTypes Bookstore.PersonInfo*/
+            };
+        }
+        
+        public global::Bookstore.PersonInfo[] Load(PersonFilter filter_Parameter)
+        {
+            Func<Common.DomRepository, PersonFilter/*FilterByInfo AdditionalParametersType Bookstore.PersonInfo.PersonFilter*/, Bookstore.PersonInfo[]> filter_Function =
+                (repository, parameter) =>
+        {
+             // Always separate parameters to prevent SQL injection.
+             string sql = "EXEC Bookstore.ComputePersonInfo @p0, @p1";
+             var sqlParams = new object[] { parameter.NamePattern, parameter.LimitResultCount };
+             var result = _executionContext.EntityFrameworkContext.Database
+                 .SqlQuery<Bookstore.PersonInfo>(sql, sqlParams)
+                 .ToArray();
+             return result;
+        };
+
+            return filter_Function(_domRepository, filter_Parameter/*FilterByInfo AdditionalParametersArgument Bookstore.PersonInfo.PersonFilter*/);
+        }
+
+        /*DataStructureInfo RepositoryMembers Bookstore.PersonInfo*/
+    }
+
+    /*DataStructureInfo RepositoryAttributes Bookstore.SalesItem*/
+    public partial class SalesItem_Repository : /*DataStructureInfo OverrideBaseType Bookstore.SalesItem*/ Common.OrmRepositoryBase<Common.Queryable.Bookstore_SalesItem, Bookstore.SalesItem> // Common.QueryableRepositoryBase<Common.Queryable.Bookstore_SalesItem, Bookstore.SalesItem> // Common.ReadableRepositoryBase<Bookstore.SalesItem> // global::Common.RepositoryBase
+        /*DataStructureInfo RepositoryInterface Bookstore.SalesItem*/
+    {
+        /*DataStructureInfo RepositoryPrivateMembers Bookstore.SalesItem*/
+
+        public SalesItem_Repository(Common.DomRepository domRepository, Common.ExecutionContext executionContext/*DataStructureInfo RepositoryConstructorArguments Bookstore.SalesItem*/)
+        {
+            _domRepository = domRepository;
+            _executionContext = executionContext;
+            /*DataStructureInfo RepositoryConstructorCode Bookstore.SalesItem*/
+        }
+
+        public static KeyValuePair<string, Type>[] GetReadParameterTypes()
+        {
+            return new KeyValuePair<string, Type>[]
+            {
+                new KeyValuePair<string, Type>(@"Rhetos.Dom.DefaultConcepts.FilterSubtype", typeof(Rhetos.Dom.DefaultConcepts.FilterSubtype)),
+                /*DataStructureInfo ReadParameterTypes Bookstore.SalesItem*/
+            };
+        }
+        
+        public global::Bookstore.SalesItem[] Load(Rhetos.Dom.DefaultConcepts.FilterSubtype filter_Parameter)
+        {
+            Func<Common.DomRepository, Rhetos.Dom.DefaultConcepts.FilterSubtype/*FilterByInfo AdditionalParametersType Bookstore.SalesItem.'Rhetos.Dom.DefaultConcepts.FilterSubtype'*/, Bookstore.SalesItem[]> filter_Function =
+                (repository, parameter) =>
+                {{
+                    Expression<Func<Common.Queryable.Bookstore_SalesItem, bool>> filterExpression = null;
+                    parameter.ImplementationName = parameter.ImplementationName ?? "";
+                    if (parameter.Subtype == @"Bookstore.Book" && parameter.ImplementationName == @"")
+                        filterExpression = item => item.BookID != null;
+                    /*PolymorphicInfo SetFilterExpression Bookstore.SalesItem*/
+                    if (filterExpression == null)
+                        throw new Rhetos.ClientException(string.Format("Invalid subtype name or implementation name provided: '{0}', '{1}'.",
+                            parameter.Subtype, parameter.ImplementationName));
+                    return Filter(Query().Where(filterExpression), parameter.Ids).ToSimple().ToArray();
+                }};
+
+            return filter_Function(_domRepository, filter_Parameter/*FilterByInfo AdditionalParametersArgument Bookstore.SalesItem.'Rhetos.Dom.DefaultConcepts.FilterSubtype'*/);
+        }
+
+        /*DataStructureInfo RepositoryMembers Bookstore.SalesItem*/
+    }
+
+    /*DataStructureInfo RepositoryAttributes Bookstore.SalesItem_Materialized*/
+    public partial class SalesItem_Materialized_Repository : /*DataStructureInfo OverrideBaseType Bookstore.SalesItem_Materialized*/ Common.OrmRepositoryBase<Common.Queryable.Bookstore_SalesItem_Materialized, Bookstore.SalesItem_Materialized> // Common.QueryableRepositoryBase<Common.Queryable.Bookstore_SalesItem_Materialized, Bookstore.SalesItem_Materialized> // Common.ReadableRepositoryBase<Bookstore.SalesItem_Materialized> // global::Common.RepositoryBase
+        , IWritableRepository<Bookstore.SalesItem_Materialized>, IValidateRepository/*DataStructureInfo RepositoryInterface Bookstore.SalesItem_Materialized*/
+    {
+        private readonly Rhetos.Utilities.ISqlUtility _sqlUtility;
+        /*DataStructureInfo RepositoryPrivateMembers Bookstore.SalesItem_Materialized*/
+
+        public SalesItem_Materialized_Repository(Common.DomRepository domRepository, Common.ExecutionContext executionContext, Rhetos.Utilities.ISqlUtility _sqlUtility/*DataStructureInfo RepositoryConstructorArguments Bookstore.SalesItem_Materialized*/)
+        {
+            _domRepository = domRepository;
+            _executionContext = executionContext;
+            this._sqlUtility = _sqlUtility;
+            /*DataStructureInfo RepositoryConstructorCode Bookstore.SalesItem_Materialized*/
+        }
+
+        public static KeyValuePair<string, Type>[] GetReadParameterTypes()
+        {
+            return new KeyValuePair<string, Type>[]
+            {
+                new KeyValuePair<string, Type>(@"Rhetos.Dom.DefaultConcepts.FilterSubtype", typeof(Rhetos.Dom.DefaultConcepts.FilterSubtype)),
+                /*DataStructureInfo ReadParameterTypes Bookstore.SalesItem_Materialized*/
+            };
+        }
+        
+        public virtual void Save(IEnumerable<Bookstore.SalesItem_Materialized> insertedNew, IEnumerable<Bookstore.SalesItem_Materialized> updatedNew, IEnumerable<Bookstore.SalesItem_Materialized> deletedIds, bool checkUserPermissions = false)
+        {
+            if (!DomHelper.InitializeSaveMethodItems(ref insertedNew, ref updatedNew, ref deletedIds))
+                return;
+
+            /*DataStructureInfo WritableOrm ClearContext Bookstore.SalesItem_Materialized*/
+
+            /*DataStructureInfo WritableOrm ArgumentValidation Bookstore.SalesItem_Materialized*/
+
+            /*DataStructureInfo WritableOrm Initialization Bookstore.SalesItem_Materialized*/
+
+            // Using old data, including lazy loading of navigation properties:
+
+            IEnumerable<Common.Queryable.Bookstore_SalesItem_Materialized> deleted = DomHelper.LoadOldDataWithNavigationProperties(deletedIds, this);
+            IEnumerable<Common.Queryable.Bookstore_SalesItem_Materialized> updated = DomHelper.LoadOldDataWithNavigationProperties(updatedNew, this);
+
+            if (deletedIds.Count() > 0)
+            {
+                List<Bookstore.SalesItemComment> childItems = deletedIds
+                    .SelectMany(parent => _executionContext.Repository.Bookstore.SalesItemComment.Query()
+                        .Where(child => child.SalesItemID == parent.ID)
+                        .Select(child => child.ID)
+                        .ToList())
+                    .Select(childId => new Bookstore.SalesItemComment { ID = childId })
+                    .ToList();
+
+                if (childItems.Count() > 0)
+                    _domRepository.Bookstore.SalesItemComment.Delete(childItems);
+            }
+
+            /*DataStructureInfo WritableOrm OldDataLoaded Bookstore.SalesItem_Materialized*/
+
+            /*DataStructureInfo WritableOrm ProcessedOldData Bookstore.SalesItem_Materialized*/
+
+            {
+                DomHelper.WriteToDatabase(insertedNew, updatedNew, deletedIds, _executionContext.PersistenceStorage, checkUserPermissions, _sqlUtility,
+                    out Exception saveException, out Rhetos.RhetosException interpretedException);
+
+                if (saveException != null)
+                {
+                    /*DataStructureInfo WritableOrm OnDatabaseError Bookstore.SalesItem_Materialized*/
+                    DomHelper.ThrowInterpretedException(checkUserPermissions, saveException, interpretedException, _sqlUtility, "Bookstore.SalesItem_Materialized");
+                }
+            }
+
+            deleted = null;
+            updated = this.Query(updatedNew.Select(item => item.ID));
+            IEnumerable<Common.Queryable.Bookstore_SalesItem_Materialized> inserted = this.Query(insertedNew.Select(item => item.ID));
+
+            bool allEffectsCompleted = false;
+            try
+            {
+                /*DataStructureInfo WritableOrm OnSaveTag1 Bookstore.SalesItem_Materialized*/
+
+                /*DataStructureInfo WritableOrm OnSaveTag2 Bookstore.SalesItem_Materialized*/
+
+                Rhetos.Dom.DefaultConcepts.InvalidDataMessage.ValidateOnSave(insertedNew, updatedNew, this, "Bookstore.SalesItem_Materialized");
+
+                /*DataStructureInfo WritableOrm AfterSave Bookstore.SalesItem_Materialized*/
+
+                allEffectsCompleted = true;
+            }
+            finally
+            {
+                if (!allEffectsCompleted)
+                    _executionContext.PersistenceTransaction.DiscardOnDispose();
+            }
+        }
+
+        public IEnumerable<Rhetos.Dom.DefaultConcepts.InvalidDataMessage> Validate(IList<Guid> ids, bool onSave)
+        {
+            /*DataStructureInfo WritableOrm OnSaveValidate Bookstore.SalesItem_Materialized*/
+            yield break;
+        }
+
+        public IEnumerable<Bookstore.SalesItem_Materialized> RecomputeFromSalesItem(object filterLoad = null, Func<IEnumerable<Bookstore.SalesItem_Materialized>, IEnumerable<Bookstore.SalesItem_Materialized>> filterSave = null)
+        {
+            /*EntityComputedFromInfo OverrideDefaultFilters Bookstore.SalesItem_Materialized.Bookstore.SalesItem*/
+            filterSave = filterSave ?? FilterSaveKeepSynchronizedOnChangedItems_Bookstore_SalesItem;
+            filterLoad = filterLoad ?? new FilterAll();
+            filterSave = filterSave ?? (x => x);
+
+            var sourceRepository = _executionContext.GenericRepositories.GetGenericRepository<Bookstore.SalesItem>();
+            var sourceItems = sourceRepository.Load(filterLoad);
+            var newItems = sourceItems.Select(sourceItem => new Bookstore.SalesItem_Materialized {
+                ID = sourceItem.ID,
+                /*EntityComputedFromInfo CloneProperty Bookstore.SalesItem_Materialized.Bookstore.SalesItem*/ }).ToList();
+
+            var destinationRepository = _executionContext.GenericRepositories.GetGenericRepository<Bookstore.SalesItem_Materialized>();
+            destinationRepository.InsertOrUpdateOrDelete(
+                newItems,
+                sameRecord: /*EntityComputedFromInfo OverrideKeyComparer Bookstore.SalesItem_Materialized.Bookstore.SalesItem*/ null, // Default is comparison by ID.
+                sameValue: (x, y) =>
+                {
+                    /*EntityComputedFromInfo CompareValueProperty Bookstore.SalesItem_Materialized.Bookstore.SalesItem*/
+                    return true;
+                },
+                filterLoad: filterLoad,
+                assign: (destination, source) =>
+                {
+                    /*EntityComputedFromInfo AssignProperty Bookstore.SalesItem_Materialized.Bookstore.SalesItem*/
+                },
+                beforeSave: (ref IEnumerable<Bookstore.SalesItem_Materialized> toInsert, ref IEnumerable<Bookstore.SalesItem_Materialized> toUpdate, ref IEnumerable<Bookstore.SalesItem_Materialized> toDelete) =>
+                {
+                    toInsert = filterSave(toInsert);
+                    toUpdate = filterSave(toUpdate);
+                    toDelete = filterSave(toDelete);
+                });
+            return newItems;
+        }
+        
+        public global::Bookstore.SalesItem_Materialized[] Load(Rhetos.Dom.DefaultConcepts.FilterSubtype filter_Parameter)
+        {
+            Func<Common.DomRepository, Rhetos.Dom.DefaultConcepts.FilterSubtype/*FilterByInfo AdditionalParametersType Bookstore.SalesItem_Materialized.'Rhetos.Dom.DefaultConcepts.FilterSubtype'*/, Bookstore.SalesItem_Materialized[]> filter_Function =
+                (repository, parameter) => Filter(parameter.Ids);
+
+            return filter_Function(_domRepository, filter_Parameter/*FilterByInfo AdditionalParametersArgument Bookstore.SalesItem_Materialized.'Rhetos.Dom.DefaultConcepts.FilterSubtype'*/);
+        }
+
+        public IEnumerable<Bookstore.SalesItem_Materialized> FilterSaveKeepSynchronizedOnChangedItems_Bookstore_SalesItem(IEnumerable<Bookstore.SalesItem_Materialized> filterSave_items)
+        {
+            return filterSave_items;
+        }
+
+        /*DataStructureInfo RepositoryMembers Bookstore.SalesItem_Materialized*/
+    }
+
+    /*DataStructureInfo RepositoryAttributes Bookstore.SalesItemComment*/
+    public partial class SalesItemComment_Repository : /*DataStructureInfo OverrideBaseType Bookstore.SalesItemComment*/ Common.OrmRepositoryBase<Common.Queryable.Bookstore_SalesItemComment, Bookstore.SalesItemComment> // Common.QueryableRepositoryBase<Common.Queryable.Bookstore_SalesItemComment, Bookstore.SalesItemComment> // Common.ReadableRepositoryBase<Bookstore.SalesItemComment> // global::Common.RepositoryBase
+        , IWritableRepository<Bookstore.SalesItemComment>, IValidateRepository/*DataStructureInfo RepositoryInterface Bookstore.SalesItemComment*/
+    {
+        private readonly Rhetos.Utilities.ISqlUtility _sqlUtility;
+        /*DataStructureInfo RepositoryPrivateMembers Bookstore.SalesItemComment*/
+
+        public SalesItemComment_Repository(Common.DomRepository domRepository, Common.ExecutionContext executionContext, Rhetos.Utilities.ISqlUtility _sqlUtility/*DataStructureInfo RepositoryConstructorArguments Bookstore.SalesItemComment*/)
+        {
+            _domRepository = domRepository;
+            _executionContext = executionContext;
+            this._sqlUtility = _sqlUtility;
+            /*DataStructureInfo RepositoryConstructorCode Bookstore.SalesItemComment*/
+        }
+
+        public static KeyValuePair<string, Type>[] GetReadParameterTypes()
+        {
+            return new KeyValuePair<string, Type>[]
+            {
+                new KeyValuePair<string, Type>(@"Bookstore.SystemRequiredSalesItem", typeof(Bookstore.SystemRequiredSalesItem)),
+                /*DataStructureInfo ReadParameterTypes Bookstore.SalesItemComment*/
+            };
+        }
+        
+        public virtual void Save(IEnumerable<Bookstore.SalesItemComment> insertedNew, IEnumerable<Bookstore.SalesItemComment> updatedNew, IEnumerable<Bookstore.SalesItemComment> deletedIds, bool checkUserPermissions = false)
+        {
+            if (!DomHelper.InitializeSaveMethodItems(ref insertedNew, ref updatedNew, ref deletedIds))
+                return;
+
+            /*DataStructureInfo WritableOrm ClearContext Bookstore.SalesItemComment*/
+
+            /*DataStructureInfo WritableOrm ArgumentValidation Bookstore.SalesItemComment*/
+
+            /*DataStructureInfo WritableOrm Initialization Bookstore.SalesItemComment*/
+
+            // Using old data, including lazy loading of navigation properties:
+
+            IEnumerable<Common.Queryable.Bookstore_SalesItemComment> deleted = DomHelper.LoadOldDataWithNavigationProperties(deletedIds, this);
+            IEnumerable<Common.Queryable.Bookstore_SalesItemComment> updated = DomHelper.LoadOldDataWithNavigationProperties(updatedNew, this);
+
+            /*DataStructureInfo WritableOrm OldDataLoaded Bookstore.SalesItemComment*/
+
+            /*DataStructureInfo WritableOrm ProcessedOldData Bookstore.SalesItemComment*/
+
+            {
+                DomHelper.WriteToDatabase(insertedNew, updatedNew, deletedIds, _executionContext.PersistenceStorage, checkUserPermissions, _sqlUtility,
+                    out Exception saveException, out Rhetos.RhetosException interpretedException);
+
+                if (saveException != null)
+                {
+                    if (interpretedException is Rhetos.UserException && Rhetos.Utilities.MsSqlUtility.IsReferenceErrorOnInsertUpdate(interpretedException, @"Bookstore.SalesItem", @"ID", @"FK_SalesItemComment_SalesItem_SalesItemID"))
+                        ((Rhetos.UserException)interpretedException).SystemMessage = @"DataStructure:Bookstore.SalesItemComment,Property:SalesItemID,Referenced:Bookstore.SalesItem";
+                    /*DataStructureInfo WritableOrm OnDatabaseError Bookstore.SalesItemComment*/
+                    DomHelper.ThrowInterpretedException(checkUserPermissions, saveException, interpretedException, _sqlUtility, "Bookstore.SalesItemComment");
+                }
+            }
+
+            deleted = null;
+            updated = this.Query(updatedNew.Select(item => item.ID));
+            IEnumerable<Common.Queryable.Bookstore_SalesItemComment> inserted = this.Query(insertedNew.Select(item => item.ID));
+
+            bool allEffectsCompleted = false;
+            try
+            {
+                /*DataStructureInfo WritableOrm OnSaveTag1 Bookstore.SalesItemComment*/
+
+                /*DataStructureInfo WritableOrm OnSaveTag2 Bookstore.SalesItemComment*/
+
+                Rhetos.Dom.DefaultConcepts.InvalidDataMessage.ValidateOnSave(insertedNew, updatedNew, this, "Bookstore.SalesItemComment");
+
+                /*DataStructureInfo WritableOrm AfterSave Bookstore.SalesItemComment*/
+
+                allEffectsCompleted = true;
+            }
+            finally
+            {
+                if (!allEffectsCompleted)
+                    _executionContext.PersistenceTransaction.DiscardOnDispose();
+            }
+        }
+
+        public IEnumerable<Rhetos.Dom.DefaultConcepts.InvalidDataMessage> Validate(IList<Guid> ids, bool onSave)
+        {
+            if (onSave)
+            {
+                var errorIds = this.Filter(this.Query(ids), new SystemRequiredSalesItem()).Select(item => item.ID).ToArray();
+                if (errorIds.Count() > 0)
+                    foreach (var error in GetErrorMessage_SystemRequiredSalesItem(errorIds))
+                        yield return error;
+            }
+            /*DataStructureInfo WritableOrm OnSaveValidate Bookstore.SalesItemComment*/
+            yield break;
+        }
+
+        public IEnumerable<InvalidDataMessage> GetErrorMessage_SystemRequiredSalesItem(IEnumerable<Guid> invalidData_Ids)
+        {
+            IDictionary<string, object> metadata = new Dictionary<string, object>();
+            metadata["Validation"] = @"SystemRequiredSalesItem";
+            metadata[@"Property"] = @"SalesItem";
+            /*InvalidDataInfo ErrorMetadata Bookstore.SalesItemComment.SystemRequiredSalesItem*/
+            /*InvalidDataInfo CustomValidationResult Bookstore.SalesItemComment.SystemRequiredSalesItem*/
+            return invalidData_Ids.Select(id => new InvalidDataMessage
+            {
+                ID = id,
+                Message = @"System required property {0} is not set.",
+                MessageParameters = new object[] { @"Reference Bookstore.SalesItemComment.SalesItem" },
+                Metadata = metadata
+            });
+        }
+
+        public IQueryable<Common.Queryable.Bookstore_SalesItemComment> Filter(IQueryable<Common.Queryable.Bookstore_SalesItemComment> source, Bookstore.SystemRequiredSalesItem parameter)
+        {
+            /*QueryFilterExpressionInfo BeforeFilter Bookstore.SalesItemComment.'Bookstore.SystemRequiredSalesItem'*/
+            return source.Where(item => item.SalesItem == null);
+        }
+
+        /*DataStructureInfo RepositoryMembers Bookstore.SalesItemComment*/
+    }
+
     /*DataStructureInfo RepositoryAttributes Bookstore.Shipment*/
     public partial class Shipment_Repository : /*DataStructureInfo OverrideBaseType Bookstore.Shipment*/ Common.OrmRepositoryBase<Common.Queryable.Bookstore_Shipment, Bookstore.Shipment> // Common.QueryableRepositoryBase<Common.Queryable.Bookstore_Shipment, Bookstore.Shipment> // Common.ReadableRepositoryBase<Bookstore.Shipment> // global::Common.RepositoryBase
         , IWritableRepository<Bookstore.Shipment>, IValidateRepository/*DataStructureInfo RepositoryInterface Bookstore.Shipment*/
@@ -2881,6 +3306,49 @@ namespace Bookstore.Repositories
         }
 
         /*DataStructureInfo RepositoryMembers Bookstore.BookGrid*/
+    }
+
+    /*DataStructureInfo RepositoryAttributes Bookstore.SalesItemGrid*/
+    public partial class SalesItemGrid_Repository : /*DataStructureInfo OverrideBaseType Bookstore.SalesItemGrid*/ Common.OrmRepositoryBase<Common.Queryable.Bookstore_SalesItemGrid, Bookstore.SalesItemGrid> // Common.QueryableRepositoryBase<Common.Queryable.Bookstore_SalesItemGrid, Bookstore.SalesItemGrid> // Common.ReadableRepositoryBase<Bookstore.SalesItemGrid> // global::Common.RepositoryBase
+        /*DataStructureInfo RepositoryInterface Bookstore.SalesItemGrid*/
+    {
+        /*DataStructureInfo RepositoryPrivateMembers Bookstore.SalesItemGrid*/
+
+        public SalesItemGrid_Repository(Common.DomRepository domRepository, Common.ExecutionContext executionContext/*DataStructureInfo RepositoryConstructorArguments Bookstore.SalesItemGrid*/)
+        {
+            _domRepository = domRepository;
+            _executionContext = executionContext;
+            /*DataStructureInfo RepositoryConstructorCode Bookstore.SalesItemGrid*/
+        }
+
+        public static KeyValuePair<string, Type>[] GetReadParameterTypes()
+        {
+            return new KeyValuePair<string, Type>[]
+            {
+                /*DataStructureInfo ReadParameterTypes Bookstore.SalesItemGrid*/
+            };
+        }
+        
+        public override IQueryable<Common.Queryable.Bookstore_SalesItemGrid> Query()
+        {
+            /*DataStructureInfo RepositoryBeforeQuery Bookstore.SalesItemGrid*/
+            return Query(_domRepository.Bookstore.SalesItem.Query());
+        }
+
+        public IQueryable<Common.Queryable.Bookstore_SalesItemGrid> Query(IQueryable<Common.Queryable.Bookstore_SalesItem> source)
+        {
+            return source.Select(item => new Common.Queryable.Bookstore_SalesItemGrid
+                {
+                    ID = item.ID,
+                    Base = item,
+                    BookNumberOfPages = item.Book.NumberOfPages,
+                    Code = item.Code,
+                    Price = item.Price,
+                    /*BrowseDataStructureInfo BrowseProperties Bookstore.SalesItemGrid*/
+                });
+        }
+
+        /*DataStructureInfo RepositoryMembers Bookstore.SalesItemGrid*/
     }
 
     /*ModuleInfo HelperNamespaceMembers Bookstore*/
