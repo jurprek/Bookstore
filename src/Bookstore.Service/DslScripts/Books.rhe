@@ -549,6 +549,9 @@ Module Demo
         ShortString ToWhom;
         DateTime EventDate;
         Money Amount;
+        
+        ItemFilter AmountNotNull 'item => !item.Amount.HasValue';
+        InvalidData AmountNotNull 'Amount must not be NULL !!!.';
 
         Is Demo.MoneyTransaction
         {
