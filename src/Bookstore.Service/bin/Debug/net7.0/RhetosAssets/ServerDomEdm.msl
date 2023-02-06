@@ -74,6 +74,14 @@
       </MappingFragment>
     </EntityTypeMapping>
   </EntitySetMapping>
+  <EntitySetMapping Name="Bookstore_ComputeBookInfo">
+    <EntityTypeMapping TypeName="Rhetos.Bookstore_ComputeBookInfo">
+      <MappingFragment StoreEntitySet="Bookstore_ComputeBookInfo">
+        <ScalarProperty Name="ID" ColumnName="ID" />
+        <ScalarProperty Name="NumberOfComments" ColumnName="NumberOfComments" />
+      </MappingFragment>
+    </EntityTypeMapping>
+  </EntitySetMapping>
   <EntitySetMapping Name="Bookstore_Department">
     <EntityTypeMapping TypeName="Rhetos.Bookstore_Department">
       <MappingFragment StoreEntitySet="Bookstore_Department">

@@ -1,218 +1,234 @@
 [
   {
     "EvaluatorName": "IConceptMacro Rhetos.Dom.DefaultConcepts.ClearPrincipalCacheMacro for Rhetos.Dsl.InitializationConcept",
-    "EvaluatorOrder": 0.0092592592592592592592592593
-  },
-  {
-    "EvaluatorName": "IConceptMacro Rhetos.Dsl.DefaultConcepts.AllPropertiesFromMacro for Rhetos.Dsl.DefaultConcepts.AllPropertiesFromInfo",
-    "EvaluatorOrder": 0.0277777777777777777777777778
+    "EvaluatorOrder": 0.0086206896551724137931034483
   },
   {
     "EvaluatorName": "IConceptMacro Rhetos.Dsl.DefaultConcepts.ModuleAuthorizationMacro for Rhetos.Dsl.DefaultConcepts.ModuleInfo",
-    "EvaluatorOrder": 0.0462962962962962962962962963
+    "EvaluatorOrder": 0.0258620689655172413793103448
   },
   {
     "EvaluatorName": "IConceptMacro Rhetos.Dsl.DefaultConcepts.PrerequisiteAllPropertiesMacro for Rhetos.Dsl.DefaultConcepts.PrerequisiteAllProperties",
-    "EvaluatorOrder": 0.0648148148148148148148148148
-  },
-  {
-    "EvaluatorName": "IConceptMacro Rhetos.Dsl.DefaultConcepts.PropertyFromMacro for Rhetos.Dsl.DefaultConcepts.PropertyFromInfo",
-    "EvaluatorOrder": 0.0833333333333333333333333333
+    "EvaluatorOrder": 0.0431034482758620689655172414
   },
   {
     "EvaluatorName": "IConceptMacro Rhetos.Dsl.DefaultConcepts.ReferencePropertyDbConstraintMacro for Rhetos.Dsl.InitializationConcept",
-    "EvaluatorOrder": 0.1018518518518518518518518519
+    "EvaluatorOrder": 0.0603448275862068965517241379
   },
   {
     "EvaluatorName": "IConceptMacro Rhetos.Dsl.DefaultConcepts.SqlIndexMacro for Rhetos.Dsl.DefaultConcepts.SqlIndexInfo",
-    "EvaluatorOrder": 0.1203703703703703703703703704
+    "EvaluatorOrder": 0.0775862068965517241379310345
   },
   {
     "EvaluatorName": "IConceptMacro Rhetos.Dsl.DefaultConcepts.UniqueClusteredMacro for Rhetos.Dsl.DefaultConcepts.UniqueClusteredInfo",
-    "EvaluatorOrder": 0.1388888888888888888888888889
+    "EvaluatorOrder": 0.094827586206896551724137931
   },
   {
     "EvaluatorName": "IConceptMacro Rhetos.Dsl.DefaultConcepts.UniquePropertiesMacro for Rhetos.Dsl.DefaultConcepts.UniquePropertiesInfo",
-    "EvaluatorOrder": 0.1574074074074074074074074074
+    "EvaluatorOrder": 0.1120689655172413793103448276
   },
   {
     "EvaluatorName": "IConceptMacro Rhetos.Dsl.DefaultConcepts.UniquePropertyMacro for Rhetos.Dsl.DefaultConcepts.UniquePropertyInfo",
-    "EvaluatorOrder": 0.1759259259259259259259259259
+    "EvaluatorOrder": 0.1293103448275862068965517241
   },
   {
     "EvaluatorName": "IMacroConcept Rhetos.Dsl.DefaultConcepts.IntegerRangeInfo",
-    "EvaluatorOrder": 0.1944444444444444444444444444
+    "EvaluatorOrder": 0.1465517241379310344827586207
   },
   {
     "EvaluatorName": "IMacroConcept Rhetos.Dsl.DefaultConcepts.AutoCodePropertyInfo",
-    "EvaluatorOrder": 0.212962962962962962962962963
-  },
-  {
-    "EvaluatorName": "IConceptMacro Rhetos.Dsl.DefaultConcepts.AutoSqlQueryableDependsOnMacro for Rhetos.Dsl.DefaultConcepts.AutoSqlQueryableDependsOnInfo",
-    "EvaluatorOrder": 0.2314814814814814814814814815
+    "EvaluatorOrder": 0.1637931034482758620689655172
   },
   {
     "EvaluatorName": "IMacroConcept Rhetos.Dsl.DefaultConcepts.EntryWithGeneratedIdentifierInfo",
-    "EvaluatorOrder": 0.25
+    "EvaluatorOrder": 0.1810344827586206896551724138
   },
   {
     "EvaluatorName": "IConceptMacro Rhetos.Dsl.DefaultConcepts.IsSubtypeOfMacro for Rhetos.Dsl.DefaultConcepts.IsSubtypeOfInfo",
-    "EvaluatorOrder": 0.2685185185185185185185185185
+    "EvaluatorOrder": 0.1982758620689655172413793103
   },
   {
     "EvaluatorName": "IConceptMacro Rhetos.Dsl.DefaultConcepts.PolymorphicMacro for Rhetos.Dsl.DefaultConcepts.PolymorphicInfo",
-    "EvaluatorOrder": 0.287037037037037037037037037
+    "EvaluatorOrder": 0.2155172413793103448275862069
   },
   {
     "EvaluatorName": "IMacroConcept Rhetos.Dsl.DefaultConcepts.HardcodedEntityInfo",
-    "EvaluatorOrder": 0.3055555555555555555555555556
+    "EvaluatorOrder": 0.2327586206896551724137931034
   },
   {
     "EvaluatorName": "IMacroConcept Rhetos.Dsl.DefaultConcepts.SubtypeImplementsReferenceToHardcodedEntityInfo",
-    "EvaluatorOrder": 0.3240740740740740740740740741
+    "EvaluatorOrder": 0.25
   },
   {
     "EvaluatorName": "IMacroConcept Rhetos.Dsl.DefaultConcepts.BrowseDataStructureInfo",
-    "EvaluatorOrder": 0.3425925925925925925925925926
+    "EvaluatorOrder": 0.2672413793103448275862068966
   },
   {
     "EvaluatorName": "IMacroConcept Rhetos.Dsl.DefaultConcepts.DenyUserEditPropertyInfo",
-    "EvaluatorOrder": 0.3611111111111111111111111111
+    "EvaluatorOrder": 0.2844827586206896551724137931
   },
   {
     "EvaluatorName": "IMacroConcept Rhetos.Dsl.DefaultConcepts.MaxValueInfo",
-    "EvaluatorOrder": 0.3796296296296296296296296296
+    "EvaluatorOrder": 0.3017241379310344827586206897
   },
   {
     "EvaluatorName": "IMacroConcept Rhetos.Dsl.DefaultConcepts.DeactivatableInfo",
-    "EvaluatorOrder": 0.3981481481481481481481481481
+    "EvaluatorOrder": 0.3189655172413793103448275862
   },
   {
     "EvaluatorName": "IConceptMacro Rhetos.Dom.DefaultConcepts.MoneyRoundingMacro for Rhetos.Dsl.DefaultConcepts.MoneyRoundingInfo",
-    "EvaluatorOrder": 0.4166666666666666666666666667
+    "EvaluatorOrder": 0.3362068965517241379310344828
   },
   {
     "EvaluatorName": "IConceptMacro Rhetos.Dsl.DefaultConcepts.SubtypeWhereMacro for Rhetos.Dsl.DefaultConcepts.SubtypeWhereInfo",
-    "EvaluatorOrder": 0.4351851851851851851851851852
+    "EvaluatorOrder": 0.3534482758620689655172413793
   },
   {
     "EvaluatorName": "IMacroConcept Rhetos.Dsl.DefaultConcepts.PolymorphicMaterializedInfo",
-    "EvaluatorOrder": 0.4537037037037037037037037037
+    "EvaluatorOrder": 0.3706896551724137931034482759
   },
   {
     "EvaluatorName": "IMacroConcept Rhetos.Dsl.DefaultConcepts.PersistedSubtypeImplementationIdInfo",
-    "EvaluatorOrder": 0.4722222222222222222222222222
+    "EvaluatorOrder": 0.3879310344827586206896551724
   },
   {
     "EvaluatorName": "IMacroConcept Rhetos.Dsl.DefaultConcepts.DenyUserEditDataStructureInfo",
-    "EvaluatorOrder": 0.4907407407407407407407407407
+    "EvaluatorOrder": 0.405172413793103448275862069
+  },
+  {
+    "EvaluatorName": "IConceptMacro Rhetos.Dsl.DefaultConcepts.ChangesOnLinkedItemsMacro for Rhetos.Dsl.DefaultConcepts.ChangesOnLinkedItemsInfo",
+    "EvaluatorOrder": 0.4224137931034482758620689655
+  },
+  {
+    "EvaluatorName": "IConceptMacro Rhetos.Dsl.DefaultConcepts.EntityComputedFromAllPropertiesCopyPropertiesMacro for Rhetos.Dsl.DefaultConcepts.EntityComputedFromAllPropertiesInfo",
+    "EvaluatorOrder": 0.4396551724137931034482758621
+  },
+  {
+    "EvaluatorName": "IConceptMacro Rhetos.Dsl.DefaultConcepts.EntityComputedFromAllPropertiesMacro for Rhetos.Dsl.DefaultConcepts.EntityComputedFromAllPropertiesInfo",
+    "EvaluatorOrder": 0.4568965517241379310344827586
   },
   {
     "EvaluatorName": "IMacroConcept Rhetos.Dsl.DefaultConcepts.QueryableExtensionInfo",
-    "EvaluatorOrder": 0.5092592592592592592592592593
+    "EvaluatorOrder": 0.4741379310344827586206896552
   },
   {
     "EvaluatorName": "IMacroConcept Rhetos.Dsl.DefaultConcepts.ReferenceDetailInfo",
-    "EvaluatorOrder": 0.5277777777777777777777777778
+    "EvaluatorOrder": 0.4913793103448275862068965517
   },
   {
     "EvaluatorName": "IMacroConcept Rhetos.Dsl.DefaultConcepts.RegisteredInterfaceImplementationHelperInfo",
-    "EvaluatorOrder": 0.5462962962962962962962962963
+    "EvaluatorOrder": 0.5086206896551724137931034483
   },
   {
     "EvaluatorName": "IMacroConcept Rhetos.Dsl.DefaultConcepts.RequiredPropertyInfo",
-    "EvaluatorOrder": 0.5648148148148148148148148148
+    "EvaluatorOrder": 0.5258620689655172413793103448
   },
   {
     "EvaluatorName": "IMacroConcept Rhetos.Dsl.DefaultConcepts.SystemRequiredInfo",
-    "EvaluatorOrder": 0.5833333333333333333333333333
+    "EvaluatorOrder": 0.5431034482758620689655172414
   },
   {
     "EvaluatorName": "IConceptMacro Rhetos.Dsl.DefaultConcepts.AllPropertiesLoggingMacro for Rhetos.Dsl.DefaultConcepts.AllPropertiesLoggingInfo",
-    "EvaluatorOrder": 0.6018518518518518518518518519
+    "EvaluatorOrder": 0.5603448275862068965517241379
   },
   {
     "EvaluatorName": "IConceptMacro Rhetos.Dsl.DefaultConcepts.DataStructureExtendsMacro for Rhetos.Dsl.DefaultConcepts.DataStructureExtendsInfo",
-    "EvaluatorOrder": 0.6203703703703703703703703704
+    "EvaluatorOrder": 0.5775862068965517241379310345
   },
   {
     "EvaluatorName": "IConceptMacro Rhetos.Dsl.DefaultConcepts.ItemFilterMacro for Rhetos.Dsl.DefaultConcepts.ItemFilterInfo",
-    "EvaluatorOrder": 0.6388888888888888888888888889
+    "EvaluatorOrder": 0.594827586206896551724137931
   },
   {
     "EvaluatorName": "IConceptMacro Rhetos.Dsl.DefaultConcepts.SqlIndexMultipleMacro for Rhetos.Dsl.DefaultConcepts.SqlIndexMultipleInfo",
-    "EvaluatorOrder": 0.6574074074074074074074074074
+    "EvaluatorOrder": 0.6120689655172413793103448276
   },
   {
     "EvaluatorName": "IConceptMacro Rhetos.Dsl.DefaultConcepts.UniqueMultiplePropertiesMacro for Rhetos.Dsl.DefaultConcepts.UniqueMultiplePropertiesInfo",
-    "EvaluatorOrder": 0.6759259259259259259259259259
+    "EvaluatorOrder": 0.6293103448275862068965517241
   },
   {
     "EvaluatorName": "IConceptMacro Rhetos.Dsl.DefaultConcepts.PropertyLoggingMacro for Rhetos.Dsl.DefaultConcepts.PropertyLoggingInfo",
-    "EvaluatorOrder": 0.6944444444444444444444444444
+    "EvaluatorOrder": 0.6465517241379310344827586207
   },
   {
     "EvaluatorName": "IConceptMacro Rhetos.Dsl.DefaultConcepts.ModuleAutoSqlDependsOnMacro for Rhetos.Dsl.DefaultConcepts.ModuleAutoSqlDependsOnInfo",
-    "EvaluatorOrder": 0.712962962962962962962962963
+    "EvaluatorOrder": 0.6637931034482758620689655172
   },
   {
     "EvaluatorName": "IConceptMacro Rhetos.Dsl.DefaultConcepts.FilterByMacro for Rhetos.Dsl.DefaultConcepts.FilterByInfo",
-    "EvaluatorOrder": 0.7314814814814814814814814815
+    "EvaluatorOrder": 0.6810344827586206896551724138
   },
   {
     "EvaluatorName": "IConceptMacro Rhetos.Dsl.DefaultConcepts.AutoSqlViewDependsOnMacro for Rhetos.Dsl.DefaultConcepts.AutoSqlViewDependsOnInfo",
-    "EvaluatorOrder": 0.75
+    "EvaluatorOrder": 0.6982758620689655172413793103
   },
   {
     "EvaluatorName": "IConceptMacro Rhetos.Dsl.DefaultConcepts.ExtensibleSubtypeSqlViewMacro for Rhetos.Dsl.DefaultConcepts.ExtensibleSubtypeSqlViewInfo",
-    "EvaluatorOrder": 0.7685185185185185185185185185
+    "EvaluatorOrder": 0.7155172413793103448275862069
   },
   {
     "EvaluatorName": "IConceptMacro Rhetos.Dsl.DefaultConcepts.SubtypeImplementsPropertyMacro for Rhetos.Dsl.DefaultConcepts.SubtypeImplementsPropertyInfo",
-    "EvaluatorOrder": 0.787037037037037037037037037
+    "EvaluatorOrder": 0.7327586206896551724137931034
   },
   {
     "EvaluatorName": "IConceptMacro Rhetos.Dsl.DefaultConcepts.WritableOrmDataStructureMacro for Rhetos.Dsl.DefaultConcepts.DataStructureInfo",
-    "EvaluatorOrder": 0.8055555555555555555555555556
-  },
-  {
-    "EvaluatorName": "IConceptMacro Rhetos.Dsl.DefaultConcepts.KeepSynchronizedMacro for Rhetos.Dsl.DefaultConcepts.KeepSynchronizedInfo",
-    "EvaluatorOrder": 0.8240740740740740740740740741
-  },
-  {
-    "EvaluatorName": "IConceptMacro Rhetos.Dsl.DefaultConcepts.BrowseTakeNamedPropertyMacro for Rhetos.Dsl.DefaultConcepts.BrowseTakeNamedPropertyInfo",
-    "EvaluatorOrder": 0.8425925925925925925925925926
+    "EvaluatorOrder": 0.75
   },
   {
     "EvaluatorName": "IConceptMacro Rhetos.Dsl.DefaultConcepts.ReferenceCascadeDeleteMacro for Rhetos.Dsl.DefaultConcepts.ReferenceCascadeDeleteInfo",
-    "EvaluatorOrder": 0.8611111111111111111111111111
+    "EvaluatorOrder": 0.7672413793103448275862068966
+  },
+  {
+    "EvaluatorName": "IConceptMacro Rhetos.Dsl.DefaultConcepts.AllPropertiesFromMacro for Rhetos.Dsl.DefaultConcepts.AllPropertiesFromInfo",
+    "EvaluatorOrder": 0.7844827586206896551724137931
+  },
+  {
+    "EvaluatorName": "IConceptMacro Rhetos.Dsl.DefaultConcepts.PropertyFromMacro for Rhetos.Dsl.DefaultConcepts.PropertyFromInfo",
+    "EvaluatorOrder": 0.8017241379310344827586206897
+  },
+  {
+    "EvaluatorName": "IConceptMacro Rhetos.Dsl.DefaultConcepts.AutoSqlQueryableDependsOnMacro for Rhetos.Dsl.DefaultConcepts.AutoSqlQueryableDependsOnInfo",
+    "EvaluatorOrder": 0.8189655172413793103448275862
+  },
+  {
+    "EvaluatorName": "IConceptMacro Rhetos.Dsl.DefaultConcepts.AllPropertiesWithCascadeDeleteFromMacro for Rhetos.Dsl.DefaultConcepts.AllPropertiesWithCascadeDeleteFromInfo",
+    "EvaluatorOrder": 0.8362068965517241379310344828
+  },
+  {
+    "EvaluatorName": "IConceptMacro Rhetos.Dsl.DefaultConcepts.KeepSynchronizedMacro for Rhetos.Dsl.DefaultConcepts.KeepSynchronizedInfo",
+    "EvaluatorOrder": 0.8534482758620689655172413793
+  },
+  {
+    "EvaluatorName": "IConceptMacro Rhetos.Dsl.DefaultConcepts.BrowseTakeNamedPropertyMacro for Rhetos.Dsl.DefaultConcepts.BrowseTakeNamedPropertyInfo",
+    "EvaluatorOrder": 0.8706896551724137931034482759
   },
   {
     "EvaluatorName": "IConceptMacro Rhetos.Dsl.DefaultConcepts.AutoInheritRowPermissionsMacro for Rhetos.Dsl.InitializationConcept",
-    "EvaluatorOrder": 0.8796296296296296296296296296
+    "EvaluatorOrder": 0.8879310344827586206896551724
   },
   {
     "EvaluatorName": "IConceptMacro Rhetos.Dsl.DefaultConcepts.RowPermissionsInheritFromBaseMacro for Rhetos.Dsl.DefaultConcepts.RowPermissionsInheritFromBaseInfo",
-    "EvaluatorOrder": 0.8981481481481481481481481481
+    "EvaluatorOrder": 0.905172413793103448275862069
   },
   {
     "EvaluatorName": "IConceptMacro Rhetos.Dsl.DefaultConcepts.RowPermissionsPluginableFiltersMacro for Rhetos.Dsl.DefaultConcepts.RowPermissionsPluginableFiltersInfo",
-    "EvaluatorOrder": 0.9166666666666666666666666667
+    "EvaluatorOrder": 0.9224137931034482758620689655
   },
   {
     "EvaluatorName": "IConceptMacro Rhetos.Dsl.DefaultConcepts.SamePropertyValueMacro for Rhetos.Dsl.InitializationConcept",
-    "EvaluatorOrder": 0.9351851851851851851851851852
+    "EvaluatorOrder": 0.9396551724137931034482758621
   },
   {
     "EvaluatorName": "IMacroConcept Rhetos.Dsl.DefaultConcepts.RowPermissionsInheritFromReferenceInfo",
-    "EvaluatorOrder": 0.9537037037037037037037037037
+    "EvaluatorOrder": 0.9568965517241379310344827586
   },
   {
     "EvaluatorName": "IConceptMacro Rhetos.Dsl.DefaultConcepts.RowPermissionsInheritFromMacro for Rhetos.Dsl.DefaultConcepts.RowPermissionsInheritFromInfo",
-    "EvaluatorOrder": 0.9722222222222222222222222222
+    "EvaluatorOrder": 0.9741379310344827586206896552
   },
   {
     "EvaluatorName": "IConceptMacro Rhetos.Dsl.DefaultConcepts.RowPermissionsInheritExtensionMacro for Rhetos.Dsl.InitializationConcept",
-    "EvaluatorOrder": 0.9907407407407407407407407407
+    "EvaluatorOrder": 0.9913793103448275862068965517
   }
 ]

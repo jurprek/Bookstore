@@ -14,6 +14,12 @@ namespace Demo
 
     /*ModuleInfo Using Demo*/
 
+    /*DataStructureInfo ClassAttributes Demo.AmountNotNull*/
+    public class AmountNotNull/*DataStructureInfo ClassInterace Demo.AmountNotNull*/
+    {
+        /*DataStructureInfo ClassBody Demo.AmountNotNull*/
+    }
+
     /*DataStructureInfo ClassAttributes Demo.BorrowMoney*/
     public class BorrowMoney : EntityBase<Demo.BorrowMoney>/*Next DataStructureInfo ClassInterace Demo.BorrowMoney*/
     {

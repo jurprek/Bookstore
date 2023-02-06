@@ -47,6 +47,9 @@ namespace Bookstore.Repositories
         private Comment_Repository _Comment_Repository;
         public Comment_Repository Comment { get { return _Comment_Repository ?? (_Comment_Repository = (Comment_Repository)Rhetos.Extensibility.NamedPluginsExtensions.GetPlugin(_repositories, @"Bookstore.Comment")); } }
 
+        private ComputeBookInfo_Repository _ComputeBookInfo_Repository;
+        public ComputeBookInfo_Repository ComputeBookInfo { get { return _ComputeBookInfo_Repository ?? (_ComputeBookInfo_Repository = (ComputeBookInfo_Repository)Rhetos.Extensibility.NamedPluginsExtensions.GetPlugin(_repositories, @"Bookstore.ComputeBookInfo")); } }
+
         private Department_Repository _Department_Repository;
         public Department_Repository Department { get { return _Department_Repository ?? (_Department_Repository = (Department_Repository)Rhetos.Extensibility.NamedPluginsExtensions.GetPlugin(_repositories, @"Bookstore.Department")); } }
 
@@ -70,6 +73,9 @@ namespace Bookstore.Repositories
 
         private Genre_Repository _Genre_Repository;
         public Genre_Repository Genre { get { return _Genre_Repository ?? (_Genre_Repository = (Genre_Repository)Rhetos.Extensibility.NamedPluginsExtensions.GetPlugin(_repositories, @"Bookstore.Genre")); } }
+
+        private InsertRandomBook_Repository _InsertRandomBook_Repository;
+        public InsertRandomBook_Repository InsertRandomBook { get { return _InsertRandomBook_Repository ?? (_InsertRandomBook_Repository = (InsertRandomBook_Repository)Rhetos.Extensibility.NamedPluginsExtensions.GetPlugin(_repositories, @"Bookstore.InsertRandomBook")); } }
 
         private Managers_Repository _Managers_Repository;
         public Managers_Repository Managers { get { return _Managers_Repository ?? (_Managers_Repository = (Managers_Repository)Rhetos.Extensibility.NamedPluginsExtensions.GetPlugin(_repositories, @"Bookstore.Managers")); } }
@@ -97,6 +103,9 @@ namespace Bookstore.Repositories
 
         private ShipmentStatus_Repository _ShipmentStatus_Repository;
         public ShipmentStatus_Repository ShipmentStatus { get { return _ShipmentStatus_Repository ?? (_ShipmentStatus_Repository = (ShipmentStatus_Repository)Rhetos.Extensibility.NamedPluginsExtensions.GetPlugin(_repositories, @"Bookstore.ShipmentStatus")); } }
+
+        private TitleCheck_Repository _TitleCheck_Repository;
+        public TitleCheck_Repository TitleCheck { get { return _TitleCheck_Repository ?? (_TitleCheck_Repository = (TitleCheck_Repository)Rhetos.Extensibility.NamedPluginsExtensions.GetPlugin(_repositories, @"Bookstore.TitleCheck")); } }
 
         private Topic_Repository _Topic_Repository;
         public Topic_Repository Topic { get { return _Topic_Repository ?? (_Topic_Repository = (Topic_Repository)Rhetos.Extensibility.NamedPluginsExtensions.GetPlugin(_repositories, @"Bookstore.Topic")); } }
@@ -319,6 +328,17 @@ namespace Bookstore.Repositories
 
             if (deletedIds.Count() > 0)
             {
+                List<Bookstore.BookInfo> childItems = _executionContext.Repository.Bookstore.BookInfo
+                    .Query(deletedIds.Select(parent => parent.ID))
+                    .Select(child => child.ID).ToList()
+                    .Select(childId => new Bookstore.BookInfo { ID = childId }).ToList();
+
+                if (childItems.Count() > 0)
+                    _domRepository.Bookstore.BookInfo.Delete(childItems);
+            }
+
+            if (deletedIds.Count() > 0)
+            {
                 List<Bookstore.BookRating> childItems = _executionContext.Repository.Bookstore.BookRating
                     .Query(deletedIds.Select(parent => parent.ID))
                     .Select(child => child.ID).ToList()
@@ -418,6 +438,8 @@ namespace Bookstore.Repositories
 
                 if (saveException != null)
                 {
+                    if (interpretedException is Rhetos.UserException && Rhetos.Utilities.MsSqlUtility.IsReferenceErrorOnDelete(interpretedException, @"Bookstore.BookInfo", @"ID", @"FK_BookInfo_Book_ID"))
+                        ((Rhetos.UserException)interpretedException).SystemMessage = @"DataStructure:Bookstore.BookInfo,Property:ID,Referenced:Bookstore.Book";
                     if (interpretedException is Rhetos.UserException && Rhetos.Utilities.MsSqlUtility.IsReferenceErrorOnDelete(interpretedException, @"Bookstore.BookRating", @"ID", @"FK_BookRating_Book_ID"))
                         ((Rhetos.UserException)interpretedException).SystemMessage = @"DataStructure:Bookstore.BookRating,Property:ID,Referenced:Bookstore.Book";
                     if (interpretedException is Rhetos.UserException && Rhetos.Utilities.MsSqlUtility.IsReferenceErrorOnDelete(interpretedException, @"Bookstore.BookTopic", @"BookID", @"FK_BookTopic_Book_BookID"))
@@ -448,7 +470,12 @@ namespace Bookstore.Repositories
             bool allEffectsCompleted = false;
             try
             {
-                /*OverrideRecompute KeepSynchronizedInfo Bookstore.SalesItem_Materialized.Bookstore.SalesItem.1*/
+                if (insertedNew.Any())
+                {
+                    Guid[] insertedIds = insertedNew.Select(item => item.ID).ToArray();
+                    _domRepository.Bookstore.BookInfo.RecomputeFromComputeBookInfo(insertedIds);
+                }
+                /*OverrideRecompute KeepSynchronizedInfo Bookstore.SalesItem_Materialized.Bookstore.SalesItem.2*/
                 {
                     var filteredNew = filterLoadKeepSynchronizedOnChangedItemsSalesItem_Materialized1(inserted.Concat(updated));
                     Rhetos.Dom.DefaultConcepts.FilterSubtype optimizedFilter;
@@ -528,16 +555,16 @@ namespace Bookstore.Repositories
         {
             Func<Common.DomRepository, ComplexSearch/*FilterByInfo AdditionalParametersType Bookstore.Book.ComplexSearch*/, Bookstore.Book[]> filter_Function =
                 (repository, parameter) =>
-      {
-          var query = repository.Bookstore.Book.Query(item => item.NumberOfPages >= parameter.MinimumPages);
-          if (parameter.ForeignBooksOnly == true)
-               query = query.Where(item => item.Extension_ForeignBook.ID != null);
-          Book[] books = query.ToSimple().ToArray();
+          {
+              var query = repository.Bookstore.Book.Query(item => item.NumberOfPages >= parameter.MinimumPages);
+              if (parameter.ForeignBooksOnly == true)
+                   query = query.Where(item => item.Extension_ForeignBook.ID != null);
+              Book[] books = query.ToSimple().ToArray();
           
-          if (parameter.MaskTitles == true)
-              foreach (var book in books.Where(b => !string.IsNullOrEmpty(b.Title))) book.Title = book.Title.First() + "***" + book.Title.Last();
-          return books;
-      };
+              if (parameter.MaskTitles == true)
+                  foreach (var book in books.Where(b => !string.IsNullOrEmpty(b.Title))) book.Title = book.Title.First() + "***" + book.Title.Last();
+              return books;
+          };
 
             return filter_Function(_domRepository, filter_Parameter/*FilterByInfo AdditionalParametersArgument Bookstore.Book.ComplexSearch*/);
         }
@@ -652,14 +679,16 @@ namespace Bookstore.Repositories
 
     /*DataStructureInfo RepositoryAttributes Bookstore.BookInfo*/
     public partial class BookInfo_Repository : /*DataStructureInfo OverrideBaseType Bookstore.BookInfo*/ Common.OrmRepositoryBase<Common.Queryable.Bookstore_BookInfo, Bookstore.BookInfo> // Common.QueryableRepositoryBase<Common.Queryable.Bookstore_BookInfo, Bookstore.BookInfo> // Common.ReadableRepositoryBase<Bookstore.BookInfo> // global::Common.RepositoryBase
-        /*DataStructureInfo RepositoryInterface Bookstore.BookInfo*/
+        , IWritableRepository<Bookstore.BookInfo>, IValidateRepository/*DataStructureInfo RepositoryInterface Bookstore.BookInfo*/
     {
+        private readonly Rhetos.Utilities.ISqlUtility _sqlUtility;
         /*DataStructureInfo RepositoryPrivateMembers Bookstore.BookInfo*/
 
-        public BookInfo_Repository(Common.DomRepository domRepository, Common.ExecutionContext executionContext/*DataStructureInfo RepositoryConstructorArguments Bookstore.BookInfo*/)
+        public BookInfo_Repository(Common.DomRepository domRepository, Common.ExecutionContext executionContext, Rhetos.Utilities.ISqlUtility _sqlUtility/*DataStructureInfo RepositoryConstructorArguments Bookstore.BookInfo*/)
         {
             _domRepository = domRepository;
             _executionContext = executionContext;
+            this._sqlUtility = _sqlUtility;
             /*DataStructureInfo RepositoryConstructorCode Bookstore.BookInfo*/
         }
 
@@ -671,6 +700,111 @@ namespace Bookstore.Repositories
             };
         }
         
+        public virtual void Save(IEnumerable<Bookstore.BookInfo> insertedNew, IEnumerable<Bookstore.BookInfo> updatedNew, IEnumerable<Bookstore.BookInfo> deletedIds, bool checkUserPermissions = false)
+        {
+            if (!DomHelper.InitializeSaveMethodItems(ref insertedNew, ref updatedNew, ref deletedIds))
+                return;
+
+            /*DataStructureInfo WritableOrm ClearContext Bookstore.BookInfo*/
+
+            /*DataStructureInfo WritableOrm ArgumentValidation Bookstore.BookInfo*/
+
+            /*DataStructureInfo WritableOrm Initialization Bookstore.BookInfo*/
+
+            // Using old data, including lazy loading of navigation properties:
+
+            IEnumerable<Common.Queryable.Bookstore_BookInfo> deleted = DomHelper.LoadOldDataWithNavigationProperties(deletedIds, this);
+            IEnumerable<Common.Queryable.Bookstore_BookInfo> updated = DomHelper.LoadOldDataWithNavigationProperties(updatedNew, this);
+
+            /*DataStructureInfo WritableOrm OldDataLoaded Bookstore.BookInfo*/
+
+            /*DataStructureInfo WritableOrm ProcessedOldData Bookstore.BookInfo*/
+
+            {
+                DomHelper.WriteToDatabase(insertedNew, updatedNew, deletedIds, _executionContext.PersistenceStorage, checkUserPermissions, _sqlUtility,
+                    out Exception saveException, out Rhetos.RhetosException interpretedException);
+
+                if (saveException != null)
+                {
+                    /*DataStructureInfo WritableOrm OnDatabaseError Bookstore.BookInfo*/
+                    DomHelper.ThrowInterpretedException(checkUserPermissions, saveException, interpretedException, _sqlUtility, "Bookstore.BookInfo");
+                }
+            }
+
+            deleted = null;
+            updated = this.Query(updatedNew.Select(item => item.ID));
+            IEnumerable<Common.Queryable.Bookstore_BookInfo> inserted = this.Query(insertedNew.Select(item => item.ID));
+
+            bool allEffectsCompleted = false;
+            try
+            {
+                /*DataStructureInfo WritableOrm OnSaveTag1 Bookstore.BookInfo*/
+
+                /*DataStructureInfo WritableOrm OnSaveTag2 Bookstore.BookInfo*/
+
+                Rhetos.Dom.DefaultConcepts.InvalidDataMessage.ValidateOnSave(insertedNew, updatedNew, this, "Bookstore.BookInfo");
+
+                /*DataStructureInfo WritableOrm AfterSave Bookstore.BookInfo*/
+
+                allEffectsCompleted = true;
+            }
+            finally
+            {
+                if (!allEffectsCompleted)
+                    _executionContext.PersistenceTransaction.DiscardOnDispose();
+            }
+        }
+
+        public IEnumerable<Rhetos.Dom.DefaultConcepts.InvalidDataMessage> Validate(IList<Guid> ids, bool onSave)
+        {
+            /*DataStructureInfo WritableOrm OnSaveValidate Bookstore.BookInfo*/
+            yield break;
+        }
+
+        public IEnumerable<Bookstore.BookInfo> RecomputeFromComputeBookInfo(object filterLoad = null, Func<IEnumerable<Bookstore.BookInfo>, IEnumerable<Bookstore.BookInfo>> filterSave = null)
+        {
+            /*EntityComputedFromInfo OverrideDefaultFilters Bookstore.BookInfo.Bookstore.ComputeBookInfo*/
+            filterSave = filterSave ?? FilterSaveKeepSynchronizedOnChangedItems_Bookstore_ComputeBookInfo;
+            filterLoad = filterLoad ?? new FilterAll();
+            filterSave = filterSave ?? (x => x);
+
+            var sourceRepository = _executionContext.GenericRepositories.GetGenericRepository<Bookstore.ComputeBookInfo>();
+            var sourceItems = sourceRepository.Load(filterLoad);
+            var newItems = sourceItems.Select(sourceItem => new Bookstore.BookInfo {
+                ID = sourceItem.ID,
+                NumberOfComments = sourceItem.NumberOfComments,
+                /*EntityComputedFromInfo CloneProperty Bookstore.BookInfo.Bookstore.ComputeBookInfo*/ }).ToList();
+
+            var destinationRepository = _executionContext.GenericRepositories.GetGenericRepository<Bookstore.BookInfo>();
+            destinationRepository.InsertOrUpdateOrDelete(
+                newItems,
+                sameRecord: /*EntityComputedFromInfo OverrideKeyComparer Bookstore.BookInfo.Bookstore.ComputeBookInfo*/ null, // Default is comparison by ID.
+                sameValue: (x, y) =>
+                {
+                    if (x.NumberOfComments == null && y.NumberOfComments != null || x.NumberOfComments != null && !x.NumberOfComments.Equals(y.NumberOfComments)) return false;
+                    /*EntityComputedFromInfo CompareValueProperty Bookstore.BookInfo.Bookstore.ComputeBookInfo*/
+                    return true;
+                },
+                filterLoad: filterLoad,
+                assign: (destination, source) =>
+                {
+                    destination.NumberOfComments = source.NumberOfComments;
+                    /*EntityComputedFromInfo AssignProperty Bookstore.BookInfo.Bookstore.ComputeBookInfo*/
+                },
+                beforeSave: (ref IEnumerable<Bookstore.BookInfo> toInsert, ref IEnumerable<Bookstore.BookInfo> toUpdate, ref IEnumerable<Bookstore.BookInfo> toDelete) =>
+                {
+                    toInsert = filterSave(toInsert);
+                    toUpdate = filterSave(toUpdate);
+                    toDelete = filterSave(toDelete);
+                });
+            return newItems;
+        }
+        
+        public IEnumerable<Bookstore.BookInfo> FilterSaveKeepSynchronizedOnChangedItems_Bookstore_ComputeBookInfo(IEnumerable<Bookstore.BookInfo> filterSave_items)
+        {
+            return filterSave_items;
+        }
+
         /*DataStructureInfo RepositoryMembers Bookstore.BookInfo*/
     }
 
@@ -1182,6 +1316,10 @@ namespace Bookstore.Repositories
             IEnumerable<Common.Queryable.Bookstore_Comment> deleted = DomHelper.LoadOldDataWithNavigationProperties(deletedIds, this);
             IEnumerable<Common.Queryable.Bookstore_Comment> updated = DomHelper.LoadOldDataWithNavigationProperties(updatedNew, this);
 
+            Func<IEnumerable<Common.Queryable.Bookstore_Comment>, Guid[]> filterLoadKeepSynchronizedOnChangedItemsBookInfo1 =
+                changedItems => changedItems.Where(item => item.BookID != null).Select(item => item.BookID.Value).Distinct().ToArray();
+            Guid[] filterKeepSynchronizedOnChangedItemsBookInfo1Old = filterLoadKeepSynchronizedOnChangedItemsBookInfo1(updated.Concat(deleted));
+
             /*DataStructureInfo WritableOrm OldDataLoaded Bookstore.Comment*/
 
             /*DataStructureInfo WritableOrm ProcessedOldData Bookstore.Comment*/
@@ -1206,6 +1344,19 @@ namespace Bookstore.Repositories
             bool allEffectsCompleted = false;
             try
             {
+                /*OverrideRecompute KeepSynchronizedInfo Bookstore.BookInfo.Bookstore.ComputeBookInfo.1*/
+                {
+                    var filteredNew = filterLoadKeepSynchronizedOnChangedItemsBookInfo1(inserted.Concat(updated));
+                    Guid[] optimizedFilter;
+                    if (KeepSynchronizedHelper.OptimizeFiltersUnion(filteredNew, filterKeepSynchronizedOnChangedItemsBookInfo1Old, out optimizedFilter))
+                        _domRepository.Bookstore.BookInfo.RecomputeFromComputeBookInfo(optimizedFilter);
+                    else
+                    {
+                        _domRepository.Bookstore.BookInfo.RecomputeFromComputeBookInfo(filterKeepSynchronizedOnChangedItemsBookInfo1Old);
+                        _domRepository.Bookstore.BookInfo.RecomputeFromComputeBookInfo(filteredNew);
+                    }
+                }
+
                 /*DataStructureInfo WritableOrm OnSaveTag1 Bookstore.Comment*/
 
                 /*DataStructureInfo WritableOrm OnSaveTag2 Bookstore.Comment*/
@@ -1259,6 +1410,30 @@ namespace Bookstore.Repositories
         }
 
         /*DataStructureInfo RepositoryMembers Bookstore.Comment*/
+    }
+
+    /*DataStructureInfo RepositoryAttributes Bookstore.ComputeBookInfo*/
+    public partial class ComputeBookInfo_Repository : /*DataStructureInfo OverrideBaseType Bookstore.ComputeBookInfo*/ Common.OrmRepositoryBase<Common.Queryable.Bookstore_ComputeBookInfo, Bookstore.ComputeBookInfo> // Common.QueryableRepositoryBase<Common.Queryable.Bookstore_ComputeBookInfo, Bookstore.ComputeBookInfo> // Common.ReadableRepositoryBase<Bookstore.ComputeBookInfo> // global::Common.RepositoryBase
+        /*DataStructureInfo RepositoryInterface Bookstore.ComputeBookInfo*/
+    {
+        /*DataStructureInfo RepositoryPrivateMembers Bookstore.ComputeBookInfo*/
+
+        public ComputeBookInfo_Repository(Common.DomRepository domRepository, Common.ExecutionContext executionContext/*DataStructureInfo RepositoryConstructorArguments Bookstore.ComputeBookInfo*/)
+        {
+            _domRepository = domRepository;
+            _executionContext = executionContext;
+            /*DataStructureInfo RepositoryConstructorCode Bookstore.ComputeBookInfo*/
+        }
+
+        public static KeyValuePair<string, Type>[] GetReadParameterTypes()
+        {
+            return new KeyValuePair<string, Type>[]
+            {
+                /*DataStructureInfo ReadParameterTypes Bookstore.ComputeBookInfo*/
+            };
+        }
+        
+        /*DataStructureInfo RepositoryMembers Bookstore.ComputeBookInfo*/
     }
 
     /*DataStructureInfo RepositoryAttributes Bookstore.Department*/
@@ -1942,36 +2117,37 @@ namespace Bookstore.Repositories
         {
             Func<Common.DomRepository/*DataStructureInfo AdditionalParametersType Bookstore.ExpectedBookRating*/, global::Bookstore.ExpectedBookRating[]> compute_Function =
             repository =>
-        {
-            var books = repository.Bookstore.Book.Query()
-                .Select(b =>
-                    new
+          {
+                    var books = repository.Bookstore.Book.Query()
+                        .Select(b =>
+                            new
+                            {
+                                b.ID,
+                                b.Title,
+                                IsForeign = b.Extension_ForeignBook.ID != null
+                            })
+                        .ToList();
+
+                    var ratings = new List<ExpectedBookRating>();
+                    foreach (var book in books)
                     {
-                        b.ID,
-                        b.Title,
-                        IsForeign = b.Extension_ForeignBook.ID != null
-                    })
-                .ToList();
+                        decimal rating = 0;
 
-            var ratings = new List<ExpectedBookRating>();
-            foreach (var book in books)
-            {
-                decimal rating = 0;
+                        if (book.Title?.IndexOf("super", StringComparison.InvariantCultureIgnoreCase) >= 0)
+                            rating += 100;
 
-                if (book.Title?.IndexOf("super", StringComparison.InvariantCultureIgnoreCase) >= 0)
-                    rating += 100;
+                        if (book.Title?.IndexOf("great", StringComparison.InvariantCultureIgnoreCase) >= 0)
+                            rating += 50;
 
-                if (book.Title?.IndexOf("great", StringComparison.InvariantCultureIgnoreCase) >= 0)
-                    rating += 50;
+                        if (book.IsForeign)
+                            rating *= 1.2m;
 
-                if (book.IsForeign)
-                    rating *= 1.2m;
+                        ratings.Add(new ExpectedBookRating { ID = book.ID, Rating = rating });
+                    }
 
-                ratings.Add(new ExpectedBookRating { ID = book.ID, Rating = rating });
-            }
-
-            return ratings.ToArray();
-        };
+                    return ratings.ToArray();
+          }
+      ;
 
             return compute_Function(_domRepository/*DataStructureInfo AdditionalParametersArgument Bookstore.ExpectedBookRating*/);
         }
@@ -2175,6 +2351,46 @@ namespace Bookstore.Repositories
         }
 
         /*DataStructureInfo RepositoryMembers Bookstore.Genre*/
+    }
+
+    /*DataStructureInfo RepositoryAttributes Bookstore.InsertRandomBook*/
+    public partial class InsertRandomBook_Repository : /*DataStructureInfo OverrideBaseType Bookstore.InsertRandomBook*/ global::Common.RepositoryBase
+        , IActionRepository/*DataStructureInfo RepositoryInterface Bookstore.InsertRandomBook*/
+    {
+        /*DataStructureInfo RepositoryPrivateMembers Bookstore.InsertRandomBook*/
+
+        public InsertRandomBook_Repository(Common.DomRepository domRepository, Common.ExecutionContext executionContext/*DataStructureInfo RepositoryConstructorArguments Bookstore.InsertRandomBook*/)
+        {
+            _domRepository = domRepository;
+            _executionContext = executionContext;
+            /*DataStructureInfo RepositoryConstructorCode Bookstore.InsertRandomBook*/
+        }
+
+        public void Execute(Bookstore.InsertRandomBook actionParameter)
+        {
+            Action<Bookstore.InsertRandomBook, Common.DomRepository, IUserInfo/*DataStructureInfo AdditionalParametersType Bookstore.InsertRandomBook*/> action_Object = (parameter, repository, userInfo) => Bookstore.Service.RandomBookGenerator.InsertBooks(repository, parameter.NumberOfBooks);
+
+            bool allEffectsCompleted = false;
+            try
+            {
+                /*ActionInfo BeforeAction Bookstore.InsertRandomBook*/
+                action_Object(actionParameter, _domRepository, _executionContext.UserInfo/*DataStructureInfo AdditionalParametersArgument Bookstore.InsertRandomBook*/);
+                /*ActionInfo AfterAction Bookstore.InsertRandomBook*/
+                allEffectsCompleted = true;
+            }
+            finally
+            {
+                if (!allEffectsCompleted)
+                    _executionContext.PersistenceTransaction.DiscardOnDispose();
+            }
+        }
+
+        void IActionRepository.Execute(object actionParameter)
+        {
+            Execute((Bookstore.InsertRandomBook) actionParameter);
+        }
+
+        /*DataStructureInfo RepositoryMembers Bookstore.InsertRandomBook*/
     }
 
     /*DataStructureInfo RepositoryAttributes Bookstore.Managers*/
@@ -2392,15 +2608,15 @@ namespace Bookstore.Repositories
         {
             Func<Common.DomRepository, PersonFilter/*FilterByInfo AdditionalParametersType Bookstore.PersonInfo.PersonFilter*/, Bookstore.PersonInfo[]> filter_Function =
                 (repository, parameter) =>
-        {
-             // Always separate parameters to prevent SQL injection.
-             string sql = "EXEC Bookstore.ComputePersonInfo @p0, @p1";
-             var sqlParams = new object[] { parameter.NamePattern, parameter.LimitResultCount };
-             var result = _executionContext.EntityFrameworkContext.Database
-                 .SqlQuery<Bookstore.PersonInfo>(sql, sqlParams)
-                 .ToArray();
-             return result;
-        };
+            {
+                 // Always separate parameters to prevent SQL injection.
+                 string sql = "EXEC Bookstore.ComputePersonInfo @p0, @p1";
+                 var sqlParams = new object[] { parameter.NamePattern, parameter.LimitResultCount };
+                 var result = _executionContext.EntityFrameworkContext.Database
+                     .SqlQuery<Bookstore.PersonInfo>(sql, sqlParams)
+                     .ToArray();
+                 return result;
+            };
 
             return filter_Function(_domRepository, filter_Parameter/*FilterByInfo AdditionalParametersArgument Bookstore.PersonInfo.PersonFilter*/);
         }
@@ -2948,6 +3164,61 @@ namespace Bookstore.Repositories
         /*DataStructureInfo RepositoryMembers Bookstore.ShipmentStatus*/
     }
 
+    /*DataStructureInfo RepositoryAttributes Bookstore.TitleCheck*/
+    public partial class TitleCheck_Repository : /*DataStructureInfo OverrideBaseType Bookstore.TitleCheck*/ Common.ReadableRepositoryBase<Bookstore.TitleCheck> // global::Common.RepositoryBase
+        /*DataStructureInfo RepositoryInterface Bookstore.TitleCheck*/
+    {
+        /*DataStructureInfo RepositoryPrivateMembers Bookstore.TitleCheck*/
+
+        public TitleCheck_Repository(Common.DomRepository domRepository, Common.ExecutionContext executionContext/*DataStructureInfo RepositoryConstructorArguments Bookstore.TitleCheck*/)
+        {
+            _domRepository = domRepository;
+            _executionContext = executionContext;
+            /*DataStructureInfo RepositoryConstructorCode Bookstore.TitleCheck*/
+        }
+
+        public override global::Bookstore.TitleCheck[] Load()
+        {
+            Func<Common.DomRepository/*DataStructureInfo AdditionalParametersType Bookstore.TitleCheck*/, global::Bookstore.TitleCheck[]> compute_Function =
+            repository =>
+          {
+                    var books = repository.Bookstore.Book.Query()
+                        .Select(b =>
+                            new
+                            {
+                                b.ID,
+                                b.Title
+                            })
+                        .ToList();
+
+                    var ratings = new List<TitleCheck>();
+                    foreach (var book in books)
+                    {
+                        decimal rating = 0;
+
+                        if (book.Title == "NewBook")
+
+                        ratings.Add(new TitleCheck { ID = book.ID, TitleCorrect = "Is 'book.Title' correct title of this book?"});
+                    }
+
+                    return ratings.ToArray();
+          }
+      ;
+
+            return compute_Function(_domRepository/*DataStructureInfo AdditionalParametersArgument Bookstore.TitleCheck*/);
+        }
+
+        public static KeyValuePair<string, Type>[] GetReadParameterTypes()
+        {
+            return new KeyValuePair<string, Type>[]
+            {
+                /*DataStructureInfo ReadParameterTypes Bookstore.TitleCheck*/
+            };
+        }
+        
+        /*DataStructureInfo RepositoryMembers Bookstore.TitleCheck*/
+    }
+
     /*DataStructureInfo RepositoryAttributes Bookstore.Topic*/
     public partial class Topic_Repository : /*DataStructureInfo OverrideBaseType Bookstore.Topic*/ Common.OrmRepositoryBase<Common.Queryable.Bookstore_Topic, Bookstore.Topic> // Common.QueryableRepositoryBase<Common.Queryable.Bookstore_Topic, Bookstore.Topic> // Common.ReadableRepositoryBase<Bookstore.Topic> // global::Common.RepositoryBase
         , IWritableRepository<Bookstore.Topic>, IValidateRepository/*DataStructureInfo RepositoryInterface Bookstore.Topic*/
@@ -3282,24 +3553,24 @@ namespace Bookstore.Repositories
         {
             /*QueryExpressionInfo BeforeQuery Bookstore.BookGrid.'Bookstore.WantedBooks'*/
             Func<Bookstore.WantedBooks, IQueryable<Common.Queryable.Bookstore_BookGrid>> queryFunction = parameter =>
-            {
-                var wishList = _domRepository.Bookstore.WishList.Query();
-                if (parameter != null && parameter.HighPriorityOnly == true)
-                    wishList = wishList.Where(item => item.HighPriority == true);
-
-                var wantedBooks = wishList.Select(wish => new Common.Queryable.Bookstore_BookGrid
                 {
-                    // All properies must be declared here, otherwise EF will throw a NotSupportedException.
-                    ID = wish.ID,
-                    Code = null,
-                    Title = wish.BookTitle,
-                    AuthorName = "unknown",
-                    TranslatorName = null,
-                    //Description = null,
-                    NumberOfComments = null
-                });
-                return wantedBooks;
-            };
+                    var wishList = _domRepository.Bookstore.WishList.Query();
+                    if (parameter != null && parameter.HighPriorityOnly == true)
+                        wishList = wishList.Where(item => item.HighPriority == true);
+
+                    var wantedBooks = wishList.Select(wish => new Common.Queryable.Bookstore_BookGrid
+                    {
+                        // All properies must be declared here, otherwise EF will throw a NotSupportedException.
+                        ID = wish.ID,
+                        Code = null,
+                        Title = wish.BookTitle,
+                        AuthorName = "unknown",
+                        TranslatorName = null,
+                        //Description = null,
+                        NumberOfComments = null
+                    });
+                    return wantedBooks;
+                };
             var queryResult = queryFunction(queryParameter);
             /*QueryExpressionInfo AfterQuery Bookstore.BookGrid.'Bookstore.WantedBooks'*/
             return queryResult;

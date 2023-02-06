@@ -1,371 +1,434 @@
 Module Bookstore  //https://github.com/Rhetos/Rhetos/wiki/Data-model-and-relationships#entities-and-properties
 {
-    AutodetectSqlDependencies;
-
-   Entity Book   //One-to-many relationship (master-detail). "1 : N" relationship is declared by the Reference from the dependent entity to the other one.
-   {             //https://localhost:7194/rest/Bookstore/Book/?filters=[{%22Property%22:%22Code%22,%22Operation%22:%22equal%22,%22Value%22:%224%22}]
-
-      ShortString Code { AutoCode; DefaultValue 'item => "B+++"'; DenyUserEdit;}
-      Money Price; // Not required. Some books are not on sale.
-      ShortString Title { Required; }
-      Integer NumberOfPages;
-      Is Bookstore.SalesItem
+      Action InsertRandomBook
+        '(parameter, repository, userInfo) => Bookstore.Service.RandomBookGenerator.InsertBooks(repository, parameter.NumberOfBooks)'
       {
-            Implements Bookstore.SalesItem.Description "Title
-                + ISNULL(', ' + CAST(NumberOfPages AS NVARCHAR(10)) + ' pages', '')";
+         Integer NumberOfBooks;
+      }
+
+      AutodetectSqlDependencies;
+
+      Entity Book   //One-to-many relationship (master-detail). "1 : N" relationship is declared by the Reference from the dependent entity to the other one.
+      {             //https://localhost:7194/rest/Bookstore/Book/?filters=[{%22Property%22:%22Code%22,%22Operation%22:%22equal%22,%22Value%22:%224%22}]
+
+          ShortString Code { AutoCode; DefaultValue 'item => "B+++"'; DenyUserEdit;}
+          Money Price; // Not required. Some books are not on sale.
+          ShortString Title { Required; }
+          Integer NumberOfPages;
+          Is Bookstore.SalesItem
+          {
+                Implements Bookstore.SalesItem.Description "Title
+                    + ISNULL(', ' + CAST(NumberOfPages AS NVARCHAR(10)) + ' pages', '')";
                 
-            Where 'Price IS NOT NULL';
-      }
+                Where 'Price IS NOT NULL';
+          }
 
 
-      //ShortString Code { RegExMatch "\d{7,10}" "Code must have 7 to 10 digits."; }
-      ShortString Title { Required; }
+          //ShortString Code { RegExMatch "\d{7,10}" "Code must have 7 to 10 digits."; }
+          ShortString Title { Required; }
    
-	  Integer NumberOfPages {MaxValue 999;}
-      ItemFilter CommonMisspelling 'book => book.Title.Contains("curiousity")';
-      InvalidData CommonMisspelling 'It is not allowed to enter misspelled word "curiousity".';
+	      Integer NumberOfPages {MaxValue 999;}
+          ItemFilter CommonMisspelling 'book => book.Title.Contains("curiousity")';
+          InvalidData CommonMisspelling 'It is not allowed to enter misspelled word "curiousity".';
       
-      Reference Author Bookstore.Person;
+          Reference Author Bookstore.Person;
 
-	  ItemFilter NameTooLong 'item => item.Title.Length > 100';
-      //Lock NameTooLong 'item => item.Title.Length > 100';
-      InvalidData NameTooLong '[Test] Longer than 100.'; // { AllowSave; }
+	      ItemFilter NameTooLong 'item => item.Title.Length > 100';
+          //Lock NameTooLong 'item => item.Title.Length > 100';
+          InvalidData NameTooLong '[Test] Longer than 100.'; // { AllowSave; }
 
-      ItemFilter LongBooks 'item => item.NumberOfPages >= 500';
+          ItemFilter LongBooks 'item => item.NumberOfPages >= 500';
       
-      ItemFilter ForeignAuthorXWithComments 'item => item.Author.Name.StartsWith("X") && item.Extension_ForeignBook.ID != null && _domRepository.Bookstore.Comment.Subquery.Where(c => c.BookID == item.ID).Count() >= 3';     //Write a filter that will return books that are foreign (if a record exists in the extension entity ForeignBook), but only if the author's name starts with X (see the referenced entity Person) and only if the book has at least 3 comments entered (in the detail entity Comment).
+          ItemFilter ForeignAuthorXWithComments 'item => item.Author.Name.StartsWith("X") && item.Extension_ForeignBook.ID != null && _domRepository.Bookstore.Comment.Subquery.Where(c => c.BookID == item.ID).Count() >= 3';     //Write a filter that will return books that are foreign (if a record exists in the extension entity ForeignBook), but only if the author's name starts with X (see the referenced entity Person) and only if the book has at least 3 comments entered (in the detail entity Comment).
     
-      ComposableFilterBy LongBooks2 '(query, repository, parameter) =>
-      {
-        return query.Where(item => item.NumberOfPages >= 300);
-      }';
+          ComposableFilterBy LongBooks2 '(query, repository, parameter) =>
+          {
+            return query.Where(item => item.NumberOfPages >= 300);
+          }';
   
-      Logging
-      {
-            Log Bookstore.Book.Title;
-            Log Bookstore.Book.Code;
-            // 'Description' property is long and not interesting, so we don't want to log its values.
-      }
+          Logging
+          {
+                Log Bookstore.Book.Title;
+                Log Bookstore.Book.Code;
+                // 'Description' property is long and not interesting, so we don't want to log its values.
+          }
       
-      //FilterBy concept    https://github.com/Rhetos/Rhetos/wiki/Filters-and-other-read-methods
-      FilterBy ComplexSearch '(repository, parameter) =>
-      {
-          var query = repository.Bookstore.Book.Query(item => item.NumberOfPages >= parameter.MinimumPages);
-          if (parameter.ForeignBooksOnly == true)
-               query = query.Where(item => item.Extension_ForeignBook.ID != null);
-          Book[] books = query.ToSimple().ToArray();
+          //FilterBy concept    https://github.com/Rhetos/Rhetos/wiki/Filters-and-other-read-methods
+          FilterBy ComplexSearch '(repository, parameter) =>
+          {
+              var query = repository.Bookstore.Book.Query(item => item.NumberOfPages >= parameter.MinimumPages);
+              if (parameter.ForeignBooksOnly == true)
+                   query = query.Where(item => item.Extension_ForeignBook.ID != null);
+              Book[] books = query.ToSimple().ToArray();
           
-          if (parameter.MaskTitles == true)
-              foreach (var book in books.Where(b => !string.IsNullOrEmpty(b.Title))) book.Title = book.Title.First() + "***" + book.Title.Last();
-          return books;
-      }';
-   }
-   // Polymorphic can be used as any other queryable data structure:
-       
-   Polymorphic SalesItem
-   {
-        ShortString Code;
-        Money Price;
-        ShortString Description;
-   }
-   
-   Browse SalesItemGrid Bookstore.SalesItem
-   {
-        Take Code;
-        Take Price;
-        Take 'Book.NumberOfPages';
-   }
-
-    // Polymorphic can even have a detail entity:
-
-   Entity SalesItemComment
-   {
-        Reference SalesItem { Detail; }
-        LongString Comment;
-   }
-
-   Parameter PersonFilter
-      {
-        ShortString NamePattern;
-        Integer LimitResultCount;
+              if (parameter.MaskTitles == true)
+                  foreach (var book in books.Where(b => !string.IsNullOrEmpty(b.Title))) book.Title = book.Title.First() + "***" + book.Title.Last();
+              return books;
+          }';
       }
-   Computed PersonInfo 'repository => { throw new Rhetos.UserException("Use filter \"Demo.PersonFilter\" to read the data."); }'
-   {
-        ShortString Name;
-        Integer NameLength;
-        Guid PersonID;
+       // Polymorphic can be used as any other queryable data structure:
+       
+      Polymorphic SalesItem
+      {
+            ShortString Code;
+            Money Price;
+            ShortString Description;
+      }
+   
+      Browse SalesItemGrid Bookstore.SalesItem
+      {
+            Take Code;
+            Take Price;
+            Take 'Book.NumberOfPages';
+      }
 
-        FilterBy PersonFilter '(repository, parameter) =>
-        {
-             // Always separate parameters to prevent SQL injection.
-             string sql = "EXEC Bookstore.ComputePersonInfo @p0, @p1";
-             var sqlParams = new object[] { parameter.NamePattern, parameter.LimitResultCount };
-             var result = _executionContext.EntityFrameworkContext.Database
-                 .SqlQuery<Bookstore.PersonInfo>(sql, sqlParams)
-                 .ToArray();
-             return result;
-        }';
-   }
+        // Polymorphic can even have a detail entity:
 
-   Entity Disposal
-   {
-        Reference Book { Required; }
-        LongString Explanation { Required; }
-        DateTime EffectiveSince { CreationTime; }
+      Entity SalesItemComment
+      {
+            Reference SalesItem { Detail; }
+            LongString Comment;
+      }
 
-        ItemFilter ImportantBookExplanation 'item => item.Book.Title.Contains("important") && item.Explanation.Length < 50';        
-        ItemFilter HighRating 'item => item.Book.Extension_BookRating.Rating > 100';
+       Parameter PersonFilter
+      {
+            ShortString NamePattern;
+            Integer LimitResultCount;
+      }
 
-        InvalidData HighRating 'You are not allowed to dispose a book with rating above 100.';
-        InvalidData ImportantBookExplanation 'When disposing an important book, the explanation should be at least 50 characters long.';
-   }
+      Computed PersonInfo 'repository => { throw new Rhetos.UserException("Use filter \"Demo.PersonFilter\" to read the data."); }'
+      {
+            ShortString Name;
+            Integer NameLength;
+            Guid PersonID;
 
-   Entity BookRating
-   {
-        Extends Bookstore.Book;
-        Decimal Rating; // ComputedFrom Bookstore.ComputeBookRating
-   }
-
-   Parameter ComplexSearch
-   {
-        Integer MinimumPages;
-        Bool ForeignBooksOnly;
-        Bool MaskTitles;
-   }  
-
-   Parameter LongBooks2
-   {
-       Integer MinimumPages;
-       Bool ForeignBooksOnly;
-   }
-
-   Entity Person
-   {
-      ShortString Name;
-   }
-
-   Entity Translator
-   {
-      ShortString Name;
-   }
-
-   Entity BookTranslator
-   {
-      Reference Book { Detail; }
-      Reference Translator { Required; }
-
-      UniqueMultiple 'Book Translator';
-   }
-
-   Entity Comment
-   {
-      Reference Book { Detail; }
-      LongString Text;
-
-      Logging { AllProperties; }
-   }
-
-   Entity ChildrensBook  //One-to-one relationship (extensions). One-to-one relationship is declared by the Extends concept.
-   {
-      Extends Bookstore.Book;
-
-      Integer AgeFrom;
-      Integer AgeTo;
-      IntegerRange AgeFrom AgeTo; // A simple validation.
-   }
-
-   Entity ForeignBook
-   {
-      Extends Bookstore.Book;
-
-      ShortString OriginalLanguage;
-      Reference Translator Bookstore.Translator;
-      Reference Author Bookstore.Person;
-   }
-
-   Entity Topic  //Many-to-many relationship (join table). "N : N" relationship is usually implemented as an associative table. 
-   {
-      ShortString Name { Unique; Required; }
-   }
-
-   Entity BookTopic
-   {
-      Reference Book { Detail; }
-      Reference Topic { Required; }
-
-      UniqueMultiple 'Book Topic';
-   }
-
-   Entity WishList
-   {
-        ShortString BookTitle;
-        Bool HighPriority;
-   }
-
-   Browse BookGrid Bookstore.Book
-   {
-        Take Code;
-        Take Title;
-        Take 'Author.Name';
-        Take TranslatorName 'Extension_ForeignBook.Translator.Name';
-        //Take Description 'Extension_BookDescription.Description';
-        Take NumberOfComments 'Extension_BookInfo.NumberOfComments';
-
-        // This query is an alternative data source for BookGrid.
-        // Instead of reading data from the `Bookstore.Book`, it provides the new data from WantedBooks.
-        Query 'Bookstore.WantedBooks' 'parameter =>
+            FilterBy PersonFilter '(repository, parameter) =>
             {
-                var wishList = _domRepository.Bookstore.WishList.Query();
-                if (parameter != null && parameter.HighPriorityOnly == true)
-                    wishList = wishList.Where(item => item.HighPriority == true);
-
-                var wantedBooks = wishList.Select(wish => new Common.Queryable.Bookstore_BookGrid
-                {
-                    // All properies must be declared here, otherwise EF will throw a NotSupportedException.
-                    ID = wish.ID,
-                    Code = null,
-                    Title = wish.BookTitle,
-                    AuthorName = "unknown",
-                    TranslatorName = null,
-                    //Description = null,
-                    NumberOfComments = null
-                });
-                return wantedBooks;
+                 // Always separate parameters to prevent SQL injection.
+                 string sql = "EXEC Bookstore.ComputePersonInfo @p0, @p1";
+                 var sqlParams = new object[] { parameter.NamePattern, parameter.LimitResultCount };
+                 var result = _executionContext.EntityFrameworkContext.Database
+                     .SqlQuery<Bookstore.PersonInfo>(sql, sqlParams)
+                     .ToArray();
+                 return result;
             }';
-   }
+      }
 
-   Parameter WantedBooks
-   {
-        Bool HighPriorityOnly;
-   }
+      Entity Disposal
+      {
+            Reference Book { Required; }
+            LongString Explanation { Required; }
+            DateTime EffectiveSince { CreationTime; }
 
-   //SqlQueryable BookInfo
-   //"
-   //    SELECT
-   //        b.ID,
-   //        NumberOfComments = COUNT(c.ID)
-   //    FROM    //        Bookstore.Book b
-   //        LEFT JOIN Bookstore.Comment c ON c.BookID = b.ID
-   //    GROUP BY
-   //        b.ID
-   //"
-   //{
-   //    Extends Bookstore.Book;
-   //    Integer NumberOfComments;
-   //
-   //    AutodetectSqlDependencies;
-   //}
+            ItemFilter ImportantBookExplanation 'item => item.Book.Title.Contains("important") && item.Explanation.Length < 50';        
+            ItemFilter HighRating 'item => item.Book.Extension_BookRating.Rating > 100';
 
-   SqlQueryable BookInfo <SQL\BookInfo.sql>
-   {
+            InvalidData HighRating 'You are not allowed to dispose a book with rating above 100.';
+            InvalidData ImportantBookExplanation 'When disposing an important book, the explanation should be at least 50 characters long.';
+      }
+
+      Entity BookRating
+      {
+            Extends Bookstore.Book;
+            Decimal Rating; // ComputedFrom Bookstore.ComputeBookRating
+      }
+
+      Parameter ComplexSearch
+      {
+            Integer MinimumPages;
+            Bool ForeignBooksOnly;
+            Bool MaskTitles;
+      }  
+
+      Parameter LongBooks2
+      {
+           Integer MinimumPages;
+           Bool ForeignBooksOnly;
+      }
+
+      Entity Person
+      {
+          ShortString Name;
+      }
+
+      Entity Translator
+      {
+          ShortString Name;
+      }
+
+      Entity BookTranslator
+      {
+          Reference Book { Detail; }
+          Reference Translator { Required; }
+
+          UniqueMultiple 'Book Translator';
+      }
+
+      Entity Comment
+      {
+          Reference Book { Detail; }
+          LongString Text;
+
+          Logging { AllProperties; }
+      }
+
+      Entity ChildrensBook  //One-to-one relationship (extensions). One-to-one relationship is declared by the Extends concept.
+      {
+          Extends Bookstore.Book;
+
+          Integer AgeFrom;
+          Integer AgeTo;
+          IntegerRange AgeFrom AgeTo; // A simple validation.
+      }
+
+      Entity ForeignBook
+      {
+          Extends Bookstore.Book;
+
+          ShortString OriginalLanguage;
+          Reference Translator Bookstore.Translator;
+          Reference Author Bookstore.Person;
+      }
+
+      Entity Topic  //Many-to-many relationship (join table). "N : N" relationship is usually implemented as an associative table. 
+      {
+          ShortString Name { Unique; Required; }
+      }
+
+      Entity BookTopic
+      {
+          Reference Book { Detail; }
+          Reference Topic { Required; }
+
+          UniqueMultiple 'Book Topic';
+      }
+
+      Entity WishList
+      {
+            ShortString BookTitle;
+            Bool HighPriority;
+      }
+
+      Browse BookGrid Bookstore.Book
+      {
+            Take Code;
+            Take Title;
+            Take 'Author.Name';
+            Take TranslatorName 'Extension_ForeignBook.Translator.Name';
+            //Take Description 'Extension_BookDescription.Description';
+            Take NumberOfComments 'Extension_BookInfo.NumberOfComments';
+
+            // This query is an alternative data source for BookGrid.
+            // Instead of reading data from the `Bookstore.Book`, it provides the new data from WantedBooks.
+            Query 'Bookstore.WantedBooks' 'parameter =>
+                {
+                    var wishList = _domRepository.Bookstore.WishList.Query();
+                    if (parameter != null && parameter.HighPriorityOnly == true)
+                        wishList = wishList.Where(item => item.HighPriority == true);
+
+                    var wantedBooks = wishList.Select(wish => new Common.Queryable.Bookstore_BookGrid
+                    {
+                        // All properies must be declared here, otherwise EF will throw a NotSupportedException.
+                        ID = wish.ID,
+                        Code = null,
+                        Title = wish.BookTitle,
+                        AuthorName = "unknown",
+                        TranslatorName = null,
+                        //Description = null,
+                        NumberOfComments = null
+                    });
+                    return wantedBooks;
+                }';
+      }
+
+      Parameter WantedBooks
+      {
+            Bool HighPriorityOnly;
+      }
+
+      //SqlQueryable BookInfo
+      //"
+      //    SELECT
+      //        b.ID,
+      //        NumberOfComments = COUNT(c.ID)
+      //    FROM    //        Bookstore.Book b
+      //        LEFT JOIN Bookstore.Comment c ON c.BookID = b.ID
+      //    GROUP BY
+      //        b.ID
+      //"
+      //{
+      //    Extends Bookstore.Book;
+      //    Integer NumberOfComments;
+      //
+      //    AutodetectSqlDependencies;
+      //}
+
+      SqlQueryable ComputeBookInfo
+        "
+            SELECT
+                b.ID,
+                NumberOfComments = COUNT(bc.ID)
+            FROM
+                Bookstore.Book b
+                LEFT JOIN Bookstore.Comment bc ON bc.BookID = b.ID
+            GROUP BY
+                b.ID
+        "
+      {
         Extends Bookstore.Book;
         Integer NumberOfComments;
 
-        AutodetectSqlDependencies;
-   }
+        ChangesOnLinkedItems Bookstore.Comment.Book;
+      }
 
-   Computed ExpectedBookRating 'repository =>
+      Entity BookInfo
+      {
+        ComputedFrom Bookstore.ComputeBookInfo
         {
-            var books = repository.Bookstore.Book.Query()
-                .Select(b =>
-                    new
+            AllProperties;
+            KeepSynchronized;
+        }
+      }
+
+      Computed ExpectedBookRating 
+      'repository =>
+          {
+                    var books = repository.Bookstore.Book.Query()
+                        .Select(b =>
+                            new
+                            {
+                                b.ID,
+                                b.Title,
+                                IsForeign = b.Extension_ForeignBook.ID != null
+                            })
+                        .ToList();
+
+                    var ratings = new List<ExpectedBookRating>();
+                    foreach (var book in books)
                     {
-                        b.ID,
-                        b.Title,
-                        IsForeign = b.Extension_ForeignBook.ID != null
-                    })
-                .ToList();
+                        decimal rating = 0;
 
-            var ratings = new List<ExpectedBookRating>();
-            foreach (var book in books)
-            {
-                decimal rating = 0;
+                        if (book.Title?.IndexOf("super", StringComparison.InvariantCultureIgnoreCase) >= 0)
+                            rating += 100;
 
-                if (book.Title?.IndexOf("super", StringComparison.InvariantCultureIgnoreCase) >= 0)
-                    rating += 100;
+                        if (book.Title?.IndexOf("great", StringComparison.InvariantCultureIgnoreCase) >= 0)
+                            rating += 50;
 
-                if (book.Title?.IndexOf("great", StringComparison.InvariantCultureIgnoreCase) >= 0)
-                    rating += 50;
+                        if (book.IsForeign)
+                            rating *= 1.2m;
 
-                if (book.IsForeign)
-                    rating *= 1.2m;
+                        ratings.Add(new ExpectedBookRating { ID = book.ID, Rating = rating });
+                    }
 
-                ratings.Add(new ExpectedBookRating { ID = book.ID, Rating = rating });
-            }
+                    return ratings.ToArray();
+          }
+      '
+    
+      {
+          Extends Bookstore.Book;
+                          Decimal Rating;
+      }
 
-            return ratings.ToArray();
-        }'
-    {
-        Extends Bookstore.Book;
-        Decimal Rating;
-    }
+      Hardcoded Genre
+      {
+                        ShortString Label; // Short text displayed to user.
+                        LongString Description;
+                        Bool IsFiction;
 
-    Hardcoded Genre
-    {
-        ShortString Label; // Short text displayed to user.
-        LongString Description;
-        Bool IsFiction;
+                        Entry ScienceFiction
+                        {
+                            Value Label 'Science fiction';
+                            Value Description 'A speculative fiction with imagined elements that are inspired by natural sciences or social sciences.';
+                            Value IsFiction 1;
+                        }
 
-        Entry ScienceFiction
-        {
-            Value Label 'Science fiction';
-            Value Description 'A speculative fiction with imagined elements that are inspired by natural sciences or social sciences.';
-            Value IsFiction 1;
-        }
+                        Entry Biography
+                        {
+                            Value Label 'Biography';
+                            Value Description 'A written narrative of a person''s life.';
+                            Value IsFiction 0;
+                        }
+      }
 
-        Entry Biography
-        {
-            Value Label 'Biography';
-            Value Description 'A written narrative of a person''s life.';
-            Value IsFiction 0;
-        }
-    }
-
-    Entity Shipment
-    {
+      Entity Shipment
+      {
        
-    }
+      }
 
-    Hardcoded ShipmentStatus
-    {
-        Entry Preparing;
-        Entry Approved;
-        Entry Delivered;
-    }
+      Hardcoded ShipmentStatus
+      {
+                        Entry Preparing;
+                        Entry Approved;
+                        Entry Delivered;
+      }
 
-    Polymorphic ShipmentEvent
-    {
-        DateTime EffectiveSince;
-        Reference Shipment;
-        Reference NewStatus Bookstore.ShipmentStatus;
-    }
+      Polymorphic ShipmentEvent
+      {
+                        DateTime EffectiveSince;
+                        Reference Shipment;
+                        Reference NewStatus Bookstore.ShipmentStatus;
+      }
 
-    Entity ApproveShipment
-    {
-        DateTime EffectiveSince { CreationTime; }
-        Reference Shipment;
+      Entity ApproveShipment
+      {
+                        DateTime EffectiveSince { CreationTime; }
+                        Reference Shipment;
 
-        Is Bookstore.ShipmentEvent
-        {
-            Implements Bookstore.ShipmentEvent.NewStatus Bookstore.ShipmentStatus.Approved;
+                        Is Bookstore.ShipmentEvent
+                        {
+                            Implements Bookstore.ShipmentEvent.NewStatus Bookstore.ShipmentStatus.Approved;
 
-            // Slower alternative: Calling the database function:
-            //Implements Bookstore.ShipmentEvent.NewStatus "Bookstore.ShipmentStatus_Approved()";
-        }
-    }
+                            // Slower alternative: Calling the database function:
+                            //Implements Bookstore.ShipmentEvent.NewStatus "Bookstore.ShipmentStatus_Approved()";
+                        }
+      }
+
+
+
+      Computed TitleCheck   //Computed je isto sto i SQLQueryable. samo što je k0d u C# a ne u SQL-u
+      'repository =>
+          {
+                    var books = repository.Bookstore.Book.Query()
+                        .Select(b =>
+                            new
+                            {
+                                b.ID,
+                                b.Title
+                            })
+                        .ToList();
+
+                    var ratings = new List<TitleCheck>();
+                    foreach (var book in books)
+                    {
+                        decimal rating = 0;
+
+                        if (book.Title == "NewBook")
+
+                        ratings.Add(new TitleCheck { ID = book.ID, TitleCorrect = "Is ''book.Title'' correct title of this book?"});
+                    }
+
+                    return ratings.ToArray();
+          }
+      '
+    
+      {
+          Extends Bookstore.Book;
+          ShortString TitleCorrect;
+      }
+
+
 }
 
-    // Relationships summary
-    // The following DSL keywords are available for relationships between entities (and other data structures).
-    //  ------------------------------------------------------------------
-    //  |            Simple relationship	|    "Part-of" relationship  |
-    //  ==================================================================
-    //  |  1 : N	         Reference	    |      Reference { Detail; } |
-    //  ------------------------------------------------------------------
-    //  |  0..1 : 1     UniqueReference     |     	Extension            |
-    //  ------------------------------------------------------------------
-        
-
+               // Relationships summary
+        // The following DSL keywords are available for relationships between entities (and other data structures).
+        //  ------------------------------------------------------------------
+        //  |            Simple relationship	|    "Part-of" relationship  |
+        //  ==================================================================
+        //  |  1 : N	         Reference	    |      Reference { Detail; } |
+        //  ------------------------------------------------------------------
+        //  |  0..1 : 1     UniqueReference     |     	Extension            |
+        //  ------------------------------------------------------------------
+   
 
 Module DemoRowPermissions1
 {
@@ -389,19 +452,21 @@ Module DemoRowPermissions1
             RowPermissions
             {
                 Allow WithinDivision 'context =>
-                    {
+                {
                         Guid myDivisionId = context.Repository.DemoRowPermissions1.Employee.Query()
                             .Where(e => e.UserName == context.UserInfo.UserName)
                             .Select(e => e.Division.ID)
                             .SingleOrDefault();
                         return item => item.Division.ID == myDivisionId;
-                    }';
+                }';
             }
         }
 }
 
-    //=========================================================
-    // Combining multiple rules:
+
+
+      //=========================================================
+      // Combining multiple rules:
 
 Module DemoRowPermissions2
 {
@@ -525,7 +590,6 @@ Module DemoRowPermissions2
         }
 }
 
-
 Module Demo
 {
     Polymorphic MoneyTransaction
@@ -562,23 +626,23 @@ Module Demo
 
     Entity TransferMoney
     {
-    DateTime EventDate;
-    ShortString TransferFrom;
-    ShortString TransferTo;
-    Money Amount;
+        DateTime EventDate;
+        ShortString TransferFrom;
+        ShortString TransferTo;
+        Money Amount;
 
-    Is Demo.MoneyTransaction; // Implicitly using the 'Amount' value.
+        Is Demo.MoneyTransaction; // Implicitly using the 'Amount' value.
 
-        Is Demo.MoneyTransaction 'Subtract'
-        {
-            Implements Demo.MoneyTransaction.Amount '-Amount';
-        }
+            Is Demo.MoneyTransaction 'Subtract'
+            {
+                Implements Demo.MoneyTransaction.Amount '-Amount';
+            }
     }
 
     Entity LendMoneyAddendum
     {
-    Reference LendMoney;
-    Money AdditionalAmount;
+        Reference LendMoney;
+        Money AdditionalAmount;
     }
 
     Entity LendMoney // Adding new features to the existing entity.
@@ -592,36 +656,36 @@ Module Demo
 
     Entity BorrowMoney2
     {
-    DateTime EventDate;
-    ShortString FromWhom;
-    Money Amount;
-    Bool Forgotten;
+        DateTime EventDate;
+        ShortString FromWhom;
+        Money Amount;
+        Bool Forgotten;
 
-        Is Demo.MoneyTransaction
-        {
-            Where 'Forgotten = 0'; // SQL snippet, the "Forgotten" column is a "bit".
-        }
+            Is Demo.MoneyTransaction
+            {
+                Where 'Forgotten = 0'; // SQL snippet, the "Forgotten" column is a "bit".
+            }
     }
 
     Entity TransactionComment
     {
-    Reference MoneyTransaction;
-    LongString Comment;
+        Reference MoneyTransaction;
+        LongString Comment;
     }
 
     Entity LendMoney2
     {
-    ShortString ToWhom;
-    // When using SqlImplementation, the properties are not automatically inherited from the polymorphic.
-    DateTime EventDate;
-    Money Amount;
+        ShortString ToWhom;
+        // When using SqlImplementation, the properties are not automatically inherited from the polymorphic.
+        DateTime EventDate;
+        Money Amount;
 
-        Is Demo.MoneyTransaction
-        {
-            SqlImplementation "SELECT lm.ID, lm.EventDate, Amount = -lm.Amount FROM Demo.LendMoney2 lm"
+            Is Demo.MoneyTransaction
             {
-                AutoDetectSqlDependencies;
+                SqlImplementation "SELECT lm.ID, lm.EventDate, Amount = -lm.Amount FROM Demo.LendMoney2 lm"
+                {
+                    AutoDetectSqlDependencies;
+                }
             }
-        }
     }
 }

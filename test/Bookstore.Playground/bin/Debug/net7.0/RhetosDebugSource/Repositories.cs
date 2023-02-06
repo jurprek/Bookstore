@@ -72,6 +72,7 @@ namespace Common
             { "Bookstore.BookTranslator", Bookstore.Repositories.BookTranslator_Repository.GetReadParameterTypes },
             { "Bookstore.ChildrensBook", Bookstore.Repositories.ChildrensBook_Repository.GetReadParameterTypes },
             { "Bookstore.Comment", Bookstore.Repositories.Comment_Repository.GetReadParameterTypes },
+            { "Bookstore.ComputeBookInfo", Bookstore.Repositories.ComputeBookInfo_Repository.GetReadParameterTypes },
             { "Bookstore.Department", Bookstore.Repositories.Department_Repository.GetReadParameterTypes },
             { "Bookstore.Disposal", Bookstore.Repositories.Disposal_Repository.GetReadParameterTypes },
             { "Bookstore.Education", Bookstore.Repositories.Education_Repository.GetReadParameterTypes },
@@ -89,6 +90,7 @@ namespace Common
             { "Bookstore.Shipment", Bookstore.Repositories.Shipment_Repository.GetReadParameterTypes },
             { "Bookstore.ShipmentEvent", Bookstore.Repositories.ShipmentEvent_Repository.GetReadParameterTypes },
             { "Bookstore.ShipmentStatus", Bookstore.Repositories.ShipmentStatus_Repository.GetReadParameterTypes },
+            { "Bookstore.TitleCheck", Bookstore.Repositories.TitleCheck_Repository.GetReadParameterTypes },
             { "Bookstore.Topic", Bookstore.Repositories.Topic_Repository.GetReadParameterTypes },
             { "Bookstore.Translator", Bookstore.Repositories.Translator_Repository.GetReadParameterTypes },
             { "Bookstore.WishList", Bookstore.Repositories.WishList_Repository.GetReadParameterTypes },
@@ -137,6 +139,16 @@ namespace Common
 
         public static readonly CurrentKeepSynchronizedMetadata CurrentKeepSynchronizedMetadata = new CurrentKeepSynchronizedMetadata
         {
+            new Common.KeepSynchronizedMetadata { Target = @"Bookstore.BookInfo", Source = @"Bookstore.ComputeBookInfo", Context = @"Rhetos.Dsl.DefaultConcepts.SqlQueryableInfo Bookstore.ComputeBookInfo '
+            SELECT
+                b.ID,
+                NumberOfComments = COUNT(bc.ID)
+            FROM
+                Bookstore.Book b
+                LEFT JOIN Bookstore.Comment bc ON bc.BookID = b.ID
+            GROUP BY
+                b.ID
+        '" },
             new Common.KeepSynchronizedMetadata { Target = @"Bookstore.SalesItem_Materialized", Source = @"Bookstore.SalesItem", Context = @"Bookstore.Book(Price IS NOT NULL)" },
             new Common.KeepSynchronizedMetadata { Target = @"Demo.MoneyTransaction_Materialized", Source = @"Demo.MoneyTransaction", Context = @"Demo.BorrowMoney, Demo.BorrowMoney2(Forgotten = 0), Demo.LendMoney, Demo.LendMoney-TotalAddendum, Demo.LendMoney2(SELECT lm.ID, lm.EventDate, Amount = -lm.Amount FROM Demo.LendMoney2 lm), Demo.TransferMoney, Demo.TransferMoney-Subtract" },
             /*AddKeepSynchronizedMetadata*/
@@ -254,6 +266,7 @@ namespace Common
             builder.RegisterType<Bookstore.Repositories.BookTranslator_Repository>().Keyed<IRepository>("Bookstore.BookTranslator").InstancePerLifetimeScope();
             builder.RegisterType<Bookstore.Repositories.ChildrensBook_Repository>().Keyed<IRepository>("Bookstore.ChildrensBook").InstancePerLifetimeScope();
             builder.RegisterType<Bookstore.Repositories.Comment_Repository>().Keyed<IRepository>("Bookstore.Comment").InstancePerLifetimeScope();
+            builder.RegisterType<Bookstore.Repositories.ComputeBookInfo_Repository>().Keyed<IRepository>("Bookstore.ComputeBookInfo").InstancePerLifetimeScope();
             builder.RegisterType<Bookstore.Repositories.Department_Repository>().Keyed<IRepository>("Bookstore.Department").InstancePerLifetimeScope();
             builder.RegisterType<Bookstore.Repositories.Disposal_Repository>().Keyed<IRepository>("Bookstore.Disposal").InstancePerLifetimeScope();
             builder.RegisterType<Bookstore.Repositories.Education_Repository>().Keyed<IRepository>("Bookstore.Education").InstancePerLifetimeScope();
@@ -262,6 +275,8 @@ namespace Common
             builder.RegisterType<Bookstore.Repositories.ExpectedBookRating_Repository>().Keyed<IRepository>("Bookstore.ExpectedBookRating").InstancePerLifetimeScope();
             builder.RegisterType<Bookstore.Repositories.ForeignBook_Repository>().Keyed<IRepository>("Bookstore.ForeignBook").InstancePerLifetimeScope();
             builder.RegisterType<Bookstore.Repositories.Genre_Repository>().Keyed<IRepository>("Bookstore.Genre").InstancePerLifetimeScope();
+            builder.RegisterType<Bookstore.Repositories.InsertRandomBook_Repository>().Keyed<IRepository>("Bookstore.InsertRandomBook").InstancePerLifetimeScope();
+            builder.RegisterType<Bookstore.Repositories.InsertRandomBook_Repository>().Keyed<IActionRepository>("Bookstore.InsertRandomBook").InstancePerLifetimeScope();
             builder.RegisterType<Bookstore.Repositories.Managers_Repository>().Keyed<IRepository>("Bookstore.Managers").InstancePerLifetimeScope();
             builder.RegisterType<Bookstore.Repositories.Person_Repository>().Keyed<IRepository>("Bookstore.Person").InstancePerLifetimeScope();
             builder.RegisterType<Bookstore.Repositories.PersonInfo_Repository>().Keyed<IRepository>("Bookstore.PersonInfo").InstancePerLifetimeScope();
@@ -271,6 +286,7 @@ namespace Common
             builder.RegisterType<Bookstore.Repositories.Shipment_Repository>().Keyed<IRepository>("Bookstore.Shipment").InstancePerLifetimeScope();
             builder.RegisterType<Bookstore.Repositories.ShipmentEvent_Repository>().Keyed<IRepository>("Bookstore.ShipmentEvent").InstancePerLifetimeScope();
             builder.RegisterType<Bookstore.Repositories.ShipmentStatus_Repository>().Keyed<IRepository>("Bookstore.ShipmentStatus").InstancePerLifetimeScope();
+            builder.RegisterType<Bookstore.Repositories.TitleCheck_Repository>().Keyed<IRepository>("Bookstore.TitleCheck").InstancePerLifetimeScope();
             builder.RegisterType<Bookstore.Repositories.Topic_Repository>().Keyed<IRepository>("Bookstore.Topic").InstancePerLifetimeScope();
             builder.RegisterType<Bookstore.Repositories.Translator_Repository>().Keyed<IRepository>("Bookstore.Translator").InstancePerLifetimeScope();
             builder.RegisterType<Bookstore.Repositories.WishList_Repository>().Keyed<IRepository>("Bookstore.WishList").InstancePerLifetimeScope();

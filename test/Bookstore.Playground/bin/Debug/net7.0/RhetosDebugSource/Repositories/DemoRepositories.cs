@@ -136,7 +136,7 @@ namespace Demo.Repositories
             bool allEffectsCompleted = false;
             try
             {
-                /*OverrideRecompute KeepSynchronizedInfo Demo.MoneyTransaction_Materialized.Demo.MoneyTransaction.2*/
+                /*OverrideRecompute KeepSynchronizedInfo Demo.MoneyTransaction_Materialized.Demo.MoneyTransaction.3*/
                 {
                     var filteredNew = filterLoadKeepSynchronizedOnChangedItemsMoneyTransaction_Materialized1(inserted.Concat(updated));
                     Rhetos.Dom.DefaultConcepts.FilterSubtype optimizedFilter;
@@ -258,7 +258,7 @@ namespace Demo.Repositories
             bool allEffectsCompleted = false;
             try
             {
-                /*OverrideRecompute KeepSynchronizedInfo Demo.MoneyTransaction_Materialized.Demo.MoneyTransaction.3*/
+                /*OverrideRecompute KeepSynchronizedInfo Demo.MoneyTransaction_Materialized.Demo.MoneyTransaction.4*/
                 {
                     var filteredNew = filterLoadKeepSynchronizedOnChangedItemsMoneyTransaction_Materialized1(inserted.Concat(updated));
                     Rhetos.Dom.DefaultConcepts.FilterSubtype optimizedFilter;
@@ -318,6 +318,7 @@ namespace Demo.Repositories
         {
             return new KeyValuePair<string, Type>[]
             {
+                new KeyValuePair<string, Type>(@"Demo.AmountNotNull", typeof(Demo.AmountNotNull)),
                 /*DataStructureInfo ReadParameterTypes Demo.LendMoney*/
             };
         }
@@ -391,7 +392,7 @@ namespace Demo.Repositories
             bool allEffectsCompleted = false;
             try
             {
-                /*OverrideRecompute KeepSynchronizedInfo Demo.MoneyTransaction_Materialized.Demo.MoneyTransaction.4*/
+                /*OverrideRecompute KeepSynchronizedInfo Demo.MoneyTransaction_Materialized.Demo.MoneyTransaction.5*/
                 {
                     var filteredNew = filterLoadKeepSynchronizedOnChangedItemsMoneyTransaction_Materialized1(inserted.Concat(updated));
                     Rhetos.Dom.DefaultConcepts.FilterSubtype optimizedFilter;
@@ -404,7 +405,7 @@ namespace Demo.Repositories
                     }
                 }
 
-                /*OverrideRecompute KeepSynchronizedInfo Demo.MoneyTransaction_Materialized.Demo.MoneyTransaction.5*/
+                /*OverrideRecompute KeepSynchronizedInfo Demo.MoneyTransaction_Materialized.Demo.MoneyTransaction.6*/
                 {
                     var filteredNew = filterLoadKeepSynchronizedOnChangedItemsMoneyTransaction_Materialized2(inserted.Concat(updated));
                     Rhetos.Dom.DefaultConcepts.FilterSubtype optimizedFilter;
@@ -436,8 +437,35 @@ namespace Demo.Repositories
 
         public IEnumerable<Rhetos.Dom.DefaultConcepts.InvalidDataMessage> Validate(IList<Guid> ids, bool onSave)
         {
+            if (onSave)
+            {
+                var errorIds = this.Filter(this.Query(ids), new AmountNotNull()).Select(item => item.ID).ToArray();
+                if (errorIds.Count() > 0)
+                    foreach (var error in GetErrorMessage_AmountNotNull(errorIds))
+                        yield return error;
+            }
             /*DataStructureInfo WritableOrm OnSaveValidate Demo.LendMoney*/
             yield break;
+        }
+
+        public IEnumerable<InvalidDataMessage> GetErrorMessage_AmountNotNull(IEnumerable<Guid> invalidData_Ids)
+        {
+            IDictionary<string, object> metadata = new Dictionary<string, object>();
+            metadata["Validation"] = @"AmountNotNull";
+            /*InvalidDataInfo ErrorMetadata Demo.LendMoney.AmountNotNull*/
+            /*InvalidDataInfo CustomValidationResult Demo.LendMoney.AmountNotNull*/
+            return invalidData_Ids.Select(id => new InvalidDataMessage
+            {
+                ID = id,
+                Message = @"Amount must not be NULL !!!.",
+                Metadata = metadata
+            });
+        }
+
+        public IQueryable<Common.Queryable.Demo_LendMoney> Filter(IQueryable<Common.Queryable.Demo_LendMoney> source, Demo.AmountNotNull parameter)
+        {
+            /*QueryFilterExpressionInfo BeforeFilter Demo.LendMoney.'Demo.AmountNotNull'*/
+            return source.Where(item => !item.Amount.HasValue);
         }
 
         /*DataStructureInfo RepositoryMembers Demo.LendMoney*/
@@ -526,7 +554,7 @@ namespace Demo.Repositories
             bool allEffectsCompleted = false;
             try
             {
-                /*OverrideRecompute KeepSynchronizedInfo Demo.MoneyTransaction_Materialized.Demo.MoneyTransaction.6*/
+                /*OverrideRecompute KeepSynchronizedInfo Demo.MoneyTransaction_Materialized.Demo.MoneyTransaction.7*/
                 {
                     var filteredNew = filterLoadKeepSynchronizedOnChangedItemsMoneyTransaction_Materialized1(inserted.Concat(updated));
                     Rhetos.Dom.DefaultConcepts.FilterSubtype optimizedFilter;
@@ -1041,7 +1069,7 @@ namespace Demo.Repositories
             bool allEffectsCompleted = false;
             try
             {
-                /*OverrideRecompute KeepSynchronizedInfo Demo.MoneyTransaction_Materialized.Demo.MoneyTransaction.7*/
+                /*OverrideRecompute KeepSynchronizedInfo Demo.MoneyTransaction_Materialized.Demo.MoneyTransaction.8*/
                 {
                     var filteredNew = filterLoadKeepSynchronizedOnChangedItemsMoneyTransaction_Materialized1(inserted.Concat(updated));
                     Rhetos.Dom.DefaultConcepts.FilterSubtype optimizedFilter;
@@ -1054,7 +1082,7 @@ namespace Demo.Repositories
                     }
                 }
 
-                /*OverrideRecompute KeepSynchronizedInfo Demo.MoneyTransaction_Materialized.Demo.MoneyTransaction.8*/
+                /*OverrideRecompute KeepSynchronizedInfo Demo.MoneyTransaction_Materialized.Demo.MoneyTransaction.9*/
                 {
                     var filteredNew = filterLoadKeepSynchronizedOnChangedItemsMoneyTransaction_Materialized2(inserted.Concat(updated));
                     Rhetos.Dom.DefaultConcepts.FilterSubtype optimizedFilter;

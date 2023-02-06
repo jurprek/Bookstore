@@ -101,6 +101,7 @@
     <NavigationProperty Name="Extension_BookInfo" Relationship="Self.Bookstore_BookInfo_Base" FromRole="Bookstore_BookInfo_Base_Target" ToRole="Bookstore_BookInfo_Base_Source" />
     <NavigationProperty Name="Extension_BookRating" Relationship="Self.Bookstore_BookRating_Base" FromRole="Bookstore_BookRating_Base_Target" ToRole="Bookstore_BookRating_Base_Source" />
     <NavigationProperty Name="Extension_ChildrensBook" Relationship="Self.Bookstore_ChildrensBook_Base" FromRole="Bookstore_ChildrensBook_Base_Target" ToRole="Bookstore_ChildrensBook_Base_Source" />
+    <NavigationProperty Name="Extension_ComputeBookInfo" Relationship="Self.Bookstore_ComputeBookInfo_Base" FromRole="Bookstore_ComputeBookInfo_Base_Target" ToRole="Bookstore_ComputeBookInfo_Base_Source" />
     <NavigationProperty Name="Extension_ForeignBook" Relationship="Self.Bookstore_ForeignBook_Base" FromRole="Bookstore_ForeignBook_Base_Target" ToRole="Bookstore_ForeignBook_Base_Source" />
     <NavigationProperty Name="Author" Relationship="Self.Bookstore_Book_Author" FromRole="Bookstore_Book_Author_Source" ToRole="Bookstore_Book_Author_Target" />
   </EntityType>
@@ -157,6 +158,14 @@
     <Property Name="BookID" Type="Guid" />
     <Property Name="Text" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
     <NavigationProperty Name="Book" Relationship="Self.Bookstore_Comment_Book" FromRole="Bookstore_Comment_Book_Source" ToRole="Bookstore_Comment_Book_Target" />
+  </EntityType>
+  <EntityType Name="Bookstore_ComputeBookInfo" customannotation:ClrType="Common.Queryable.Bookstore_ComputeBookInfo, Bookstore.Service">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Guid" Nullable="false" />
+    <Property Name="NumberOfComments" Type="Int32" />
+    <NavigationProperty Name="Base" Relationship="Self.Bookstore_ComputeBookInfo_Base" FromRole="Bookstore_ComputeBookInfo_Base_Source" ToRole="Bookstore_ComputeBookInfo_Base_Target" />
   </EntityType>
   <EntityType Name="Bookstore_Department" customannotation:ClrType="Common.Queryable.Bookstore_Department, Bookstore.Service">
     <Key>
@@ -761,6 +770,18 @@
       </Dependent>
     </ReferentialConstraint>
   </Association>
+  <Association Name="Bookstore_ComputeBookInfo_Base">
+    <End Role="Bookstore_ComputeBookInfo_Base_Source" Type="Self.Bookstore_ComputeBookInfo" Multiplicity="0..1" />
+    <End Role="Bookstore_ComputeBookInfo_Base_Target" Type="Self.Bookstore_Book" Multiplicity="1" />
+    <ReferentialConstraint>
+      <Principal Role="Bookstore_ComputeBookInfo_Base_Target">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="Bookstore_ComputeBookInfo_Base_Source">
+        <PropertyRef Name="ID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
   <Association Name="Bookstore_Disposal_Book">
     <End Role="Bookstore_Disposal_Book_Source" Type="Self.Bookstore_Disposal" Multiplicity="*" />
     <End Role="Bookstore_Disposal_Book_Target" Type="Self.Bookstore_Book" Multiplicity="0..1" />
@@ -1359,6 +1380,7 @@
     <EntitySet Name="Bookstore_BookTranslator" EntityType="Self.Bookstore_BookTranslator" />
     <EntitySet Name="Bookstore_ChildrensBook" EntityType="Self.Bookstore_ChildrensBook" />
     <EntitySet Name="Bookstore_Comment" EntityType="Self.Bookstore_Comment" />
+    <EntitySet Name="Bookstore_ComputeBookInfo" EntityType="Self.Bookstore_ComputeBookInfo" />
     <EntitySet Name="Bookstore_Department" EntityType="Self.Bookstore_Department" />
     <EntitySet Name="Bookstore_Disposal" EntityType="Self.Bookstore_Disposal" />
     <EntitySet Name="Bookstore_Education" EntityType="Self.Bookstore_Education" />
@@ -1436,6 +1458,10 @@
 	<AssociationSet Name="Bookstore_Comment_Book" Association="Self.Bookstore_Comment_Book">
 		<End Role="Bookstore_Comment_Book_Source" EntitySet="Bookstore_Comment" />
 		<End Role="Bookstore_Comment_Book_Target" EntitySet="Bookstore_Book" />
+	</AssociationSet>
+	<AssociationSet Name="Bookstore_ComputeBookInfo_Base" Association="Self.Bookstore_ComputeBookInfo_Base">
+		<End Role="Bookstore_ComputeBookInfo_Base_Source" EntitySet="Bookstore_ComputeBookInfo" />
+		<End Role="Bookstore_ComputeBookInfo_Base_Target" EntitySet="Bookstore_Book" />
 	</AssociationSet>
 	<AssociationSet Name="Bookstore_Disposal_Book" Association="Self.Bookstore_Disposal_Book">
 		<End Role="Bookstore_Disposal_Book_Source" EntitySet="Bookstore_Disposal" />

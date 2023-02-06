@@ -95,6 +95,13 @@
     <Property Name="BookID" Type="uniqueidentifier" customannotation:Index="{ Name: IX_BookID, Order: 0 }" Nullable="true" />
     <Property Name="Text" Type="nvarchar(max)" Nullable="true" />
   </EntityType>
+  <EntityType Name="Bookstore_ComputeBookInfo">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="uniqueidentifier" Nullable="false"  customannotation:Index="{ Name: IX_ID, Order: 0 }"/>
+    <Property Name="NumberOfComments" Type="int" Nullable="true" />
+  </EntityType>
   <EntityType Name="Bookstore_Department">
     <Key>
       <PropertyRef Name="ID" />
@@ -647,6 +654,18 @@
       </Principal>
       <Dependent Role="Bookstore_Comment">
         <PropertyRef Name="BookID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="Bookstore_ComputeBookInfo_Base">
+    <End Role="Bookstore_Book" Type="Self.Bookstore_Book" Multiplicity="1" />
+    <End Role="Bookstore_ComputeBookInfo" Type="Self.Bookstore_ComputeBookInfo" Multiplicity="0..1" />
+    <ReferentialConstraint>
+      <Principal Role="Bookstore_Book">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="Bookstore_ComputeBookInfo">
+        <PropertyRef Name="ID" />
       </Dependent>
     </ReferentialConstraint>
   </Association>
@@ -1248,6 +1267,7 @@
     <EntitySet Name="Bookstore_BookTranslator" EntityType="Self.Bookstore_BookTranslator" Schema="Bookstore" Table="BookTranslator" />
     <EntitySet Name="Bookstore_ChildrensBook" EntityType="Self.Bookstore_ChildrensBook" Schema="Bookstore" Table="ChildrensBook" />
     <EntitySet Name="Bookstore_Comment" EntityType="Self.Bookstore_Comment" Schema="Bookstore" Table="Comment" />
+    <EntitySet Name="Bookstore_ComputeBookInfo" EntityType="Self.Bookstore_ComputeBookInfo" Schema="Bookstore" Table="ComputeBookInfo" />
     <EntitySet Name="Bookstore_Department" EntityType="Self.Bookstore_Department" Schema="Bookstore" Table="Department" />
     <EntitySet Name="Bookstore_Disposal" EntityType="Self.Bookstore_Disposal" Schema="Bookstore" Table="Disposal" />
     <EntitySet Name="Bookstore_Education" EntityType="Self.Bookstore_Education" Schema="Bookstore" Table="Education" />
@@ -1325,6 +1345,10 @@
   <AssociationSet Name="Bookstore_Comment_Book" Association="Self.Bookstore_Comment_Book">
     <End Role="Bookstore_Book" EntitySet="Bookstore_Book" />
     <End Role="Bookstore_Comment" EntitySet="Bookstore_Comment" />
+  </AssociationSet>
+  <AssociationSet Name="Bookstore_ComputeBookInfo_Base" Association="Self.Bookstore_ComputeBookInfo_Base">
+    <End Role="Bookstore_Book" EntitySet="Bookstore_Book" />
+    <End Role="Bookstore_ComputeBookInfo" EntitySet="Bookstore_ComputeBookInfo" />
   </AssociationSet>
   <AssociationSet Name="Bookstore_Disposal_Book" Association="Self.Bookstore_Disposal_Book">
     <End Role="Bookstore_Book" EntitySet="Bookstore_Book" />

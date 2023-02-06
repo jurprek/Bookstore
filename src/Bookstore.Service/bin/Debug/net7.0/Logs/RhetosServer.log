@@ -1307,3 +1307,176 @@ Command: SaveEntityCommandInfo Bookstore.Book, update 1
 2023-02-01 12:20:59.3148|INFO|Microsoft.Hosting.Lifetime|Application started. Press Ctrl+C to shut down.
 2023-02-01 12:20:59.3290|INFO|Microsoft.Hosting.Lifetime|Hosting environment: Development
 2023-02-01 12:20:59.3290|INFO|Microsoft.Hosting.Lifetime|Content root path: C:\Users\jpreksavec\source\repos\Bookstore\src\Bookstore.Service
+2023-02-03 08:30:28.0174|INFO|Microsoft.Hosting.Lifetime|Now listening on: https://localhost:7194
+2023-02-03 08:30:28.0483|INFO|Microsoft.Hosting.Lifetime|Now listening on: http://localhost:5138
+2023-02-03 08:30:28.0483|INFO|Microsoft.Hosting.Lifetime|Application started. Press Ctrl+C to shut down.
+2023-02-03 08:30:28.0591|INFO|Microsoft.Hosting.Lifetime|Hosting environment: Development
+2023-02-03 08:30:28.0591|INFO|Microsoft.Hosting.Lifetime|Content root path: C:\Users\jpreksavec\source\repos\Bookstore\src\Bookstore.Service
+2023-02-03 09:10:05.3439|INFO|Microsoft.Hosting.Lifetime|Now listening on: https://localhost:7194
+2023-02-03 09:10:05.3660|INFO|Microsoft.Hosting.Lifetime|Now listening on: http://localhost:5138
+2023-02-03 09:10:05.3660|INFO|Microsoft.Hosting.Lifetime|Application started. Press Ctrl+C to shut down.
+2023-02-03 09:10:05.3785|INFO|Microsoft.Hosting.Lifetime|Hosting environment: Development
+2023-02-03 09:10:05.3785|INFO|Microsoft.Hosting.Lifetime|Content root path: C:\Users\jpreksavec\source\repos\Bookstore\src\Bookstore.Service
+2023-02-03 09:10:47.0204|INFO|Microsoft.Hosting.Lifetime|Now listening on: https://localhost:7194
+2023-02-03 09:10:47.0416|INFO|Microsoft.Hosting.Lifetime|Now listening on: http://localhost:5138
+2023-02-03 09:10:47.0416|INFO|Microsoft.Hosting.Lifetime|Application started. Press Ctrl+C to shut down.
+2023-02-03 09:10:47.0529|INFO|Microsoft.Hosting.Lifetime|Hosting environment: Development
+2023-02-03 09:10:47.0529|INFO|Microsoft.Hosting.Lifetime|Content root path: C:\Users\jpreksavec\source\repos\Bookstore\src\Bookstore.Service
+2023-02-03 09:11:13.6989|INFO|Microsoft.Hosting.Lifetime|Now listening on: https://localhost:7194
+2023-02-03 09:11:13.7226|INFO|Microsoft.Hosting.Lifetime|Now listening on: http://localhost:5138
+2023-02-03 09:11:13.7226|INFO|Microsoft.Hosting.Lifetime|Application started. Press Ctrl+C to shut down.
+2023-02-03 09:11:13.7226|INFO|Microsoft.Hosting.Lifetime|Hosting environment: Development
+2023-02-03 09:11:13.7409|INFO|Microsoft.Hosting.Lifetime|Content root path: C:\Users\jpreksavec\source\repos\Bookstore\src\Bookstore.Service
+2023-02-03 09:18:39.3638|INFO|Microsoft.Hosting.Lifetime|Now listening on: https://localhost:7194
+2023-02-03 09:18:39.3909|INFO|Microsoft.Hosting.Lifetime|Now listening on: http://localhost:5138
+2023-02-03 09:18:39.3992|INFO|Microsoft.Hosting.Lifetime|Application started. Press Ctrl+C to shut down.
+2023-02-03 09:18:39.3992|INFO|Microsoft.Hosting.Lifetime|Hosting environment: Development
+2023-02-03 09:18:39.3992|INFO|Microsoft.Hosting.Lifetime|Content root path: C:\Users\jpreksavec\source\repos\Bookstore\src\Bookstore.Service
+2023-02-03 09:23:38.1242|INFO|Microsoft.Hosting.Lifetime|Now listening on: https://localhost:7194
+2023-02-03 09:23:38.1468|INFO|Microsoft.Hosting.Lifetime|Now listening on: http://localhost:5138
+2023-02-03 09:23:38.1468|INFO|Microsoft.Hosting.Lifetime|Application started. Press Ctrl+C to shut down.
+2023-02-03 09:23:38.1468|INFO|Microsoft.Hosting.Lifetime|Hosting environment: Development
+2023-02-03 09:23:38.1468|INFO|Microsoft.Hosting.Lifetime|Content root path: C:\Users\jpreksavec\source\repos\Bookstore\src\Bookstore.Service
+2023-02-03 09:34:46.2703|INFO|Microsoft.Hosting.Lifetime|Now listening on: https://localhost:7194
+2023-02-03 09:34:46.3088|INFO|Microsoft.Hosting.Lifetime|Now listening on: http://localhost:5138
+2023-02-03 09:34:46.3088|INFO|Microsoft.Hosting.Lifetime|Application started. Press Ctrl+C to shut down.
+2023-02-03 09:34:46.3206|INFO|Microsoft.Hosting.Lifetime|Hosting environment: Development
+2023-02-03 09:34:46.3206|INFO|Microsoft.Hosting.Lifetime|Content root path: C:\Users\jpreksavec\source\repos\Bookstore\src\Bookstore.Service
+2023-02-03 10:00:10.3120|INFO|Microsoft.Hosting.Lifetime|Now listening on: https://localhost:7194
+2023-02-03 10:00:10.3422|INFO|Microsoft.Hosting.Lifetime|Now listening on: http://localhost:5138
+2023-02-03 10:00:10.3422|INFO|Microsoft.Hosting.Lifetime|Application started. Press Ctrl+C to shut down.
+2023-02-03 10:00:10.3422|INFO|Microsoft.Hosting.Lifetime|Hosting environment: Development
+2023-02-03 10:00:10.3610|INFO|Microsoft.Hosting.Lifetime|Content root path: C:\Users\jpreksavec\source\repos\Bookstore\src\Bookstore.Service
+2023-02-03 10:07:44.5717|INFO|Microsoft.Hosting.Lifetime|Now listening on: https://localhost:7194
+2023-02-03 10:07:44.6162|INFO|Microsoft.Hosting.Lifetime|Now listening on: http://localhost:5138
+2023-02-03 10:07:44.6245|INFO|Microsoft.Hosting.Lifetime|Application started. Press Ctrl+C to shut down.
+2023-02-03 10:07:44.6245|INFO|Microsoft.Hosting.Lifetime|Hosting environment: Development
+2023-02-03 10:07:44.6245|INFO|Microsoft.Hosting.Lifetime|Content root path: C:\Users\jpreksavec\source\repos\Bookstore\src\Bookstore.Service
+2023-02-03 10:18:01.2049|INFO|Microsoft.Hosting.Lifetime|Now listening on: https://localhost:7194
+2023-02-03 10:18:01.2272|INFO|Microsoft.Hosting.Lifetime|Now listening on: http://localhost:5138
+2023-02-03 10:18:01.2272|INFO|Microsoft.Hosting.Lifetime|Application started. Press Ctrl+C to shut down.
+2023-02-03 10:18:01.2383|INFO|Microsoft.Hosting.Lifetime|Hosting environment: Development
+2023-02-03 10:18:01.2383|INFO|Microsoft.Hosting.Lifetime|Content root path: C:\Users\jpreksavec\source\repos\Bookstore\src\Bookstore.Service
+2023-02-03 10:22:27.2647|INFO|Microsoft.Hosting.Lifetime|Now listening on: https://localhost:7194
+2023-02-03 10:22:27.2863|INFO|Microsoft.Hosting.Lifetime|Now listening on: http://localhost:5138
+2023-02-03 10:22:27.2863|INFO|Microsoft.Hosting.Lifetime|Application started. Press Ctrl+C to shut down.
+2023-02-03 10:22:27.2863|INFO|Microsoft.Hosting.Lifetime|Hosting environment: Development
+2023-02-03 10:22:27.2994|INFO|Microsoft.Hosting.Lifetime|Content root path: C:\Users\jpreksavec\source\repos\Bookstore\src\Bookstore.Service
+2023-02-03 10:25:27.9396|INFO|Microsoft.Hosting.Lifetime|Now listening on: https://localhost:7194
+2023-02-03 10:25:27.9608|INFO|Microsoft.Hosting.Lifetime|Now listening on: http://localhost:5138
+2023-02-03 10:25:27.9608|INFO|Microsoft.Hosting.Lifetime|Application started. Press Ctrl+C to shut down.
+2023-02-03 10:25:27.9723|INFO|Microsoft.Hosting.Lifetime|Hosting environment: Development
+2023-02-03 10:25:27.9723|INFO|Microsoft.Hosting.Lifetime|Content root path: C:\Users\jpreksavec\source\repos\Bookstore\src\Bookstore.Service
+2023-02-03 10:33:57.8239|INFO|Microsoft.Hosting.Lifetime|Now listening on: https://localhost:7194
+2023-02-03 10:33:57.8452|INFO|Microsoft.Hosting.Lifetime|Now listening on: http://localhost:5138
+2023-02-03 10:33:57.8537|INFO|Microsoft.Hosting.Lifetime|Application started. Press Ctrl+C to shut down.
+2023-02-03 10:33:57.8537|INFO|Microsoft.Hosting.Lifetime|Hosting environment: Development
+2023-02-03 10:33:57.8537|INFO|Microsoft.Hosting.Lifetime|Content root path: C:\Users\jpreksavec\source\repos\Bookstore\src\Bookstore.Service
+2023-02-03 10:35:34.8729|INFO|Microsoft.Hosting.Lifetime|Now listening on: https://localhost:7194
+2023-02-03 10:35:34.8942|INFO|Microsoft.Hosting.Lifetime|Now listening on: http://localhost:5138
+2023-02-03 10:35:34.9017|INFO|Microsoft.Hosting.Lifetime|Application started. Press Ctrl+C to shut down.
+2023-02-03 10:35:34.9017|INFO|Microsoft.Hosting.Lifetime|Hosting environment: Development
+2023-02-03 10:35:34.9017|INFO|Microsoft.Hosting.Lifetime|Content root path: C:\Users\jpreksavec\source\repos\Bookstore\src\Bookstore.Service
+2023-02-03 10:36:46.1970|INFO|Microsoft.Hosting.Lifetime|Now listening on: https://localhost:7194
+2023-02-03 10:36:46.2221|INFO|Microsoft.Hosting.Lifetime|Now listening on: http://localhost:5138
+2023-02-03 10:36:46.2306|INFO|Microsoft.Hosting.Lifetime|Application started. Press Ctrl+C to shut down.
+2023-02-03 10:36:46.2548|INFO|Microsoft.Hosting.Lifetime|Hosting environment: Development
+2023-02-03 10:36:46.2593|INFO|Microsoft.Hosting.Lifetime|Content root path: C:\Users\jpreksavec\source\repos\Bookstore\src\Bookstore.Service
+2023-02-03 10:42:44.6721|INFO|Microsoft.Hosting.Lifetime|Now listening on: https://localhost:7194
+2023-02-03 10:42:44.6980|INFO|Microsoft.Hosting.Lifetime|Now listening on: http://localhost:5138
+2023-02-03 10:42:44.6980|INFO|Microsoft.Hosting.Lifetime|Application started. Press Ctrl+C to shut down.
+2023-02-03 10:42:44.7129|INFO|Microsoft.Hosting.Lifetime|Hosting environment: Development
+2023-02-03 10:42:44.7129|INFO|Microsoft.Hosting.Lifetime|Content root path: C:\Users\jpreksavec\source\repos\Bookstore\src\Bookstore.Service
+2023-02-03 10:45:53.8107|INFO|Microsoft.Hosting.Lifetime|Now listening on: https://localhost:7194
+2023-02-03 10:45:53.8363|INFO|Microsoft.Hosting.Lifetime|Now listening on: http://localhost:5138
+2023-02-03 10:45:53.8363|INFO|Microsoft.Hosting.Lifetime|Application started. Press Ctrl+C to shut down.
+2023-02-03 10:45:53.8363|INFO|Microsoft.Hosting.Lifetime|Hosting environment: Development
+2023-02-03 10:45:53.8363|INFO|Microsoft.Hosting.Lifetime|Content root path: C:\Users\jpreksavec\source\repos\Bookstore\src\Bookstore.Service
+2023-02-03 10:46:29.8126|INFO|Microsoft.Hosting.Lifetime|Now listening on: https://localhost:7194
+2023-02-03 10:46:29.8379|INFO|Microsoft.Hosting.Lifetime|Now listening on: http://localhost:5138
+2023-02-03 10:46:29.8379|INFO|Microsoft.Hosting.Lifetime|Application started. Press Ctrl+C to shut down.
+2023-02-03 10:46:29.8516|INFO|Microsoft.Hosting.Lifetime|Hosting environment: Development
+2023-02-03 10:46:29.8516|INFO|Microsoft.Hosting.Lifetime|Content root path: C:\Users\jpreksavec\source\repos\Bookstore\src\Bookstore.Service
+2023-02-03 11:06:13.2890|INFO|Microsoft.Hosting.Lifetime|Now listening on: https://localhost:7194
+2023-02-03 11:06:13.3168|INFO|Microsoft.Hosting.Lifetime|Now listening on: http://localhost:5138
+2023-02-03 11:06:13.3252|INFO|Microsoft.Hosting.Lifetime|Application started. Press Ctrl+C to shut down.
+2023-02-03 11:06:13.3252|INFO|Microsoft.Hosting.Lifetime|Hosting environment: Development
+2023-02-03 11:06:13.3252|INFO|Microsoft.Hosting.Lifetime|Content root path: C:\Users\jpreksavec\source\repos\Bookstore\src\Bookstore.Service
+2023-02-03 11:07:53.7975|INFO|Microsoft.Hosting.Lifetime|Now listening on: https://localhost:7194
+2023-02-03 11:07:53.8184|INFO|Microsoft.Hosting.Lifetime|Now listening on: http://localhost:5138
+2023-02-03 11:07:53.8262|INFO|Microsoft.Hosting.Lifetime|Application started. Press Ctrl+C to shut down.
+2023-02-03 11:07:53.8262|INFO|Microsoft.Hosting.Lifetime|Hosting environment: Development
+2023-02-03 11:07:53.8262|INFO|Microsoft.Hosting.Lifetime|Content root path: C:\Users\jpreksavec\source\repos\Bookstore\src\Bookstore.Service
+2023-02-03 11:19:36.1263|INFO|Microsoft.Hosting.Lifetime|Now listening on: https://localhost:7194
+2023-02-03 11:19:36.1570|INFO|Microsoft.Hosting.Lifetime|Now listening on: http://localhost:5138
+2023-02-03 11:19:36.1570|INFO|Microsoft.Hosting.Lifetime|Application started. Press Ctrl+C to shut down.
+2023-02-03 11:19:36.1570|INFO|Microsoft.Hosting.Lifetime|Hosting environment: Development
+2023-02-03 11:19:36.1723|INFO|Microsoft.Hosting.Lifetime|Content root path: C:\Users\jpreksavec\source\repos\Bookstore\src\Bookstore.Service
+2023-02-03 11:48:29.6672|INFO|Microsoft.Hosting.Lifetime|Now listening on: https://localhost:7194
+2023-02-03 11:48:29.6886|INFO|Microsoft.Hosting.Lifetime|Now listening on: http://localhost:5138
+2023-02-03 11:48:29.6886|INFO|Microsoft.Hosting.Lifetime|Application started. Press Ctrl+C to shut down.
+2023-02-03 11:48:29.7006|INFO|Microsoft.Hosting.Lifetime|Hosting environment: Development
+2023-02-03 11:48:29.7006|INFO|Microsoft.Hosting.Lifetime|Content root path: C:\Users\jpreksavec\source\repos\Bookstore\src\Bookstore.Service
+2023-02-03 11:51:54.2385|INFO|Microsoft.Hosting.Lifetime|Now listening on: https://localhost:7194
+2023-02-03 11:51:54.2606|INFO|Microsoft.Hosting.Lifetime|Now listening on: http://localhost:5138
+2023-02-03 11:51:54.2721|INFO|Microsoft.Hosting.Lifetime|Application started. Press Ctrl+C to shut down.
+2023-02-03 11:51:54.2721|INFO|Microsoft.Hosting.Lifetime|Hosting environment: Development
+2023-02-03 11:51:54.2786|INFO|Microsoft.Hosting.Lifetime|Content root path: C:\Users\jpreksavec\source\repos\Bookstore\src\Bookstore.Service
+2023-02-03 11:53:07.2108|INFO|Microsoft.Hosting.Lifetime|Now listening on: https://localhost:7194
+2023-02-03 11:53:07.2535|INFO|Microsoft.Hosting.Lifetime|Now listening on: http://localhost:5138
+2023-02-03 11:53:07.2715|INFO|Microsoft.Hosting.Lifetime|Application started. Press Ctrl+C to shut down.
+2023-02-03 11:53:07.2802|INFO|Microsoft.Hosting.Lifetime|Hosting environment: Development
+2023-02-03 11:53:07.2802|INFO|Microsoft.Hosting.Lifetime|Content root path: C:\Users\jpreksavec\source\repos\Bookstore\src\Bookstore.Service
+2023-02-03 11:59:46.8352|INFO|Microsoft.Hosting.Lifetime|Now listening on: https://localhost:7194
+2023-02-03 11:59:46.8765|INFO|Microsoft.Hosting.Lifetime|Now listening on: http://localhost:5138
+2023-02-03 11:59:46.8867|INFO|Microsoft.Hosting.Lifetime|Application started. Press Ctrl+C to shut down.
+2023-02-03 11:59:46.8867|INFO|Microsoft.Hosting.Lifetime|Hosting environment: Development
+2023-02-03 11:59:46.8997|INFO|Microsoft.Hosting.Lifetime|Content root path: C:\Users\jpreksavec\source\repos\Bookstore\src\Bookstore.Service
+2023-02-03 12:03:14.5986|INFO|Microsoft.Hosting.Lifetime|Now listening on: https://localhost:7194
+2023-02-03 12:03:14.6232|INFO|Microsoft.Hosting.Lifetime|Now listening on: http://localhost:5138
+2023-02-03 12:03:14.6232|INFO|Microsoft.Hosting.Lifetime|Application started. Press Ctrl+C to shut down.
+2023-02-03 12:03:14.6341|INFO|Microsoft.Hosting.Lifetime|Hosting environment: Development
+2023-02-03 12:03:14.6341|INFO|Microsoft.Hosting.Lifetime|Content root path: C:\Users\jpreksavec\source\repos\Bookstore\src\Bookstore.Service
+2023-02-03 13:06:56.2074|INFO|Microsoft.Hosting.Lifetime|Now listening on: https://localhost:7194
+2023-02-03 13:06:56.2437|INFO|Microsoft.Hosting.Lifetime|Now listening on: http://localhost:5138
+2023-02-03 13:06:56.2672|INFO|Microsoft.Hosting.Lifetime|Application started. Press Ctrl+C to shut down.
+2023-02-03 13:06:56.2672|INFO|Microsoft.Hosting.Lifetime|Hosting environment: Development
+2023-02-03 13:06:56.2672|INFO|Microsoft.Hosting.Lifetime|Content root path: C:\Users\jpreksavec\source\repos\Bookstore\src\Bookstore.Service
+2023-02-03 13:07:18.3293|INFO|Microsoft.Hosting.Lifetime|Application started. Press Ctrl+C to shut down.
+2023-02-03 13:07:18.3786|INFO|Microsoft.Hosting.Lifetime|Hosting environment: Development
+2023-02-03 13:07:18.3786|INFO|Microsoft.Hosting.Lifetime|Content root path: C:\Users\jpreksavec\source\repos\Bookstore\src\Bookstore.Service
+2023-02-03 13:08:19.4387|INFO|Microsoft.Hosting.Lifetime|Now listening on: https://localhost:7194
+2023-02-03 13:08:19.4811|INFO|Microsoft.Hosting.Lifetime|Now listening on: http://localhost:5138
+2023-02-03 13:08:19.4917|INFO|Microsoft.Hosting.Lifetime|Application started. Press Ctrl+C to shut down.
+2023-02-03 13:08:19.4917|INFO|Microsoft.Hosting.Lifetime|Hosting environment: Development
+2023-02-03 13:08:19.4917|INFO|Microsoft.Hosting.Lifetime|Content root path: C:\Users\jpreksavec\source\repos\Bookstore\src\Bookstore.Service
+2023-02-03 13:17:20.4422|INFO|Microsoft.Hosting.Lifetime|Now listening on: https://localhost:7194
+2023-02-03 13:17:20.5367|INFO|Microsoft.Hosting.Lifetime|Now listening on: http://localhost:5138
+2023-02-03 13:17:20.5662|INFO|Microsoft.Hosting.Lifetime|Application started. Press Ctrl+C to shut down.
+2023-02-03 13:17:20.5814|INFO|Microsoft.Hosting.Lifetime|Hosting environment: Development
+2023-02-03 13:17:20.5924|INFO|Microsoft.Hosting.Lifetime|Content root path: C:\Users\jpreksavec\source\repos\Bookstore\src\Bookstore.Service
+2023-02-03 13:24:30.6619|INFO|Microsoft.Hosting.Lifetime|Now listening on: https://localhost:7194
+2023-02-03 13:24:30.7022|INFO|Microsoft.Hosting.Lifetime|Now listening on: http://localhost:5138
+2023-02-03 13:24:30.7022|INFO|Microsoft.Hosting.Lifetime|Application started. Press Ctrl+C to shut down.
+2023-02-03 13:24:30.7131|INFO|Microsoft.Hosting.Lifetime|Hosting environment: Development
+2023-02-03 13:24:30.7131|INFO|Microsoft.Hosting.Lifetime|Content root path: C:\Users\jpreksavec\source\repos\Bookstore\src\Bookstore.Service
+2023-02-03 13:34:51.6374|INFO|Microsoft.Hosting.Lifetime|Now listening on: https://localhost:7194
+2023-02-03 13:34:51.6587|INFO|Microsoft.Hosting.Lifetime|Now listening on: http://localhost:5138
+2023-02-03 13:34:51.6587|INFO|Microsoft.Hosting.Lifetime|Application started. Press Ctrl+C to shut down.
+2023-02-03 13:34:51.6587|INFO|Microsoft.Hosting.Lifetime|Hosting environment: Development
+2023-02-03 13:34:51.6729|INFO|Microsoft.Hosting.Lifetime|Content root path: C:\Users\jpreksavec\source\repos\Bookstore\src\Bookstore.Service
+2023-02-03 13:36:45.5036|INFO|Microsoft.Hosting.Lifetime|Now listening on: https://localhost:7194
+2023-02-03 13:36:45.5260|INFO|Microsoft.Hosting.Lifetime|Now listening on: http://localhost:5138
+2023-02-03 13:36:45.5331|INFO|Microsoft.Hosting.Lifetime|Application started. Press Ctrl+C to shut down.
+2023-02-03 13:36:45.5331|INFO|Microsoft.Hosting.Lifetime|Hosting environment: Development
+2023-02-03 13:36:45.5331|INFO|Microsoft.Hosting.Lifetime|Content root path: C:\Users\jpreksavec\source\repos\Bookstore\src\Bookstore.Service
+2023-02-06 09:09:52.9293|INFO|Microsoft.Hosting.Lifetime|Now listening on: https://localhost:7194
+2023-02-06 09:09:52.9668|INFO|Microsoft.Hosting.Lifetime|Now listening on: http://localhost:5138
+2023-02-06 09:09:52.9742|INFO|Microsoft.Hosting.Lifetime|Application started. Press Ctrl+C to shut down.
+2023-02-06 09:09:52.9742|INFO|Microsoft.Hosting.Lifetime|Hosting environment: Development
+2023-02-06 09:09:52.9742|INFO|Microsoft.Hosting.Lifetime|Content root path: C:\Users\jpreksavec\source\repos\Bookstore\src\Bookstore.Service
+2023-02-06 12:33:11.2960|INFO|Microsoft.Hosting.Lifetime|Now listening on: https://localhost:7194
+2023-02-06 12:33:11.3204|INFO|Microsoft.Hosting.Lifetime|Now listening on: http://localhost:5138
+2023-02-06 12:33:11.3302|INFO|Microsoft.Hosting.Lifetime|Application started. Press Ctrl+C to shut down.
+2023-02-06 12:33:11.3302|INFO|Microsoft.Hosting.Lifetime|Hosting environment: Development
+2023-02-06 12:33:11.3302|INFO|Microsoft.Hosting.Lifetime|Content root path: C:\Users\jpreksavec\source\repos\Bookstore\src\Bookstore.Service

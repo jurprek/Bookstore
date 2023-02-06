@@ -18,6 +18,7 @@ namespace Common
         {
             _mappings.Add(typeof(Bookstore.ApproveShipment), new Bookstore_ApproveShipment_Mapper());
             _mappings.Add(typeof(Bookstore.Book), new Bookstore_Book_Mapper());
+            _mappings.Add(typeof(Bookstore.BookInfo), new Bookstore_BookInfo_Mapper());
             _mappings.Add(typeof(Bookstore.BookRating), new Bookstore_BookRating_Mapper());
             _mappings.Add(typeof(Bookstore.BookTopic), new Bookstore_BookTopic_Mapper());
             _mappings.Add(typeof(Bookstore.BookTranslator), new Bookstore_BookTranslator_Mapper());
@@ -137,6 +138,32 @@ namespace Common
     	public string GetTableName()
         {
             return "Bookstore.Book";
+        }
+    }
+
+    public class Bookstore_BookInfo_Mapper : IPersistenceStorageObjectMapper
+    {
+        public PersistenceStorageObjectParameter[] GetParameters(IEntity genericEntity)
+        {
+            var entity = (Bookstore.BookInfo)genericEntity;
+            return new PersistenceStorageObjectParameter[]
+            {
+                new PersistenceStorageObjectParameter("ID", new SqlParameter("", System.Data.SqlDbType.UniqueIdentifier) { Value = entity.ID }),
+                new PersistenceStorageObjectParameter("NumberOfComments", new SqlParameter("", System.Data.SqlDbType.Int) { Value = ((object)entity.NumberOfComments) ?? DBNull.Value }),
+                /*DataStructureInfo PersistenceStorageMapperPropertyMapping Bookstore.BookInfo*/
+            };
+        }
+    
+    	public IEnumerable<Guid> GetDependencies(IEntity genericEntity)
+        {
+            var entity = (Bookstore.BookInfo)genericEntity;
+            /*DataStructureInfo PersistenceStorageMapperDependencyResolution Bookstore.BookInfo*/
+            yield break;
+        }
+    
+    	public string GetTableName()
+        {
+            return "Bookstore.BookInfo";
         }
     }
 
